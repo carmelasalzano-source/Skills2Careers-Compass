@@ -1,0 +1,145 @@
+{
+  "mentors": [
+    { "initials": "MK", "name": "Dr. Mary K.", "role": "Soil Science Lead", "color": "green" },
+    { "initials": "JO", "name": "John O.", "role": "Agri-Supply Chain Expert", "color": "emerald" }
+  ],
+  "lmi": [
+    { "name": "CGIAR", "desc": "Research on climate-smart agrifood systems.", "link": "https://www.cgiar.org/" },
+    { "name": "FAOSTAT", "desc": "Global agriculture/food statistics.", "link": "https://www.fao.org/faostat/en/" },
+    { "name": "IFPRI", "desc": "Policy research on food systems.", "link": "https://www.ifpri.org/" },
+    { "name": "FEWS NET", "desc": "Food security early warning data.", "link": "https://fews.net/" },
+    { "name": "ILO Green Jobs", "desc": "Evidence on green jobs in agriculture.", "link": "https://www.ilo.org/greenjobs" }
+  ],
+  "communities": [
+    { "name": "EAFF", "desc": "Eastern Africa Farmers Federation network.", "type": "Network", "link": "https://www.eaffu.org/" },
+    { "name": "AgriProFocus", "desc": "Agribusiness communities of practice.", "type": "Community", "link": "https://agriprofocus.com/" },
+    { "name": "AfriLabs", "desc": "Pan-African network of innovation hubs.", "type": "Network", "link": "https://www.afrilabs.com/" },
+    { "name": "Digital Farmers Kenya", "desc": "Facebook Group • 200k+ Members", "type": "Community", "link": "https://www.facebook.com/groups/DigitalFarmersKenya/" },
+    { "name": "Young Professionals for Ag. Dev", "desc": "Global Network • Africa Chapter", "type": "Network", "link": "https://ypard.net/" }
+  ],
+  "jobs": [
+    { "title": "AgCareers.com", "company": "Global", "type": "Portal", "link": "https://www.agcareers.com/" },
+    { "title": "One Acre Fund Jobs", "company": "NGO", "type": "Employer", "link": "https://oneacrefund.org/" },
+    { "title": "Devex Jobs", "company": "Development", "type": "Portal", "link": "https://www.devex.com/" }
+  ],
+  "entrepreneurship": {
+    "title": "Agritech",
+    "theme": "green",
+    "incubators": [
+      { "name": "Kilimo Trust", "desc": "Value-chain support.", "link": "https://www.kilimotrust.org/" },
+      { "name": "TechnoServe", "desc": "Enterprise development.", "link": "https://www.technoserve.org/" },
+      { "name": "Heifer Int.", "desc": "Inclusive agribusiness.", "link": "https://www.heifer.org/" },
+      { "name": "WFP Accelerator", "desc": "Innovation challenges.", "link": "https://innovation.wfp.org/" }
+    ],
+    "funding": [
+      { "name": "AGRA", "desc": "Catalytic funding for agribusiness.", "link": "https://agra.org/" },
+      { "name": "AECF", "desc": "Challenge fund for agribusiness ventures.", "link": "https://www.aecfafrica.org/" },
+      { "name": "IFAD", "desc": "Finance for rural entrepreneurship.", "link": "https://www.ifad.org/" },
+      { "name": "Feed the Future (USAID)", "desc": "Global food security initiative.", "link": "https://www.feedthefuture.gov/" }
+    ],
+    "tools": [
+      { "name": "AgPlan Business Planner", "desc": "Interactive business plan creator.", "icon": "table", "link": "https://agplan.umn.edu/" },
+      { "name": "GlobalG.A.P. Standards", "desc": "Certification guide for export.", "icon": "file-check", "link": "https://www.globalgap.org/" }
+    ]
+  },
+  "country_resources": {
+    "Kenya": {
+      "policy": [
+        { "title": "Ministry of Agriculture", "desc": "Policy & programmes.", "link": "https://kilimo.go.ke/" },
+        { "title": "KEPHIS", "desc": "Plant health & phytosanitary.", "link": "https://www.kephis.org/" },
+        { "title": "AFA", "desc": "Food Authority regulation.", "link": "https://agricultureauthority.go.ke/" },
+        { "title": "NEMA", "desc": "Environmental compliance.", "link": "https://www.nema.go.ke/" }
+      ],
+      "hubs": [
+        { "title": "KALRO", "desc": "Agricultural Research.", "link": "https://www.kalro.org/" },
+        { "title": "KCIC", "desc": "Climate Innovation Center.", "link": "https://kenyacic.org/" },
+        { "title": "iHub", "desc": "Tech-enabled agribusiness.", "link": "https://ihub.co.ke/" }
+      ],
+      "jobs": [
+        { "title": "BrighterMonday", "desc": "Agribusiness roles.", "link": "https://www.brightermonday.co.ke/" }
+      ],
+      "data": [
+        { "title": "KNBS", "desc": "Economic Survey.", "link": "https://www.knbs.or.ke/" }
+      ]
+    },
+    "Uganda": {
+      "policy": [
+        { "title": "MAAIF", "desc": "Ministry of Agriculture.", "link": "https://www.agriculture.go.ug/" },
+        { "title": "UNBS", "desc": "Bureau of Standards.", "link": "https://www.unbs.go.ug/" }
+      ],
+      "hubs": [
+        { "title": "NARO", "desc": "Agricultural Research.", "link": "https://www.naro.go.ug/" },
+        { "title": "aBi Development", "desc": "Agribusiness incubation.", "link": "https://www.abi.co.ug/" }
+      ],
+      "jobs": []
+    },
+    "Tanzania": {
+      "policy": [
+        { "title": "Ministry of Agriculture", "desc": "Official info & programmes.", "link": "https://www.kilimo.go.tz/" },
+        { "title": "TFRA", "desc": "Fertilizer Regulatory Authority.", "link": "https://tfra.go.tz/" }
+      ],
+      "hubs": [
+        { "title": "TARI", "desc": "Agricultural Research.", "link": "https://www.tari.go.tz/" },
+        { "title": "SAGCOT", "desc": "Agricultural Growth Corridor.", "link": "https://sagcot.co.tz/" }
+      ],
+      "jobs": [
+        { "title": "Ajira Portal", "desc": "Public service jobs.", "link": "https://www.ajira.go.tz/" }
+      ]
+    },
+    "Rwanda": {
+      "policy": [
+        { "title": "MINAGRI", "desc": "Ministry of Agriculture.", "link": "https://www.minagri.gov.rw/" },
+        { "title": "RSB", "desc": "Standards Board.", "link": "https://www.rsb.gov.rw/" }
+      ],
+      "hubs": [
+        { "title": "RAB", "desc": "Agriculture Board.", "link": "https://rab.gov.rw/" },
+        { "title": "NAEB", "desc": "Export Development Board.", "link": "https://naeb.gov.rw/" }
+      ],
+      "jobs": []
+    },
+    "Burundi": {
+      "policy": [
+        { "title": "MINEAGRIE", "desc": "Ministry of Agriculture.", "link": "https://www.mineagrie.gov.bi/" }
+      ],
+      "hubs": [
+        { "title": "ISABU", "desc": "Agronomic Sciences Inst.", "link": "https://isabu.bi/" }
+      ],
+      "jobs": []
+    },
+    "DR Congo": {
+      "policy": [
+        { "title": "Min. Agriculture", "desc": "Ministry of Agriculture.", "link": "https://agriculture.gouv.cd/" }
+      ],
+      "hubs": [
+        { "title": "INERA", "desc": "Agronomic Research.", "link": "https://inera-rdc.cd/" }
+      ],
+      "jobs": []
+    },
+    "Somalia": {
+      "policy": [
+        { "title": "MOAI", "desc": "Ministry of Agriculture.", "link": "https://moa.gov.so/" }
+      ],
+      "hubs": [
+        { "title": "iRise Hub", "desc": "Agritech & climate hub.", "link": "https://irisehub.com/" }
+      ],
+      "jobs": []
+    },
+    "South Sudan": {
+      "policy": [
+        { "title": "MAFS", "desc": "Min. Agriculture & Food Security.", "link": "https://mafs.gov.ss/" }
+      ],
+      "hubs": [],
+      "jobs": []
+    }
+  },
+  "signals": {
+    "Sector Value-Chain Gaps": [
+      { "title": "FAOSTAT Value Chain", "desc": "Global food and agriculture data.", "link": "https://www.fao.org/faostat/en/#data" },
+      { "title": "World Bank Agriculture", "desc": "Data on agricultural development.", "link": "https://data.worldbank.org/topic/agriculture" }
+    ],
+    "Innovation Investments/Grants": [
+      { "title": "AgFunder News", "desc": "AgriFoodTech investment news.", "link": "https://agfundernews.com/" },
+      { "title": "Briter Bridges", "desc": "Innovation ecosystem intelligence.", "link": "https://briterbridges.com/" }
+    ]
+  }
+}

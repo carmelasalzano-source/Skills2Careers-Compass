@@ -1,0 +1,120 @@
+{
+  "pathwayData": {
+    "Data Scientist": [
+      { "step": 1, "title": "Foundations: Digital Literacy & Logic", "desc": "Master the basics of computing, internet navigation, and introductory logic needed for data roles.", "duration": "1 Month", "tag": "Beginner", "color": "emerald", "icon": "book-open" },
+      { "step": 2, "title": "Core Skills: Python & SQL", "desc": "Learn the industry-standard languages for data manipulation and database management.", "duration": "3 Months", "tag": "Technical", "color": "indigo", "icon": "code" },
+      { "step": 3, "title": "Certification: Google Data Analytics", "desc": "Complete a professional certificate to validate your skills. Includes capstone project.", "duration": "6 Months", "tag": "Credential", "color": "purple", "icon": "award" },
+      { "step": 4, "title": "Job Readiness & Placement", "desc": "Prepare your CV, join communities, and apply for internships.", "duration": "Ongoing", "tag": "Career", "color": "amber", "icon": "briefcase" }
+    ],
+    "Software Engineer": [
+      { "step": 1, "title": "Foundations: CS Basics", "desc": "Understand algorithms, data structures, and how the internet works.", "duration": "2 Months", "tag": "Beginner", "color": "emerald", "icon": "cpu" },
+      { "step": 2, "title": "Core Skills: Full Stack Dev", "desc": "Master HTML/CSS, JavaScript, and a backend framework like Node.js.", "duration": "4 Months", "tag": "Technical", "color": "indigo", "icon": "code" },
+      { "step": 3, "title": "Certification: Cloud & DevOps", "desc": "Learn to deploy applications on AWS/Azure and manage CI/CD pipelines.", "duration": "3 Months", "tag": "Credential", "color": "purple", "icon": "cloud" },
+      { "step": 4, "title": "Job Readiness & Portfolio", "desc": "Build a GitHub portfolio and contribute to open source projects.", "duration": "Ongoing", "tag": "Career", "color": "amber", "icon": "briefcase" }
+    ],
+    "Solar PV Installer": [
+      { "step": 1, "title": "Foundations: Electrical Safety", "desc": "Understand basic electrical circuits, safety standards (OSHA), and tool handling.", "duration": "1 Month", "tag": "Beginner", "color": "emerald", "icon": "zap" },
+      { "step": 2, "title": "Core Skills: PV Systems & Wiring", "desc": "Learn to install solar panels, inverters, and battery storage systems.", "duration": "2 Months", "tag": "Technical", "color": "indigo", "icon": "tool" },
+      { "step": 3, "title": "Certification: EPRA T1/T2 License", "desc": "Prepare for and pass the national regulatory licensing exam for solar technicians.", "duration": "3 Months", "tag": "Credential", "color": "purple", "icon": "award" },
+      { "step": 4, "title": "Field Experience", "desc": "Log required hours under a licensed contractor to gain full accreditation.", "duration": "Ongoing", "tag": "Career", "color": "amber", "icon": "hard-hat" }
+    ],
+    "Precision Ag Specialist": [
+      { "step": 1, "title": "Foundations: Agronomy Basics", "desc": "Understand crop cycles, soil health, and basic farm management.", "duration": "1 Month", "tag": "Beginner", "color": "emerald", "icon": "sprout" },
+      { "step": 2, "title": "Core Skills: GIS & Drone Ops", "desc": "Learn to use GPS tools, fly drones for mapping, and interpret aerial data.", "duration": "2 Months", "tag": "Technical", "color": "indigo", "icon": "map" },
+      { "step": 3, "title": "Certification: Remote Sensing", "desc": "Gain proficiency in analyzing satellite imagery for crop health monitoring.", "duration": "3 Months", "tag": "Credential", "color": "purple", "icon": "satellite" },
+      { "step": 4, "title": "Service Provision", "desc": "Set up a service model to offer precision insights to local farmers.", "duration": "Ongoing", "tag": "Career", "color": "amber", "icon": "briefcase" }
+    ]
+  },
+  "sectorCardConfig": [
+    { "id": "agri", "name": "Agritech", "icon": "leaf", "color": "green", "growth": "High Growth" },
+    { "id": "energy", "name": "Renewable Energy", "icon": "zap", "color": "orange", "growth": "High Demand" },
+    { "id": "digital", "name": "Digital Economy", "icon": "cpu", "color": "indigo", "growth": "Exponential" }
+  ],
+  "pathwayConstraints": [
+    { "id": "time", "label": "Time Commitment", "icon": "clock", "options": ["Full-time", "Part-time", "Self-paced"] },
+    { "id": "budget", "label": "Budget", "icon": "banknote", "options": ["Free", "Paid", "Any"] },
+    { "id": "mode", "label": "Learning Mode", "icon": "monitor", "options": ["Online", "In-Person", "Hybrid"] }
+  ],
+  "sectorThemes": {
+    "agri": { "color": "green", "feedback": "Solid alignment with Agritech standards." },
+    "energy": { "color": "orange", "feedback": "Meets renewable energy competency baselines." },
+    "digital": { "color": "indigo", "feedback": "Strong digital literacy demonstrated." }
+  },
+  "ventureContext": {
+    "agri": { "location": "Rural / Peri-urban", "customer": "Smallholder Farmers", "drivers": ["Food Security", "Climate Resilience"], "tools": "Smartphone, Sensors" },
+    "energy": { "location": "Off-grid / Peri-urban", "customer": "Households & SMEs", "drivers": ["Energy Access", "Cost Savings"], "tools": "Multimeter, GPS" },
+    "digital": { "location": "Urban / Remote", "customer": "B2B & B2C", "drivers": ["Efficiency", "Market Access"], "tools": "Laptop, Cloud" }
+  },
+  "interviewQuestions": {
+    "agri": "Describe a time you used data to improve a crop yield or farm process.",
+    "energy": "How do you ensure safety compliance when installing a new system?",
+    "digital": "Tell me about a challenging bug you fixed and your process."
+  },
+  "sectorTooltips": {
+    "agri": "Metrics: Job Growth (High), Tech Adoption (Rapid). Key focus on precision ag and value addition.",
+    "energy": "Metrics: Investment (Very High), Skills Gap (Critical). Focus on solar, wind, and grid stability.",
+    "digital": "Metrics: Remote Work (High), Salary (Competitive). Focus on software, data, and AI."
+  },
+  "courseFilters": [
+    {
+      "id": "sector",
+      "label": "Sector",
+      "options": [
+        { "value": "agri", "label": "Agritech" },
+        { "value": "energy", "label": "Renewable Energy" },
+        { "value": "digital", "label": "Digital Economy" }
+      ]
+    },
+    {
+      "id": "difficulty",
+      "label": "Difficulty",
+      "options": [
+        { "value": "Beginner", "label": "Beginner" },
+        { "value": "Intermediate", "label": "Intermediate" },
+        { "value": "Advanced", "label": "Advanced" },
+        { "value": "All Levels", "label": "All Levels" }
+      ]
+    },
+    {
+      "id": "costType",
+      "label": "Cost",
+      "options": [
+        { "value": "Free", "label": "Free" },
+        { "value": "Paid", "label": "Paid" },
+        { "value": "Freemium", "label": "Freemium" },
+        { "value": "Subsidized", "label": "Subsidized" }
+      ]
+    },
+    {
+      "id": "mode",
+      "label": "Mode",
+      "options": [
+        { "value": "Online", "label": "Online" },
+        { "value": "In-Person", "label": "In-Person" },
+        { "value": "Hybrid", "label": "Hybrid" }
+      ]
+    },
+    {
+      "id": "country",
+      "label": "Location",
+      "options": [
+        { "value": "all", "label": "Online / Pan-African" },
+        { "value": "Kenya", "label": "Kenya" },
+        { "value": "Rwanda", "label": "Rwanda" },
+        { "value": "Uganda", "label": "Uganda" },
+        { "value": "Tanzania", "label": "Tanzania" },
+        { "value": "Burundi", "label": "Burundi" },
+        { "value": "South Sudan", "label": "South Sudan" },
+        { "value": "DR Congo", "label": "DR Congo" },
+        { "value": "Somalia", "label": "Somalia" }
+      ]
+    }
+  ],
+  "pathwayGoals": [
+    { "title": "Entry Level Job", "desc": "I want to find my first job or internship.", "icon": "briefcase" },
+    { "title": "Apprenticeship", "desc": "I want to learn on the job with a mentor.", "icon": "users" },
+    { "title": "Upskill", "desc": "I want to strengthen my current skills.", "icon": "trending-up" },
+    { "title": "Venture", "desc": "I want to start my own business.", "icon": "rocket" },
+    { "title": "Change Careers", "desc": "I want to pivot to a new sector.", "icon": "refresh-cw" }
+  ]
+}

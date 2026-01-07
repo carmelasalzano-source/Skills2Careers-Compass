@@ -1,0 +1,11 @@
+[
+  { "name": "Moringa School", "course": "Software Engineering", "sector": "digital", "country": "Kenya", "rating": 5, "metric": "140% Salary Inc.", "desc": "Independent study by SJF Analytics.", "link": "https://moringaschool.com", "gsa_member": false },
+  { "name": "Generation Kenya", "course": "AWS Cloud Practitioner", "sector": "digital", "country": "Kenya", "rating": 5, "metric": "83% Emp. Rate", "desc": "Mathematica Evaluation.", "link": "https://kenya.generation.org", "gsa_member": true },
+  { "name": "Andela", "course": "Technical Leadership", "sector": "digital", "country": "Multi", "rating": 4, "metric": "87% Salary Inc.", "desc": "IFC Case Study verification.", "link": "https://andela.com", "gsa_member": false },
+  { "name": "Skills for Africa", "course": "Agritech for Smallholders", "sector": "agri", "country": "Kenya", "rating": 1, "metric": "No Data", "desc": "No public employment outcomes.", "link": "N/A" },
+  { "name": "FAO e-Learning", "course": "Smart Farming Tech", "sector": "agri", "country": "Global", "rating": 1, "metric": "No Data", "desc": "Completion certs only.", "link": "https://elearning.fao.org", "gsa_member": true },
+  { "name": "Ethiopia Ag Roadmap", "course": "Government Initiative", "sector": "agri", "country": "Ethiopia", "rating": 1, "metric": "No Data", "desc": "Policy framework only.", "link": "N/A" },
+  { "name": "TAREA", "course": "Solar PV Installation", "sector": "energy", "country": "Tanzania", "rating": 1, "metric": "No Data", "desc": "Vocational license tracking gap.", "link": "https://tarea-tz.org", "gsa_member": false },
+  { "name": "KenGen / GRO", "course": "Geothermal Training", "sector": "energy", "country": "Kenya", "rating": 3, "metric": "Scholarship", "desc": "Internal fellowship data only.", "link": "https://kengen.co.ke", "gsa_member": false },
+  { "name": "atingi (GIZ)", "course": "Entrepreneurship", "sector": "Multi", "country": "Multi", "rating": 2, "metric": "27M+ Reach", "desc": "Platform stats, not job outcomes.", "link": "https://atingi.org", "gsa_member": true }
+]

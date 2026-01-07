@@ -1,0 +1,58 @@
+{
+  "mentors": [
+    { "initials": "SM", "name": "Sarah M.", "role": "Solar PV Engineer (T3)", "color": "brown" },
+    { "initials": "DL", "name": "David L.", "role": "EPRA Audit Consultant", "color": "brown" }
+  ],
+  "lmi": [
+    { "name": "EPRA Energy Statistics", "desc": "National energy generation data.", "link": "https://www.epra.go.ke/" },
+    { "name": "IRENA Renewable Jobs", "desc": "Global employment trends.", "link": "https://www.irena.org/Data" },
+    { "name": "AFSIA Job Board", "desc": "Solar vacancies & alerts.", "link": "https://www.afsiasolar.com/careers/jobs/" }
+  ],
+  "communities": [
+    { "name": "Women in Renewable Energy", "desc": "Mentorship & Networking", "type": "Community", "link": "https://wire-network.org/" },
+    { "name": "Solar Africa Expo", "desc": "KICC Nairobi • Annual Event", "type": "Event", "link": "https://www.solarafricaexpo.com/" }
+  ],
+  "jobs": [
+    { "title": "Solar Sales Agent", "company": "M-KOPA", "type": "Commission", "link": "https://m-kopa.com/careers/" },
+    { "title": "Grid Maintenance Tech", "company": "KPLC", "type": "Full Time", "link": "https://kplc.co.ke/careers" }
+  ],
+  "entrepreneurship": {
+    "title": "Renewable Energy",
+    "theme": "brown",
+    "incubators": [
+      { "name": "Kenya Climate Innovation Center", "desc": "Incubation for clean-tech.", "link": "https://www.kenyacic.org/" },
+      { "name": "Energy 4 Impact", "desc": "Support for off-grid entrepreneurs.", "link": "https://energy4impact.org/" }
+    ],
+    "funding": [
+      { "name": "EEP Africa", "desc": "Early-stage financing.", "link": "https://eepafrica.org/" },
+      { "name": "USADF Energy Challenge", "desc": "Grants for African-owned enterprises.", "link": "https://www.usadf.gov/" }
+    ],
+    "tools": [
+      { "name": "PVWatts Calculator", "desc": "Estimate solar production.", "icon": "calculator", "link": "https://pvwatts.nrel.gov/" },
+      { "name": "EPRA Licensing Portal", "desc": "Requirements for Solar Tech.", "icon": "check-square", "link": "https://www.epra.go.ke/" },
+      { "name": "GOGLA Investment Academy", "desc": "Off-grid solar finance.", "icon": "trending-up", "link": "https://www.gogla.org/" },
+      { "name": "ARE Investment Academy", "desc": "DRE investment readiness.", "icon": "briefcase", "link": "https://www.ruralelec.org/" }
+    ]
+  },
+  "country_resources": {
+    "Somalia": {
+      "policy": [
+        { "title": "MoEWR", "desc": "Ministry of Energy & Water Resources.", "link": "https://moewr.gov.so/" }
+      ],
+      "hubs": [
+        { "title": "iRise Hub", "desc": "Innovation hub.", "link": "https://irisehub.com/" }
+      ],
+      "jobs": []
+    }
+  },
+  "signals": {
+    "Sector Value-Chain Gaps": [
+      { "title": "SEforALL Knowledge Hub", "desc": "Sustainable Energy for All data.", "link": "https://www.seforall.org/data-and-evidence" },
+      { "title": "IRENA Data", "desc": "Renewable energy statistics.", "link": "https://www.irena.org/Data" }
+    ],
+    "Innovation Investments/Grants": [
+      { "title": "GOGLA Resources", "desc": "Off-grid solar market reports.", "link": "https://www.gogla.org/resources" },
+      { "title": "EEP Africa", "desc": "Clean energy financing.", "link": "https://eepafrica.org/" }
+    ]
+  }
+}

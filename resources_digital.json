@@ -1,0 +1,214 @@
+{
+  "country_resources": {
+    "Kenya": {
+      "policy": [
+        { "title": "Communications Authority (CA)", "desc": "Telecoms/ICT regulation & licensing.", "link": "https://ca.go.ke/" },
+        { "title": "Ministry of ICT & Digital Economy", "desc": "National ICT policy direction.", "link": "https://ict.go.ke/" },
+        { "title": "ICT Authority (ICTA)", "desc": "Govt digital programmes & standards.", "link": "https://icta.go.ke/" },
+        { "title": "Office of Data Protection (ODPC)", "desc": "Data protection compliance.", "link": "https://www.odpc.go.ke/" },
+        { "title": "National KE-CIRT/CC", "desc": "Cyber incident response.", "link": "https://ke-cirt.go.ke/" },
+        { "title": "Business Registration Service", "desc": "Company registration guidance.", "link": "https://brs.go.ke/" },
+        { "title": "eCitizen Kenya", "desc": "Government e-services.", "link": "https://www.ecitizen.go.ke/" }
+      ],
+      "hubs": [
+        { "title": "Konza Technopolis", "desc": "Innovation city & tech ecosystem.", "link": "https://konza.go.ke/" },
+        { "title": "iHub", "desc": "Community & ecosystem connections.", "link": "https://ihub.co.ke/" },
+        { "title": "Nailab", "desc": "Incubation & venture support.", "link": "https://www.nailab.co.ke/" },
+        { "title": "Gearbox", "desc": "Makerspace & prototyping.", "link": "https://gearbox.co.ke/" },
+        { "title": "Endeavor Kenya", "desc": "High-impact entrepreneur network.", "link": "https://kenya.endeavor.org/" },
+        { "title": "Founder Institute Kenya", "desc": "Pre-seed accelerator.", "link": "https://fi.co/apply/kenya" },
+        { "title": "AfriLabs Kenya", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Kenya" },
+        { "title": "KICTANet", "desc": "ICT policy community.", "link": "https://www.kictanet.or.ke/" }
+      ],
+      "jobs": [
+        { "title": "Ajira Digital Program", "desc": "Digital skills & online work.", "link": "https://ajiradigital.go.ke/" },
+        { "title": "BrighterMonday Kenya", "desc": "Job vacancies & career resources.", "link": "https://www.brightermonday.co.ke/" },
+        { "title": "Fuzu", "desc": "Jobs + upskilling.", "link": "https://www.fuzu.com/" }
+      ],
+      "data": [
+        { "title": "Kenya LMIS (KLMIS)", "desc": "Labour market data & insights.", "link": "https://labourmarket.go.ke/" }
+      ]
+    },
+    "Uganda": {
+      "policy": [
+        { "title": "Uganda Communications Commission", "desc": "Communications regulation.", "link": "https://www.ucc.co.ug/" },
+        { "title": "Ministry of ICT", "desc": "National ICT policy.", "link": "https://ict.go.ug/" },
+        { "title": "NITA-U", "desc": "Digital govt & infrastructure.", "link": "https://www.nita.go.ug/" },
+        { "title": "PDPO", "desc": "Privacy compliance guidance.", "link": "https://www.pdpo.go.ug/" },
+        { "title": "UGCERT", "desc": "Cyber incident response.", "link": "https://www.ugcert.ug/" },
+        { "title": "URSB", "desc": "Company registration services.", "link": "https://www.ursb.go.ug/" },
+        { "title": "Uganda Investment Authority", "desc": "Investor guidance.", "link": "https://www.ugandainvest.go.ug/" }
+      ],
+      "hubs": [
+        { "title": "Outbox", "desc": "Incubation & entrepreneurship.", "link": "https://outbox.co.ug/" },
+        { "title": "Innovation Village", "desc": "Startup support & community.", "link": "https://innovationvillage.co.ug/" },
+        { "title": "Hive Colab", "desc": "Co-working & programmes.", "link": "https://www.hivecolab.com/" },
+        { "title": "AfriLabs Uganda", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Uganda" }
+      ],
+      "jobs": [
+        { "title": "BrighterMonday Uganda", "desc": "Job vacancies.", "link": "https://www.brightermonday.co.ug/" },
+        { "title": "EEMIS", "desc": "Vetted overseas jobs.", "link": "https://eemis.mglsd.go.ug/" }
+      ],
+      "data": [
+        { "title": "MGLSD LMIS.Stat", "desc": "Labour market indicators.", "link": "https://de.lmis.mglsd.go.ug/" },
+        { "title": "UBOS Labour Force Survey", "desc": "Official survey results.", "link": "https://www.ubos.org/" }
+      ]
+    },
+    "Tanzania": {
+      "policy": [
+        { "title": "TCRA", "desc": "Communications regulation.", "link": "https://www.tcra.go.tz/" },
+        { "title": "Tanzania ICT Commission", "desc": "Digital economy coordination.", "link": "https://www.ictc.go.tz/" },
+        { "title": "e-Government Authority", "desc": "Public digital services.", "link": "https://www.ega.go.tz/" },
+        { "title": "COSTECH", "desc": "Science/innovation system.", "link": "https://www.costech.or.tz/" },
+        { "title": "PDPC", "desc": "Data protection compliance.", "link": "https://www.pdpc.go.tz/" },
+        { "title": "TZ-CERT", "desc": "Cyber incident response.", "link": "https://www.tzcert.go.tz/" },
+        { "title": "BRELA ORS", "desc": "Online business registration.", "link": "https://ors.brela.go.tz/ors" },
+        { "title": "TIC Registration", "desc": "Company registration guidance.", "link": "https://www.tic.go.tz/pages/company-registration" }
+      ],
+      "hubs": [
+        { "title": "Buni Innovation Hub", "desc": "Innovation hub & community.", "link": "https://bunihub.or.tz/" },
+        { "title": "dLab Tanzania", "desc": "Data/innovation lab.", "link": "https://www.dlab.or.tz/" },
+        { "title": "Sahara Ventures", "desc": "Acceleration & investment.", "link": "https://saharaventures.com/" },
+        { "title": "AfriLabs Tanzania", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Tanzania" }
+      ],
+      "jobs": [
+        { "title": "TaESA Jobs Gateway", "desc": "Job opportunities gateway.", "link": "https://jobs.kazi.go.tz/" },
+        { "title": "ZoomTanzania Jobs", "desc": "Job listings & alerts.", "link": "https://www.zoomtanzania.net/jobs/" }
+      ],
+      "data": [
+        { "title": "NLMIS Tanzania", "desc": "Labour market intelligence.", "link": "https://nlmis.go.tz/" }
+      ]
+    },
+    "Rwanda": {
+      "policy": [
+        { "title": "RURA", "desc": "Utilities & comms regulation.", "link": "https://rura.rw/" },
+        { "title": "MINICT", "desc": "National ICT policy.", "link": "https://www.minict.gov.rw/" },
+        { "title": "RISA", "desc": "Digital govt & platforms.", "link": "https://risa.gov.rw/" },
+        { "title": "NCSA", "desc": "Cybersecurity governance.", "link": "https://ncsa.gov.rw/" },
+        { "title": "Rwanda CERT", "desc": "Advisories & reporting.", "link": "https://www.cert.gov.rw/" },
+        { "title": "DPO Rwanda", "desc": "Privacy compliance.", "link": "https://dpo.gov.rw/" },
+        { "title": "Rwanda Development Board", "desc": "Investment & startup support.", "link": "https://rdb.rw/" }
+      ],
+      "hubs": [
+        { "title": "kLab Rwanda", "desc": "Incubation & community.", "link": "https://klab.rw/" },
+        { "title": "Norrsken Kigali", "desc": "Impact startup hub.", "link": "https://www.norrsken.org/kigali" },
+        { "title": "Kigali Innovation City", "desc": "Innovation district.", "link": "https://kigaliinnovationcity.com/" },
+        { "title": "ICT Chamber", "desc": "Industry coordination.", "link": "https://www.ictchamber.rw/" },
+        { "title": "AfriLabs Rwanda", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Rwanda" }
+      ],
+      "jobs": [
+        { "title": "Job in Rwanda", "desc": "Vacancies & recruitment.", "link": "https://www.jobinrwanda.com/" },
+        { "title": "Rwanda Recruitment Portal", "desc": "Public service jobs.", "link": "https://recruitmentportal.gov.rw/" },
+        { "title": "ReliefWeb Rwanda", "desc": "NGO/UN vacancies.", "link": "https://reliefweb.int/jobs?advanced-search=%28C198%29&list=Rwanda+Jobs" }
+      ],
+      "data": [
+        { "title": "Rwanda LMIS", "desc": "Labour market trends.", "link": "https://www.lmis.rw/" }
+      ]
+    },
+    "Burundi": {
+      "policy": [
+        { "title": "ARCT", "desc": "Telecoms regulation.", "link": "https://arct.gov.bi/" },
+        { "title": "Invest Burundi", "desc": "Company creation procedures.", "link": "https://investburundi.bi/procedure-de-la-creation/" },
+        { "title": "EasyBusiness.bi", "desc": "Online business registration.", "link": "https://www.easybusiness.bi/" }
+      ],
+      "hubs": [
+        { "title": "BujaHub", "desc": "Innovation hub.", "link": "https://bujahub.bi/" },
+        { "title": "Orange Corners", "desc": "Entrepreneur support.", "link": "https://orangecorners.com/" },
+        { "title": "Invest Burundi", "desc": "Investment promotion.", "link": "https://investburundi.bi/" }
+      ],
+      "jobs": [
+        { "title": "Emploi.bi", "desc": "Jobs portal.", "link": "https://www.emploi.bi/" },
+        { "title": "BurundiJobs.bi", "desc": "Jobs & tenders.", "link": "https://www.burundijobs.bi/" }
+      ]
+    },
+    "South Sudan": {
+      "policy": [
+        { "title": "NCA", "desc": "Communications regulation.", "link": "https://nca.gov.ss/" },
+        { "title": "Ministry of ICT", "desc": "National ICT policy.", "link": "https://mictps.gov.ss/" },
+        { "title": "Business Registration", "desc": "Online services.", "link": "https://brs.eservices.gov.ss/" },
+        { "title": "Trade Portal", "desc": "Trade e-services.", "link": "https://trade.eservices.gov.ss/" }
+      ],
+      "hubs": [
+        { "title": "AfriLabs South Sudan", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=South%20Sudan" }
+      ],
+      "jobs": [
+        { "title": "NGO Forum Vacancies", "desc": "NGO jobs.", "link": "https://comms.southsudanngoforum.org/c/jobs/5" }
+      ]
+    },
+    "Somalia": {
+      "policy": [
+        { "title": "NCA", "desc": "Communications regulation.", "link": "https://nca.gov.so/" },
+        { "title": "MoCT", "desc": "National ICT policy.", "link": "https://moct.gov.so/en/" }
+      ],
+      "hubs": [
+        { "title": "iRise Hub", "desc": "Innovation hub.", "link": "https://irisehub.com/" },
+        { "title": "AfriLabs Somalia", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Somalia" }
+      ],
+      "jobs": [
+        { "title": "Somali Jobs", "desc": "Job board.", "link": "https://somalijobs.com/" },
+        { "title": "Govt Jobs Portal", "desc": "Government vacancies.", "link": "https://jobs.gov.so/" }
+      ]
+    },
+    "DR Congo": {
+      "policy": [
+        { "title": "ARPTC", "desc": "Telecoms regulation.", "link": "https://arptc.gouv.cd/" },
+        { "title": "ARPTC Dashboard", "desc": "Regulatory dashboards.", "link": "https://www.arptc-solution.cd/" },
+        { "title": "Ministry of Digital Affairs", "desc": "Digital policy.", "link": "https://numerique.gouv.cd/" },
+        { "title": "Ministry of PTNTIC", "desc": "Telecom/ICT policy.", "link": "https://ptntic.gouv.cd/" },
+        { "title": "ANAPI", "desc": "Investment promotion.", "link": "https://www.investindrc.cd/" },
+        { "title": "GUCE", "desc": "Single window for trade.", "link": "https://guichetunique.org/webguce/" },
+        { "title": "SEGUCE", "desc": "Customs facilitation.", "link": "https://segucerdc.com/" }
+      ],
+      "hubs": [
+        { "title": "Silikin Village", "desc": "Innovation hub.", "link": "https://www.silikinvillage.com/" },
+        { "title": "Ingenious City", "desc": "Incubation.", "link": "https://ingeniouscity.com/" },
+        { "title": "AfriLabs DRC", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Democratic%20Republic%20of%20Congo" }
+      ],
+      "jobs": [
+        { "title": "Jobartis", "desc": "Job vacancies.", "link": "https://www.emploiscongo.com/emplois" }
+      ]
+    }
+  },
+  "mentors": [
+    { "initials": "AK", "name": "Amara K.", "role": "Senior DevOps Engineer", "color": "indigo" },
+    { "initials": "PW", "name": "Peter W.", "role": "Fintech Product Manager", "color": "blue" }
+  ],
+  "lmi": [
+    { "name": "BrighterMonday Trends", "desc": "Kenya job market reports.", "link": "https://www.brightermonday.co.ke/blog" },
+    { "name": "Stack Overflow Trends", "desc": "Tech skill demand analytics.", "link": "https://insights.stackoverflow.com/trends" }
+  ],
+  "communities": [
+    { "name": "Nairobi Devs", "desc": "Discord Server • 5k+ Devs", "type": "Community", "link": "N/A" },
+    { "name": "Africa Tech Summit", "desc": "Nairobi • Industry Leaders", "type": "Event", "link": "https://www.africatechsummit.com/" }
+  ],
+  "jobs": [
+    { "title": "Junior React Dev", "company": "Safaricom", "type": "Full Time" },
+    { "title": "Data Entry Intern", "company": "CloudFactory", "type": "Part Time" }
+  ],
+  "entrepreneurship": {
+    "title": "Digital",
+    "theme": "indigo",
+    "incubators": [
+      { "name": "Antler East Africa", "desc": "Global VC building startups from day zero.", "link": "https://www.antler.co/" },
+      { "name": "Norrsken House Kigali", "desc": "Largest hub for entrepreneurship in Africa.", "link": "https://www.norrsken.org/" }
+    ],
+    "funding": [
+      { "name": "Google Black Founders Fund", "desc": "Non-dilutive cash awards for tech startups.", "link": "https://www.campus.co/" },
+      { "name": "Savannah Fund", "desc": "Seed capital for high-growth tech ventures.", "link": "https://savannah.vc/" }
+    ],
+    "tools": [
+      { "name": "Lean Canvas Tool", "desc": "1-page business model generator.", "icon": "layout", "link": "https://leanstack.com/lean-canvas" },
+      { "name": "AWS Activate", "desc": "$1,000+ in free cloud credits for startups.", "icon": "cloud", "link": "https://aws.amazon.com/activate/" }
+    ]
+  },
+  "signals": {
+    "Sector Value-Chain Gaps": [
+      { "title": "ITU DataHub", "desc": "ICT statistics and data.", "link": "https://datahub.itu.int/" },
+      { "title": "GSMA Mobile Economy", "desc": "Mobile industry data and analysis.", "link": "https://www.gsma.com/mobileeconomy/sub-saharan-africa/" }
+    ],
+    "Innovation Investments/Grants": [
+      { "title": "Partech Africa", "desc": "Tech investment reports.", "link": "https://partechpartners.com/africa-reports/" },
+      { "title": "Disrupt Africa", "desc": "Startup news and investment reports.", "link": "https://disrupt-africa.com/" }
+    ]
+  }
+}

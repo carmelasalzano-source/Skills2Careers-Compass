@@ -1,0 +1,272 @@
+[
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 1,
+    "Venture_Title": "Smart-irrigation services",
+    "Venture_Description": "Low-cost drip systems, sensors, and solar pumps. Viable due to high training density in irrigation + renewable energy cross-skills.",
+    "Key_Competencies": ["Irrigation Tech", "Renewable Integration"],
+    "Startup_Capital_Est": "Medium ($2k-$5k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 2,
+    "Venture_Title": "Agri-advisory micro-enterprises",
+    "Venture_Description": "Mobile / WhatsApp advisory groups. Viable due to skills gap in extension/advisory and high smartphone adoption.",
+    "Key_Competencies": ["Advisory Agent", "Digital Literacy"],
+    "Startup_Capital_Est": "Low (<$500)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 3,
+    "Venture_Title": "Input retail + soil testing hubs",
+    "Venture_Description": "Agro-dealer networks with soil testing. Viable due to existing networks and strong SME potential.",
+    "Key_Competencies": ["Soil Testing", "Sales & Distribution"],
+    "Startup_Capital_Est": "Medium ($5k-$10k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 4,
+    "Venture_Title": "Cold-chain & post-harvest logistics",
+    "Venture_Description": "Logistics to reduce losses. Viable due to persistent losses and training availability on post-harvest management.",
+    "Key_Competencies": ["Cold-chain Tech", "Supply Chain"],
+    "Startup_Capital_Est": "High ($10k+)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 5,
+    "Venture_Title": "Value-added food processing",
+    "Venture_Description": "Drying and packaging. Viable as it is gender-inclusive and aligns with TVET modules.",
+    "Key_Competencies": ["Food Safety", "Processing Tech"],
+    "Startup_Capital_Est": "Medium ($2k-$8k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 6,
+    "Venture_Title": "Organic fertilizer production",
+    "Venture_Description": "Bio-inputs production. Viable due to circular-economy demand and training supply gap.",
+    "Key_Competencies": ["Composting", "Micro-biotech"],
+    "Startup_Capital_Est": "Low ($1k-$3k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 7,
+    "Venture_Title": "Digital marketplace for produce",
+    "Venture_Description": "Agri-e-commerce platforms. Viable due to growth in platform data.",
+    "Key_Competencies": ["E-commerce", "Market Analytics"],
+    "Startup_Capital_Est": "Low (<$1k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 8,
+    "Venture_Title": "Mechanization-as-a-service",
+    "Venture_Description": "Tractor / drone hire. Viable due to existing micro-leasing pilots.",
+    "Key_Competencies": ["Mechanization", "Maintenance"],
+    "Startup_Capital_Est": "High ($15k+)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 9,
+    "Venture_Title": "Climate-risk info services",
+    "Venture_Description": "Weather services. Viable due to high regional investment in agri-data.",
+    "Key_Competencies": ["GIS", "Data Analysis"],
+    "Startup_Capital_Est": "Low ($1k-$5k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "agri",
+    "Rank": 10,
+    "Venture_Title": "Women-led horticulture enterprises",
+    "Venture_Description": "Seedling enterprises. Viable due to youth/women training overlap.",
+    "Key_Competencies": ["Agribusiness Mgmt", "Gender Lens"],
+    "Startup_Capital_Est": "Low (<$1k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 1,
+    "Venture_Title": "Mini-grid O&M micro-enterprises",
+    "Venture_Description": "High installation growth, weak maintenance capacity.",
+    "Key_Competencies": ["Electrical Tech", "Safety Standards"],
+    "Startup_Capital_Est": "Medium ($2k-$5k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 2,
+    "Venture_Title": "Solar-home-system retail & servicing",
+    "Venture_Description": "Training density + consumer demand.",
+    "Key_Competencies": ["PV Installation", "Sales"],
+    "Startup_Capital_Est": "Low ($500-$2k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 3,
+    "Venture_Title": "Battery refurbishment / recycling services",
+    "Venture_Description": "Skills overlap in energy storage.",
+    "Key_Competencies": ["Battery Tech", "Circular Economy"],
+    "Startup_Capital_Est": "High ($10k+)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 4,
+    "Venture_Title": "Appliance distribution for productive use",
+    "Venture_Description": "Strong link with agri-processing / MSMEs.",
+    "Key_Competencies": ["Energy Sales", "Agribusiness"],
+    "Startup_Capital_Est": "Medium ($5k-$10k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 5,
+    "Venture_Title": "Energy-efficient cooking / biogas solutions",
+    "Venture_Description": "Climate mitigation + rural adoption.",
+    "Key_Competencies": ["Clean-Cooking Tech", "Marketing"],
+    "Startup_Capital_Est": "Low ($1k-$3k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 6,
+    "Venture_Title": "Rooftop / institutional solar integrators",
+    "Venture_Description": "Emerging urban market.",
+    "Key_Competencies": ["PV Design", "Project Dev"],
+    "Startup_Capital_Est": "High ($15k+)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 7,
+    "Venture_Title": "Renewable energy audit & consulting",
+    "Venture_Description": "Growing regulatory compliance needs.",
+    "Key_Competencies": ["Energy Audit", "Policy"],
+    "Startup_Capital_Est": "Low (<$1k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 8,
+    "Venture_Title": "E-mobility charging & conversion services",
+    "Venture_Description": "Early growth segment.",
+    "Key_Competencies": ["EV Systems", "Entrepreneurship"],
+    "Startup_Capital_Est": "High ($20k+)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 9,
+    "Venture_Title": "Solar irrigation system integrators",
+    "Venture_Description": "Agritech synergy – high demand.",
+    "Key_Competencies": ["PV Pumps", "Irrigation"],
+    "Startup_Capital_Est": "Medium ($5k-$10k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "energy",
+    "Rank": 10,
+    "Venture_Title": "Renewable-energy training & certification centres",
+    "Venture_Description": "Workforce expansion requirement.",
+    "Key_Competencies": ["Pedagogical", "Technical Train-the-Trainer"],
+    "Startup_Capital_Est": "High ($10k+)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 1,
+    "Venture_Title": "Data analytics & dashboard services for MSMEs",
+    "Venture_Description": "Strong demand for local data insights.",
+    "Key_Competencies": ["Data Analysis", "Visualization"],
+    "Startup_Capital_Est": "Low (<$1k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 2,
+    "Venture_Title": "No-code app / automation micro-agency",
+    "Venture_Description": "Low-code tool adoption rising.",
+    "Key_Competencies": ["No-code Dev", "Client Ops"],
+    "Startup_Capital_Est": "Low (<$1k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 3,
+    "Venture_Title": "Digital-marketing / e-commerce agency",
+    "Venture_Description": "Rapid SME digitalization.",
+    "Key_Competencies": ["SEO", "Campaign Mgmt"],
+    "Startup_Capital_Est": "Low (<$1k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 4,
+    "Venture_Title": "AI-enabled content / translation services",
+    "Venture_Description": "Regional language data scarcity.",
+    "Key_Competencies": ["NLP", "Localization"],
+    "Startup_Capital_Est": "Low ($1k-$3k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 5,
+    "Venture_Title": "Tech support / cyber-safety services for SMEs",
+    "Venture_Description": "Security skills gap.",
+    "Key_Competencies": ["IT Support", "Cyber Basics"],
+    "Startup_Capital_Est": "Low ($500-$2k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 6,
+    "Venture_Title": "Cloud integration / migration consulting",
+    "Venture_Description": "Enterprise adoption of SaaS.",
+    "Key_Competencies": ["Cloud Ops", "Project Mgmt"],
+    "Startup_Capital_Est": "Low (<$1k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 7,
+    "Venture_Title": "Digital-skills bootcamp / training hub",
+    "Venture_Description": "Youth upskilling demand.",
+    "Key_Competencies": ["Instructional Design", "Mentorship"],
+    "Startup_Capital_Est": "Medium ($5k-$10k)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 8,
+    "Venture_Title": "Agritech/healthtech data platforms",
+    "Venture_Description": "Cross-sector innovation driver.",
+    "Key_Competencies": ["Data Engineering", "Domain Knowledge"],
+    "Startup_Capital_Est": "High ($10k+)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 9,
+    "Venture_Title": "Freelance AI model-labeling / annotation teams",
+    "Venture_Description": "Expanding AI data pipeline demand.",
+    "Key_Competencies": ["Data Curation", "Ethics"],
+    "Startup_Capital_Est": "Low (<$500)"
+  },
+  {
+    "Country": "All",
+    "Sector": "digital",
+    "Rank": 10,
+    "Venture_Title": "Remote-work co-ops / talent collectives",
+    "Venture_Description": "Gig-economy trend, shared infrastructure.",
+    "Key_Competencies": ["Platform Mgmt", "Co-op Gov"],
+    "Startup_Capital_Est": "Low ($1k-$3k)"
+  }
+]
