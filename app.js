@@ -846,7 +846,10 @@ function getOJAMetrics(roleTitle, country) {
                 <div class="p-4 border-b border-slate-100 bg-slate-50">
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="font-bold text-slate-800 text-sm">Assessment Results</h3>
-                        <span class="px-2 py-1 rounded-full bg-${matchColor}-100 text-${matchColor}-700 text-[10px] font-bold uppercase tracking-wider">${matchStatus}</span>
+                        <div class="flex items-center gap-2">
+                            <button onclick="renderPATHWAYContent('${selectedRole}')" class="text-[10px] font-bold text-slate-500 hover:text-indigo-600 flex items-center gap-1 bg-white border border-slate-200 px-2 py-1 rounded shadow-sm transition-colors"><i data-lucide="rotate-ccw" class="w-3 h-3"></i> Retake</button>
+                            <span class="px-2 py-1 rounded-full bg-${matchColor}-100 text-${matchColor}-700 text-[10px] font-bold uppercase tracking-wider">${matchStatus}</span>
+                        </div>
                     </div>
                     <select onchange="renderPATHWAYContent(this.value)" class="w-full text-sm border-slate-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2">
                         ${roleOptions}
@@ -864,29 +867,12 @@ function getOJAMetrics(roleTitle, country) {
                         </div>
                     </div>
 
-                    <!-- 2. Consolidated Assessment Synthesis -->
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
-                        <h4 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
-                            <i data-lucide="lightbulb" class="w-4 h-4 text-amber-500"></i> Assessment Synthesis
+                    <!-- 2. Assessment Synthesis (Restored) -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-2 flex items-center gap-2">
+                            <i data-lucide="lightbulb" class="w-3 h-3 text-amber-500"></i> Assessment Synthesis
                         </h4>
-                        <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
-                            <p>Based on your profile, ${summaryText} ${synthesisText}</p>
-                            
-                            <div class="pt-4 border-t border-slate-200">
-                                <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-3">AI Career Insights: Related Roles</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                    ${relatedRoles.slice(0, 3).map(r => `
-                                        <button onclick="openOccupationModal('${r.name.replace(/'/g, "\\'")}')" class="text-left p-2 bg-white border border-slate-200 hover:border-indigo-300 hover:shadow-sm rounded-lg transition-all group">
-                                            <div class="flex justify-between items-start">
-                                                <div class="text-[10px] text-slate-400 uppercase font-bold mb-0.5">${r.score}% Match</div>
-                                                <i data-lucide="arrow-right" class="w-3 h-3 text-slate-300 group-hover:text-indigo-400"></i>
-                                            </div>
-                                            <div class="text-xs font-bold text-slate-700 group-hover:text-indigo-600 line-clamp-2">${r.name}</div>
-                                        </button>
-                                    `).join('')}
-                                </div>
-                            </div>
-                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed">${synthesisText}</p>
                     </div>
 
                     <!-- INLINE PATHWAY RESULT -->
@@ -1078,17 +1064,20 @@ function getOJAMetrics(roleTitle, country) {
                 const icon = hasLink ? `<i data-lucide="external-link" class="w-3 h-3 text-slate-300 group-hover:text-indigo-500 transition-colors"></i>` : `<span class="text-[9px] text-slate-400 font-bold">N/A</span>`;
 
                 return `
-                <${tag} ${href} class="flex items-start gap-3 p-3 bg-white border border-slate-200 rounded-lg hover:border-indigo-300 ${cursor} transition-all group text-left h-full">
-                    <div class="w-8 h-8 rounded bg-slate-100 flex items-center justify-center font-bold text-xs text-slate-600 shrink-0 group-hover:bg-indigo-100 group-hover:text-indigo-600 transition-colors">
-                        ${t.provider.substring(0, 2).toUpperCase()}
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <div class="flex justify-between items-start">
-                            <div class="text-xs font-bold text-indigo-700 uppercase tracking-wide mb-0.5 flex items-center flex-wrap gap-y-1">Recommended ${matchTag}${gsaTag}${unevocTag}</div>
+                <${tag} ${href} class="flex flex-col justify-between p-3 bg-blue-50 border border-blue-100 rounded-lg hover:border-blue-300 ${cursor} transition-all group text-left h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="text-[10px] font-bold text-blue-700 uppercase tracking-wide bg-white px-2 py-0.5 rounded border border-blue-100 inline-block">Recommended</div>
                             ${icon}
                         </div>
-                        <div class="text-sm font-bold text-slate-800 leading-tight mb-1 group-hover:text-indigo-700 transition-colors line-clamp-2">${t.name}</div>
-                        <div class="text-xs text-slate-500 truncate">${t.provider} • ${t.duration}</div>
+                        <div class="text-sm font-bold text-slate-800 leading-tight mb-1 group-hover:text-blue-700 transition-colors line-clamp-2">${t.name}</div>
+                        <div class="text-xs text-slate-600 mb-2 line-clamp-2">${t.provider}</div>
+                    </div>
+                    <div class="flex items-center gap-2 text-[10px] text-slate-500 border-t border-blue-100 pt-2 mt-auto">
+                        <span>${t.duration}</span>
+                        <span class="text-blue-300">•</span>
+                        <span>${t.mode}</span>
+                        ${unevocTag ? `<span class="ml-auto">${unevocTag}</span>` : ''}
                     </div>
                 </${tag}>
             `}).join('');
@@ -1175,22 +1164,18 @@ function getOJAMetrics(roleTitle, country) {
                     <div class="bg-slate-50 border-b border-slate-200 -mx-6 -mt-6 px-6 py-4 mb-2 flex justify-between items-start">
                         <div>
                             <div class="flex items-center gap-2 mb-1">
-                                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-slate-200 text-slate-600">Current Level: ${tierCode.toUpperCase()}</span>
                                 ${activeCountry !== 'all' ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-indigo-100 text-indigo-700">Context: ${activeCountry}</span>` : ''}
                             </div>
                             <h3 class="text-lg font-bold text-slate-900">${headerTitle}</h3>
                             <p class="text-xs text-slate-500">${headerDesc}</p>
                         </div>
-                        <button onclick="window.print()" class="flex items-center gap-1 px-3 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-lg text-xs font-bold shadow-sm transition-colors">
-                            <i data-lucide="download" class="w-3 h-3"></i> Download Plan
-                        </button>
                     </div>
 
                     <!-- Step 1: Training & capacity strengthening opportunities -->
                     <div>
                         <h4 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
                             <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs">1</span> 
-                            Bridge Knowledge Gaps (Training)
+                            Bridge Knowledge and Skills Gaps
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                             ${courseHtml}
@@ -1357,14 +1342,6 @@ function getOJAMetrics(roleTitle, country) {
                 `).join('');
 
                 diagContainer.innerHTML = `
-                    <div class="bg-indigo-50 rounded-xl p-4 border border-indigo-100 mb-4 flex items-start gap-3">
-                        <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg shrink-0"><i data-lucide="target" class="w-5 h-5"></i></div>
-                        <div>
-                            <h3 class="font-bold text-indigo-900 text-sm">Assess Your Readiness</h3>
-                            <p class="text-xs text-indigo-700 mt-1">Analyze your skills against market standards to identify gaps. Get a personalized readiness report for specific roles.</p>
-                        </div>
-                    </div>
-
                     <div id="diagnostic-inputs" class="bg-white p-5 rounded-xl border border-slate-200 space-y-6 shadow-sm">
                         
                         <!-- 1. ROLE SELECTOR -->
@@ -4260,9 +4237,9 @@ window.toggleCareerHub = function() {
                 const btn = document.getElementById(`btn-p-${k}`);
                 if(btn) {
                     if(k === type) {
-                        btn.className = "px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium border border-indigo-600 bg-indigo-600 text-white shadow-sm transition-all scale-105";
+                        btn.className = "shrink-0 snap-center whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium border border-indigo-600 bg-indigo-600 text-white shadow-sm transition-all scale-105";
                     } else {
-                        btn.className = "px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all";
+                        btn.className = "shrink-0 snap-center whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all";
                     }
                 }
             });
@@ -4306,15 +4283,16 @@ window.toggleCareerHub = function() {
             const dateStr = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 
             statsContainer.innerHTML = `
-                <div class="mt-3 pt-3 border-t border-slate-200/60 animate-fade-in text-center">
-                    <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wide mb-3">Growing Database — Updated ${dateStr}</div>
-                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium text-slate-600">
-                        <div class="flex items-center gap-1.5" title="Training Courses"><i data-lucide="book-open" class="w-4 h-4 text-indigo-500"></i> <span>${courseCount} Courses</span></div>
-                        <div class="flex items-center gap-1.5" title="Training Providers"><i data-lucide="building-2" class="w-4 h-4 text-indigo-500"></i> <span>${providerCount} Providers</span></div>
-                        <div class="flex items-center gap-1.5" title="Mapped Occupations"><i data-lucide="briefcase" class="w-4 h-4 text-indigo-500"></i> <span>${occCount} Occupations</span></div>
-                        <div class="flex items-center gap-1.5" title="Tracked Skills"><i data-lucide="cpu" class="w-4 h-4 text-indigo-500"></i> <span>${skillCount} Skills</span></div>
-                        <div class="flex items-center gap-1.5" title="Data Sources"><i data-lucide="database" class="w-4 h-4 text-indigo-500"></i> <span>${datasetCount} Datasets</span></div>
-                    </div>
+                <div class="mt-3 pt-2 border-t border-slate-200/60 animate-fade-in flex flex-wrap justify-center items-center gap-x-3 gap-y-1 text-[10px] text-slate-500 font-medium">
+                    <span class="font-bold text-slate-400 uppercase tracking-wide mr-1 hidden sm:inline">Database:</span>
+                    <div class="flex items-center gap-1" title="Training Courses"><i data-lucide="book-open" class="w-3 h-3 text-indigo-400"></i> <span>${courseCount} Courses</span></div>
+                    <span class="text-slate-300 hidden sm:inline">•</span>
+                    <div class="flex items-center gap-1" title="Training Providers"><i data-lucide="building-2" class="w-3 h-3 text-indigo-400"></i> <span>${providerCount} Providers</span></div>
+                    <span class="text-slate-300 hidden sm:inline">•</span>
+                    <div class="flex items-center gap-1" title="Mapped Occupations"><i data-lucide="briefcase" class="w-3 h-3 text-indigo-400"></i> <span>${occCount} Roles</span></div>
+                    <span class="text-slate-300 hidden sm:inline">•</span>
+                    <div class="flex items-center gap-1" title="Tracked Skills"><i data-lucide="cpu" class="w-3 h-3 text-indigo-400"></i> <span>${skillCount} Skills</span></div>
+                    <span class="ml-2 text-[9px] text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">Updated ${dateStr}</span>
                 </div>
             `;
             

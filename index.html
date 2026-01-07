@@ -90,19 +90,20 @@
 
     <main class="max-w-7xl mx-auto px-4 py-8 space-y-8">
         <div class="bg-gradient-to-br from-white to-slate-100 rounded-2xl border border-slate-200 p-3 md:p-5 text-center shadow-sm relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'1\' cy=\'1\' r=\'1\' fill=\'%2394a3b8\' fill-opacity=\'0.4\'/%3E%3C/svg%3E')] opacity-20 pointer-events-none"></div>
             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-emerald-500"></div>
-            <h2 class="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-900 to-purple-800 mb-1 tracking-tight">Skills2Careers Compass</h2>
-            <p class="text-sm md:text-base text-slate-600 mb-3 font-medium">Find your place in the EAC’s fastest-growing sectors</p>
+            <h2 class="text-xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-900 to-purple-800 mb-1 tracking-tight relative z-10">Skills2Careers Compass</h2>
+            <p class="text-xs md:text-sm text-slate-500 mb-4 font-medium relative z-10">Find your place in the EAC’s fastest-growing sectors</p>
             
             <!-- Dynamic Persona Value Prop -->
-            <div class="max-w-4xl mx-auto mb-2">
-                <div class="flex flex-wrap justify-center gap-2 mb-3">
-                    <button onclick="updateHeroPersona('learner')" id="btn-p-learner" class="px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium border border-indigo-600 bg-indigo-600 text-white shadow-sm transition-all scale-105">Learner / Job Seeker</button>
-                    <button onclick="updateHeroPersona('entrepreneur')" id="btn-p-entrepreneur" class="px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all">Entrepreneur</button>
-                    <button onclick="updateHeroPersona('provider')" id="btn-p-provider" class="px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all">Training Provider</button>
-                    <button onclick="updateHeroPersona('policy')" id="btn-p-policy" class="px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all">Policymaker</button>
+            <div class="max-w-4xl mx-auto mb-2 relative z-10">
+                <div class="flex flex-nowrap md:flex-wrap overflow-x-auto md:overflow-visible justify-start md:justify-center gap-2 mb-3 pb-2 md:pb-0 snap-x">
+                    <button onclick="updateHeroPersona('learner')" id="btn-p-learner" class="shrink-0 snap-center whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium border border-indigo-600 bg-indigo-600 text-white shadow-sm transition-all scale-105">Learner / Job Seeker</button>
+                    <button onclick="updateHeroPersona('entrepreneur')" id="btn-p-entrepreneur" class="shrink-0 snap-center whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all">Entrepreneur</button>
+                    <button onclick="updateHeroPersona('provider')" id="btn-p-provider" class="shrink-0 snap-center whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all">Training Provider</button>
+                    <button onclick="updateHeroPersona('policy')" id="btn-p-policy" class="shrink-0 snap-center whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all">Policymaker</button>
                 </div>
-                <p id="hero-desc" class="text-slate-700 text-xs md:text-sm font-normal mb-1 leading-relaxed">In 10 minutes, you’ll have a shortlist of opportunities you’re suited for + a step-by-step learning plan + information on training options in your country.</p>
+                <p id="hero-desc" class="text-slate-600 text-sm font-normal mb-1 leading-relaxed px-2">In 10 minutes, you’ll have a shortlist of opportunities you’re suited for + a step-by-step learning plan + information on training options in your country.</p>
             </div>
         </div>
 
