@@ -844,9 +844,9 @@ function getOJAMetrics(roleTitle, country) {
             resultsDiv.innerHTML = `
             <div class="animate-fade-in bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mt-4">
                 <div class="p-4 border-b border-slate-100 bg-slate-50">
-                    <div class="flex justify-between items-center mb-3">
-                        <h3 class="font-bold text-slate-800 text-sm">Assessment Results</h3>
-                        <div class="flex items-center gap-2">
+                    <div class="flex flex-wrap justify-between items-center mb-3 gap-2">
+                        <h3 class="font-bold text-slate-800 text-sm shrink-0">Assessment Results</h3>
+                        <div class="flex items-center gap-2 shrink-0">
                             <button onclick="renderPATHWAYContent('${selectedRole}')" class="text-[10px] font-bold text-slate-500 hover:text-indigo-600 flex items-center gap-1 bg-white border border-slate-200 px-2 py-1 rounded shadow-sm transition-colors"><i data-lucide="rotate-ccw" class="w-3 h-3"></i> Retake</button>
                             <span class="px-2 py-1 rounded-full bg-${matchColor}-100 text-${matchColor}-700 text-[10px] font-bold uppercase tracking-wider">${matchStatus}</span>
                         </div>
@@ -4233,13 +4233,20 @@ window.toggleCareerHub = function() {
                 setTimeout(() => { descEl.innerHTML = data.text; descEl.style.opacity = '1'; }, 150);
             }
 
+            const styles = {
+                learner: { active: "border-indigo-600 bg-indigo-600 text-white font-bold shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-indigo-600 hover:border-indigo-300" },
+                entrepreneur: { active: "border-fuchsia-600 bg-fuchsia-600 text-white font-bold shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-fuchsia-600 hover:border-fuchsia-300" },
+                provider: { active: "border-emerald-600 bg-emerald-600 text-white font-bold shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-emerald-600 hover:border-emerald-300" },
+                policy: { active: "border-cyan-600 bg-cyan-600 text-white font-bold shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-cyan-600 hover:border-cyan-300" }
+            };
+
             ['learner', 'entrepreneur', 'provider', 'policy'].forEach(k => {
                 const btn = document.getElementById(`btn-p-${k}`);
                 if(btn) {
                     if(k === type) {
-                        btn.className = "shrink-0 snap-center whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium border border-indigo-600 bg-indigo-600 text-white shadow-sm transition-all scale-105";
+                        btn.className = `shrink-0 snap-center whitespace-nowrap px-4 py-1.5 rounded-full text-xs transition-colors ${styles[k].active}`;
                     } else {
-                        btn.className = "shrink-0 snap-center whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium border border-slate-200 bg-white text-slate-500 hover:border-indigo-300 hover:text-indigo-600 transition-all";
+                        btn.className = `shrink-0 snap-center whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-colors ${styles[k].inactive}`;
                     }
                 }
             });
@@ -4283,16 +4290,18 @@ window.toggleCareerHub = function() {
             const dateStr = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 
             statsContainer.innerHTML = `
-                <div class="mt-3 pt-2 border-t border-slate-200/60 animate-fade-in flex flex-wrap justify-center items-center gap-x-3 gap-y-1 text-[10px] text-slate-500 font-medium">
-                    <span class="font-bold text-slate-400 uppercase tracking-wide mr-1 hidden sm:inline">Database:</span>
-                    <div class="flex items-center gap-1" title="Training Courses"><i data-lucide="book-open" class="w-3 h-3 text-indigo-400"></i> <span>${courseCount} Courses</span></div>
-                    <span class="text-slate-300 hidden sm:inline">•</span>
-                    <div class="flex items-center gap-1" title="Training Providers"><i data-lucide="building-2" class="w-3 h-3 text-indigo-400"></i> <span>${providerCount} Providers</span></div>
-                    <span class="text-slate-300 hidden sm:inline">•</span>
-                    <div class="flex items-center gap-1" title="Mapped Occupations"><i data-lucide="briefcase" class="w-3 h-3 text-indigo-400"></i> <span>${occCount} Roles</span></div>
-                    <span class="text-slate-300 hidden sm:inline">•</span>
-                    <div class="flex items-center gap-1" title="Tracked Skills"><i data-lucide="cpu" class="w-3 h-3 text-indigo-400"></i> <span>${skillCount} Skills</span></div>
-                    <span class="ml-2 text-[9px] text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">Updated ${dateStr}</span>
+                <div class="mt-4 pt-2 border-t border-slate-200/60 animate-fade-in overflow-x-auto no-scrollbar">
+                    <div class="flex flex-nowrap items-center justify-start md:justify-center gap-4 text-[10px] text-slate-500 font-medium min-w-max px-2">
+                        <span class="font-bold text-slate-400 uppercase tracking-wide mr-1">Database:</span>
+                        <div class="flex items-center gap-1" title="Training Courses"><i data-lucide="book-open" class="w-3 h-3 text-indigo-400"></i> <span>${courseCount} Courses</span></div>
+                        <span class="text-slate-300">•</span>
+                        <div class="flex items-center gap-1" title="Training Providers"><i data-lucide="building-2" class="w-3 h-3 text-indigo-400"></i> <span>${providerCount} Providers</span></div>
+                        <span class="text-slate-300">•</span>
+                        <div class="flex items-center gap-1" title="Mapped Occupations"><i data-lucide="briefcase" class="w-3 h-3 text-indigo-400"></i> <span>${occCount} Roles</span></div>
+                        <span class="text-slate-300">•</span>
+                        <div class="flex items-center gap-1" title="Tracked Skills"><i data-lucide="cpu" class="w-3 h-3 text-indigo-400"></i> <span>${skillCount} Skills</span></div>
+                        <span class="ml-2 text-[9px] text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">Updated ${dateStr}</span>
+                    </div>
                 </div>
             `;
             
