@@ -2419,7 +2419,7 @@ function getOJAMetrics(roleTitle, country) {
                                 Am I a good fit for this role?
                             </h3>
                             <p class="text-xs text-slate-300 max-w-sm leading-relaxed mb-3">
-                                Unsure if you have the right skills set? Take our quick <strong>Matching-Skills2Roles</strong> assessment to identify your strengths and gaps and follow up with a curated training plan.
+                                Unsure if you have the right skills set? Take our quick <strong>SkillsMatch> assessment to identify your strengths and gaps and follow up with a curated training plan.
                             </p>
                             <button class="bg-white text-indigo-900 px-4 py-2 rounded-lg text-xs font-bold hover:bg-indigo-50 transition-colors flex items-center gap-2 shadow-sm" onclick="event.stopPropagation(); closeModal('occupation-modal'); openUnifiedHub('pp-diagnostic', '${title.replace(/'/g, "\\'")}');">
                                 Start SkillsMatch <i data-lucide="arrow-right" class="w-3 h-3"></i>
@@ -3467,8 +3467,9 @@ window.toggleCareerHub = function() {
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                         ${ventures.map(v => `
                             <button onclick="openVentureModal('${v.Venture_Title.replace(/'/g, "\\'")}')" title="${v.Venture_Title}" class="px-3 py-2 bg-white border border-${themeColor}-200 rounded-lg text-left hover:bg-${themeColor}-100 hover:border-${themeColor}-300 transition-all group">
-                                <div class="font-bold text-xs text-${themeColor}-800 mb-0.5 flex items-center gap-1 truncate">
-                                    ${v.Venture_Title} ${v.Rank <= 3 ? '<span title="High Demand" class="ml-1">🔥</span>' : ''}
+                                <div class="font-bold text-xs text-${themeColor}-800 mb-0.5 flex items-center gap-1 min-w-0">
+                                    <span class="truncate">${v.Venture_Title}</span>
+                                    <span title="High Demand" class="ml-0.5 shrink-0">🔥</span>
                                 </div>
                                 <div class="text-[10px] text-${themeColor}-700/80 leading-tight truncate">${v.Venture_Description}</div>
                             </button>
@@ -3623,6 +3624,7 @@ window.toggleCareerHub = function() {
 
             const modalTitle = document.getElementById('venture-modal-title');
             modalTitle.innerHTML = `${venture.Venture_Title} ${venture.Rank <= 3 ? '<span title="High Demand" class="ml-2">🔥</span>' : ''}`;
+            modalTitle.innerHTML = `${venture.Venture_Title} <span title="High Demand" class="ml-2">🔥</span>`;
 
             // Determine Theme based on Sector
             const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo' };
@@ -4231,6 +4233,9 @@ window.toggleCareerHub = function() {
                 entrepreneur: {
                     text: "Identify high-potential venture niches, access eco-system resources, and build your capability roadmap.",
                 },
+                counsellor: {
+                    text: "Support students and graduates in making career choices, strengthening their employability skills and figuring out their next move.",
+                },
                 provider: {
                     text: "Align curriculum with real-time market demand, benchmark outcomes and connect directly with motivated learners.",
                 },
@@ -4251,11 +4256,12 @@ window.toggleCareerHub = function() {
             const styles = {
                 learner: { active: "border-indigo-200 bg-indigo-50 text-indigo-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-indigo-600 hover:border-indigo-300" },
                 entrepreneur: { active: "border-fuchsia-200 bg-fuchsia-50 text-fuchsia-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-fuchsia-600 hover:border-fuchsia-300" },
+                counsellor: { active: "border-amber-200 bg-amber-50 text-amber-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-amber-600 hover:border-amber-300" },
                 provider: { active: "border-emerald-200 bg-emerald-50 text-emerald-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-emerald-600 hover:border-emerald-300" },
                 policy: { active: "border-cyan-200 bg-cyan-50 text-cyan-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-cyan-600 hover:border-cyan-300" }
             };
 
-            ['learner', 'entrepreneur', 'provider', 'policy'].forEach(k => {
+            ['learner', 'entrepreneur', 'counsellor', 'provider', 'policy'].forEach(k => {
                 const btn = document.getElementById(`btn-p-${k}`);
                 if(btn) {
                     if(k === type) {

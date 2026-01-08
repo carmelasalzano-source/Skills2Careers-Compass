@@ -12,7 +12,9 @@
     { "title": "GSMA Innovation Fund", "desc": "Catalytic funding for mobile/digital innovation.", "link": "https://www.gsma.com/mobilefordevelopment/", "type": "Funding" },
     { "title": "VC4A", "desc": "Africa startup ecosystem platform & funding.", "link": "https://vc4a.com/", "type": "Funding" },
     { "title": "Seedstars", "desc": "Acceleration, investment & events.", "link": "https://www.seedstars.com/", "type": "Funding" },
-    { "title": "Zindi", "desc": "Data science & AI competitions in Africa.", "link": "https://zindi.africa/", "type": "Skills" }
+    { "title": "Zindi", "desc": "Data science & AI competitions in Africa.", "link": "https://zindi.africa/", "type": "Skills" },
+    { "title": "VC4A Startup Academy", "desc": "Free online courses for startup founders.", "link": "https://academy.vc4a.com/", "type": "Skills" },
+    { "title": "IUCEA", "desc": "Universities directory (regional visibility).", "link": "https://www.iucea.org/", "type": "Education" }
   ],
   "global_resources": [
     { "title": "ITU", "desc": "Telecom/ICT standards & policy.", "link": "https://www.itu.int/", "type": "Policy/Regulation", "gsa_member": true },

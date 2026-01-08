@@ -2478,5 +2478,26 @@
     "language": "English",
     "prerequisites": "None",
     "lastUpdated": "2024"
+  },
+  {
+    "id": "c_career_readiness",
+    "name": "Career Readiness and Employability Skills",
+    "provider": "Campus Africa",
+    "type": "Learning Path",
+    "level": "med",
+    "duration": "12 Weeks",
+    "durationHours": 36,
+    "difficulty": "Beginner",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Hybrid",
+    "sector": "all",
+    "skills": ["Resume Writing", "Interview Skills", "Networking", "Soft Skills"],
+    "url": "#",
+    "country": "all",
+    "description": "A comprehensive 12-week program covering self-assessment, resume writing, interview skills, and professional networking. Designed for university students and young professionals.",
+    "language": "English",
+    "prerequisites": "None",
+    "lastUpdated": "2025"
   }
 ]

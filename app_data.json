@@ -116,5 +116,20 @@
     { "title": "Upskill", "desc": "I want to strengthen my current skills.", "icon": "trending-up" },
     { "title": "Venture", "desc": "I want to start my own business.", "icon": "rocket" },
     { "title": "Change Careers", "desc": "I want to pivot to a new sector.", "icon": "refresh-cw" }
-  ]
+  ],
+  "assessmentConfig": {
+    "riasec": [
+      { "code": "R", "label": "Realistic", "question": "I enjoy working with tools, machines, or hands-on projects." },
+      { "code": "I", "label": "Investigative", "question": "I enjoy solving problems, analyzing data, or researching." },
+      { "code": "A", "label": "Artistic", "question": "I enjoy creative work such as art, writing, or design." },
+      { "code": "S", "label": "Social", "question": "I enjoy helping, teaching, or supporting people." },
+      { "code": "E", "label": "Enterprising", "question": "I enjoy leading, persuading, or selling ideas." },
+      { "code": "C", "label": "Conventional", "question": "I enjoy organizing tasks, following procedures, or working with data." }
+    ],
+    "workValues": [
+      "Creativity & Innovation", "Job Security / Stability", "Helping Others / Service",
+      "Achievement / Success", "Recognition / Status", "Independence / Autonomy",
+      "Teamwork / Collaboration", "Work-Life Balance"
+    ]
+  }
 }
