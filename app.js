@@ -785,10 +785,6 @@ function getOJAMetrics(roleTitle, country) {
             const gaps = allSkillsData.filter(s => s.score < 4).map(s => s.skill);
 
             let synthesisText = '';
-            if (strengths.length > 0 && gaps.length > 0) {
-                synthesisText = `You have a solid foundation in <strong>${strengths.slice(0, 3).join(', ')}</strong>${strengths.length > 3 ? ' and others' : ''}. To become fully job-ready for this role, focus your efforts on strengthening <strong>${gaps.slice(0, 3).join(', ')}</strong>.`;
-            } else if (gaps.length === 0) {
-                synthesisText = `Excellent work! You demonstrate high proficiency across all key areas for this role. Focus on portfolio building and networking.`;
             // Use tier/percent to drive the main narrative for consistency
             if (percent > 85) {
                 synthesisText = `Excellent work! You demonstrate high proficiency across key areas for this role.`;
@@ -802,7 +798,6 @@ function getOJAMetrics(roleTitle, country) {
                 synthesisText = `You are making good progress but have some key gaps.`;
                 if (gaps.length > 0) synthesisText += ` Prioritize training in <strong>${gaps.slice(0, 3).join(', ')}</strong> to build your profile.`;
             } else {
-                synthesisText = `You are at the beginning of your journey. Prioritize foundational training in <strong>${gaps.slice(0, 3).join(', ')}</strong> to build your profile.`;
                 synthesisText = `You are at the beginning of your journey. Focus on foundational training in <strong>${gaps.slice(0, 3).join(', ')}</strong>.`;
             }
 
@@ -1080,7 +1075,6 @@ function getOJAMetrics(roleTitle, country) {
                 <${tag} ${href} class="flex flex-col justify-between p-3 bg-blue-50 border border-blue-100 rounded-lg hover:border-blue-300 ${cursor} transition-all group text-left h-full">
                     <div>
                         <div class="flex justify-between items-start mb-2">
-                            <div class="text-[10px] font-bold text-blue-700 uppercase tracking-wide bg-white px-2 py-0.5 rounded border border-blue-100 inline-block">Recommended</div>
                             ${icon}
                         </div>
                         <div class="text-sm font-bold text-slate-800 leading-tight mb-1 group-hover:text-blue-700 transition-colors line-clamp-2">${t.name}</div>
@@ -1167,7 +1161,6 @@ function getOJAMetrics(roleTitle, country) {
                 `;
             }
 
-            const headerTitle = `${pathwayFocus} Pathway: ${roleName}`;
             const headerTitle = `${pathwayFocus} Pathway`;
             const headerDesc = "A recommended learning and experience path for this role.";
 
@@ -2429,7 +2422,6 @@ function getOJAMetrics(roleTitle, country) {
                                 Unsure if you have the right skills set? Take our quick <strong>Matching-Skills2Roles</strong> assessment to identify your strengths and gaps and follow up with a curated training plan.
                             </p>
                             <button class="bg-white text-indigo-900 px-4 py-2 rounded-lg text-xs font-bold hover:bg-indigo-50 transition-colors flex items-center gap-2 shadow-sm" onclick="event.stopPropagation(); closeModal('occupation-modal'); openUnifiedHub('pp-diagnostic', '${title.replace(/'/g, "\\'")}');">
-                                Start Match <i data-lucide="arrow-right" class="w-3 h-3"></i>
                                 Start SkillsMatch <i data-lucide="arrow-right" class="w-3 h-3"></i>
                             </button>
                         </div>
