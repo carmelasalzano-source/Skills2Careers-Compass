@@ -789,8 +789,21 @@ function getOJAMetrics(roleTitle, country) {
                 synthesisText = `You have a solid foundation in <strong>${strengths.slice(0, 3).join(', ')}</strong>${strengths.length > 3 ? ' and others' : ''}. To become fully job-ready for this role, focus your efforts on strengthening <strong>${gaps.slice(0, 3).join(', ')}</strong>.`;
             } else if (gaps.length === 0) {
                 synthesisText = `Excellent work! You demonstrate high proficiency across all key areas for this role. Focus on portfolio building and networking.`;
+            // Use tier/percent to drive the main narrative for consistency
+            if (percent > 85) {
+                synthesisText = `Excellent work! You demonstrate high proficiency across key areas for this role.`;
+                if (gaps.length > 0) synthesisText += ` Consider polishing <strong>${gaps.slice(0, 2).join(', ')}</strong> to reach expert level.`;
+                else synthesisText += ` Focus on portfolio building and networking.`;
+            } else if (percent > 65) {
+                synthesisText = `You have a solid foundation.`;
+                if (strengths.length > 0) synthesisText += ` You are strong in <strong>${strengths.slice(0, 2).join(', ')}</strong>.`;
+                if (gaps.length > 0) synthesisText += ` To become fully job-ready, focus on strengthening <strong>${gaps.slice(0, 3).join(', ')}</strong>.`;
+            } else if (percent > 40) {
+                synthesisText = `You are making good progress but have some key gaps.`;
+                if (gaps.length > 0) synthesisText += ` Prioritize training in <strong>${gaps.slice(0, 3).join(', ')}</strong> to build your profile.`;
             } else {
                 synthesisText = `You are at the beginning of your journey. Prioritize foundational training in <strong>${gaps.slice(0, 3).join(', ')}</strong> to build your profile.`;
+                synthesisText = `You are at the beginning of your journey. Focus on foundational training in <strong>${gaps.slice(0, 3).join(', ')}</strong>.`;
             }
 
             // --- NEW: Dynamic Related Roles Logic ---
@@ -1155,6 +1168,7 @@ function getOJAMetrics(roleTitle, country) {
             }
 
             const headerTitle = `${pathwayFocus} Pathway: ${roleName}`;
+            const headerTitle = `${pathwayFocus} Pathway`;
             const headerDesc = "A recommended learning and experience path for this role.";
 
             container.innerHTML = `
@@ -1346,6 +1360,14 @@ function getOJAMetrics(roleTitle, country) {
                         
                         <!-- 1. ROLE SELECTOR -->
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div class="mb-4">
+                                <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Target Sector</label>
+                                <select onchange="setGlobalSector(this.value); renderPATHWAYContent();" class="w-full text-sm font-bold text-slate-700 border-slate-300 rounded-lg shadow-sm focus:border-${themeColor}-500 focus:ring-${themeColor}-500 p-2.5">
+                                    <option value="agri" ${sector === 'agri' ? 'selected' : ''}>Agritech</option>
+                                    <option value="energy" ${sector === 'energy' ? 'selected' : ''}>Renewable Energy</option>
+                                    <option value="digital" ${sector === 'digital' ? 'selected' : ''}>Digital Economy</option>
+                                </select>
+                            </div>
                             <div class="mb-4">
                                 <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Target Role</label>
                                 <select id="pp-role-selector" onchange="renderPATHWAYContent(this.value)" class="w-full text-sm font-bold text-slate-700 border-slate-300 rounded-lg shadow-sm focus:border-${themeColor}-500 focus:ring-${themeColor}-500 p-2.5">
@@ -2408,6 +2430,7 @@ function getOJAMetrics(roleTitle, country) {
                             </p>
                             <button class="bg-white text-indigo-900 px-4 py-2 rounded-lg text-xs font-bold hover:bg-indigo-50 transition-colors flex items-center gap-2 shadow-sm" onclick="event.stopPropagation(); closeModal('occupation-modal'); openUnifiedHub('pp-diagnostic', '${title.replace(/'/g, "\\'")}');">
                                 Start Match <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                                Start SkillsMatch <i data-lucide="arrow-right" class="w-3 h-3"></i>
                             </button>
                         </div>
                         <div class="hidden sm:block opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">
@@ -3465,7 +3488,7 @@ window.toggleCareerHub = function() {
             const html = `
                 <div class="space-y-6 animate-fade-in">
                     <!-- Sector Intelligence: 1 Row (4 Columns) -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         
                         <!-- Card 1: Sector Proxy -->
                         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between h-full">
