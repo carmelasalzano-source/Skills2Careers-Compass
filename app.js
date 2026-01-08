@@ -794,7 +794,7 @@ function getOJAMetrics(roleTitle, country) {
             }
 
             // --- NEW: Dynamic Related Roles Logic ---
-            const currentRoleSkills = roleSkills[selectedRole] ? new Set(roleSkills[selectedRole].technical) : new Set();
+            const currentRoleSkills = (typeof roleSkills !== 'undefined' && roleSkills[selectedRole]) ? new Set(roleSkills[selectedRole].technical) : new Set();
             let relatedRoles = [];
 
             if (currentRoleSkills.size > 0) {
@@ -969,7 +969,7 @@ function getOJAMetrics(roleTitle, country) {
 
             // --- COUNTRY SPECIFIC CONTEXT MAP ---
             // Default to 'all' if country not found, or use activeCountry
-            const localTip = countryPathwayContext[activeCountry] || countryPathwayContext['all'];
+            const localTip = (typeof countryPathwayContext !== 'undefined' && (countryPathwayContext[activeCountry] || countryPathwayContext['all'])) || { hub: "local hubs" };
 
             // Determine Theme based on Sector
             let theme = 'indigo';
@@ -983,7 +983,7 @@ function getOJAMetrics(roleTitle, country) {
             if (empGaps.length > 0) {
                 proofHtml = empGaps.map(gap => {
                     // Try exact match
-                    let item = proofPromptsMap[gap];
+                    let item = (typeof proofPromptsMap !== 'undefined') ? proofPromptsMap[gap] : null;
                     let linkHtml = '';
 
                     if (item && item.link && item.link !== '#') {
@@ -1023,7 +1023,7 @@ function getOJAMetrics(roleTitle, country) {
 
 
             // Select specific tasks or fall back to default
-            const practiceTasks = rolePracticeMap[roleName] || defaultPracticeTasks;
+            const practiceTasks = (typeof rolePracticeMap !== 'undefined' && rolePracticeMap[roleName]) ? rolePracticeMap[roleName] : ((typeof defaultPracticeTasks !== 'undefined') ? defaultPracticeTasks : []);
             const practiceHtml = practiceTasks.map(t => {
                 const isLinkValid = t.link && t.link !== "#";
                 const linkAttr = isLinkValid ? `href="${t.link}" target="_blank"` : '';
@@ -1282,7 +1282,7 @@ function getOJAMetrics(roleTitle, country) {
 
             // --- ROLE SPECIFIC BADGE MAP ---
             // Use specific badge if available, else fallback to sector default
-            const badgeInfo = (currentRoleName && roleBadgeMap[currentRoleName]) ? roleBadgeMap[currentRoleName] : { title: activeData.badgeTitle, provider: activeData.badgeProvider, standard: activeData.badgeStandard };
+            const badgeInfo = (currentRoleName && typeof roleBadgeMap !== 'undefined' && roleBadgeMap[currentRoleName]) ? roleBadgeMap[currentRoleName] : { title: activeData.badgeTitle, provider: activeData.badgeProvider, standard: activeData.badgeStandard };
 
             // --- RENDER TABS ---
 
@@ -1604,7 +1604,7 @@ function getOJAMetrics(roleTitle, country) {
                     </div>
                     
                     <div class="space-y-6 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                        ${pathwayConstraints.map(c => `
+                        ${(typeof pathwayConstraints !== 'undefined' ? pathwayConstraints : []).map(c => `
                             <div>
                                 <label class="block text-sm font-bold text-slate-700 mb-3 flex items-center gap-2"><i data-lucide="${c.icon}" class="w-4 h-4 text-slate-400"></i> ${c.label}</label>
                                 <div class="flex flex-wrap gap-3">
@@ -1745,7 +1745,7 @@ function getOJAMetrics(roleTitle, country) {
             const theme = themeConfig.color;
             
             // --- SECTION A: SKILLS FOCUS ---
-            const sectorDetails = baseSectorDetailData[sector];
+            const sectorDetails = (typeof baseSectorDetailData !== 'undefined') ? baseSectorDetailData[sector] : { skills: [] };
             const allSkills = sectorDetails ? sectorDetails.skills : [];
             let targetSkills = [];
 
@@ -3386,7 +3386,7 @@ window.toggleCareerHub = function() {
 
             if (!baseData) return; // Stop if data is completely missing
 
-            const overrides = (countryOverrides[activeCountry] && countryOverrides[activeCountry][activeSectorId]) || {};
+            const overrides = (typeof countryOverrides !== 'undefined' && countryOverrides[activeCountry] && countryOverrides[activeCountry][activeSectorId]) || {};
             
             const data = {
                 growth: {
@@ -4234,10 +4234,10 @@ window.toggleCareerHub = function() {
             }
 
             const styles = {
-                learner: { active: "border-indigo-600 bg-indigo-600 text-white font-bold shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-indigo-600 hover:border-indigo-300" },
-                entrepreneur: { active: "border-fuchsia-600 bg-fuchsia-600 text-white font-bold shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-fuchsia-600 hover:border-fuchsia-300" },
-                provider: { active: "border-emerald-600 bg-emerald-600 text-white font-bold shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-emerald-600 hover:border-emerald-300" },
-                policy: { active: "border-cyan-600 bg-cyan-600 text-white font-bold shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-cyan-600 hover:border-cyan-300" }
+                learner: { active: "border-indigo-200 bg-indigo-50 text-indigo-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-indigo-600 hover:border-indigo-300" },
+                entrepreneur: { active: "border-fuchsia-200 bg-fuchsia-50 text-fuchsia-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-fuchsia-600 hover:border-fuchsia-300" },
+                provider: { active: "border-emerald-200 bg-emerald-50 text-emerald-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-emerald-600 hover:border-emerald-300" },
+                policy: { active: "border-cyan-200 bg-cyan-50 text-cyan-700 font-medium shadow-sm", inactive: "border-slate-200 bg-white text-slate-500 hover:text-cyan-600 hover:border-cyan-300" }
             };
 
             ['learner', 'entrepreneur', 'provider', 'policy'].forEach(k => {
@@ -4290,8 +4290,8 @@ window.toggleCareerHub = function() {
             const dateStr = now.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 
             statsContainer.innerHTML = `
-                <div class="mt-4 pt-2 border-t border-slate-200/60 animate-fade-in overflow-x-auto no-scrollbar">
-                    <div class="flex flex-nowrap items-center justify-start md:justify-center gap-4 text-[10px] text-slate-500 font-medium min-w-max px-2">
+                <div class="mt-4 pt-2 border-t border-slate-200/60 animate-fade-in">
+                    <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[10px] text-slate-500 font-medium px-2">
                         <span class="font-bold text-slate-400 uppercase tracking-wide mr-1">Database:</span>
                         <div class="flex items-center gap-1" title="Training Courses"><i data-lucide="book-open" class="w-3 h-3 text-indigo-400"></i> <span>${courseCount} Courses</span></div>
                         <span class="text-slate-300">•</span>
