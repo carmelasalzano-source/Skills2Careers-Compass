@@ -131,5 +131,31 @@
       "Achievement / Success", "Recognition / Status", "Independence / Autonomy",
       "Teamwork / Collaboration", "Work-Life Balance"
     ]
+  },
+  "careerSyllabus": [
+    { "week": 1, "title": "Introduction to Career Readiness", "topics": ["Concept & Importance", "Key Employability Skills", "Readiness Frameworks"], "activity": "Self-assessment survey & Group discussion" },
+    { "week": 2, "title": "Self-Assessment & Personal Branding", "topics": ["SWOT Analysis", "Personal Branding Basics"], "activity": "MBTI/StrengthsFinder & Brand Statement" },
+    { "week": 3, "title": "Career Exploration & Goal Setting", "topics": ["Labor Market Trends", "SMART Goals"], "activity": "Online research & Career path report" },
+    { "week": 4, "title": "Resume & CV Writing", "topics": ["Resume vs CV", "ATS Formatting", "Key Components"], "activity": "Peer review & ATS workshop" },
+    { "week": 5, "title": "Cover Letters & Communication", "topics": ["Cover Letter Structure", "Email Etiquette"], "activity": "Drafting cover letters & Role-play" },
+    { "week": 6, "title": "Interview Skills", "topics": ["STAR Method", "Handling Difficult Questions", "Body Language"], "activity": "Mock interviews & Self-recording" },
+    { "week": 7, "title": "Networking & Relationships", "topics": ["Networking Strategies", "Elevator Pitch", "Online Presence"], "activity": "LinkedIn profile update & Networking practice" },
+    { "week": 8, "title": "Workplace Soft Skills", "topics": ["Collaboration", "Conflict Resolution", "Emotional Intelligence"], "activity": "Team exercises & Case studies" },
+    { "week": 9, "title": "Professional Development", "topics": ["Lifelong Learning", "Certifications", "Advancement Strategies"], "activity": "Personal development plan" },
+    { "week": 10, "title": "Work-Integrated Learning", "topics": ["Internships & Co-ops", "Application Strategies"], "activity": "Drafting internship applications" },
+    { "week": 11, "title": "Job Search Strategies", "topics": ["Job Boards & Agencies", "Tracking Applications"], "activity": "Job search tracker & Applying" },
+    { "week": 12, "title": "Capstone: Presentation", "topics": ["Portfolio Preparation", "Career Presentations"], "activity": "Final presentation & Portfolio submission" }
+  ],
+  "interviewRubric": {
+    "scale": "1 (Poor) to 5 (Excellent)",
+    "categories": [
+      { "name": "Professionalism & Appearance", "max": 5, "criteria": ["Appropriate dress/grooming", "Confidence & poise", "Eye contact", "Positive body language"] },
+      { "name": "Communication Skills", "max": 5, "criteria": ["Clarity & articulation", "Tone/pace/volume", "Active listening", "No filler words"] },
+      { "name": "Knowledge & Preparedness", "max": 5, "criteria": ["Company/role knowledge", "Industry context", "Preparation evident"] },
+      { "name": "Behavioral Responses", "max": 5, "criteria": ["STAR method usage", "Specific examples", "Problem-solving skills", "Accountability"] },
+      { "name": "Technical Responses", "max": 5, "criteria": ["Technical knowledge", "Clear explanations", "Practical application examples"] },
+      { "name": "Interpersonal Skills", "max": 5, "criteria": ["Teamwork ability", "Adaptability", "Enthusiasm", "Cultural fit"] },
+      { "name": "Closing & Questions", "max": 5, "criteria": ["Thoughtful questions asked", "Interest demonstrated", "Effective summary"] }
+    ]
   }
 }

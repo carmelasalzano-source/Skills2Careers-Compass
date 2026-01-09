@@ -228,20 +228,51 @@
     { "title": "Data Entry Intern", "company": "CloudFactory", "type": "Part Time" }
   ],
   "entrepreneurship": {
-    "title": "Digital",
-    "theme": "indigo",
-    "incubators": [
-      { "name": "Antler East Africa", "desc": "Global VC building startups from day zero.", "link": "https://www.antler.co/" },
-      { "name": "Norrsken House Kigali", "desc": "Largest hub for entrepreneurship in Africa.", "link": "https://www.norrsken.org/" }
-    ],
-    "funding": [
-      { "name": "Google Black Founders Fund", "desc": "Non-dilutive cash awards for tech startups.", "link": "https://www.campus.co/" },
-      { "name": "Savannah Fund", "desc": "Seed capital for high-growth tech ventures.", "link": "https://savannah.vc/" }
-    ],
-    "tools": [
-      { "name": "Lean Canvas Tool", "desc": "1-page business model generator.", "icon": "layout", "link": "https://leanstack.com/lean-canvas" },
-      { "name": "AWS Activate", "desc": "$1,000+ in free cloud credits for startups.", "icon": "cloud", "link": "https://aws.amazon.com/activate/" }
-    ]
+    "digital": {
+      "title": "Digital Economy",
+      "theme": "indigo",
+      "incubators": [
+        { "name": "Antler East Africa", "desc": "Global VC building startups from day zero.", "link": "https://www.antler.co/" },
+        { "name": "Norrsken House Kigali", "desc": "Largest hub for entrepreneurship in Africa.", "link": "https://www.norrsken.org/" }
+      ],
+      "funding": [
+        { "name": "Google Black Founders Fund", "desc": "Non-dilutive cash awards for tech startups.", "link": "https://www.campus.co/" },
+        { "name": "Savannah Fund", "desc": "Seed capital for high-growth tech ventures.", "link": "https://savannah.vc/" }
+      ],
+      "tools": [
+        { "name": "Lean Canvas Tool", "desc": "1-page business model generator.", "icon": "layout", "link": "https://leanstack.com/lean-canvas" },
+        { "name": "AWS Activate", "desc": "$1,000+ in free cloud credits for startups.", "icon": "cloud", "link": "https://aws.amazon.com/activate/" }
+      ]
+    },
+    "agri": {
+      "title": "Agritech",
+      "theme": "green",
+      "incubators": [
+        { "name": "Villgro Africa", "desc": "Incubator for early-stage social enterprises.", "link": "https://villgroafrica.org/" },
+        { "name": "Kenya Climate Innovation Center", "desc": "Supporting climate-smart ventures.", "link": "https://www.kenyacic.org/" }
+      ],
+      "funding": [
+        { "name": "Heifer International", "desc": "Grants for agritech innovation.", "link": "https://www.heifer.org/" },
+        { "name": "Acumen", "desc": "Patient capital for poverty alleviation.", "link": "https://acumen.org/" }
+      ],
+      "tools": [
+        { "name": "Farm Management Software", "desc": "Tools for crop planning and tracking.", "icon": "sprout", "link": "#" }
+      ]
+    },
+    "energy": {
+      "title": "Renewable Energy",
+      "theme": "orange",
+      "incubators": [
+        { "name": "Energy 4 Impact", "desc": "Supporting off-grid energy businesses.", "link": "https://energy4impact.org/" },
+        { "name": "Climates-KIC", "desc": "Climate innovation initiative.", "link": "https://www.climate-kic.org/" }
+      ],
+      "funding": [
+        { "name": "EEP Africa", "desc": "Clean energy financing facility.", "link": "https://eepafrica.org/" }
+      ],
+      "tools": [
+        { "name": "HOMER Energy", "desc": "Microgrid modeling software.", "icon": "zap", "link": "https://www.homerenergy.com/" }
+      ]
+    }
   },
   "signals": {
     "Sector Value-Chain Gaps": [

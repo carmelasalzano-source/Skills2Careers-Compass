@@ -13,6 +13,7 @@
     { "title": "VC4A", "desc": "Africa startup ecosystem platform & funding.", "link": "https://vc4a.com/", "type": "Funding" },
     { "title": "Seedstars", "desc": "Acceleration, investment & events.", "link": "https://www.seedstars.com/", "type": "Funding" },
     { "title": "Zindi", "desc": "Data science & AI competitions in Africa.", "link": "https://zindi.africa/", "type": "Skills" },
+    { "title": "ALX Africa", "desc": "Tech training and career acceleration.", "link": "https://www.alxafrica.com/", "type": "Skills" },
     { "title": "VC4A Startup Academy", "desc": "Free online courses for startup founders.", "link": "https://academy.vc4a.com/", "type": "Skills" },
     { "title": "IUCEA", "desc": "Universities directory (regional visibility).", "link": "https://www.iucea.org/", "type": "Education" }
   ],
