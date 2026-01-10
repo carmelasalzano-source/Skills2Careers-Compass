@@ -19,6 +19,7 @@ class DataManager {
         this.topOccupations = [];
         this.topSkills = [];
         this.courses = [];
+        this.scholarships = [];
         this.sectorMap = (typeof sectorMap !== 'undefined') ? sectorMap : { 'agri': 'Agriculture', 'energy': 'Renewables', 'digital': 'Digital/AI' };
         this.wageMap = new Map(); // For ID-based lookup
     }
@@ -47,7 +48,8 @@ class DataManager {
             this.fetchData('resources_evidence.json'),
             this.fetchData('resources_digital.json'),
             this.fetchData('resources_agri.json'),
-            this.fetchData('resources_energy.json')
+            this.fetchData('resources_energy.json'),
+            this.fetchData('scholarships.json')
         ]);
 
         // Extract data safely
@@ -56,6 +58,7 @@ class DataManager {
         this.topOccupations = (results[2].status === 'fulfilled' && results[2].value) ? results[2].value : [];
         this.topSkills = (results[3].status === 'fulfilled' && results[3].value) ? results[3].value : [];
         this.courses = (results[4].status === 'fulfilled' && results[4].value) ? results[4].value : [];
+        this.scholarships = (results[11].status === 'fulfilled' && results[11].value) ? results[11].value : [];
 
         // Load App Data (UI Config)
         const appData = (results[5].status === 'fulfilled' && results[5].value) ? results[5].value : {};
@@ -4546,12 +4549,148 @@ window.toggleCareerHub = function() {
                 <div class="animate-fade-in">
                     <button onclick="resetCareerHub()" class="mb-4 flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Hub</button>
                     <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2"><i data-lucide="file-text" class="w-5 h-5 text-purple-500"></i> CV & Portfolio Tools</h3>
+                    
+                    <!-- NEW: Internal Generator CTA -->
+                    <div class="mb-6 p-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl text-white shadow-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-sm">Instant CV Builder</h4>
+                            <i data-lucide="zap" class="w-4 h-4 text-yellow-300"></i>
+                        </div>
+                        <p class="text-xs text-indigo-100 mb-3 leading-relaxed">Create a standardized, ATS-friendly PDF resume directly in your browser. No sign-up required.</p>
+                        <button onclick="renderCVGenerator()" class="w-full py-2 bg-white text-indigo-700 font-bold rounded-lg text-xs hover:bg-indigo-50 transition-colors shadow-sm">
+                            Build My CV Now
+                        </button>
+                    </div>
+
                     <div class="space-y-3">
                         ${toolsHtml}
                     </div>
                 </div>
             `;
             if(window.lucide) lucide.createIcons();
+        }
+
+        // --- NEW: CV Generator Logic ---
+        window.renderCVGenerator = function() {
+            const container = document.getElementById('career-hub-content');
+            container.innerHTML = `
+                <div class="animate-fade-in space-y-4">
+                    <button onclick="showCVResources()" class="mb-2 flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Tools</button>
+                    
+                    <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-lg">Quick CV Builder</h3>
+                                <p class="text-xs text-slate-500">Generate a clean, ATS-friendly PDF resume in seconds.</p>
+                            </div>
+                            <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><i data-lucide="file-text" class="w-5 h-5"></i></div>
+                        </div>
+
+                        <form id="cv-form" class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Full Name</label>
+                                    <input type="text" id="cv-name" class="w-full text-sm border-slate-300 rounded-lg p-2" placeholder="Jane Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Target Role</label>
+                                    <input type="text" id="cv-role" class="w-full text-sm border-slate-300 rounded-lg p-2" placeholder="Data Analyst">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Email</label>
+                                    <input type="email" id="cv-email" class="w-full text-sm border-slate-300 rounded-lg p-2" placeholder="jane@example.com">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Phone</label>
+                                    <input type="text" id="cv-phone" class="w-full text-sm border-slate-300 rounded-lg p-2" placeholder="+254 700 000000">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Professional Summary</label>
+                                <textarea id="cv-summary" rows="3" class="w-full text-sm border-slate-300 rounded-lg p-2" placeholder="Motivated professional with 2 years of experience in..."></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Key Skills (Comma separated)</label>
+                                <input type="text" id="cv-skills" class="w-full text-sm border-slate-300 rounded-lg p-2" placeholder="Python, Data Analysis, Project Management">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Experience / Projects</label>
+                                <textarea id="cv-experience" rows="4" class="w-full text-sm border-slate-300 rounded-lg p-2" placeholder="• Role at Company (Dates): Achieved X by doing Y..."></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Education</label>
+                                <textarea id="cv-education" rows="2" class="w-full text-sm border-slate-300 rounded-lg p-2" placeholder="BSc Computer Science, University of Nairobi (2024)"></textarea>
+                            </div>
+                        </form>
+
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex gap-3">
+                            <button onclick="generatePDF()" class="flex-1 py-3 bg-slate-900 text-white font-bold rounded-xl shadow-md hover:bg-slate-800 transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="download" class="w-4 h-4"></i> Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            if(window.lucide) lucide.createIcons();
+        }
+
+        window.generatePDF = function() {
+            if (!window.jspdf) {
+                alert("PDF Generator library not loaded. Please check your internet connection.");
+                return;
+            }
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            const name = document.getElementById('cv-name').value || "Your Name";
+            const role = document.getElementById('cv-role').value || "Professional Role";
+            const email = document.getElementById('cv-email').value || "email@example.com";
+            const phone = document.getElementById('cv-phone').value || "Phone";
+            const summary = document.getElementById('cv-summary').value || "";
+            const skills = document.getElementById('cv-skills').value || "";
+            const experience = document.getElementById('cv-experience').value || "";
+            const education = document.getElementById('cv-education').value || "";
+
+            // Styling
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(22);
+            doc.text(name, 20, 20);
+            
+            doc.setFontSize(14);
+            doc.setTextColor(100);
+            doc.text(role, 20, 28);
+            
+            doc.setFontSize(10);
+            doc.setTextColor(0);
+            doc.setFont("helvetica", "normal");
+            doc.text(`${email} | ${phone}`, 20, 35);
+            
+            doc.setLineWidth(0.5);
+            doc.line(20, 38, 190, 38);
+            
+            let yPos = 45;
+            
+            const addSection = (title, content) => {
+                if(content) {
+                    if (yPos > 270) { doc.addPage(); yPos = 20; }
+                    doc.setFont("helvetica", "bold");
+                    doc.text(title, 20, yPos);
+                    yPos += 5;
+                    doc.setFont("helvetica", "normal");
+                    const splitContent = doc.splitTextToSize(content, 170);
+                    doc.text(splitContent, 20, yPos);
+                    yPos += (splitContent.length * 5) + 5;
+                }
+            };
+
+            addSection("SUMMARY", summary);
+            addSection("SKILLS", skills);
+            addSection("EXPERIENCE", experience);
+            addSection("EDUCATION", education);
+            
+            doc.save(`${name.replace(/ /g, "_")}_CV.pdf`);
         }
 
         window.toggleCommunityHub = function() {
@@ -5330,6 +5469,50 @@ window.toggleCareerHub = function() {
             });
             const counter = document.getElementById('provider-counter');
             if(counter) counter.innerText = `Showing ${filtered.length} courses`;
+            if(window.lucide) lucide.createIcons();
+        }
+
+        // --- NEW: Render Financial Aid ---
+        window.renderFinancialAid = function() {
+            const container = document.getElementById('financial-aid-list');
+            if (!container) return;
+
+            const countryFilter = document.getElementById('finance-filter-country') ? document.getElementById('finance-filter-country').value : 'all';
+            const typeFilter = document.getElementById('finance-filter-type') ? document.getElementById('finance-filter-type').value : 'all';
+
+            let items = dataManager.scholarships || [];
+
+            // Filter
+            items = items.filter(item => {
+                const matchCountry = countryFilter === 'all' || item.country === 'Regional' || item.country === countryFilter;
+                const matchType = typeFilter === 'all' || item.type.includes(typeFilter);
+                return matchCountry && matchType;
+            });
+
+            if (items.length === 0) {
+                container.innerHTML = `<div class="text-xs text-slate-500 italic text-center py-4">No financial aid opportunities found for these filters.</div>`;
+                return;
+            }
+
+            container.innerHTML = items.map(item => `
+                <div class="p-4 bg-white border border-slate-200 rounded-xl hover:border-indigo-300 transition-all shadow-sm group">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <div class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-0.5">${item.provider}</div>
+                            <h4 class="font-bold text-sm text-slate-900 group-hover:text-indigo-700">${item.name}</h4>
+                        </div>
+                        <span class="px-2 py-1 rounded text-[10px] font-bold shrink-0 ${item.type === 'Loan' ? 'bg-orange-50 text-orange-700' : 'bg-emerald-50 text-emerald-700'}">${item.type}</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mb-3 leading-relaxed">${item.desc}</p>
+                    <div class="flex flex-wrap items-center justify-between gap-y-2 pt-3 border-t border-slate-50">
+                        <div class="text-[10px] text-slate-500 font-medium flex flex-wrap gap-3">
+                            <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i> ${item.country}</span>
+                            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> ${item.deadline}</span>
+                        </div>
+                        <a href="${item.link}" target="_blank" class="text-xs font-bold text-indigo-600 hover:underline flex items-center gap-1">Apply <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+            `).join('');
             if(window.lucide) lucide.createIcons();
         }
 

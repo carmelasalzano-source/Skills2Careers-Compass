@@ -13,6 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -595,6 +596,7 @@
                 <button onclick="showTrainingTab('th-find')" class="th-tab-btn flex-1 py-3 text-xs font-bold border-b-2 transition-all text-emerald-700 border-emerald-600 bg-emerald-50" data-tab="th-find">Find Courses</button>
                 <button onclick="showTrainingTab('th-featured')" class="th-tab-btn flex-1 py-3 text-xs font-bold border-b-2 transition-all text-slate-500 border-transparent hover:text-slate-700 hover:bg-slate-50" data-tab="th-featured">Featured Providers</button>
                 <button onclick="showTrainingTab('th-impact')" class="th-tab-btn flex-1 py-3 text-xs font-bold border-b-2 transition-all text-slate-500 border-transparent hover:text-slate-700 hover:bg-slate-50" data-tab="th-impact">Impact Evidence</button>
+                <button onclick="showTrainingTab('th-finance')" class="th-tab-btn flex-1 py-3 text-xs font-bold border-b-2 transition-all text-slate-500 border-transparent hover:text-slate-700 hover:bg-slate-50" data-tab="th-finance">Financial Aid</button>
             </div>
             <div class="flex-1 overflow-y-auto p-5 space-y-6 custom-scroll">
                 <div id="th-find" class="th-tab-content space-y-6">
@@ -796,6 +798,33 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div id="th-finance" class="th-tab-content hidden space-y-6">
+                    <div class="bg-indigo-50 rounded-xl p-4 border border-indigo-100 flex items-start gap-3">
+                        <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg shrink-0"><i data-lucide="banknote" class="w-5 h-5"></i></div>
+                        <div>
+                            <h3 class="font-bold text-indigo-900 text-sm">Scholarships & Loans</h3>
+                            <p class="text-xs text-indigo-700 mt-1">Find financial support for your education across East Africa. Filter by country or aid type.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-2">
+                        <select id="finance-filter-country" onchange="renderFinancialAid()" class="flex-1 text-xs border border-slate-300 rounded-lg px-2 py-2 focus:ring-indigo-500">
+                            <option value="all">All Countries</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Regional">Regional</option>
+                        </select>
+                        <select id="finance-filter-type" onchange="renderFinancialAid()" class="flex-1 text-xs border border-slate-300 rounded-lg px-2 py-2 focus:ring-indigo-500">
+                            <option value="all">All Types</option>
+                            <option value="Scholarship">Scholarship</option>
+                            <option value="Loan">Loan</option>
+                            <option value="Grant">Grant</option>
+                        </select>
+                    </div>
+                    <div id="financial-aid-list" class="space-y-3"></div>
                 </div>
             </div>
         </div>
