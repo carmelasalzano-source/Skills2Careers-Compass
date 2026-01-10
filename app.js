@@ -3822,10 +3822,16 @@ window.toggleCareerHub = function() {
         window.toggleGrid = function(id, btn, label) {
             const el = document.getElementById(id);
             if (el) {
-                const isHidden = el.classList.toggle('hidden');
-                btn.innerHTML = isHidden 
-                    ? `View All ${label} <i data-lucide="chevron-down" class="w-3 h-3"></i>` 
-                    : `View Less <i data-lucide="chevron-up" class="w-3 h-3"></i>`;
+                const isExpanded = el.classList.contains('max-h-[2000px]');
+                if (isExpanded) {
+                    el.classList.remove('max-h-[2000px]', 'opacity-100', 'mt-3');
+                    el.classList.add('max-h-0', 'opacity-0');
+                    btn.innerHTML = `View All ${label} <i data-lucide="chevron-down" class="w-3 h-3"></i>`;
+                } else {
+                    el.classList.remove('max-h-0', 'opacity-0');
+                    el.classList.add('max-h-[2000px]', 'opacity-100', 'mt-3');
+                    btn.innerHTML = `View Less ${label} <i data-lucide="chevron-up" class="w-3 h-3"></i>`;
+                }
                 if(window.lucide) lucide.createIcons();
             }
         }
@@ -3928,7 +3934,7 @@ window.toggleCareerHub = function() {
                                 <div class="text-[10px] text-${themeColor}-700/80 leading-tight truncate">${v.Venture_Description}</div>
                             </button>
                         `).join('')}
-                        <div id="more-ventures" class="hidden contents">
+                        <div id="more-ventures" class="col-span-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
                             ${moreVentures.map(v => `
                                 <button onclick="openVentureModal('${v.Venture_Title.replace(/'/g, "\\'")}')" title="${v.Venture_Title}" class="px-3 py-2 bg-white border border-${themeColor}-200 rounded-lg text-left hover:bg-${themeColor}-100 hover:border-${themeColor}-300 transition-all group">
                                     <div class="font-bold text-xs text-${themeColor}-800 mb-0.5 flex items-center gap-1 min-w-0">
@@ -4018,7 +4024,7 @@ window.toggleCareerHub = function() {
                                     </div>
                                 </button>
                             `).join('')}
-                            <div id="more-occs" class="hidden contents">
+                            <div id="more-occs" class="col-span-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
                                 ${moreOccs.map(role => `
                                     <button onclick="openOccupationModal('${role.name}')" title="${role.name}" class="px-3 py-2 ${cardBgColor} border ${cardBorderColor} rounded-lg text-left ${cardHoverBg} ${cardHoverBorder} transition-all group">
                                         <div class="w-full">
@@ -4052,7 +4058,7 @@ window.toggleCareerHub = function() {
                                     <div class="text-[10px] ${cardDescColor} leading-tight truncate">${skill.desc || 'Key competency'}</div>
                                 </button>
                             `).join('')}
-                            <div id="more-skills" class="hidden contents">
+                            <div id="more-skills" class="col-span-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
                                 ${moreSkills.map(skill => `
                                     <button onclick="openSkillModal('${skill.name.replace(/'/g, "\\'")}')" class="px-3 py-2 ${cardBgColor} border ${cardBorderColor} rounded-lg text-left ${cardHoverBg} ${cardHoverBorder} transition-all group">
                                         <div class="font-bold text-xs ${cardTitleColor} mb-0.5 flex items-center gap-1 truncate">
