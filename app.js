@@ -3818,6 +3818,18 @@ window.toggleCareerHub = function() {
             alert((typeof sectorTooltips !== 'undefined' && sectorTooltips[sector]) ? sectorTooltips[sector] : "Sector Metrics Overview");
         }
 
+        // --- NEW: Toggle Grid Helper ---
+        window.toggleGrid = function(id, btn, label) {
+            const el = document.getElementById(id);
+            if (el) {
+                const isHidden = el.classList.toggle('hidden');
+                btn.innerHTML = isHidden 
+                    ? `View All ${label} <i data-lucide="chevron-down" class="w-3 h-3"></i>` 
+                    : `View Less <i data-lucide="chevron-up" class="w-3 h-3"></i>`;
+                if(window.lucide) lucide.createIcons();
+            }
+        }
+
         window.renderOccupationsView = function() {
             // Safety Check: Ensure base data exists for the active sector
             const baseData = (typeof baseSectorDetailData !== 'undefined' && baseSectorDetailData[activeSectorId]) 
@@ -3928,6 +3940,7 @@ window.toggleCareerHub = function() {
                         </div>
                         ${moreVentures.length > 0 ? `
                         <button onclick="document.getElementById('more-ventures').classList.remove('hidden'); this.classList.add('hidden');" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
+                        <button onclick="toggleGrid('more-ventures', this, 'Ventures')" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
                             View All Ventures <i data-lucide="chevron-down" class="w-3 h-3"></i>
                         </button>` : ''}
                     </div>
@@ -4019,6 +4032,7 @@ window.toggleCareerHub = function() {
                             </div>
                             ${moreOccs.length > 0 ? `
                             <button onclick="document.getElementById('more-occs').classList.remove('hidden'); this.classList.add('hidden');" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
+                            <button onclick="toggleGrid('more-occs', this, 'Occupations')" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
                                 View All Occupations <i data-lucide="chevron-down" class="w-3 h-3"></i>
                             </button>` : ''}
                         </div>
@@ -4050,6 +4064,7 @@ window.toggleCareerHub = function() {
                             </div>
                             ${moreSkills.length > 0 ? `
                             <button onclick="document.getElementById('more-skills').classList.remove('hidden'); this.classList.add('hidden');" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
+                            <button onclick="toggleGrid('more-skills', this, 'Skills')" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
                                 View All Skills <i data-lucide="chevron-down" class="w-3 h-3"></i>
                             </button>` : ''}
                         </div>
