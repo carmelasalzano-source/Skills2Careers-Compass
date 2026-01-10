@@ -427,19 +427,27 @@ function getOJAMetrics(roleTitle, country) {
         }
 
         // --- HELPER: GENERATE OUTCOME DATA (Updated for Real Data) ---
-        const generateOutcomeScorecard = (providerName) => {
+        const generateOutcomeScorecard = (providerName, courseType) => {
             const name = providerName || "";
             const config = (typeof outcomeScorecardConfig !== 'undefined') ? outcomeScorecardConfig : { verified: [], online: [] };
             
             const hasData = config.verified.some(k => name.includes(k));
             const isOnline = config.online.some(k => name.includes(k));
             
+            // Accreditation & Stackable Logic
+            let accreditation = null;
+            if (name.includes("University") || name.includes("TVET") || name.includes("Institute") || name.includes("College")) {
+                accreditation = "Accredited";
+            }
+            
+            const isStackable = (courseType && (courseType.includes('Micro') || courseType.includes('Cert') || courseType.includes('Badge') || courseType.includes('Degree')));
+
             if (hasData) {
-                return { available: true, placement: { d90: '62%', m6: '85%', y1: '94%' }, uplift: '+45%', methodology: 'Independent Audit', stars: 4 };
+                return { available: true, placement: { d90: '62%', m6: '85%', y1: '94%' }, uplift: '+45%', methodology: 'Independent Audit', stars: 5, evidence: { completion: '94%', timeToJob: '3 Mo', sample: 'n=1.2k' }, accreditation: accreditation || "Verified Provider", stackable: isStackable };
             } else if (isOnline) {
-                return { available: true, placement: { d90: 'N/A', m6: 'Global Avg', y1: 'N/A' }, uplift: 'Varies', methodology: 'Self-Reported', stars: 3 };
+                return { available: true, placement: { d90: 'N/A', m6: 'Global Avg', y1: 'N/A' }, uplift: 'Varies', methodology: 'Self-Reported', stars: 3, evidence: { completion: 'Varies', timeToJob: 'N/A', sample: 'Global' }, accreditation: accreditation || "Industry Recog.", stackable: isStackable };
             } else {
-                return { available: false }; 
+                return { available: false, accreditation: accreditation, stackable: isStackable }; 
             }
         };
 
@@ -476,7 +484,7 @@ function getOJAMetrics(roleTitle, country) {
                  c.durationMonths = c.duration;
                  c.skillsCovered = c.skills || [];
                  c.occupationsMapped = ["Specialist", "Analyst"]; 
-                 c.outcomeData = generateOutcomeScorecard(c.provider);
+                 c.outcomeData = generateOutcomeScorecard(c.provider, c.type);
             });
 
             return { short, med, long };
@@ -496,6 +504,15 @@ function getOJAMetrics(roleTitle, country) {
                 const isSaved = myPlan.courses.has(t.id);
                 const saveIconClass = isSaved ? "fill-indigo-600 text-indigo-600" : "text-slate-300 hover:text-indigo-600";
 
+                // Trust Tags
+                let tagsHtml = '';
+                if (t.outcomeData.accreditation === 'Accredited') {
+                    tagsHtml += `<span class="text-[9px] font-bold bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded border border-emerald-100 flex items-center gap-1" title="Nationally Accredited"><i data-lucide="shield-check" class="w-2.5 h-2.5"></i> Accredited</span>`;
+                }
+                if (t.outcomeData.stackable) {
+                    tagsHtml += `<span class="text-[9px] font-bold bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded border border-blue-100 flex items-center gap-1" title="Counts towards larger qualification"><i data-lucide="layers" class="w-2.5 h-2.5"></i> Stackable</span>`;
+                }
+
                 if (t.outcomeData && t.outcomeData.available) {
                     // ... existing scorecard logic ...
                     const stars = Array(5).fill(0).map((_, i) => 
@@ -506,26 +523,26 @@ function getOJAMetrics(roleTitle, country) {
                         <div class="mt-3 bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
                             <div class="bg-indigo-50 px-3 py-1.5 border-b border-indigo-100 flex justify-between items-center">
                                 <span class="text-[10px] font-bold text-indigo-800 uppercase tracking-wide">Provider Outcome Scorecard</span>
-                                <div class="flex gap-0.5" title="Data Quality: ${t.outcomeData.stars}/5">${stars}</div>
+                                <div class="flex gap-0.5" title="Evidence Strength: ${t.outcomeData.stars}/5">${stars}</div>
                             </div>
-                            <div class="p-3 grid grid-cols-2 gap-y-3 gap-x-4">
-                                <div class="col-span-2">
-                                    <div class="text-[10px] text-slate-500 uppercase font-semibold mb-1">Placement Rate (Verified)</div>
-                                    <div class="flex justify-between text-xs text-slate-700 bg-slate-50 rounded px-2 py-1 border border-slate-100">
-                                        <span><strong>90d:</strong> ${t.outcomeData.placement.d90}</span>
-                                        <span class="border-l border-slate-200 mx-1"></span>
-                                        <span><strong>6m:</strong> ${t.outcomeData.placement.m6}</span>
-                                        <span class="border-l border-slate-200 mx-1"></span>
-                                        <span><strong>1y:</strong> ${t.outcomeData.placement.y1}</span>
+                            <div class="p-3">
+                                <div class="grid grid-cols-3 gap-2 text-center mb-3">
+                                    <div>
+                                        <div class="text-[9px] text-slate-500 uppercase">Completion</div>
+                                        <div class="text-xs font-bold text-slate-800">${t.outcomeData.evidence.completion}</div>
+                                    </div>
+                                    <div class="border-x border-slate-100">
+                                        <div class="text-[9px] text-slate-500 uppercase">Time-to-Job</div>
+                                        <div class="text-xs font-bold text-slate-800">${t.outcomeData.evidence.timeToJob}</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-slate-500 uppercase">Sample</div>
+                                        <div class="text-xs font-bold text-slate-800">${t.outcomeData.evidence.sample}</div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="text-[10px] text-slate-500 uppercase font-semibold">Salary Uplift</div>
-                                    <div class="text-sm font-bold text-emerald-600">${t.outcomeData.uplift}</div>
-                                </div>
-                                <div>
-                                    <div class="text-[10px] text-slate-500 uppercase font-semibold">Methodology</div>
-                                    <div class="text-[10px] font-bold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded w-fit border border-indigo-100">${t.outcomeData.methodology}</div>
+                                <div class="flex justify-between items-center pt-2 border-t border-slate-100">
+                                    <div class="text-[10px] text-slate-500">Method: <span class="font-bold text-indigo-700">${t.outcomeData.methodology}</span></div>
+                                    <div class="text-[10px] font-bold text-emerald-600">Uplift: ${t.outcomeData.uplift}</div>
                                 </div>
                             </div>
                         </div>
@@ -566,6 +583,10 @@ function getOJAMetrics(roleTitle, country) {
                             </div>
                         </div>
                         
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            ${tagsHtml}
+                        </div>
+
                         <!-- Added Description Section -->
                         <div class="text-xs text-slate-600 mb-3 leading-snug line-clamp-3">
                             ${t.description || 'No description available.'}
@@ -979,6 +1000,10 @@ function getOJAMetrics(roleTitle, country) {
             // Select top 6 unique recommendations
             let relevantCourses = prioritizedCourses.slice(0, 6).filter(c => c); // Filter out undefined
 
+            // STORE FOR SORTING
+            pathwayState.recommendedCourses = relevantCourses;
+            pathwayState.techGaps = techGaps;
+
             // --- COUNTRY SPECIFIC CONTEXT MAP ---
             // Default to 'all' if country not found, or use activeCountry
             const localTip = (typeof countryPathwayContext !== 'undefined' && (countryPathwayContext[activeCountry] || countryPathwayContext['all'])) || { hub: "local hubs" };
@@ -1057,45 +1082,32 @@ function getOJAMetrics(roleTitle, country) {
                 </a>
             `}).join('');
 
-            // 3. Render HTML
-            let courseHtml = relevantCourses.map(t => {
-                // Check if course matches a gap
-                const matchedGaps = (techGaps && t.skillsCovered) 
-                    ? t.skillsCovered.filter(s => techGaps.some(g => s.toLowerCase().includes(g.toLowerCase()) || g.toLowerCase().includes(s.toLowerCase()))) 
-                    : [];
-                const matchTag = matchedGaps.length > 0 ? `<span class="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium bg-emerald-100 text-emerald-800">Matches Gap: ${matchedGaps[0]}</span>` : '';
-                
-                // UNESCO Tags
-                const gsaTag = t.gsa_member ? `<span class="ml-1 inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium bg-blue-100 text-blue-800 border border-blue-200" title="UNESCO Global Skills Academy Partner">UNESCO GSA</span>` : '';
-                const unevocTag = t.unesco_unevoc ? `<span class="ml-1 inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium bg-orange-100 text-orange-800 border border-orange-200" title="UNESCO-UNEVOC Network Member">UNEVOC</span>` : '';
-                
-                const hasLink = t.url && t.url !== '#';
-                const tag = hasLink ? 'a' : 'div';
-                const href = hasLink ? `href="${t.url}" target="_blank"` : '';
-                const cursor = hasLink ? 'hover:shadow-md cursor-pointer' : 'cursor-default opacity-75';
-                const icon = hasLink ? `<i data-lucide="external-link" class="w-3 h-3 text-slate-300 group-hover:text-indigo-500 transition-colors"></i>` : `<span class="text-[9px] text-slate-400 font-bold">N/A</span>`;
-
-                return `
-                <${tag} ${href} class="flex flex-col justify-between p-3 bg-blue-50 border border-blue-100 rounded-lg hover:border-blue-300 ${cursor} transition-all group text-left h-full">
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            ${icon}
+            // --- ROI SNAPSHOT ---
+            const roiHtml = `
+                <div class="bg-white border border-slate-200 rounded-xl p-4 mb-2 shadow-sm">
+                    <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-3 flex items-center gap-2">
+                        <i data-lucide="clock" class="w-3 h-3"></i> Pathway ROI Snapshot: Time-to-Employability
+                    </h4>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div class="p-2 bg-emerald-50 rounded-lg border border-emerald-100">
+                            <div class="text-[10px] text-emerald-800 font-bold mb-1">Micro-Creds</div>
+                            <div class="text-lg font-bold text-emerald-600 leading-none">3-6</div>
+                            <div class="text-[9px] text-emerald-700">Months</div>
                         </div>
-                        <div class="text-sm font-bold text-slate-800 leading-tight mb-1 group-hover:text-blue-700 transition-colors line-clamp-2">${t.name}</div>
-                        <div class="text-xs text-slate-600 mb-2 line-clamp-2">${t.provider}</div>
+                        <div class="p-2 bg-blue-50 rounded-lg border border-blue-100">
+                            <div class="text-[10px] text-blue-800 font-bold mb-1">TVET / Diploma</div>
+                            <div class="text-lg font-bold text-blue-600 leading-none">1-2</div>
+                            <div class="text-[9px] text-blue-700">Years</div>
+                        </div>
+                        <div class="p-2 bg-slate-50 rounded-lg border border-slate-100">
+                            <div class="text-[10px] text-slate-800 font-bold mb-1">University</div>
+                            <div class="text-lg font-bold text-slate-600 leading-none">3-4</div>
+                            <div class="text-[9px] text-slate-700">Years</div>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2 text-[10px] text-slate-500 border-t border-blue-100 pt-2 mt-auto">
-                        <span>${t.duration}</span>
-                        <span class="text-blue-300">•</span>
-                        <span>${t.mode}</span>
-                        ${unevocTag ? `<span class="ml-auto">${unevocTag}</span>` : ''}
-                    </div>
-                </${tag}>
-            `}).join('');
-
-            if (relevantCourses.length === 0) {
-                courseHtml = `<div class="col-span-1 md:col-span-2 p-4 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 text-center italic">No specific training recommendations found for this profile tier. Please explore the full Training Hub.</div>`;
-            }
+                    <p class="text-[10px] text-slate-400 mt-2 text-center italic">*Figures are indicative averages based on regional tracer studies (e.g. IUCEA). Actual timelines vary by program.</p>
+                </div>
+            `;
 
             // --- SECTOR SPECIFIC RESOURCES (New Request) ---
             let sectorResourcesHtml = '';
@@ -1182,14 +1194,22 @@ function getOJAMetrics(roleTitle, country) {
                         </div>
                     </div>
 
+                    ${roiHtml}
+
                     <!-- Step 1: Training & capacity strengthening opportunities -->
                     <div>
-                        <h4 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
-                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs">1</span> 
-                            Bridge Knowledge and Skills Gaps
-                        </h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            ${courseHtml}
+                        <div class="flex justify-between items-end mb-3">
+                            <h4 class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                                <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs">1</span> 
+                                Bridge Knowledge Gaps
+                            </h4>
+                            <div class="flex gap-1 bg-slate-100 p-0.5 rounded-lg">
+                                <button onclick="renderPathwayCourseGrid('match')" class="pathway-sort-btn px-2 py-1 text-[10px] font-bold rounded-md transition-colors bg-white text-slate-600 border border-slate-200 shadow-sm" data-sort="match">Best Match</button>
+                                <button onclick="renderPathwayCourseGrid('quickest')" class="pathway-sort-btn px-2 py-1 text-[10px] font-bold rounded-md transition-colors text-slate-500 hover:text-slate-700" data-sort="quickest">Quickest</button>
+                            </div>
+                        </div>
+                        <div id="pathway-course-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <!-- Dynamic Content -->
                         </div>
                     </div>
 
@@ -1261,6 +1281,85 @@ function getOJAMetrics(roleTitle, country) {
 
                 </div>
             `;
+            
+            // Render initial grid
+            renderPathwayCourseGrid('match');
+            
+            if(window.lucide) lucide.createIcons();
+        }
+
+        // --- NEW: Render Pathway Course Grid (Sorting) ---
+        window.renderPathwayCourseGrid = function(sortType) {
+            const container = document.getElementById('pathway-course-grid');
+            if (!container || !pathwayState.recommendedCourses) return;
+
+            let courses = [...pathwayState.recommendedCourses];
+            const techGaps = pathwayState.techGaps || [];
+
+            // Update active button state
+            document.querySelectorAll('.pathway-sort-btn').forEach(btn => {
+                if (btn.dataset.sort === sortType) {
+                    btn.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+                    btn.classList.add('bg-indigo-100', 'text-indigo-700', 'border-indigo-200');
+                } else {
+                    btn.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+                    btn.classList.remove('bg-indigo-100', 'text-indigo-700', 'border-indigo-200');
+                }
+            });
+
+            if (sortType === 'quickest') {
+                courses.sort((a, b) => {
+                    const durA = parseDuration(a.duration) || 99;
+                    const durB = parseDuration(b.duration) || 99;
+                    return durA - durB;
+                });
+            } 
+
+            if (courses.length === 0) {
+                container.innerHTML = `<div class="col-span-1 md:col-span-2 p-4 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-500 text-center italic">No specific training recommendations found for this profile tier. Please explore the full Training Hub.</div>`;
+                return;
+            }
+
+            const html = courses.map(t => {
+                const matchedGaps = (techGaps && t.skillsCovered) 
+                    ? t.skillsCovered.filter(s => techGaps.some(g => s.toLowerCase().includes(g.toLowerCase()) || g.toLowerCase().includes(s.toLowerCase()))) 
+                    : [];
+                
+                const unevocTag = t.unesco_unevoc ? `<span class="ml-1 inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-medium bg-orange-100 text-orange-800 border border-orange-200" title="UNESCO-UNEVOC Network Member">UNEVOC</span>` : '';
+                const hasLink = t.url && t.url !== '#';
+                const tag = hasLink ? 'a' : 'div';
+                const href = hasLink ? `href="${t.url}" target="_blank"` : '';
+                const cursor = hasLink ? 'hover:shadow-md cursor-pointer' : 'cursor-default opacity-75';
+                const icon = hasLink ? `<i data-lucide="external-link" class="w-3 h-3 text-slate-300 group-hover:text-indigo-500 transition-colors ml-auto"></i>` : ``;
+
+                let durColor = "text-slate-500";
+                if (sortType === 'quickest') {
+                    const months = parseDuration(t.duration) || 99;
+                    if (months < 3) durColor = "text-emerald-600 font-bold";
+                    else if (months < 12) durColor = "text-amber-600 font-bold";
+                }
+
+                return `
+                <${tag} ${href} class="flex flex-col justify-between p-2.5 bg-blue-50 border border-blue-100 rounded-lg hover:border-blue-300 ${cursor} transition-all group text-left h-full">
+                    <div>
+                        <div class="flex justify-between items-start mb-1">
+                            <div class="text-xs font-bold text-slate-800 leading-tight group-hover:text-blue-700 transition-colors line-clamp-2 pr-1">${t.name}</div>
+                            ${matchedGaps.length > 0 ? `<span class="text-[9px] font-bold bg-emerald-100 text-emerald-700 px-1 py-0.5 rounded shrink-0">Match</span>` : ''}
+                        </div>
+                        <div class="text-[10px] text-slate-600 mb-1.5 line-clamp-1">${t.provider}</div>
+                    </div>
+                    <div class="flex items-center gap-2 text-[10px] text-slate-500 border-t border-blue-100 pt-1.5 mt-auto">
+                        <span class="${durColor}">${t.duration}</span>
+                        <span class="text-blue-300">•</span>
+                        <span>${t.mode}</span>
+                        ${unevocTag ? `<span>${unevocTag}</span>` : ''}
+                        ${icon}
+                    </div>
+                </${tag}>
+                `;
+            }).join('');
+
+            container.innerHTML = html;
             if(window.lucide) lucide.createIcons();
         }
 
@@ -3077,10 +3176,6 @@ function getOJAMetrics(roleTitle, country) {
             if (trainingDrawer && !trainingDrawer.classList.contains('translate-x-full')) {
                 trainingDrawer.classList.add('translate-x-full');
             }
-            const communityDrawer = document.getElementById('community-hub-drawer');
-            if (communityDrawer && !communityDrawer.classList.contains('translate-x-full')) {
-                communityDrawer.classList.add('translate-x-full');
-            }
 
             const modal = document.getElementById('unified-hub-modal');
             const panel = document.getElementById('unified-hub-modal-panel');
@@ -3919,7 +4014,7 @@ window.toggleCareerHub = function() {
             const ventureHtml = ventures.length > 0 ? `
                 <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
                     <div class="border-b border-slate-200 bg-white flex flex-col sm:flex-row justify-between items-center">
-                        <div class="px-6 py-4 w-full sm:w-auto border-b sm:border-b-0 border-slate-100">
+                        <div class="px-4 py-4 sm:px-6 w-full sm:w-auto border-b sm:border-b-0 border-slate-100">
                             <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2">
                                 <i data-lucide="rocket" class="w-5 h-5 text-orange-600"></i>
                                 Top 10 Ventures
@@ -3927,7 +4022,7 @@ window.toggleCareerHub = function() {
                             <p class="text-xs text-slate-500 mt-1">High-growth opportunities tailored to your region</p>
                         </div>
                     </div>
-                    <div class="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                    <div class="p-4 sm:p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                         ${topVentures.map(v => `
                             <button onclick="openVentureModal('${v.Venture_Title.replace(/'/g, "\\'")}')" title="${v.Venture_Title}" class="px-3 py-2 bg-white border border-${themeColor}-200 rounded-lg text-left hover:bg-${themeColor}-100 hover:border-${themeColor}-300 transition-all group">
                                 <div class="font-bold text-xs text-${themeColor}-800 mb-0.5 flex items-center gap-1 min-w-0">
@@ -3959,7 +4054,7 @@ window.toggleCareerHub = function() {
             const html = `
                 <div class="space-y-6 animate-fade-in">
                     <!-- Sector Intelligence: 1 Row (4 Columns) -->
-                    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                         
                         <!-- Card 1: Sector Proxy -->
                         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between h-full">
@@ -4011,7 +4106,7 @@ window.toggleCareerHub = function() {
 
                     </div>
 
-                    <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+                    <div class="bg-white rounded-xl p-4 sm:p-6 border border-slate-200 shadow-sm">
                         <div class="mb-4">
                             <h3 class="text-base font-bold text-slate-800 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-slate-500"></i> Top Occupations in this Sector</h3>
                             <p class="text-xs text-slate-500 mt-1">Click to view salary data, daily tasks, and required qualifications.</p>
@@ -4047,7 +4142,7 @@ window.toggleCareerHub = function() {
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                    <div class="bg-white rounded-xl p-4 sm:p-6 border border-slate-200 shadow-sm">
                         <div class="mb-4">
                             <h3 class="text-base font-bold text-slate-800 flex items-center gap-2"><i data-lucide="cpu" class="w-4 h-4 text-slate-500"></i> Top Skills sought by Employers</h3>
                             <p class="text-xs text-slate-500 mt-1">Click to see proficiency levels, training providers, and related jobs.</p>
@@ -4479,8 +4574,24 @@ window.toggleCareerHub = function() {
             if(window.lucide) lucide.createIcons();
         }
 
-        window.showLMIResources = function() {
+        window.showWorkforceDataView = function() {
             const sectorData = getSectorCareerResources(activeSectorId);
+            
+            // FIX: If in Regional view, explicitly pull in all National LMIS links so they aren't hidden
+            if (activeCountry === 'all' && dataManager.digitalResources && dataManager.digitalResources.country_resources) {
+                const cr = dataManager.digitalResources.country_resources;
+                Object.keys(cr).forEach(country => {
+                    if (cr[country].data) {
+                        cr[country].data.forEach(d => {
+                            // Add to LMI list if not already there
+                            if (!sectorData.lmi.some(l => l.name === d.title)) {
+                                sectorData.lmi.push({ name: d.title, desc: `${country}: ${d.desc}`, link: d.link, type: 'National Data' });
+                            }
+                        });
+                    }
+                });
+            }
+
             const container = document.getElementById('career-hub-content');
             
             // Group resources by type for better display
@@ -4511,12 +4622,42 @@ window.toggleCareerHub = function() {
                 </div>
             `).join('');
 
+            // Static Evidence Content (Merged from openEvidenceModal)
+            const evidenceHtml = `
+                <div class="mt-6 pt-6 border-t border-slate-200">
+                    <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-3">Verified Data Sources</h3>
+                    <div class="grid grid-cols-1 gap-3">
+                        <a href="https://ilostat.ilo.org" target="_blank" class="block p-3 border border-slate-200 rounded-lg hover:border-indigo-300 hover:bg-slate-50 transition-colors group bg-white">
+                            <div class="font-bold text-sm text-slate-800 group-hover:text-indigo-700 flex items-center gap-2">ILOSTAT <i data-lucide="external-link" class="w-3 h-3 text-slate-400"></i></div>
+                            <div class="text-xs text-slate-500 mt-1">Global reference for comparable labour indicators.</div>
+                        </a>
+                        <a href="https://www.eac.int" target="_blank" class="block p-3 border border-slate-200 rounded-lg hover:border-indigo-300 hover:bg-slate-50 transition-colors group bg-white">
+                            <div class="font-bold text-sm text-slate-800 group-hover:text-indigo-700 flex items-center gap-2">EAC Secretariat <i data-lucide="external-link" class="w-3 h-3 text-slate-400"></i></div>
+                            <div class="text-xs text-slate-500 mt-1">Regional labour policy & Manpower Survey.</div>
+                        </a>
+                        <a href="https://unevoc.unesco.org/home/Global+Skills+Tracker" target="_blank" class="block p-3 border border-slate-200 rounded-lg hover:border-indigo-300 hover:bg-slate-50 transition-colors group bg-white">
+                            <div class="font-bold text-sm text-slate-800 group-hover:text-indigo-700 flex items-center gap-2">UNESCO Global Skills Tracker <i data-lucide="external-link" class="w-3 h-3 text-slate-400"></i></div>
+                            <div class="text-xs text-slate-500 mt-1">Labour market insights on skills demand.</div>
+                        </a>
+                        <a href="https://economicgraph.linkedin.com/workforce-data?selectedFilter=view-all%2Fby-year" target="_blank" class="block p-3 border border-slate-200 rounded-lg hover:border-indigo-300 hover:bg-slate-50 transition-colors group bg-white">
+                            <div class="font-bold text-sm text-slate-800 group-hover:text-indigo-700 flex items-center gap-2">LinkedIn Economic Graph <i data-lucide="external-link" class="w-3 h-3 text-slate-400"></i></div>
+                            <div class="text-xs text-slate-500 mt-1">Interactive workforce trends & skills insights.</div>
+                        </a>
+                        <a href="https://data.worldbank.org" target="_blank" class="block p-3 border border-slate-200 rounded-lg hover:border-indigo-300 hover:bg-slate-50 transition-colors group bg-white">
+                            <div class="font-bold text-sm text-slate-800 group-hover:text-indigo-700 flex items-center gap-2">World Bank Data <i data-lucide="external-link" class="w-3 h-3 text-slate-400"></i></div>
+                            <div class="text-xs text-slate-500 mt-1">Harmonized macro indicators.</div>
+                        </a>
+                    </div>
+                </div>
+            `;
+
             container.innerHTML = `
                 <div class="animate-fade-in">
                     <button onclick="resetCareerHub()" class="mb-4 flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Hub</button>
-                    <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2"><i data-lucide="line-chart" class="w-5 h-5 text-indigo-500"></i> Market Intelligence</h3>
+                    <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2"><i data-lucide="database" class="w-5 h-5 text-indigo-500"></i> Workforce Data</h3>
                     <div class="space-y-4">
                         ${lmiHtml || '<p class="text-sm text-slate-500 italic">No market intelligence resources found for this sector.</p>'}
+                        ${evidenceHtml}
                     </div>
                 </div>
             `;
@@ -4693,35 +4834,9 @@ window.toggleCareerHub = function() {
             doc.save(`${name.replace(/ /g, "_")}_CV.pdf`);
         }
 
-        window.toggleCommunityHub = function() {
-            // Close Unified Hub if open
-            const unifiedModal = document.getElementById('unified-hub-modal');
-            if (unifiedModal && !unifiedModal.classList.contains('hidden')) {
-                closeModal('unified-hub-modal');
-            }
-
-            // Close other drawers
-            const trainingDrawer = document.getElementById('training-hub-drawer');
-            if (!trainingDrawer.classList.contains('translate-x-full')) {
-                trainingDrawer.classList.add('translate-x-full');
-            }
-            const careerDrawer = document.getElementById('career-hub-drawer');
-            if (!careerDrawer.classList.contains('translate-x-full')) {
-                careerDrawer.classList.add('translate-x-full');
-            }
-            
-            // Toggle Community Drawer
-            const drawer = document.getElementById('community-hub-drawer');
-            drawer.classList.toggle('translate-x-full');
-
-            if (!drawer.classList.contains('translate-x-full')) {
-                showCommunityView();
-            }
-        }
-
         window.showCommunityView = function(activeFilter = 'all') {
             const sectorData = getSectorCareerResources(activeSectorId);
-            const container = document.getElementById('community-hub-content');
+            const container = document.getElementById('career-hub-content');
             
             // Determine Theme based on Sector
             const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo' };
@@ -4794,6 +4909,7 @@ window.toggleCareerHub = function() {
 
             container.innerHTML = `
                 <div class="animate-fade-in flex flex-col h-full">
+                    <button onclick="resetCareerHub()" class="mb-4 flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600 shrink-0"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Hub</button>
                     <!-- Filters -->
                     <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 grid grid-cols-2 gap-3 mb-4">
                         <div>
@@ -4937,11 +5053,27 @@ window.toggleCareerHub = function() {
             if(window.lucide) lucide.createIcons();
         }
 
-        window.showJobBoardView = function() {
+        window.showJobBoardView = function(filter = 'all') {
             const sectorData = getSectorCareerResources(activeSectorId);
             const container = document.getElementById('career-hub-content');
             
-            const jobsHtml = (sectorData.jobs || []).map(j => `
+            // 1. Merge real jobs with mock opportunities for the prototype to demonstrate aggregation
+            let allOps = [...(sectorData.jobs || [])];
+            
+            // Inject mocks for demonstration if they don't exist in data
+            if (!allOps.some(j => j.type === 'Internship')) allOps.push({ title: "Graduate Trainee", company: "Leading Sector Firm", type: "Internship", link: "#" });
+            if (!allOps.some(j => j.type === 'Freelance')) allOps.push({ title: "Technical Consultant", company: "Project Alpha", type: "Freelance", link: "#" });
+            if (!allOps.some(j => j.type === 'Tender')) allOps.push({ title: "RFP: Service Delivery", company: "Government Agency", type: "Tender", link: "#" });
+            if (!allOps.some(j => j.type === 'Volunteer')) allOps.push({ title: "Community Mentor", company: "Local Hub", type: "Volunteer", link: "#" });
+
+            // 2. Filter Logic
+            let filteredOps = allOps;
+            if (filter !== 'all') {
+                // Loose matching for prototype
+                filteredOps = allOps.filter(j => (j.type && j.type.toLowerCase().includes(filter)) || (filter === 'entry' && !j.type)); 
+            }
+
+            const opsHtml = filteredOps.map(j => `
                 <a href="${j.link || '#'}" target="_blank" class="block p-3 border border-slate-200 rounded-lg bg-white hover:border-cyan-300 transition-colors group">
                     <div class="flex justify-between items-start mb-1">
                         <div class="flex gap-1">
@@ -4955,15 +5087,108 @@ window.toggleCareerHub = function() {
                 </a>
             `).join('');
 
+            // 3. Kit Configuration per Type
+            const kits = {
+                'all': { title: "General Job Application Kit", icon: "briefcase", cv: "Standard Professional CV", check: "LinkedIn Updated, References Ready", test: "General Aptitude" },
+                'internship': { title: "Internship Starter Kit", icon: "graduation-cap", cv: "Academic/Project-based CV", check: "Transcript, Cover Letter", test: "Basic Logic / Personality" },
+                'freelance': { title: "Freelancer Toolkit", icon: "laptop", cv: "Portfolio/Case Studies", check: "Rate Card, Contract Template", test: "Skill Assessment (e.g. Coding)" },
+                'tender': { title: "Founder Tender Kit", icon: "file-text", cv: "Company Profile / Capability Statement", check: "Tax Compliance, Registration Certs", test: "Technical Proposal Evaluation" },
+                'volunteer': { title: "Volunteer Kit", icon: "heart", cv: "Skills-based Resume", check: "Availability Schedule, Motivation Statement", test: "Values Alignment" }
+            };
+            const activeKit = kits[filter] || kits['all'];
+            const getBtnClass = (f) => filter === f ? "bg-cyan-600 text-white shadow-sm" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50";
+
             container.innerHTML = `
                 <div class="animate-fade-in">
                     <button onclick="resetCareerHub()" class="mb-4 flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Hub</button>
-                    <h3 class="font-bold text-slate-800 mb-4 flex items-center gap-2"><i data-lucide="briefcase" class="w-5 h-5 text-cyan-600"></i> Active Opportunities</h3>
-                    <div class="space-y-3">
-                        ${jobsHtml.length > 0 ? jobsHtml : '<p class="text-sm text-slate-500 italic">No job opportunities found for this filter.</p>'}
+                    
+                    <div class="mb-4">
+                        <h3 class="font-bold text-slate-800 mb-1 flex items-center gap-2"><i data-lucide="briefcase" class="w-5 h-5 text-cyan-600"></i> Opportunity Aggregator</h3>
+                        <p class="text-xs text-slate-500">Curated listings across the ecosystem.</p>
+                    </div>
+
+                    <div class="flex gap-2 mb-4 overflow-x-auto pb-1 shrink-0">
+                        <button onclick="showJobBoardView('all')" class="px-3 py-1.5 rounded-full text-xs font-bold transition-colors whitespace-nowrap ${getBtnClass('all')}">All</button>
+                        <button onclick="showJobBoardView('internship')" class="px-3 py-1.5 rounded-full text-xs font-bold transition-colors whitespace-nowrap ${getBtnClass('internship')}">Internships</button>
+                        <button onclick="showJobBoardView('freelance')" class="px-3 py-1.5 rounded-full text-xs font-bold transition-colors whitespace-nowrap ${getBtnClass('freelance')}">Freelance</button>
+                        <button onclick="showJobBoardView('tender')" class="px-3 py-1.5 rounded-full text-xs font-bold transition-colors whitespace-nowrap ${getBtnClass('tender')}">Tenders</button>
+                        <button onclick="showJobBoardView('volunteer')" class="px-3 py-1.5 rounded-full text-xs font-bold transition-colors whitespace-nowrap ${getBtnClass('volunteer')}">Volunteer</button>
+                    </div>
+
+                    <!-- Application Kit Card -->
+                    <div class="mb-4 bg-gradient-to-r from-slate-800 to-slate-900 rounded-xl p-4 text-white shadow-md shrink-0">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-sm flex items-center gap-2"><i data-lucide="${activeKit.icon}" class="w-4 h-4 text-cyan-400"></i> ${activeKit.title}</h4>
+                            <span class="text-[9px] bg-white/10 px-2 py-0.5 rounded uppercase tracking-wider">Ready-to-Use</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] text-slate-300 mb-3">
+                            <div>• ${activeKit.cv}</div>
+                            <div>• ${activeKit.check}</div>
+                            <div class="col-span-2">• Screening: ${activeKit.test}</div>
+                        </div>
+                        <button onclick="renderApplicationKit('${filter}')" class="w-full py-2 bg-white text-slate-900 font-bold rounded-lg text-xs hover:bg-cyan-50 transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="download" class="w-3 h-3"></i> View Application Kit
+                        </button>
+                    </div>
+
+                    <div class="space-y-3 overflow-y-auto pr-1 pb-4">
+                        ${opsHtml.length > 0 ? opsHtml : '<p class="text-sm text-slate-500 italic text-center py-4">No specific opportunities found for this category yet.</p>'}
                         <div class="p-3 bg-slate-50 rounded text-xs text-center text-slate-500">
                             Showing opportunities in <strong>${activeSectorId}</strong>. Includes national, regional, and global listings.
                         </div>
+                    </div>
+                </div>
+            `;
+            if(window.lucide) lucide.createIcons();
+        }
+
+        // --- NEW: Render Application Kit ---
+        window.renderApplicationKit = function(type) {
+            const container = document.getElementById('career-hub-content');
+            
+            const kits = {
+                'all': { title: "General Job Application Kit", items: ["Master CV Template", "Cover Letter Guide", "LinkedIn Checklist", "Common Interview Qs"] },
+                'internship': { title: "Internship Starter Kit", items: ["No-Experience Resume Template", "University Transcript Guide", "Internship Cover Letter", "Behavioral Interview Prep"] },
+                'freelance': { title: "Freelancer Toolkit", items: ["Service Rate Card Template", "Client Contract Draft", "Portfolio Website Checklist", "Proposal Email Script"] },
+                'tender': { title: "Founder Tender Kit", items: ["Capability Statement Template", "Tax Compliance Checklist", "Technical Proposal Structure", "Financial Proposal Sheet"] },
+                'volunteer': { title: "Volunteer Application Kit", items: ["Motivation Statement Template", "Availability Schedule", "Soft Skills Checklist", "Values Alignment Prep"] }
+            };
+            const kit = kits[type] || kits['all'];
+
+            container.innerHTML = `
+                <div class="animate-fade-in space-y-5">
+                    <button onclick="showJobBoardView('${type}')" class="flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Opportunities</button>
+                    
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="briefcase" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900">${kit.title}</h3>
+                        <p class="text-xs text-slate-500">Everything you need to apply successfully.</p>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                        <div class="bg-slate-50 px-4 py-2 border-b border-slate-200 text-xs font-bold text-slate-500 uppercase">Included Resources</div>
+                        <div class="divide-y divide-slate-100">
+                            ${kit.items.map(item => `
+                                <div class="p-3 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                                        <span class="text-sm text-slate-700">${item}</span>
+                                    </div>
+                                    <button class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded hover:bg-indigo-100">Access</button>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="bg-indigo-50 rounded-xl p-4 border border-indigo-100">
+                        <h4 class="font-bold text-sm text-indigo-900 mb-2">Next Steps</h4>
+                        <ol class="list-decimal list-inside text-xs text-indigo-800 space-y-1">
+                            <li>Download the templates above.</li>
+                            <li>Customize them for the specific role.</li>
+                            <li>Use the <strong>Interview Prep</strong> tool in the main hub.</li>
+                        </ol>
                     </div>
                 </div>
             `;
@@ -5192,42 +5417,42 @@ window.toggleCareerHub = function() {
                     </div>
 
                     <div class="grid grid-cols-2 gap-3">
-                        <!-- 1. LMI -->
-                        <button onclick="showLMIResources()" class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-indigo-300 hover:bg-white hover:shadow-sm text-left transition-all group">
+                        <!-- 1. Market Intel -->
+                        <button onclick="showWorkforceDataView()" class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-indigo-300 hover:bg-white hover:shadow-sm text-left transition-all group">
                             <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg w-fit mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors"><i data-lucide="line-chart" class="w-5 h-5"></i></div>
                             <h4 class="font-bold text-slate-800 text-sm">Market Intel</h4>
                             <p class="text-xs text-slate-500 mt-1">Trends & Data</p>
                         </button>
                         
-                        <!-- 2. CV & Portfolio -->
+                        <!-- 2. CV & Tools -->
                         <button onclick="showCVResources()" class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-purple-300 hover:bg-white hover:shadow-sm text-left transition-all group">
                             <div class="p-2 bg-purple-100 text-purple-600 rounded-lg w-fit mb-3 group-hover:bg-purple-600 group-hover:text-white transition-colors"><i data-lucide="file-text" class="w-5 h-5"></i></div>
-                            <h4 class="font-bold text-slate-800 text-sm">CV & Portfolio</h4>
-                            <p class="text-xs text-slate-500 mt-1">Tools & Templates</p>
+                            <h4 class="font-bold text-slate-800 text-sm">CV & Tools</h4>
+                            <p class="text-xs text-slate-500 mt-1">Builder & Templates</p>
                         </button>
                         
-                        <!-- 3. AI Interview Coach -->
+                        <!-- 3. Interview Prep -->
                         <button onclick="showInterviewPrep()" class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-emerald-300 hover:bg-white hover:shadow-sm text-left transition-all group">
                             <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg w-fit mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors"><i data-lucide="mic" class="w-5 h-5"></i></div>
                             <h4 class="font-bold text-slate-800 text-sm">Interview Prep</h4>
                              <p class="text-xs text-slate-500 mt-1">AI Practice Tool</p>
                         </button>
                         
-                        <!-- 4. Find a Mentor -->
+                        <!-- 4. Mentorship -->
                         <button onclick="showMentorshipView()" class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-blue-300 hover:bg-white hover:shadow-sm text-left transition-all group">
                             <div class="p-2 bg-blue-100 text-blue-600 rounded-lg w-fit mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors"><i data-lucide="user-check" class="w-5 h-5"></i></div>
                             <h4 class="font-bold text-slate-800 text-sm">Mentorship</h4>
                             <p class="text-xs text-slate-500 mt-1">Communities & Networks</p>
                         </button>
-                        
-                        <!-- 6. Jobs -->
+
+                        <!-- 5. Job Board -->
                         <button onclick="showJobBoardView()" class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-cyan-300 hover:bg-white hover:shadow-sm text-left transition-all group">
                             <div class="p-2 bg-cyan-100 text-cyan-600 rounded-lg w-fit mb-3 group-hover:bg-cyan-600 group-hover:text-white transition-colors"><i data-lucide="briefcase" class="w-5 h-5"></i></div>
-                            <h4 class="font-bold text-slate-800 text-sm">Job Board</h4>
-                            <p class="text-xs text-slate-500 mt-1">Active Roles</p>
+                            <h4 class="font-bold text-slate-800 text-sm">Opportunities</h4>
+                            <p class="text-xs text-slate-500 mt-1">Jobs, Gigs & Tenders</p>
                         </button>
-
-                        <!-- 7. Employer Connect -->
+                        
+                        <!-- 6. Employer Connect -->
                         <button onclick="showEmployerConnectView()" class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-pink-300 hover:bg-white hover:shadow-sm text-left transition-all group">
                             <div class="p-2 bg-pink-100 text-pink-600 rounded-lg w-fit mb-3 group-hover:bg-pink-600 group-hover:text-white transition-colors"><i data-lucide="handshake" class="w-5 h-5"></i></div>
                             <h4 class="font-bold text-slate-800 text-sm">Employer Connect</h4>
@@ -5391,12 +5616,21 @@ window.toggleCareerHub = function() {
                 // Sector Display
                 const sectorDisplay = c.sector === 'agri' ? 'Agriculture' : c.sector === 'energy' ? 'Renewable Energy' : c.sector === 'digital' ? 'Digital Economy' : 'Multi-Sector';
 
+                // Trust Tags for Table
+                let trustIcons = '';
+                if (outcome.accreditation === 'Accredited') {
+                    trustIcons += `<i data-lucide="shield-check" class="w-3 h-3 text-emerald-500" title="Accredited"></i>`;
+                }
+                if (outcome.stackable) {
+                    trustIcons += `<i data-lucide="layers" class="w-3 h-3 text-blue-500" title="Stackable"></i>`;
+                }
+
                 // Mobile Card HTML
                 if (mobileContainer) {
                     const mobileCard = `
                         <div class="p-4 space-y-3">
                             <div class="flex justify-between items-start gap-3">
-                                <div>
+                                <div class="flex-1">
                                     <div class="font-bold text-sm text-slate-800 leading-tight mb-1">${c.name}</div>
                                     <div class="text-xs text-slate-500">${c.provider}</div>
                                 </div>
@@ -5438,7 +5672,7 @@ window.toggleCareerHub = function() {
                                 ${c.unesco_unevoc ? '<span title="UNESCO-UNEVOC Network Member" class="text-[9px] bg-orange-100 text-orange-700 px-1 rounded border border-orange-200">UNEVOC</span>' : ''}
                                 ${c.women_focused ? '<span title="Women-Focused Program" class="text-[9px] bg-pink-100 text-pink-700 px-1 rounded border border-pink-200">Women-Focused</span>' : ''}
                             </div>
-                            <div class="text-[10px] text-slate-500 truncate max-w-[120px]">${c.provider}</div>
+                            <div class="flex items-center gap-1 mt-0.5">${trustIcons} <span class="text-[10px] text-slate-500 truncate max-w-[120px]">${c.provider}</span></div>
                         </td>
                         <td class="px-3 py-3">
                             <div class="text-[10px] text-slate-600 font-medium">${sectorDisplay}</div>
@@ -5576,27 +5810,72 @@ window.toggleCareerHub = function() {
             const tc = themeConfig.color;
             const title = sector === 'agri' ? 'Agritech' : sector === 'energy' ? 'Renewable Energy' : 'Digital Economy';
 
-            const incubatorHtml = (data.incubators || []).map(i => `
-                <a href="${i.link}" target="_blank" class="p-4 bg-white border border-slate-200 rounded-xl hover:border-${tc}-400 transition-all group block shadow-sm hover:shadow-md">
-                    <div class="font-bold text-sm text-slate-800 flex justify-between items-center group-hover:text-${tc}-700 mb-1">
-                        ${i.name} <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover:text-${tc}-500"></i>
-                    </div>
-                    <div class="text-xs text-slate-500 leading-relaxed">${i.desc}</div>
-                </a>
-            `).join('');
+            // --- 1. Venture Playbook Data ---
+            const playbooks = {
+                agri: {
+                    reg: "KEPHIS (Seeds), PCPB (Chemicals), County Business Permit",
+                    economics: "Yield/Acre vs Input Cost",
+                    pricing: "Commission on Produce (5-10%) or Input Margin",
+                    gtm: "Farmer Co-ops, Aggregators, USSD/SMS Blasts"
+                },
+                energy: {
+                    reg: "EPRA Solar License (T1/T2), ERC Class C1",
+                    economics: "Hardware Payback Period (PAYG)",
+                    pricing: "Deposit (15%) + Daily Rate (KES 50)",
+                    gtm: "Door-to-door Agents, SACCO Partnerships"
+                },
+                digital: {
+                    reg: "Data Protection (ODPC), Copyright/IP",
+                    economics: "CAC < LTV (3:1 Ratio)",
+                    pricing: "Freemium, Tiered Subscription (SaaS)",
+                    gtm: "SEO/Content, LinkedIn B2B, App Stores"
+                }
+            };
+            const pb = playbooks[sector] || playbooks.digital;
 
-            const fundingHtml = (data.funding || []).map(f => `
-                <a href="${f.link}" target="_blank" class="p-4 bg-white border border-slate-200 rounded-xl hover:border-${tc}-400 transition-all group block shadow-sm hover:shadow-md">
-                    <div class="font-bold text-sm text-slate-800 flex justify-between items-center group-hover:text-${tc}-700 mb-1">
-                        <span class="flex items-center gap-2">
-                            ${f.name}
-                            ${f.gsa_member ? '<span class="text-[9px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded border border-blue-200 font-bold">UNESCO</span>' : ''}
-                        </span>
-                        <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover:text-${tc}-500"></i>
+            // --- 2. Pitch Calendar & Directory Logic ---
+            // Merge Incubators and Funding for a unified list
+            let opportunities = [
+                ...(data.incubators || []).map(i => ({ ...i, type: 'Incubator', deadline: 'Rolling' })),
+                ...(data.funding || []).map(f => ({ ...f, type: 'Grant/Fund', deadline: 'Oct 30, 2025' }))
+            ];
+
+            // Add some mock competitions if list is short
+            if (opportunities.length < 4) {
+                opportunities.push({ name: "Annual Sector Prize", desc: "Seed funding for early stage.", link: "#", type: "Competition", deadline: "Nov 15, 2025" });
+            }
+
+            const oppsHtml = opportunities.map(op => {
+                const reminderText = encodeURIComponent(`Reminder: Apply for ${op.name} (${op.type}) by ${op.deadline}. Link: ${op.link}`);
+                const waLink = `https://wa.me/?text=${reminderText}`;
+                
+                return `
+                <div class="p-3 bg-white border border-slate-200 rounded-lg hover:border-${tc}-400 transition-all group shadow-sm flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start">
+                            <div class="font-bold text-sm text-slate-800 group-hover:text-${tc}-700 mb-0.5">
+                                ${op.name} 
+                                ${op.gsa_member ? '<span class="text-[9px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded border border-blue-200 font-bold ml-1">UNESCO</span>' : ''}
+                            </div>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200 whitespace-nowrap sm:hidden">${op.type}</span>
+                        </div>
+                        <div class="text-xs text-slate-500 leading-tight mb-1">${op.desc}</div>
+                        <div class="flex items-center gap-3 text-[10px] font-medium text-slate-400">
+                            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> Deadline: ${op.deadline}</span>
+                            <span class="hidden sm:inline-block px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">${op.type}</span>
+                        </div>
                     </div>
-                    <div class="text-xs text-slate-500 leading-relaxed">${f.desc}</div>
-                </a>
-            `).join('');
+                    <div class="flex gap-2 shrink-0">
+                        <a href="${waLink}" target="_blank" class="p-2 text-emerald-600 bg-emerald-50 hover:bg-emerald-100 rounded-lg border border-emerald-100 transition-colors" title="Set WhatsApp Reminder">
+                            <i data-lucide="bell" class="w-4 h-4"></i>
+                        </a>
+                        <a href="${op.link}" target="_blank" class="px-3 py-2 bg-white border border-slate-200 text-slate-700 font-bold rounded-lg text-xs hover:bg-slate-50 hover:text-${tc}-600 transition-colors flex items-center gap-1">
+                            Visit <i data-lucide="external-link" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+                </div>
+                `;
+            }).join('');
 
             container.innerHTML = `
                 <div class="animate-fade-in space-y-8">
@@ -5609,7 +5888,7 @@ window.toggleCareerHub = function() {
                             <h3 class="font-bold text-xl text-slate-900 flex items-center gap-2">
                                 <i data-lucide="rocket" class="w-6 h-6 text-orange-600"></i> Founder's Launchpad
                             </h3>
-                            <p class="text-sm text-${tc}-800 mt-1 max-w-xl">Curated resources to help you start, fund, and scale your venture in the ${title} ecosystem.</p>
+                            <p class="text-sm text-${tc}-800 mt-1 max-w-xl">From idea to investment: Your sector-specific venture building toolkit.</p>
                         </div>
                         <div class="flex gap-2">
                              <a href="https://accounts.ecitizen.go.ke" target="_blank" class="px-4 py-2 bg-white text-slate-700 font-bold rounded-lg text-xs border border-slate-200 hover:bg-slate-50 shadow-sm flex items-center gap-2">
@@ -5618,27 +5897,48 @@ window.toggleCareerHub = function() {
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Incubators -->
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wide mb-4 flex items-center gap-2">
-                                <span class="p-1.5 bg-orange-100 text-orange-600 rounded-lg"><i data-lucide="warehouse" class="w-4 h-4"></i></span> 
-                                Incubators & Hubs
-                            </h4>
-                            <div class="space-y-3">
-                                ${incubatorHtml.length ? incubatorHtml : '<div class="text-sm text-slate-500 italic">No specific incubators listed for this sector.</div>'}
+                    <!-- 1. Venture Playbook (First 30 Days) -->
+                    <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                        <div class="bg-slate-50 px-4 py-3 border-b border-slate-200 flex justify-between items-center">
+                            <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2"><i data-lucide="clipboard-list" class="w-4 h-4 text-${tc}-600"></i> "First 30 Days" Playbook</h4>
+                            <span class="text-[10px] text-slate-500 font-medium">Sector-Specific Checklist</span>
+                        </div>
+                        <div class="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-3 bg-${tc}-50/30 rounded-lg border border-${tc}-100">
+                                <div class="text-[10px] font-bold text-${tc}-700 uppercase mb-1">Regulatory Basics</div>
+                                <div class="text-xs text-slate-700 font-medium">${pb.reg}</div>
+                            </div>
+                            <div class="p-3 bg-${tc}-50/30 rounded-lg border border-${tc}-100">
+                                <div class="text-[10px] font-bold text-${tc}-700 uppercase mb-1">Unit Economics Template</div>
+                                <div class="text-xs text-slate-700 font-medium">${pb.economics}</div>
+                            </div>
+                            <div class="p-3 bg-${tc}-50/30 rounded-lg border border-${tc}-100">
+                                <div class="text-[10px] font-bold text-${tc}-700 uppercase mb-1">Pricing Strategy</div>
+                                <div class="text-xs text-slate-700 font-medium">${pb.pricing}</div>
+                            </div>
+                            <div class="p-3 bg-${tc}-50/30 rounded-lg border border-${tc}-100">
+                                <div class="text-[10px] font-bold text-${tc}-700 uppercase mb-1">Go-to-Market Channels</div>
+                                <div class="text-xs text-slate-700 font-medium">${pb.gtm}</div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Funding -->
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wide mb-4 flex items-center gap-2">
-                                <span class="p-1.5 bg-green-100 text-green-600 rounded-lg"><i data-lucide="banknote" class="w-4 h-4"></i></span>
-                                Grants & Funding
-                            </h4>
-                            <div class="space-y-3">
-                                ${fundingHtml.length ? fundingHtml : '<div class="text-sm text-slate-500 italic">No specific funding sources listed for this sector.</div>'}
+                    <!-- 2. Pitch Calendar & Directory -->
+                    <div>
+                        <div class="flex justify-between items-end mb-4">
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wide flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-4 h-4 text-slate-400"></i> Pitch Calendar & Directory
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">Incubators, funders, and competitions with deadlines.</p>
                             </div>
+                            <div class="relative hidden sm:block">
+                                <i data-lucide="search" class="absolute left-2.5 top-1.5 w-3.5 h-3.5 text-slate-400"></i>
+                                <input type="text" placeholder="Search opportunities..." class="pl-8 pr-3 py-1.5 text-xs border border-slate-300 rounded-lg focus:ring-${tc}-500 focus:border-${tc}-500 w-48">
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            ${oppsHtml}
                         </div>
                     </div>
 
