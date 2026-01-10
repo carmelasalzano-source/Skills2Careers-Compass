@@ -2170,20 +2170,26 @@ function getOJAMetrics(roleTitle, country) {
                 blockBContent = `
                     <div class="space-y-4">
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <button onclick="closeModal('unified-hub-modal'); document.getElementById('career-hub-drawer').classList.remove('translate-x-full'); showCVResources();" class="flex flex-col items-center text-center p-3 border border-slate-200 rounded-lg hover:border-purple-300 bg-white group transition-all h-full">
-                                <div class="p-2 bg-purple-100 text-purple-600 rounded-lg mb-2"><i data-lucide="file-text" class="w-5 h-5"></i></div>
-                                <div class="font-bold text-xs text-slate-800 group-hover:text-purple-700">CV Templates</div>
-                                <div class="text-[10px] text-slate-500">ATS-friendly formats</div>
+                            <button onclick="closeModal('unified-hub-modal'); document.getElementById('career-hub-drawer').classList.remove('translate-x-full'); showCVResources();" class="flex flex-row items-center text-left p-3 border border-slate-200 rounded-lg hover:border-purple-300 bg-white group transition-all h-full w-full gap-3">
+                                <div class="p-2 bg-purple-100 text-purple-600 rounded-lg shrink-0"><i data-lucide="file-text" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-xs text-slate-800 group-hover:text-purple-700">CV Templates</div>
+                                    <div class="text-[10px] text-slate-500">ATS-friendly formats</div>
+                                </div>
                             </button>
-                            <button onclick="closeModal('unified-hub-modal'); document.getElementById('career-hub-drawer').classList.remove('translate-x-full'); showInterviewPrep();" class="flex flex-col items-center text-center p-3 border border-slate-200 rounded-lg hover:border-emerald-300 bg-white group transition-all h-full">
-                                <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg mb-2"><i data-lucide="mic" class="w-5 h-5"></i></div>
-                                <div class="font-bold text-xs text-slate-800 group-hover:text-emerald-700">Interview Coach</div>
-                                <div class="text-[10px] text-slate-500">AI-powered practice</div>
+                            <button onclick="closeModal('unified-hub-modal'); document.getElementById('career-hub-drawer').classList.remove('translate-x-full'); showInterviewPrep();" class="flex flex-row items-center text-left p-3 border border-slate-200 rounded-lg hover:border-emerald-300 bg-white group transition-all h-full w-full gap-3">
+                                <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg shrink-0"><i data-lucide="mic" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-xs text-slate-800 group-hover:text-emerald-700">Interview Coach</div>
+                                    <div class="text-[10px] text-slate-500">AI-powered practice</div>
+                                </div>
                             </button>
-                            <button onclick="renderOutreachTemplates()" class="flex flex-col items-center text-center p-3 border border-slate-200 rounded-lg hover:border-blue-300 bg-white group transition-all h-full">
-                                <div class="p-2 bg-blue-100 text-blue-600 rounded-lg mb-2"><i data-lucide="mail" class="w-5 h-5"></i></div>
-                                <div class="font-bold text-xs text-slate-800 group-hover:text-blue-700">Email Scripts</div>
-                                <div class="text-[10px] text-slate-500">Networking templates</div>
+                            <button onclick="renderOutreachTemplates()" class="flex flex-row items-center text-left p-3 border border-slate-200 rounded-lg hover:border-blue-300 bg-white group transition-all h-full w-full gap-3">
+                                <div class="p-2 bg-blue-100 text-blue-600 rounded-lg shrink-0"><i data-lucide="mail" class="w-5 h-5"></i></div>
+                                <div>
+                                    <div class="font-bold text-xs text-slate-800 group-hover:text-blue-700">Email Scripts</div>
+                                    <div class="text-[10px] text-slate-500">Networking templates</div>
+                                </div>
                             </button>
                         </div>
                     </div>
@@ -2417,7 +2423,7 @@ function getOJAMetrics(roleTitle, country) {
                     ${goal !== 'Apprenticeship' ? `
                     <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
-                        <div class="flex flex-wrap justify-between items-center mb-4 gap-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-3">
                             <h3 class="font-bold text-slate-800 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold">C</span> Bridge Knowledge Gaps</h3>
                             <div class="flex gap-2">
                                 <select onchange="updatePathwayConstraint('mode', this.value)" class="text-[10px] border-slate-200 rounded bg-slate-50 text-slate-600 focus:ring-0 py-1 pl-2 pr-6 cursor-pointer hover:bg-slate-100">
@@ -2440,9 +2446,9 @@ function getOJAMetrics(roleTitle, country) {
                     <!-- D. Opportunities -->
                     <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-${blockDColor}-500"></div>
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-3">
                             <h3 class="font-bold text-slate-800 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-${blockDColor}-100 text-${blockDColor}-600 flex items-center justify-center text-xs font-bold">D</span> ${blockDTitle}</h3>
-                            <button onclick="${blockDOnclick}" class="text-[10px] font-bold text-${blockDColor}-600 bg-${blockDColor}-50 px-2 py-1 rounded hover:bg-${blockDColor}-100 border border-${blockDColor}-100">${blockDAction}</button>
+                            <button onclick="${blockDOnclick}" class="text-[10px] font-bold text-${blockDColor}-600 bg-${blockDColor}-50 px-2 py-1 rounded hover:bg-${blockDColor}-100 border border-${blockDColor}-100 self-start sm:self-auto">${blockDAction}</button>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                             ${blockDContentHtml || '<div class="text-xs text-slate-500 italic">No items found.</div>'}
@@ -3872,15 +3878,23 @@ window.toggleCareerHub = function() {
                 demandBgClass = "bg-indigo-50 text-indigo-600";
             }
 
-            // --- NEW: Filter Venture Data ---
+            // --- Filter Venture Data ---
             const sectorMap = { 'agri': 'Agriculture', 'energy': 'Renewables', 'digital': 'Digital/AI' };
             const targetSector = sectorMap[activeSectorId];
-            // Filter by sector and country (if specific country selected, otherwise show all or specific 'All' entries)
             const ventures = dataManager.getVentures(activeSectorId, activeCountry)
                 .sort((a, b) => a.Rank - b.Rank)
                 .slice(0, 10);
 
-            // --- UPDATED: Harmonized Ventures UI (Tabs) ---
+            // --- Split Data for View All ---
+            const topOccs = data.occupations.slice(0, 4);
+            const moreOccs = data.occupations.slice(4, 12);
+
+            const topSkills = data.skills.slice(0, 4);
+            const moreSkills = data.skills.slice(4, 10);
+
+            const topVentures = ventures.slice(0, 4);
+            const moreVentures = ventures.slice(4, 10);
+
             const ventureHtml = ventures.length > 0 ? `
                 <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
                     <div class="border-b border-slate-200 bg-white flex flex-col sm:flex-row justify-between items-center">
@@ -3893,7 +3907,7 @@ window.toggleCareerHub = function() {
                         </div>
                     </div>
                     <div class="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                        ${ventures.map(v => `
+                        ${topVentures.map(v => `
                             <button onclick="openVentureModal('${v.Venture_Title.replace(/'/g, "\\'")}')" title="${v.Venture_Title}" class="px-3 py-2 bg-white border border-${themeColor}-200 rounded-lg text-left hover:bg-${themeColor}-100 hover:border-${themeColor}-300 transition-all group">
                                 <div class="font-bold text-xs text-${themeColor}-800 mb-0.5 flex items-center gap-1 min-w-0">
                                     <span class="truncate">${v.Venture_Title}</span>
@@ -3902,6 +3916,20 @@ window.toggleCareerHub = function() {
                                 <div class="text-[10px] text-${themeColor}-700/80 leading-tight truncate">${v.Venture_Description}</div>
                             </button>
                         `).join('')}
+                        <div id="more-ventures" class="hidden contents">
+                            ${moreVentures.map(v => `
+                                <button onclick="openVentureModal('${v.Venture_Title.replace(/'/g, "\\'")}')" title="${v.Venture_Title}" class="px-3 py-2 bg-white border border-${themeColor}-200 rounded-lg text-left hover:bg-${themeColor}-100 hover:border-${themeColor}-300 transition-all group">
+                                    <div class="font-bold text-xs text-${themeColor}-800 mb-0.5 flex items-center gap-1 min-w-0">
+                                        <span class="truncate">${v.Venture_Title}</span>
+                                    </div>
+                                    <div class="text-[10px] text-${themeColor}-700/80 leading-tight truncate">${v.Venture_Description}</div>
+                                </button>
+                            `).join('')}
+                        </div>
+                        ${moreVentures.length > 0 ? `
+                        <button onclick="document.getElementById('more-ventures').classList.remove('hidden'); this.classList.add('hidden');" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
+                            View All Ventures <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                        </button>` : ''}
                     </div>
                 </div>
             ` : '';
@@ -3967,8 +3995,7 @@ window.toggleCareerHub = function() {
                             <p class="text-xs text-slate-500 mt-1">Click to view salary data, daily tasks, and required qualifications.</p>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-                            ${data.occupations.slice(0, 12).map(role => {
-                                return `
+                            ${topOccs.map(role => `
                                 <button onclick="openOccupationModal('${role.name}')" title="${role.name}" class="px-3 py-2 ${cardBgColor} border ${cardBorderColor} rounded-lg text-left ${cardHoverBg} ${cardHoverBorder} transition-all group">
                                     <div class="w-full">
                                         <div class="font-bold text-xs ${cardTitleColor} mb-0.5 flex items-center gap-1 min-w-0">
@@ -3977,8 +4004,23 @@ window.toggleCareerHub = function() {
                                         <div class="text-[10px] ${cardDescColor} leading-tight line-clamp-2">${role.desc}</div>
                                     </div>
                                 </button>
-                            `;
-                            }).join('')}
+                            `).join('')}
+                            <div id="more-occs" class="hidden contents">
+                                ${moreOccs.map(role => `
+                                    <button onclick="openOccupationModal('${role.name}')" title="${role.name}" class="px-3 py-2 ${cardBgColor} border ${cardBorderColor} rounded-lg text-left ${cardHoverBg} ${cardHoverBorder} transition-all group">
+                                        <div class="w-full">
+                                            <div class="font-bold text-xs ${cardTitleColor} mb-0.5 flex items-center gap-1 min-w-0">
+                                                <span class="truncate">${role.name}</span> ${role.isHot ? '<span title="Critical Demand" class="shrink-0 ml-0.5 cursor-help">🔥</span>' : ''}
+                                            </div>
+                                            <div class="text-[10px] ${cardDescColor} leading-tight line-clamp-2">${role.desc}</div>
+                                        </div>
+                                    </button>
+                                `).join('')}
+                            </div>
+                            ${moreOccs.length > 0 ? `
+                            <button onclick="document.getElementById('more-occs').classList.remove('hidden'); this.classList.add('hidden');" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
+                                View All Occupations <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                            </button>` : ''}
                         </div>
                     </div>
 
@@ -3988,7 +4030,7 @@ window.toggleCareerHub = function() {
                             <p class="text-xs text-slate-500 mt-1">Click to see proficiency levels, training providers, and related jobs.</p>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-                            ${data.skills.slice(0, 10).map(skill => `
+                            ${topSkills.map(skill => `
                                 <button onclick="openSkillModal('${skill.name.replace(/'/g, "\\'")}')" class="px-3 py-2 ${cardBgColor} border ${cardBorderColor} rounded-lg text-left ${cardHoverBg} ${cardHoverBorder} transition-all group">
                                     <div class="font-bold text-xs ${cardTitleColor} mb-0.5 flex items-center gap-1 truncate">
                                         ${skill.name} ${skill.isHot ? '<span title="Critical Demand" class="ml-1 cursor-help">🔥</span>' : ''}
@@ -3996,6 +4038,20 @@ window.toggleCareerHub = function() {
                                     <div class="text-[10px] ${cardDescColor} leading-tight truncate">${skill.desc || 'Key competency'}</div>
                                 </button>
                             `).join('')}
+                            <div id="more-skills" class="hidden contents">
+                                ${moreSkills.map(skill => `
+                                    <button onclick="openSkillModal('${skill.name.replace(/'/g, "\\'")}')" class="px-3 py-2 ${cardBgColor} border ${cardBorderColor} rounded-lg text-left ${cardHoverBg} ${cardHoverBorder} transition-all group">
+                                        <div class="font-bold text-xs ${cardTitleColor} mb-0.5 flex items-center gap-1 truncate">
+                                            ${skill.name} ${skill.isHot ? '<span title="Critical Demand" class="ml-1 cursor-help">🔥</span>' : ''}
+                                        </div>
+                                        <div class="text-[10px] ${cardDescColor} leading-tight truncate">${skill.desc || 'Key competency'}</div>
+                                    </button>
+                                `).join('')}
+                            </div>
+                            ${moreSkills.length > 0 ? `
+                            <button onclick="document.getElementById('more-skills').classList.remove('hidden'); this.classList.add('hidden');" class="col-span-full text-left text-xs font-bold text-indigo-600 hover:text-indigo-700 mt-2 flex items-center gap-1">
+                                View All Skills <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                            </button>` : ''}
                         </div>
                     </div>
 
@@ -4697,7 +4753,7 @@ window.toggleCareerHub = function() {
                         <div class="space-y-2">
                             ${partnersHtml}
                         </div>
-                        <div class="mt-2 text-[10px] text-slate-400 italic text-center">Verified partners offering internships & apprenticeships.</div>
+                        <div class="mt-2 text-[10px] text-slate-400 italic text-center">Curated partners offering internships & apprenticeships.</div>
                     </div>
 
                     <!-- 2. Industry Fairs -->

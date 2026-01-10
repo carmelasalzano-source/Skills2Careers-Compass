@@ -358,8 +358,8 @@
                         <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-100 flex items-start gap-3">
                             <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg shrink-0"><i data-lucide="search" class="w-5 h-5"></i></div>
                             <div>
-                                <h3 class="font-bold text-emerald-900 text-sm">Find Verified Training</h3>
-                                <p class="text-xs text-emerald-700 mt-1">Search a curated database of verified training providers across East Africa. Filter by cost, duration, and mode.</p>
+                                <h3 class="font-bold text-emerald-900 text-sm">Find Curated Training</h3>
+                                <p class="text-xs text-emerald-700 mt-1">Search a curated database of training providers across East Africa. Filter by cost, duration, and mode.</p>
                             </div>
                         </div>
 
@@ -376,7 +376,7 @@
                                 <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400"></i>
                                 <input type="text" id="filter-search" onkeyup="renderProviderTable()" placeholder="Search by course name or provider..." class="w-full border border-slate-300 rounded-lg pl-9 pr-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500 shadow-sm">
                             </div>
-                            <div id="course-filters-grid" class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            <div id="course-filters-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3">
                                 <div>
                                     <label class="block text-xs font-medium text-slate-600 mb-1">Country</label>
                                     <select id="filter-country" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
@@ -401,18 +401,6 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-medium text-slate-600 mb-1">Duration</label>
-                                    <select id="filter-duration" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                        <option value="all">Any Duration</option>
-                                        <option value="short">&lt; 1 Month</option>
-                                        <option value="1-3m">1 - 3 Months</option>
-                                        <option value="3-6m">3 - 6 Months</option>
-                                        <option value="6-12m">6 - 12 Months</option>
-                                        <option value="1-2y">1 - 2 Years</option>
-                                        <option value="2y+">2+ Years</option>
-                                    </select>
-                                </div>
-                                <div>
                                     <label class="block text-xs font-medium text-slate-600 mb-1">Mode</label>
                                     <select id="filter-mode" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
                                         <option value="all">Any Mode</option>
@@ -427,6 +415,21 @@
                                         <option value="all">Any Cost</option>
                                         <option value="free">Free / Audit Available</option>
                                         <option value="paid">Paid / Subscription</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div id="extra-course-filters" class="hidden grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-600 mb-1">Duration</label>
+                                    <select id="filter-duration" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
+                                        <option value="all">Any Duration</option>
+                                        <option value="short">&lt; 1 Month</option>
+                                        <option value="1-3m">1 - 3 Months</option>
+                                        <option value="3-6m">3 - 6 Months</option>
+                                        <option value="6-12m">6 - 12 Months</option>
+                                        <option value="1-2y">1 - 2 Years</option>
+                                        <option value="2y+">2+ Years</option>
                                     </select>
                                 </div>
                                 <div>
@@ -450,14 +453,12 @@
                                         <option value="French">French</option>
                                     </select>
                                 </div>
-                                <div>
-                                    <label class="block text-xs font-medium text-slate-600 mb-1">Special Features</label>
-                                    <select id="filter-feature" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                        <option value="all">Any Feature</option>
-                                        <option value="unesco">UNESCO Verified (GSA/UNEVOC)</option>
-                                        <option value="women">Women-Focused</option>
-                                    </select>
-                                </div>
+                            </div>
+
+                            <div class="mt-2">
+                                <button onclick="document.getElementById('extra-course-filters').classList.toggle('hidden'); this.textContent = this.textContent.includes('More') ? 'View Less Filters' : 'View More Filters';" class="text-xs font-bold text-indigo-600 hover:text-indigo-700 flex items-center gap-1">
+                                    View More Filters
+                                </button>
                             </div>
                             <div class="mt-4 pt-3 border-t border-slate-100 flex justify-end">
                                 <button onclick="renderProviderTable()" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold shadow-sm transition-colors flex items-center gap-2">
