@@ -1685,3 +1685,148 @@ const credentialRules = {
         ]
     }
 };
+
+// --- 36. Venture Playbooks ---
+const venturePlaybooks = {
+    agri: {
+        reg: "KEPHIS (Seeds), PCPB (Chemicals), County Business Permit",
+        economics: "Yield/Acre vs Input Cost",
+        pricing: "Commission on Produce (5-10%) or Input Margin",
+        gtm: "Farmer Co-ops, Aggregators, USSD/SMS Blasts"
+    },
+    energy: {
+        reg: "EPRA Solar License (T1/T2), ERC Class C1",
+        economics: "Hardware Payback Period (PAYG)",
+        pricing: "Deposit (15%) + Daily Rate (KES 50)",
+        gtm: "Door-to-door Agents, SACCO Partnerships"
+    },
+    digital: {
+        reg: "Data Protection (ODPC), Copyright/IP",
+        economics: "CAC < LTV (3:1 Ratio)",
+        pricing: "Freemium, Tiered Subscription (SaaS)",
+        gtm: "SEO/Content, LinkedIn B2B, App Stores"
+    }
+};
+
+// --- 37. Pathway Tools Interest Map ---
+const pathwayToolsInterestMap = {
+    'digital': {
+        'code': ['Docker', 'GraphQL', 'Next.js'],
+        'data': ['TensorFlow', 'Tableau', 'dbt'],
+        'creative': ['Figma (Adv)', 'Webflow', 'Adobe XD']
+    },
+    'energy': {
+        'hands-on': ['Thermal Imaging', 'High Voltage Testers', 'SCADA'],
+        'design': ['PVsyst', 'AutoCAD Electrical', 'Homer Pro'],
+        'mgmt': ['MS Project', 'ERP Systems', 'Auditing Tools']
+    },
+    'agri': {
+        'tech': ['ArcGIS Pro', 'Python for Ag', 'Drone Deploy'],
+        'field': ['Soil Spectrometers', 'GPS Units', 'Farm ERP'],
+        'biz': ['QuickBooks', 'Supply Chain Soft.', 'Market Analytics']
+    }
+};
+
+// --- 38. Apprenticeship Standards ---
+const apprenticeshipStandards = [
+    { c: 'Kenya', name: 'NITA Guidelines', url: 'https://www.nita.go.ke/' },
+    { c: 'Tanzania', name: 'VETA Apprenticeship', url: 'https://www.veta.go.tz/' },
+    { c: 'Uganda', name: 'DIT Standards', url: 'https://dituganda.org/' },
+    { c: 'Rwanda', name: 'RTB Workplace Learning', url: 'https://www.rtb.gov.rw/' }
+];
+
+// --- 39. National Mentorships ---
+const nationalMentorships = {
+    'Kenya': [{ title: "KamiLimu", desc: "Structured mentorship for CS students.", link: "https://kamilimu.org/", type: "Mentorship" }],
+    'Rwanda': [{ title: "Girls in ICT Rwanda", desc: "Mentorship and networking.", link: "https://girlsinict.rw/", type: "Mentorship" }],
+    'Uganda': [{ title: "Women in Technology Uganda", desc: "Networking and mentorship.", link: "https://witug.org/", type: "Mentorship" }],
+    'Tanzania': [{ title: "Apps and Girls", desc: "Coding and mentorship for girls.", link: "https://appsandgirls.com/", type: "Mentorship" }]
+};
+
+// --- 40. Outreach Templates ---
+const outreachTemplates = [
+    {
+        title: "LinkedIn Connection (Alumni)",
+        subject: "N/A",
+        body: "Hi [Name], I noticed we both studied at [University]. I'm currently exploring careers in [Sector] and would love to connect to learn from your journey. Thanks, [Your Name]"
+    },
+    {
+        title: "Informational Interview Request",
+        subject: "Quick question about [Role] at [Company]",
+        body: "Dear [Name],\n\nI'm a [Current Role/Student] admiring [Company]'s work in [Specific Project]. I'd love to ask 3 quick questions about your experience as a [Role] to help guide my next steps.\n\nWould you be open to a 15-min chat next week?\n\nBest,\n[Your Name]"
+    },
+    {
+        title: "Application Follow-up",
+        subject: "Following up on [Role] application - [Your Name]",
+        body: "Dear Hiring Manager,\n\nI applied for the [Role] position last week (ID: 12345). I'm very interested in [Company]'s mission to [Mission] and wanted to reiterate my enthusiasm.\n\nPlease let me know if you need any further information.\n\nBest regards,\n[Your Name]"
+    }
+];
+
+// --- 41. Readiness Scorecard Sections ---
+const readinessScorecardSections = [
+    {
+        title: "Digital Assets", icon: "file-text", color: "blue",
+        items: ["CV is ATS-friendly (no graphics/columns)", "LinkedIn profile has a professional photo", "LinkedIn 'About' section tells a story", "Portfolio link is working and accessible"]
+    },
+    {
+        title: "Search Strategy", icon: "target", color: "purple",
+        items: ["Identified top 10 target companies", "Set up job alerts on 3+ platforms", "Connected with 5+ alumni/peers in sector", "Researched salary benchmarks for role"]
+    },
+    {
+        title: "Interview Prep", icon: "mic", color: "emerald",
+        items: ["Prepared 3 STAR stories for behavioral Qs", "Researched 'Why this company?' answer", "Practiced technical/case study questions", "Prepared questions to ask the interviewer"]
+    }
+];
+
+// --- 42. Pivot Audit Sections ---
+const pivotAuditSections = [
+    {
+        title: "Skill Translation", icon: "languages", color: "pink",
+        items: ["Mapped past skills to new sector jargon", "Identified transferable soft skills (e.g. Mgmt)", "Created a 'functional' CV format"]
+    },
+    {
+        title: "Market Immersion", icon: "users", color: "blue",
+        items: ["Joined 2+ sector-specific communities", "Followed 10 industry leaders on LinkedIn", "Subscribed to 3 industry newsletters"]
+    },
+    {
+        title: "Validation", icon: "check-circle", color: "emerald",
+        items: ["Conducted 3 informational interviews", "Completed 1 relevant mini-project", "Updated LinkedIn headline to 'Aspiring [Role]'"]
+    }
+];
+
+// --- 43. Application Kits Config (Job Board) ---
+const applicationKitsConfig = {
+    'all': { title: "General Job Application Kit", icon: "briefcase", cv: "Standard Professional CV", check: "LinkedIn Updated, References Ready", test: "General Aptitude" },
+    'internship': { title: "Internship Starter Kit", icon: "graduation-cap", cv: "Academic/Project-based CV", check: "Transcript, Cover Letter", test: "Basic Logic / Personality" },
+    'freelance': { title: "Freelancer Toolkit", icon: "laptop", cv: "Portfolio/Case Studies", check: "Rate Card, Contract Template", test: "Skill Assessment (e.g. Coding)" },
+    'tender': { title: "Founder Tender Kit", icon: "file-text", cv: "Company Profile / Capability Statement", check: "Tax Compliance, Registration Certs", test: "Technical Proposal Evaluation" },
+    'volunteer': { title: "Volunteer Kit", icon: "heart", cv: "Skills-based Resume", check: "Availability Schedule, Motivation Statement", test: "Values Alignment" }
+};
+
+// --- 44. Application Kits Resources (Download) ---
+const applicationKitsResources = {
+    'all': { title: "General Job Application Kit", items: ["Master CV Template", "Cover Letter Guide", "LinkedIn Checklist", "Common Interview Qs"] },
+    'internship': { title: "Internship Starter Kit", items: ["No-Experience Resume Template", "University Transcript Guide", "Internship Cover Letter", "Behavioral Interview Prep"] },
+    'freelance': { title: "Freelancer Toolkit", items: ["Service Rate Card Template", "Client Contract Draft", "Portfolio Website Checklist", "Proposal Email Script"] },
+    'tender': { title: "Founder Tender Kit", items: ["Capability Statement Template", "Tax Compliance Checklist", "Technical Proposal Structure", "Financial Proposal Sheet"] },
+    'volunteer': { title: "Volunteer Application Kit", items: ["Motivation Statement Template", "Availability Schedule", "Soft Skills Checklist", "Values Alignment Prep"] }
+};
+
+// --- 45. Hero Persona Content ---
+const heroPersonaContent = {
+    learner: {
+        text: "In 10 minutes, you’ll have a shortlist of occupations, skills in demand and leads to targeted training options.",
+    },
+    entrepreneur: {
+        text: "Identify high-potential venture niches, access eco-system resources, and build your capability roadmap.",
+    },
+    counsellor: {
+        text: "Access labor market intelligence to guide students towards high-growth career paths.",
+    },
+    provider: {
+        text: "Align your curriculum with real-time market demand and skills gaps.",
+    },
+    policy: {
+        text: "View workforce data and trends to inform education and employment policy.",
+    }
+};

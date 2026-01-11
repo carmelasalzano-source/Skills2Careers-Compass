@@ -671,59 +671,6 @@ function getOJAMetrics(roleTitle, country) {
             if(window.lucide) lucide.createIcons();
         }
 
-        window.showUnifiedTab = function(tabId) {
-            document.querySelectorAll('.pp-tab-content').forEach(c => c.classList.add('hidden'));
-            
-            const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo' };
-            const theme = themeConfig.color;
-
-            // Reset all buttons
-            document.querySelectorAll('.pp-tab-btn').forEach(b => {
-                // Remove all active color classes
-                b.classList.remove(
-                    'text-violet-700', 'border-violet-600', 'bg-violet-50',
-                    'text-blue-700', 'border-blue-600', 'bg-blue-50',
-                    'text-emerald-700', 'border-emerald-600', 'bg-emerald-50',
-                    'text-amber-700', 'border-amber-600', 'bg-amber-50',
-                    'text-slate-700', 'border-slate-600', 'bg-slate-50',
-                    'text-indigo-700', 'border-indigo-600', 'bg-indigo-50'
-                );
-                // Add default inactive state
-                b.classList.add('text-slate-500', 'border-transparent', 'hover:text-slate-700', 'hover:bg-slate-50');
-            });
-            
-            const targetContent = document.getElementById(tabId);
-            if (targetContent) {
-                targetContent.classList.remove('hidden');
-            } else {
-                return;
-            }
-
-            const activeBtn = document.querySelector(`.pp-tab-btn[data-tab="${tabId}"]`);
-            if(activeBtn) {
-                activeBtn.classList.remove('text-slate-500', 'border-transparent', 'hover:text-slate-700', 'hover:bg-slate-50');
-                activeBtn.classList.add(`text-${theme}-700`, `border-${theme}-600`, `bg-${theme}-50`);
-            }
-
-            // Lazy Load Logic for specific tabs
-            if (tabId === 'pp-courses') {
-                renderProviderTable();
-            } else if (tabId === 'pp-launchpad') {
-                renderLaunchpadTab();
-            } else if (tabId === 'pp-impact') {
-                // Small timeout to ensure DOM is visible for Chart.js sizing
-                setTimeout(() => { initImpactCharts(); }, 100);
-            }
-
-            // Scroll to top logic
-            const container = document.getElementById('pp-scroll-container');
-            if(container) {
-                container.scrollTop = 0;
-            }
-            
-            if(window.lucide) lucide.createIcons();
-        }
-
         // --- NEW: Switch Sector inside PATHWAY ---
         window.switchPATHWAYSector = function(sector) {
             // Use global setter to sync UI and state
@@ -3176,9 +3123,14 @@ function getOJAMetrics(roleTitle, country) {
             if (trainingDrawer && !trainingDrawer.classList.contains('translate-x-full')) {
                 trainingDrawer.classList.add('translate-x-full');
             }
+            
+            // Community drawer
+            const communityDrawer = document.getElementById('community-hub-drawer');
+            if (communityDrawer && !communityDrawer.classList.contains('translate-x-full')) {
+                communityDrawer.classList.add('translate-x-full');
+            }
 
-            const modal = document.getElementById('unified-hub-modal');
-            const panel = document.getElementById('unified-hub-modal-panel');
+            const drawer = document.getElementById('unified-hub-modal');
             
             // Conditional Rendering: Only render pathway content if requested (role/goal) or if it's empty/first load
             // This prevents resetting the Diagnostic/Pathway state when just opening "Find Courses" (Tab 4)
@@ -3189,16 +3141,101 @@ function getOJAMetrics(roleTitle, country) {
                 window.renderPATHWAYContent(roleName, pathwayGoal);
             }
 
-            document.body.classList.add('overflow-hidden');
-            modal.classList.remove('hidden');
+            drawer.classList.remove('translate-x-full');
             
-            setTimeout(() => { 
-                window.showUnifiedTab(startTab); 
-                if(panel) {
-                    panel.classList.remove('scale-95', 'opacity-0'); 
-                    panel.classList.add('scale-100', 'opacity-100'); 
+            if (startTab === 'pp-diagnostic' && !roleName) {
+                // Default open: Show Dashboard
+                renderSkillsHubDashboard();
+            } else {
+                // Specific deep link (e.g. from "Am I a good fit?")
+                openSkillsView(startTab);
+            }
+        }
+
+        window.closeUnifiedHub = function() {
+            const drawer = document.getElementById('unified-hub-modal');
+            if(drawer) drawer.classList.add('translate-x-full');
+        }
+
+        window.renderSkillsHubDashboard = function() {
+            const container = document.getElementById('skills-hub-home');
+            if(!container) return;
+            
+            // Hide other views
+            document.querySelectorAll('.pp-view-content').forEach(el => el.classList.add('hidden'));
+            container.classList.remove('hidden');
+
+            container.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button onclick="openSkillsView('pp-diagnostic')" class="p-6 bg-emerald-50 border border-emerald-100 rounded-xl hover:border-emerald-300 hover:bg-white hover:shadow-md text-left transition-all group">
+                        <div class="p-3 bg-emerald-100 text-emerald-600 rounded-lg w-fit mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors"><i data-lucide="clipboard-check" class="w-6 h-6"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg mb-1">SkillsMatch</h3>
+                        <p class="text-sm text-slate-600">Assess your current skills, identify gaps, and get a readiness score for your target role.</p>
+                    </button>
+
+                    <button onclick="openSkillsView('pp-practice')" class="p-6 bg-indigo-50 border border-indigo-100 rounded-xl hover:border-indigo-300 hover:bg-white hover:shadow-md text-left transition-all group">
+                        <div class="p-3 bg-indigo-100 text-indigo-600 rounded-lg w-fit mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors"><i data-lucide="map" class="w-6 h-6"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg mb-1">Pathway Builder</h3>
+                        <p class="text-sm text-slate-600">Create a personalized step-by-step learning roadmap tailored to your career goals.</p>
+                    </button>
+
+                    <button onclick="openSkillsView('pp-courses')" class="p-6 bg-blue-50 border border-blue-100 rounded-xl hover:border-blue-300 hover:bg-white hover:shadow-md text-left transition-all group">
+                        <div class="p-3 bg-blue-100 text-blue-600 rounded-lg w-fit mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors"><i data-lucide="search" class="w-6 h-6"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg mb-1">Find Courses</h3>
+                        <p class="text-sm text-slate-600">Search verified training providers, scholarships, and certifications across East Africa.</p>
+                    </button>
+
+                    <button onclick="openSkillsView('pp-launchpad')" class="p-6 bg-orange-50 border border-orange-100 rounded-xl hover:border-orange-300 hover:bg-white hover:shadow-md text-left transition-all group">
+                        <div class="p-3 bg-orange-100 text-orange-600 rounded-lg w-fit mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors"><i data-lucide="rocket" class="w-6 h-6"></i></div>
+                        <h3 class="font-bold text-slate-800 text-lg mb-1">Founder's Launchpad</h3>
+                        <p class="text-sm text-slate-600">Access incubators, funding sources, and playbooks to start your own venture.</p>
+                    </button>
+                </div>
+            `;
+            if(window.lucide) lucide.createIcons();
+        }
+
+        window.openSkillsView = function(viewId) {
+            // Hide dashboard
+            const dashboard = document.getElementById('skills-hub-home');
+            if(dashboard) dashboard.classList.add('hidden');
+            
+            // Hide all views
+            document.querySelectorAll('.pp-view-content').forEach(el => el.classList.add('hidden'));
+            
+            // Show target view
+            const target = document.getElementById(viewId);
+            if(target) {
+                target.classList.remove('hidden');
+                
+                // Inject Back Button if not present
+                let nav = target.querySelector('.pp-back-nav');
+                if(!nav) {
+                    nav = document.createElement('div');
+                    nav.className = 'pp-back-nav mb-4';
+                    target.insertBefore(nav, target.firstChild);
                 }
-            }, 10);
+                nav.innerHTML = `<button onclick="renderSkillsHubDashboard()" class="flex items-center gap-2 text-sm text-slate-500 hover:text-indigo-600 font-medium"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Hub</button>`;
+                
+                // Trigger specific render logic if needed
+                if(viewId === 'pp-diagnostic') {
+                    const content = document.getElementById('pp-diagnostic-content');
+                    if(!content.innerHTML.trim()) renderPATHWAYContent();
+                } else if (viewId === 'pp-practice') {
+                     const content = document.getElementById('pp-practice-content');
+                     if(!content.innerHTML.trim()) initPathwayWizard();
+                } else if (viewId === 'pp-courses') {
+                    renderProviderTable();
+                } else if (viewId === 'pp-launchpad') {
+                    renderLaunchpadTab();
+                }
+                
+                // Scroll to top
+                const container = document.getElementById('pp-scroll-container');
+                if(container) container.scrollTop = 0;
+
+                if(window.lucide) lucide.createIcons();
+            }
         }
 
         window.openVentureLaunchpad = function(ventureTitle) {
@@ -3206,7 +3243,11 @@ function getOJAMetrics(roleTitle, country) {
             closeModal('venture-modal');
             
             // Open Unified Hub -> Founder's Launchpad Tab
-            openUnifiedHub('pp-launchpad');
+            openUnifiedHub('pp-launchpad', null, null);
+            // Ensure specific venture is rendered after opening
+            setTimeout(() => {
+                if(typeof renderVentureLaunchpad === 'function') renderVentureLaunchpad(ventureTitle);
+            }, 100);
         }
 
         // --- NEW: Submit Practice Task Logic (Updated to accept badge name) ---
@@ -3246,7 +3287,7 @@ function getOJAMetrics(roleTitle, country) {
                                 <div class="bg-slate-50 p-2 rounded text-center"><span class="block font-bold text-slate-800">Completeness</span><span class="text-emerald-600">High</span></div>
                                 <div class="bg-slate-50 p-2 rounded text-center"><span class="block font-bold text-slate-800">Relevance</span><span class="text-emerald-600">Spot On</span></div>
                             </div>
-                            <button onclick="window.showUnifiedTab('pp-badges')" class="w-full py-2 bg-slate-900 text-white font-bold rounded-lg text-sm hover:bg-slate-800 transition-colors shadow-sm">
+                        <button class="w-full py-2 bg-slate-900 text-white font-bold rounded-lg text-sm hover:bg-slate-800 transition-colors shadow-sm">
                                 View '${awardedBadge}'
                             </button>
                         </div>
@@ -3633,9 +3674,9 @@ function getOJAMetrics(roleTitle, country) {
 
 window.toggleTrainingHub = function() {
     // Close Unified Hub if open
-    const unifiedModal = document.getElementById('unified-hub-modal');
-    if (unifiedModal && !unifiedModal.classList.contains('hidden')) {
-        closeModal('unified-hub-modal');
+    const unifiedDrawer = document.getElementById('unified-hub-modal');
+    if (unifiedDrawer && !unifiedDrawer.classList.contains('translate-x-full')) {
+        unifiedDrawer.classList.add('translate-x-full');
     }
 
     // 1. Close the other drawer if it is open
@@ -3665,9 +3706,9 @@ window.toggleTrainingHub = function() {
 }
 window.toggleCareerHub = function() {
     // Close Unified Hub if open
-    const unifiedModal = document.getElementById('unified-hub-modal');
-    if (unifiedModal && !unifiedModal.classList.contains('hidden')) {
-        closeModal('unified-hub-modal');
+    const unifiedDrawer = document.getElementById('unified-hub-modal');
+    if (unifiedDrawer && !unifiedDrawer.classList.contains('translate-x-full')) {
+        unifiedDrawer.classList.add('translate-x-full');
     }
 
     // 1. Close the other drawer if it is open
@@ -3791,10 +3832,7 @@ window.toggleCareerHub = function() {
             const ctaContainer = document.getElementById('skill-cta-container');
             if(ctaContainer) {
                 ctaContainer.innerHTML = `
-                     <button onclick="closeModal('skill-modal'); openUnifiedHub('pp-practice')" class="bg-indigo-800/50 text-white border border-indigo-400/30 px-4 py-2 rounded-lg text-xs font-bold hover:bg-indigo-800 transition-colors flex items-center gap-2 shadow-sm">
-                    Pathway Builder <i data-lucide="map" class="w-3 h-3"></i>
-                    </button>
-                    <button onclick="openCoursesForSkill('${skillName}')" class="bg-white text-indigo-900 px-4 py-2 rounded-lg text-xs font-bold hover:bg-indigo-50 transition-colors flex items-center gap-2 shadow-sm">
+                    <button onclick="openCoursesForSkill('${skillName.replace(/'/g, "\\'")}')" class="bg-white text-indigo-900 px-4 py-2 rounded-lg text-xs font-bold hover:bg-indigo-50 transition-colors flex items-center gap-2 shadow-sm">
                     Find Courses <i data-lucide="search" class="w-3 h-3"></i>
                     </button>
                 `;
@@ -3816,8 +3854,8 @@ window.toggleCareerHub = function() {
             if(searchInput) {
                 searchInput.value = skillName;
             }
-            openUnifiedHub('pp-courses');
-            // Force render to ensure filter is applied
+            openUnifiedHub('pp-courses', null, null);
+            // Force render to ensure filter is applied (handled by openSkillsView now)
             setTimeout(() => { renderProviderTable(); }, 150);
         }
 
@@ -4184,28 +4222,15 @@ window.toggleCareerHub = function() {
         }
 
         window.openVentureLaunchpad = function(ventureTitle) {
-            // Close drawers
-            const careerDrawer = document.getElementById('career-hub-drawer');
-            if (careerDrawer) careerDrawer.classList.add('translate-x-full');
-            const trainingDrawer = document.getElementById('training-hub-drawer');
-            if (trainingDrawer) trainingDrawer.classList.add('translate-x-full');
-
-            const modal = document.getElementById('unified-hub-modal');
-            const panel = document.getElementById('unified-hub-modal-panel');
+            // Close Venture Modal
+            closeModal('venture-modal');
             
-            document.body.classList.add('overflow-hidden');
-            modal.classList.remove('hidden');
-            
-            // Show tab and render specific venture
-            showUnifiedTab('pp-venture');
-            if(typeof renderVentureLaunchpad === 'function') renderVentureLaunchpad(ventureTitle);
-            
-            setTimeout(() => { 
-                if(panel) {
-                    panel.classList.remove('scale-95', 'opacity-0'); 
-                    panel.classList.add('scale-100', 'opacity-100'); 
-                }
-            }, 10);
+            // Open Unified Hub -> Founder's Launchpad Tab
+            openUnifiedHub('pp-launchpad', null, null);
+            // Ensure specific venture is rendered after opening
+            setTimeout(() => {
+                if(typeof renderVentureLaunchpad === 'function') renderVentureLaunchpad(ventureTitle);
+            }, 100);
         }
 
         // --- NEW: Venture Modal Logic ---
@@ -4366,7 +4391,7 @@ window.toggleCareerHub = function() {
 
             // 5. CTA
             const ctaHtml = `
-                <div class="bg-gradient-to-r from-slate-900 to-indigo-900 rounded-xl p-5 text-white shadow-lg relative overflow-hidden group cursor-pointer hover:shadow-xl transition-all mt-6" onclick="closeModal('venture-modal'); openVentureLaunchpad('${venture.Venture_Title.replace(/'/g, "\\'")}');">
+                <div class="bg-gradient-to-r from-slate-900 to-indigo-900 rounded-xl p-5 text-white shadow-lg relative overflow-hidden group cursor-pointer hover:shadow-xl transition-all mt-6" onclick="openVentureLaunchpad('${venture.Venture_Title.replace(/'/g, "\\'")}');">
                     <div class="absolute right-0 top-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10 blur-2xl group-hover:bg-white/10 transition-colors"></div>
                     <div class="relative z-10 flex items-center justify-between">
                         <div>
