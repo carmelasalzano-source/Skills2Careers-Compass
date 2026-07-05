@@ -18,70 +18,116 @@
             'Kenya': {
                 'agri': {
                     jobTrend: "+18% YoY",
-                    investment: "$60M (Very High)",
+                    investment: "$60M (Agritech)",
                     skillsDemand: "High",
                     demandContext: "Silicon Savannah AgTech",
                     hiring: "Twiga Foods, SunCulture, Govt Research",
                     hotspots: "Nairobi, Nakuru, Eldoret",
-                    source: "Kenya KLMIS"
+                    source: "World Bank Kenya Overview",
+                    sourceUrl: "https://www.worldbank.org/en/country/kenya/overview"
                 },
                 'digital': {
-                    jobTrend: "+40% YoY",
-                    investment: "$500M (Hub)",
+                    jobTrend: "+8% YoY",
+                    investment: "$500M ICT FDI (2023)",
                     skillsDemand: "Critical",
-                    demandContext: "Massive corporate shift to Cloud-Native & GenAI",
+                    demandContext: "Cloud-Native & GenAI Adoption",
                     hiring: "Safaricom (Fintech 2.0), Microsoft ADC, Equity Bank",
                     hotspots: "Nairobi (Westlands/Kilimani)",
-                    source: "World Bank Enterprise Survey"
+                    source: "Kenya CBK / KNBS 2023",
+                    sourceUrl: "https://www.centralbank.go.ke/wp-content/uploads/2024/07/2023-Foreign-Investment-Report.pdf"
                 },
                 'energy': {
                     jobTrend: "+25% YoY",
-                    investment: "$150M",
+                    investment: "$150M (Annual est.)",
                     hiring: "KPLC, Geothermal Dev Corp, Solar Firms",
                     hotspots: "Rift Valley (Geothermal), Lake Turkana",
-                    source: "EPRA / IRENA"
+                    source: "IEA Kenya 2024",
+                    sourceUrl: "https://www.iea.org/reports/kenya-2024/executive-summary"
                 }
             },
             'Rwanda': {
                 'digital': {
-                    jobTrend: "+28% YoY",
-                    investment: "$100M (Rapid Growth)",
-                    demandContext: "Proof-of-Concept Hub",
+                    jobTrend: "+35% YoY",
+                    investment: "$100M (ICT sector)",
+                    demandContext: "ICT: 2nd largest GDP driver (Q1 2025)",
                     hiring: "Norrsken House, Govt Digital Services",
                     hotspots: "Kigali Innovation City",
-                    source: "Rwanda LMIS"
+                    source: "Rwanda MINICT / NISR 2023",
+                    sourceUrl: "https://www.minict.gov.rw/"
                 },
                 'agri': {
-                    jobTrend: "+12% YoY",
-                    investment: "$30M",
+                    jobTrend: "+7% YoY",
+                    investment: "$300M (World Bank CDAT)",
                     hiring: "Export Crops (Coffee/Tea), Horti-export",
                     hotspots: "Kigali, Northern Province",
-                    source: "NISR Labour Survey"
+                    source: "Rwanda MINAGRI / World Bank",
+                    sourceUrl: "https://www.minagri.gov.rw/updates/news-details/rwanda-world-bank-launch-us300-million-project-to-commercialize-de-risk-agriculture"
+                },
+                'energy': {
+                    jobTrend: "+20% YoY",
+                    investment: "$65M (Annual est.)",
+                    hiring: "REG, Ignite Power, d.light, KivuWatt",
+                    hotspots: "Kigali, Lake Kivu, Rural Electrification Zones",
+                    source: "RURA / IRENA",
+                    sourceUrl: "https://www.rura.rw/sectors/energy/overview"
                 }
             },
             'Tanzania': {
                 'energy': {
                     jobTrend: "+20% YoY",
-                    investment: "$90M",
+                    investment: "$1.5B (World Bank)",
                     hiring: "TANESCO, REA, Solar Home Systems",
                     hotspots: "Rural Electrification Zones",
-                    source: "National Bureau of Stats"
+                    source: "TanzaniaInvest / World Bank Energy",
+                    sourceUrl: "https://www.tanzaniainvest.com/energy"
                 },
                 'agri': {
                     jobTrend: "+14% YoY",
-                    investment: "$55M",
+                    investment: "$300M (World Bank TFSRP)",
                     hiring: "Large Commercial Farms, SAGCOT",
                     hotspots: "Iringa, Morogoro, Mbeya",
-                    source: "Agri-Sector Dev. Programme"
+                    source: "World Bank Tanzania TFSRP 2023",
+                    sourceUrl: "https://www.worldbank.org/en/news/press-release/2023/05/31/new-world-bank-financing-for-tanzania-afe-will-enhance-agricultural-productivity-and-improve-resilience-climate-change"
+                },
+                'digital': {
+                    jobTrend: "+16% YoY",
+                    investment: "$559M (Ecosystem 2024)",
+                    skillsDemand: "Growing",
+                    demandContext: "Mobile Money & Govt Digital Services",
+                    hiring: "Vodacom Tanzania, CRDB Bank, TTCL, Dar Startups",
+                    hotspots: "Dar es Salaam (Masaki, Msasani)",
+                    source: "TICGL / Chanzo Digital Economy 2024",
+                    sourceUrl: "https://thechanzo.com/2024/05/22/see-how-tanzanias-journey-towards-digital-economy-is-gaining-momentum/"
                 }
             },
              'Uganda': {
+                'agri': {
+                    jobTrend: "+12% YoY",
+                    investment: "$45M (Estimated)",
+                    skillsDemand: "Growing",
+                    demandContext: "Horticulture Export & Coffee Value Chain",
+                    hiring: "NARO, Export Farms, Agro-processing Firms",
+                    hotspots: "Kampala, Jinja, Mbarara",
+                    source: "World Bank Uganda / UBOS",
+                    sourceUrl: "https://www.worldbank.org/en/country/uganda/overview"
+                },
                 'energy': {
                     jobTrend: "+18% YoY",
-                    investment: "$80M",
+                    investment: "$400M (COP28 Pledge)",
                     hiring: "Oil & Gas Transition, Hydro",
                     hotspots: "Albertine Graben, Jinja",
-                    source: "MoGLSD"
+                    source: "IEA Uganda 2023 Review",
+                    sourceUrl: "https://www.iea.org/reports/uganda-2023/executive-summary"
+                },
+                'digital': {
+                    jobTrend: "+22% YoY",
+                    investment: "$55M (Estimated)",
+                    skillsDemand: "High",
+                    demandContext: "Fintech & Mobile Money Growth",
+                    hiring: "MTN Uganda, Airtel, Outbox Hub Startups",
+                    hotspots: "Kampala (Kololo, Nakasero)",
+                    source: "CIPESA / UNCTAD 2025",
+                    sourceUrl: "https://cipesa.org/2025/05/the-future-of-work-in-uganda-challenges-and-prospects-in-the-context-of-the-digital-economy/"
                 }
             },
             'Burundi': {
@@ -92,14 +138,16 @@
                     demandContext: "Subsistence to Commercial",
                     hiring: "Coffee Co-ops, Tea Estates, NGOs",
                     hotspots: "Bujumbura Rural, Gitega",
-                    source: "ISTEEBU"
+                    source: "AfDB Burundi Economic Outlook",
+                    sourceUrl: "https://www.afdb.org/en/countries/east-africa/burundi/burundi-economic-outlook"
                 },
                 'energy': {
                     jobTrend: "+12% YoY",
-                    investment: "$25M",
+                    investment: "$147M (AfDB Portfolio)",
                     hiring: "Regideso, Solar Micro-grids",
                     hotspots: "Rural Provinces, Solar Parks",
-                    source: "Energy Ministry"
+                    source: "World Bank / AfDB Burundi 2024",
+                    sourceUrl: "https://www.worldbank.org/en/news/press-release/2024/01/10/world-bank-provides-continued-support-for-energy-access-in-afe-burundi"
                 },
                 'digital': {
                     jobTrend: "+10% YoY",
@@ -108,61 +156,98 @@
                     demandContext: "Early Stage ICT",
                     hiring: "Telecommunications (Econet), Banks",
                     hotspots: "Bujumbura",
-                    source: "ICT Regulation"
+                    source: "Digital Watch / IFC CPSD Burundi",
+                    sourceUrl: "https://dig.watch/countries/burundi"
                 }
             },
             'South Sudan': {
                 'agri': {
                     jobTrend: "+5% YoY",
-                    investment: "$20M (Humanitarian)",
+                    investment: "$46.2M (AfDB CRAFT)",
                     skillsDemand: "High (Basic)",
                     demandContext: "Food Security Focus",
                     hiring: "FAO, WFP, NGOs, Local Co-ops",
                     hotspots: "Greenbelt Region, Juba",
-                    source: "NBS South Sudan"
+                    source: "AfDB CRAFT Grant 2024",
+                    sourceUrl: "https://www.afdb.org/en/news-and-events/press-releases/south-sudan-african-development-bank-group-approves-46-million-grant-funding-agricultural-productivity-food-security-and-resilience-72642"
                 },
                 'energy': {
                     jobTrend: "+8% YoY",
-                    investment: "$40M",
+                    investment: "$50M (World Bank)",
                     hiring: "Ezra Power, Solar Relief Projects",
                     hotspots: "Juba, Oil Fields",
-                    source: "Ministry of Energy"
+                    source: "World Bank / ESMAP South Sudan",
+                    sourceUrl: "https://www.esmap.org/Pathways_to_Electricity_Access_Expansion_in_South_Sudan"
                 },
                 'digital': {
                     jobTrend: "+15% YoY",
-                    investment: "$8M",
+                    investment: "$8M (Estimated)",
                     skillsDemand: "High",
                     demandContext: "Infra & Mobile Money",
                     hiring: "Mobile Operators (MTN/Zain), NGOs",
                     hotspots: "Juba",
-                    source: "World Bank"
+                    source: "World Bank South Sudan (Estimated)",
+                    sourceUrl: "https://www.worldbank.org/en/country/southsudan/overview"
                 }
             },
             'DRC': {
                 'agri': {
                     jobTrend: "+10% YoY",
-                    investment: "$50M",
+                    investment: "$117.9M (AfDB 2024)",
                     skillsDemand: "Growing",
                     demandContext: "Agro-Industrial Parks",
                     hiring: "Plantations, Agro-processing SEZs",
                     hotspots: "Lubumbashi, Goma, Kinshasa",
-                    source: "INS RDC"
+                    source: "AfDB DRC Agri Loan Feb 2024",
+                    sourceUrl: "https://www.afdb.org/en/news-and-events/press-releases/democratic-republic-congo-african-development-bank-lend-117-million-support-agricultural-transformation-69100"
                 },
                 'energy': {
                     jobTrend: "+20% YoY",
-                    investment: "$200M (Hydro/Solar)",
+                    investment: "$340M (Moyi Power)",
                     hiring: "SNEL, Mining Power Projects",
                     hotspots: "Katanga (Mining), Inga Zone",
-                    source: "ANSER"
+                    source: "AfDB Moyi Power Dec 2024",
+                    sourceUrl: "https://www.afdb.org/en/news-and-events/press-releases/drc-african-development-bank-lead-financing-transformative-moyi-power-project-79372"
                 },
                 'digital': {
                     jobTrend: "+30% YoY",
-                    investment: "$40M",
+                    investment: "$400M+ (World Bank IDA)",
                     skillsDemand: "High",
-                    demandContext: "Fintech & Services",
+                    demandContext: "Fintech & Digital Transformation",
                     hiring: "Kinshasa Digital, Orange, Vodacom",
                     hotspots: "Kinshasa (Gombe)",
-                    source: "Target Sarl"
+                    source: "World Bank DRC Digital Project 2023",
+                    sourceUrl: "https://www.worldbank.org/en/topic/digitaldevelopment"
+                }
+            },
+            'Somalia': {
+                'agri': {
+                    jobTrend: "+6% YoY",
+                    investment: "$18M (Humanitarian)",
+                    skillsDemand: "High (Basic)",
+                    demandContext: "Food Security & Livestock Value Chain",
+                    hiring: "FAO, WFP, Mercy Corps, Agro-dealers",
+                    hotspots: "Kismayo, Bay/Bakool, Puntland",
+                    source: "FAO Somalia / SDRB 2023",
+                    sourceUrl: "https://sdrb.gov.so/unlocking-investment-in-somalias-livestock-sector-opportunities-challenges-and-market-potential/"
+                },
+                'energy': {
+                    jobTrend: "+15% YoY",
+                    investment: "$25M (AfDB + MIGA)",
+                    hiring: "Hormuud Telecom, Solar EPC Firms, Private Utilities",
+                    hotspots: "Mogadishu, Hargeisa, Bosaso",
+                    source: "AfDB / MIGA Somalia 2023",
+                    sourceUrl: "https://www.ecofinagency.com/news-industry/1301-51897-somalia-builds-renewable-energy-push-to-tackle-high-electricity-costs"
+                },
+                'digital': {
+                    jobTrend: "+15% YoY",
+                    investment: "$15M (Estimated)",
+                    skillsDemand: "High",
+                    demandContext: "Mobile Money & Diaspora-led Fintech",
+                    hiring: "Hormuud (EVC Plus), Somtel, Dahabshiil",
+                    hotspots: "Mogadishu, Hargeisa",
+                    source: "CBS Somalia / UNDP 2023",
+                    sourceUrl: "https://sominvest.gov.so/key-sectors/ict-digital-economy/"
                 }
             }
         };
@@ -182,20 +267,21 @@ const baseSectorDetailData = {
                     entrepreneurshipLevel: 75,
                     mobility: ["Regional (EAC)", "Rural-Urban"],
                     mobilityLevel: 60,
-                    source: "FAOSTAT / ILO"
+                    source: "FAOSTAT / ILO",
+                    sourceUrl: "https://www.fao.org/faostat/en/"
                 },
                 occupations: [
                     { name: "Agricultural Extension Officer", desc: "Community mobilization, crop advisory, and farmer training.", isHot: true, escoCode: "2132.2.2" },
+                    { name: "Supply Chain Manager", desc: "Applies predictive analytics to manage logistics, reduce post-harvest losses, and connect smallholders to markets.", isHot: true, escoCode: "1324.4" },
+                    { name: "Post-Harvest Specialist", desc: "Manages cold-chain and storage using IoT sensors and data platforms to reduce losses between farm and market.", isHot: true, escoCode: "2132.4" },
+                    { name: "Digital Extension Officer", desc: "Delivers AI-powered advisory services to farmers — combining agronomic knowledge with mobile and data tools.", isHot: true, escoCode: "2132.2" },
                     { name: "Precision Ag Specialist", desc: "Drone mapping, GIS analysis, and sensor integration.", isHot: true, escoCode: "2132.2.8" },
-                    { name: "Drone Pilot", desc: "Operates UAVs for crop surveillance and mapping.", isHot: true, escoCode: "8342.3" },
+                    { name: "Farm IoT Engineer", desc: "Maintains connected sensor networks on-farm.", isHot: true, escoCode: "2151.5" },
+                    { name: "Drone Pilot", desc: "Operates UAVs for crop surveillance and mapping.", escoCode: "8342.3" },
                     { name: "Soil Data Analyst", desc: "Interprets soil samples for nutrient management.", escoCode: "2132.1" },
                     { name: "Smart Irrigation Tech", desc: "Installs automated water delivery systems.", escoCode: "7126.2" },
-                    { name: "Supply Chain Manager", desc: "Orchestrates logistics from farm to market.", escoCode: "1324.4" },
                     { name: "Agri-Input Sales", desc: "Distributes seeds/chemicals with technical advice.", escoCode: "3322.2" },
-                    { name: "Farm IoT Engineer", desc: "Maintains connected sensor networks on-farm.", isHot: true, escoCode: "2151.5" },
-                    { name: "Post-Harvest Specialist", desc: "Implements cold-chain and storage solutions.", escoCode: "2132.4" },
                     { name: "Climate Risk Analyst", desc: "Models weather patterns for crop resilience.", escoCode: "2114.1" },
-                    { name: "Digital Extension Officer", desc: "Delivers mobile advisory services to farmers.", escoCode: "2132.2" },
                     { name: "Urban Farming Architect", desc: "Designs vertical and CEA systems for cities.", escoCode: "2161.1" },
                     { name: "Livestock Health Tech", desc: "Tracks animal health via wearables/software.", escoCode: "3240.1" }
                 ],
@@ -238,7 +324,29 @@ const baseSectorDetailData = {
                     { name: "Inventory Mgmt", desc: "Stock tracking systems", narrative: "Managing input supplies (seeds, fertilizer) and harvest stock using digital ledgers to ensure traceability and prevent theft or spoilage." }, 
                     { name: "Data Viz", desc: "Dashboard creation", narrative: "Translating complex agronomic data into simple, actionable visual dashboards for farmers or stakeholders using tools like Tableau or PowerBI." }, 
                     { name: "Crop Science", desc: "Yield optimization", narrative: "Deep understanding of plant physiology and genetics, combined with digital tools to run trials and select the best seed varieties for specific micro-climates." }, 
-                    { name: "Drone Ops", desc: "Aerial surveillance", narrative: "Piloting UAVs for crop spraying or multispectral imaging, including adherence to civil aviation regulations and flight path planning." }
+                    { name: "Drone Ops", desc: "Aerial surveillance", narrative: "Piloting UAVs for crop spraying or multispectral imaging, including adherence to civil aviation regulations and flight path planning." },
+                    { name: "Digital Advisory", desc: "E-extension services", narrative: "Using digital tools to provide farmers with actionable advice on crop management, weather, and markets.", isHot: true },
+                    { name: "Precision Ag", desc: "Site-specific farming", narrative: "Farming management concept based on observing, measuring, and responding to inter and intra-field variability in crops.", isHot: true },
+                    { name: "Water Management", desc: "Irrigation efficiency", narrative: "The activity of planning, developing, distributing, and managing the optimum use of water resources.", isHot: true },
+                    { name: "Climate Adaptation", desc: "Resilience planning", narrative: "Adjusting to actual or expected future climate and its effects. In agriculture, this means changing planting dates or crop varieties.", isHot: true },
+                    { name: "Food Security", desc: "Supply stability", narrative: "The measure of the availability of food and individuals' ability to access it." },
+                    { name: "Farm Management", desc: "Operational oversight", narrative: "Making and implementing decisions involved in organizing and operating a farm for maximum production and profit." },
+                    { name: "Mechanization", desc: "Machinery use", narrative: "The process of changing from working by hand or with animals to doing that work with machinery." },
+                    { name: "Agribusiness", desc: "Commercial farming", narrative: "The business of agricultural production including agrichemicals, breeding, crop production, distribution, farm machinery, processing, and seed supply." },
+                    { name: "Supply Chain", desc: "Logistics flow", narrative: "The network of all individuals, organizations, resources, activities, and technology involved in the creation and sale of a product." },
+                    { name: "Digital Tools", desc: "Software usage", narrative: "General proficiency in using software and applications to enhance productivity and decision making." },
+                    { name: "Communication", desc: "Info dissemination", narrative: "Conveying meanings from one entity or group to another through the use of mutually understood signs, symbols, and semiotic rules." },
+                    { name: "IoT", desc: "Platform & API connectivity", narrative: "Connecting farm devices and sensors to cloud advisory platforms and market systems using IoT protocols (MQTT, LoRaWAN). Essential for linking field data to decision-support tools." },
+                    { name: "Data Analysis", desc: "Farm data & market analytics", narrative: "Analysing yield data, price trends and supply chain performance using tools like Excel, R and Power BI to support farm management decisions and investor reporting." },
+                    { name: "Data Science", desc: "Crop modelling & prediction", narrative: "Building predictive models for crop disease risk, climate vulnerability scoring and yield optimisation using historical field and weather data." },
+                    { name: "Machine Learning", desc: "Pest & disease detection", narrative: "Applying ML models to field imagery and sensor data to detect crop stress, identify pest outbreaks early and automate irrigation scheduling decisions.", isHot: true },
+                    { name: "Project Mgmt", desc: "Value chain coordination", narrative: "Managing timelines, procurement and stakeholder relationships for agri value chain rollouts, rural electrification tie-ins and donor-funded programmes." },
+                    { name: "Cloud Computing", desc: "Farm platform hosting", narrative: "Hosting farm management platforms, sensor data lakes and advisory dashboards on cloud infrastructure. Ensures 24/7 availability for remote advisory services." },
+                    { name: "Cybersecurity", desc: "Farm data protection", narrative: "Protecting farmer data, payment records and supply chain integrity from digital threats — increasingly important as agri platforms handle financial transactions." },
+                    { name: "AI", desc: "Precision farming intelligence", narrative: "Using AI tools for crop disease detection from images, yield prediction, weather-adaptive planting advice and automated market price alerts for smallholders.", isHot: true },
+                    { name: "Web Dev", desc: "Market & advisory portals", narrative: "Building farmer-facing web platforms for market price discovery, cooperative management and digital input ordering." },
+                    { name: "Digital Marketing", desc: "Market access & e-commerce", narrative: "Using WhatsApp Business, social media and digital marketplaces to connect farmers and agro-dealers with buyers, reducing dependence on middlemen.", isHot: true },
+                    { name: "Financial Literacy", desc: "Farm finance & credit", narrative: "Understanding farm budgeting, input credit options, SACCO savings and how to prepare a loan application or pitch to an agri-investor." }
                 ],
                 entrepreneurship: {
                     successMetrics: { value: "65% Revenue Uplift", source: "TechnoServe 2024", context: "for digitized farms" }
@@ -258,7 +366,8 @@ const baseSectorDetailData = {
                     entrepreneurshipLevel: 50,
                     mobility: ["Regional", "Technical Certs"],
                     mobilityLevel: 80,
-                    source: "IRENA / IEA"
+                    source: "IRENA / IEA",
+                    sourceUrl: "https://www.irena.org/Data"
                 },
                 occupations: [
                     { name: "Solar PV Installer", desc: "Assembles and maintains photovoltaic systems.", isHot: true, escoCode: "7411.3.3" },
@@ -312,7 +421,32 @@ const baseSectorDetailData = {
                     { name: "Thermodynamics", desc: "Heat transfer systems", narrative: "Understanding heat flow is crucial for geothermal energy and solar water heating systems to optimize thermal exchange efficiency." }, 
                     { name: "Regulatory Compl.", desc: "Policy adherence", narrative: "Navigating the complex landscape of energy laws, tariffs, and environmental regulations in East African nations." }, 
                     { name: "Data Analysis", desc: "Usage pattern tracking", narrative: "Analyzing smart meter data to understand consumption patterns, detect theft, and forecast peak demand periods." }, 
-                    { name: "Field Ops", desc: "On-site maintenance", narrative: "Hands-on troubleshooting of hardware—cleaning panels, topping up battery electrolytes, and replacing blown fuses in remote locations." }
+                    { name: "Field Ops", desc: "On-site maintenance", narrative: "Hands-on troubleshooting of hardware—cleaning panels, topping up battery electrolytes, and replacing blown fuses in remote locations." },
+                    { name: "Wind Power", desc: "Turbine maintenance", narrative: "Technical skills for the installation, operation, and maintenance of wind turbines, including blade repair and generator troubleshooting." },
+                    { name: "Grid Systems", desc: "Transmission & Distribution", narrative: "Understanding the infrastructure of power transmission, including substations, transformers, and the integration of renewable energy sources." },
+                    { name: "Sustainability", desc: "Eco-friendly practices", narrative: "Meeting the needs of the present without compromising the ability of future generations to meet their own needs.", isHot: true },
+                    { name: "Green Tech", desc: "Clean technology", narrative: "Technology whose use is intended to mitigate or reverse the effects of human activity on the environment.", isHot: true },
+                    { name: "Installation", desc: "System setup", narrative: "The physical act of setting up equipment for use. In energy, this involves mounting panels, turbines, and connecting wiring." },
+                    { name: "Compliance", desc: "Rule adherence", narrative: "Ensuring energy systems meet legal and safety standards. Covers licensing requirements and inspection protocols." },
+                    { name: "Biomass", desc: "Organic energy", narrative: "Fuel developed from organic materials — a renewable and sustainable source of energy used to create electricity or other forms of power." },
+                    { name: "Policy", desc: "Regulatory frameworks", narrative: "Understanding and formulating the laws, regulations, and guidelines that govern the energy sector." },
+                    { name: "Economics", desc: "Market analysis", narrative: "Analyzing the production, distribution, and consumption of energy goods and services." },
+                    { name: "Audit", desc: "Compliance check", narrative: "Systematic examination of records, documents, and systems to ensure an organization meets required standards." },
+                    { name: "Python", desc: "Grid modelling & automation", narrative: "Writing scripts for grid simulation, renewable output modelling and automating data collection from smart meters or SCADA systems.", isHot: true },
+                    { name: "GIS Mapping", desc: "Site selection & grid planning", narrative: "Using spatial data to plan rural electrification routes, optimise solar site placement and map coverage gaps for off-grid expansion." },
+                    { name: "IoT Sensors", desc: "Smart metering & diagnostics", narrative: "Deploying and maintaining sensors for smart metering, fault detection and remote grid diagnostics — core skills for Advanced Metering Infrastructure (AMI) rollout." },
+                    { name: "IoT", desc: "Remote asset management", narrative: "Connecting energy assets (solar home systems, smart meters, batteries) to cloud monitoring platforms for real-time performance tracking and automated demand-response." },
+                    { name: "Data Science", desc: "Demand & output forecasting", narrative: "Building models to predict energy demand, forecast renewable output (solar irradiance, wind speed) and optimise dispatch decisions for grid operators.", isHot: true },
+                    { name: "Machine Learning", desc: "Predictive maintenance", narrative: "Training models on equipment sensor data to predict failures before they occur — reducing downtime for solar plants, wind turbines and grid substations.", isHot: true },
+                    { name: "Mobile Money API", desc: "PAYG solar integration", narrative: "Integrating M-Pesa, Airtel Money and MTN MoMo into pay-as-you-go (PAYG) solar platforms — enabling token-based energy access for unbanked households." },
+                    { name: "Drone Ops", desc: "Infrastructure inspection", narrative: "Operating UAVs to inspect power lines, wind turbine blades and solar panel arrays — reducing the cost and risk of manual inspection in remote locations." },
+                    { name: "Data Viz", desc: "Grid dashboards & reporting", narrative: "Building consumption dashboards and outage heat-maps to help utilities and regulators monitor grid performance and communicate impact to investors." },
+                    { name: "Cloud Computing", desc: "Grid data & SCADA hosting", narrative: "Centralising grid monitoring data and SCADA telemetry on cloud infrastructure for reliable access, disaster recovery and multi-site operational visibility." },
+                    { name: "Cybersecurity", desc: "Critical grid security", narrative: "Protecting SCADA systems and grid control infrastructure from cyber-attacks — a critical risk as East African utilities digitise and connect to the internet.", isHot: true },
+                    { name: "AI", desc: "Grid optimisation & forecasting", narrative: "Using AI for real-time load balancing, renewable energy dispatch optimisation, outage prediction and automated fault isolation in distribution networks.", isHot: true },
+                    { name: "Web Dev", desc: "Customer & utility portals", narrative: "Developing customer self-service portals for bill payment, outage reporting and usage tracking — reducing utility call-centre volumes." },
+                    { name: "Digital Marketing", desc: "Solar customer acquisition", narrative: "Driving adoption of solar home systems and mini-grids through digital channels — essential for off-grid companies scaling across rural East Africa." },
+                    { name: "Financial Literacy", desc: "Project finance & energy ROI", narrative: "Understanding project finance structures, green bonds, carbon credit markets and the ROI calculations behind PAYG solar and mini-grid investments." }
                 ],
                 entrepreneurship: {
                     successMetrics: null
@@ -332,7 +466,8 @@ const baseSectorDetailData = {
                     entrepreneurshipLevel: 90,
                     mobility: ["Global Remote", "Regional"],
                     mobilityLevel: 95,
-                    source: "ITU / GSMA"
+                    source: "ITU / GSMA",
+                    sourceUrl: "https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-economy/africa/"
                 },
                 occupations: [
                     { name: "Data Scientist", desc: "Extracts insights from complex datasets.", isHot: true, escoCode: "2122.2.4" },
@@ -346,7 +481,8 @@ const baseSectorDetailData = {
                     { name: "DevOps Engineer", desc: "Automates CI/CD deployment pipelines.", escoCode: "2512.7" },
                     { name: "Digital Marketer", desc: "Drives growth via digital channels.", escoCode: "2431.5" },
                     { name: "Blockchain Developer", desc: "Builds decentralized apps and smart contracts.", escoCode: "2512.9" },
-                    { name: "Systems Administrator", desc: "Maintains IT infrastructure and networks.", escoCode: "2522.1" }
+                    { name: "Systems Administrator", desc: "Maintains IT infrastructure and networks.", escoCode: "2522.1" },
+                    { name: "Android Dev", desc: "Builds native Android apps for mobile-first EAC markets.", isHot: true, escoCode: "2512.10" }
                 ],
                 skills: [
                     { 
@@ -387,7 +523,29 @@ const baseSectorDetailData = {
                     { name: "Agile", desc: "Product management", narrative: "A project management methodology that emphasizes iterative delivery, team collaboration, and flexibility to adapt to changing market needs." }, 
                     { name: "DevOps", desc: "CI/CD & automation", narrative: "Bridging development and operations to shorten the development lifecycle. Involves automating code testing, deployment pipelines, and infrastructure monitoring." }, 
                     { name: "API Design", desc: "System integration", narrative: "Designing secure and documented interfaces (REST/GraphQL) that allow different software systems to talk to each other reliably." }, 
-                    { name: "Figma", desc: "Interface design", narrative: "The industry-standard tool for collaborative interface design and prototyping. Used to create the visual look and feel before coding begins." }
+                    { name: "Figma", desc: "Interface design", narrative: "The industry-standard tool for collaborative interface design and prototyping. Used to create the visual look and feel before coding begins." },
+                    { name: "Cloud Computing", desc: "Serverless & Scalability", narrative: "The delivery of computing services including servers, storage, databases, and networking over the Internet.", isHot: true },
+                    { name: "Web Dev", desc: "Full-stack building", narrative: "Building and maintaining websites and web applications, covering both client-side (frontend) and server-side (backend) technologies.", isHot: true },
+                    { name: "Data Science", desc: "Insight generation", narrative: "Combining domain expertise, programming skills, and mathematics to extract meaningful insights from data.", isHot: true },
+                    { name: "IoT", desc: "Connected devices", narrative: "The Internet of Things involves connecting physical devices to the internet. Essential for smart grids, precision agriculture, and industrial automation.", isHot: true },
+                    { name: "Networking", desc: "Connectivity infrastructure", narrative: "Designing and managing computer networks (LAN/WAN). Essential for ensuring connectivity in remote areas and supporting IoT infrastructure.", isHot: true },
+                    { name: "AI", desc: "Artificial Intelligence", narrative: "Broad field of computer science focused on creating systems capable of performing tasks that typically require human intelligence.", isHot: true },
+                    { name: "Digital Marketing", desc: "Online growth strategy", narrative: "Promoting products or services using digital channels like social media, search engines, and email to reach consumers." },
+                    { name: "Product Management", desc: "Lifecycle oversight", narrative: "The business process of planning, developing, launching, and managing a product or service including lifecycle management and strategy." },
+                    { name: "Deep Learning", desc: "Neural networks", narrative: "A subset of machine learning based on artificial neural networks. Key for image recognition and NLP.", isHot: true },
+                    { name: "Network Security", desc: "Infrastructure defense", narrative: "Policies and practices to prevent and monitor unauthorized access, misuse, modification, or denial of a computer network.", isHot: true },
+                    { name: "Cloud Architecture", desc: "Cloud design", narrative: "Designing secure, scalable, and reliable cloud applications. Involves components and subcomponents required for cloud computing.", isHot: true },
+                    { name: "UI Design", desc: "Visual interface", narrative: "User Interface design focuses on the look and layout of an interface to ensure it is visually appealing and easy to navigate." },
+                    { name: "Automation", desc: "Process efficiency", narrative: "The use of technology to perform tasks with reduced human assistance. Key in DevOps and manufacturing.", isHot: true },
+                    { name: "CI/CD", desc: "Deployment pipelines", narrative: "Continuous Integration and Continuous Delivery. A method to frequently deliver apps by introducing automation into app development stages.", isHot: true },
+                    { name: "GIS Mapping", desc: "Spatial analytics & logistics", narrative: "Using geospatial data for urban mobility platforms, logistics route optimisation, precision delivery networks and mapping unserved markets across East Africa." },
+                    { name: "IoT Sensors", desc: "Connected device integration", narrative: "Integrating physical sensor networks into software platforms — from smart city traffic management to industrial automation and connected consumer devices." },
+                    { name: "Data Analysis", desc: "Product & business analytics", narrative: "Analysing user behaviour, A/B test results and business metrics using BI tools (Looker, Tableau, Power BI) to inform product and commercial decisions." },
+                    { name: "Project Mgmt", desc: "Tech delivery & coordination", narrative: "Coordinating agile sprints, managing vendor relationships and delivering digital projects on time and budget across distributed teams." },
+                    { name: "Mobile Money API", desc: "EAC fintech integration", narrative: "Integrating M-Pesa, Airtel Money and MTN MoMo APIs into digital products — a must-have skill for any consumer app targeting payments in East Africa.", isHot: true },
+                    { name: "Drone Ops", desc: "Logistics & aerial tech", narrative: "Programming and operating autonomous delivery drones and building the software platforms that manage flight corridors, payload tracking and last-mile logistics." },
+                    { name: "Data Viz", desc: "BI dashboards & data storytelling", narrative: "Building business intelligence dashboards and investor-ready data visualisations using Tableau, Power BI, Looker Studio or D3.js for product and commercial teams." },
+                    { name: "Financial Literacy", desc: "Unit economics & fundraising", narrative: "Understanding CAC/LTV ratios, runway management, investor term sheets and cash flow modelling — critical for anyone building or working in a tech startup.", isHot: true }
                 ],
                 entrepreneurship: {
                     successMetrics: { value: "3x Growth", source: "Partech Africa", context: "for funded startups" }
@@ -439,7 +597,8 @@ const standardDefinitions = {
     "DevOps Engineer": "Engineers who bridge the gap between software development and IT operations, automating the building, testing, and deployment of applications using CI/CD pipelines.",
     "Digital Marketer": "Marketers who use online channels like search engines, social media, and email to promote products or services, analyzing data to optimize campaigns.",
     "Blockchain Developer": "Developers who specialize in building decentralized applications (DApps) and smart contracts on blockchain platforms like Ethereum, focusing on security and consensus algorithms.",
-    "Systems Administrator": "IT professionals responsible for the maintenance, configuration, and reliable operation of computer systems, especially multi-user servers."
+    "Systems Administrator": "IT professionals responsible for the maintenance, configuration, and reliable operation of computer systems, especially multi-user servers.",
+    "Android Dev": "Developers who build native mobile applications for Android devices using Kotlin or Java, focusing on mobile-first user experiences and integration with services like M-Pesa and USSD."
 };
 
 // 2. Specific Employers Mapping
@@ -478,7 +637,8 @@ const roleEmployers = {
     "DevOps Engineer": "Scale-up Startups, Cloud Providers, Enterprise IT",
     "Digital Marketer": "E-commerce, Media Houses, Marketing Agencies",
     "Blockchain Developer": "Crypto Startups, Financial Institutions, NGOs",
-    "Systems Administrator": "ISPs, Universities, Government Ministries"
+    "Systems Administrator": "ISPs, Universities, Government Ministries",
+    "Android Dev": "FinTechs (M-Pesa ecosystem), Telcos, Health Startups, E-commerce"
 };
 
 // 3. Specific Skills Mapping
@@ -621,11 +781,11 @@ const roleSkills = {
         employability: ["Integrity", "Vigilance", "Stress Management", "Investigative Mindset", "Confidentiality"]
     },
     "Frontend Dev": {
-        technical: ["React", "Web Dev", "JavaScript", "DevOps", "UI Design"],
+        technical: ["React", "JavaScript", "CSS", "Figma", "Web Dev"],
         employability: ["Creativity", "User Empathy", "Collaboration", "Attention to Detail", "Patience"]
     },
     "Backend Dev": {
-        technical: ["Python", "API Design", "Database Mgmt", "Cloud Computing", "Web Dev"],
+        technical: ["Python", "API Design", "Microservices", "Database Mgmt", "Cloud Computing"],
         employability: ["Logic", "Efficiency", "Continuous Learning", "Systems Thinking", "Reliability"]
     },
     "UX/UI Designer": {
@@ -655,40 +815,44 @@ const roleSkills = {
     "Systems Administrator": {
         technical: ["DevOps", "Networking", "Network Security", "Database Mgmt", "Cloud Computing"],
         employability: ["Troubleshooting", "Patience", "Service Orientation", "Reliability", "Organization"]
+    },
+    "Android Dev": {
+        technical: ["Kotlin", "Android SDK", "API Integration", "Firebase", "Git"],
+        employability: ["User Empathy", "Attention to Detail", "Continuous Learning", "Collaboration", "Problem Solving"]
     }
 };
 
 // 4. Role-Specific "Typical Day" Content
 const roleDayBreakdown = {
     // --- AGRI ---
-    "Precision Ag Specialist": { theme: 'green', entry: "Collecting soil/leaf samples, calibrating GPS on tractors, and flying drones for basic field mapping under supervision.", mid: "Analyzing satellite/drone imagery to create variable rate prescription maps for fertilizer application and presenting findings to farm managers.", senior: "Developing the farm's overall precision ag strategy, evaluating new technologies (e.g., AI-powered weed recognition), and managing the data analytics team." },
-    "Drone Pilot": { theme: 'green', entry: "Performing pre-flight checks, executing pre-planned flight paths for aerial mapping, and logging flight data.", mid: "Planning complex flight missions (e.g., multispectral imaging), processing raw imagery into usable data layers (e.g., NDVI), and performing minor drone maintenance.", senior: "Managing a fleet of UAVs, ensuring regulatory compliance (e.g., KCAA), training junior pilots, and integrating drone data with other farm management systems." },
-    "Soil Data Analyst": { theme: 'green', entry: "Organizing and cleaning soil lab result spreadsheets, creating basic charts of nutrient levels, and assisting with report preparation.", mid: "Using statistical software (R/Python) to analyze soil data trends across regions, correlating them with yield data, and writing nutrient management recommendations.", senior: "Building predictive soil health models, advising on regional soil policy, and developing new data products for fertilizer companies or government agencies." },
-    "Smart Irrigation Tech": { theme: 'green', entry: "Installing soil moisture probes and weather stations, laying pipes and drip lines, and assisting with basic system troubleshooting.", mid: "Calibrating irrigation controllers, diagnosing sensor or valve failures, and training farm staff on system operation and basic maintenance.", senior: "Designing end-to-end smart irrigation systems for large commercial farms, managing water use budgets, and integrating the system with crop growth models." },
-    "Supply Chain Manager": { theme: 'green', entry: "Tracking shipments, coordinating with transporters, and ensuring cold chain temperature logs are correctly maintained.", mid: "Optimizing transport routes, managing warehouse inventory using ERP software, and negotiating contracts with logistics providers.", senior: "Designing the entire supply chain strategy, managing international export compliance and documentation, and implementing risk mitigation plans (e.g., for port delays)." },
-    "Agri-Input Sales": { theme: 'green', entry: "Visiting small-scale farmers to demonstrate products, taking orders, and providing basic agronomic advice.", mid: "Managing a sales territory, developing relationships with co-operatives and large farms, and conducting farmer training days.", senior: "Developing regional sales strategies, managing key accounts (e.g., large distributors), and providing market feedback to the product development team." },
-    "Farm IoT Engineer": { theme: 'green', entry: "Assembling and testing IoT devices, installing gateways and sensors in the field, and monitoring network connectivity dashboards.", mid: "Troubleshooting hardware and network issues, writing scripts to process sensor data, and integrating data streams into a cloud platform (e.g., AWS IoT).", senior: "Architecting the entire on-farm IoT network, selecting hardware vendors, ensuring data security, and developing custom analytics from the collected data." },
-    "Post-Harvest Specialist": { theme: 'green', entry: "Monitoring sorting and grading lines, ensuring hygiene protocols are followed, and conducting basic quality checks (e.g., size, color).", mid: "Implementing food safety standards (e.g., HACCP), managing cold storage conditions, and training workers on quality control procedures.", senior: "Designing post-harvest handling systems to reduce spoilage, auditing facilities for compliance, and researching new preservation or packaging technologies." },
-    "Climate Risk Analyst": { theme: 'green', entry: "Gathering historical weather data, running pre-built climate models, and creating charts for internal reports.", mid: "Using Python/R to analyze climate data, assessing the probability of events like drought or floods, and contributing to risk reports for insurance products.", senior: "Developing custom climate models for specific regions, advising financial institutions on climate-related investment risks, and engaging with policymakers." },
-    "Digital Extension Officer": { theme: 'green', entry: "Registering farmers onto a digital platform, providing basic app support via phone, and collecting field data using a tablet.", mid: "Creating and disseminating digital advisory content (SMS, voice messages), analyzing user engagement data, and training lead farmers on new digital tools.", senior: "Designing the digital extension strategy for a region, managing partnerships with NGOs or government, and evaluating the impact of digital advisory on farmer incomes." },
-    "Agricultural Extension Officer": { theme: 'green', entry: "Conducting farm visits, registering farmers on digital platforms, and distributing educational flyers.", mid: "Organizing field days, training lead farmers, and collecting data on crop yields using mobile tools.", senior: "Managing a team of extension officers, designing curriculum for farmer training, and liaising with research institutions." },
-    "Farm Services Operator": { theme: 'green', entry: "Operating basic machinery (e.g., threshers) and assisting with drone spraying setups under supervision.", mid: "Independently managing spraying missions, maintaining equipment, and coordinating service schedules with farmer groups.", senior: "Managing a fleet of machinery and operators, negotiating service contracts with cooperatives, and analyzing operational efficiency." },
-    "Irrigation Technician": { theme: 'green', entry: "Laying drip lines, checking for leaks, and cleaning filters under the guidance of a senior technician.", mid: "Installing solar pumps, calibrating automated controllers, and troubleshooting hydraulic pressure issues.", senior: "Designing irrigation layouts for large farms, managing water use budgets, and training junior installation teams." },
-    "Agro-Processing Technician": { theme: 'green', entry: "Operating sorting or drying machinery, maintaining hygiene logs, and packaging finished products.", mid: "Supervising a production line, conducting quality assurance tests, and performing routine machine maintenance.", senior: "Managing facility operations, ensuring HACCP compliance, and optimizing production workflows for efficiency." },
-    "Aquaculture Farm Technician": { theme: 'green', entry: "Feeding fish, cleaning ponds/cages, and recording water quality metrics (pH, oxygen).", mid: "Managing breeding cycles, diagnosing fish health issues, and supervising harvest logistics.", senior: "Overseeing hatchery operations, designing farm expansion plans, and managing production data for investors." },
-    "Fisheries Compliance Officer": { theme: 'green', entry: "Conducting beach patrols, checking licenses, and recording catch data at landing sites.", mid: "Leading inspection teams, investigating illegal fishing reports, and preparing prosecution case files.", senior: "Developing regional compliance strategies, liaising with maritime police, and analyzing catch data trends for policy." },
+    "Precision Ag Specialist": { theme: 'sky', entry: "Collecting soil/leaf samples, calibrating GPS on tractors, and flying drones for basic field mapping under supervision.", mid: "Analyzing satellite/drone imagery to create variable rate prescription maps for fertilizer application and presenting findings to farm managers.", senior: "Developing the farm's overall precision ag strategy, evaluating new technologies (e.g., AI-powered weed recognition), and managing the data analytics team." },
+    "Drone Pilot": { theme: 'sky', entry: "Performing pre-flight checks, executing pre-planned flight paths for aerial mapping, and logging flight data.", mid: "Planning complex flight missions (e.g., multispectral imaging), processing raw imagery into usable data layers (e.g., NDVI), and performing minor drone maintenance.", senior: "Managing a fleet of UAVs, ensuring regulatory compliance (e.g., KCAA), training junior pilots, and integrating drone data with other farm management systems." },
+    "Soil Data Analyst": { theme: 'sky', entry: "Organizing and cleaning soil lab result spreadsheets, creating basic charts of nutrient levels, and assisting with report preparation.", mid: "Using statistical software (R/Python) to analyze soil data trends across regions, correlating them with yield data, and writing nutrient management recommendations.", senior: "Building predictive soil health models, advising on regional soil policy, and developing new data products for fertilizer companies or government agencies." },
+    "Smart Irrigation Tech": { theme: 'sky', entry: "Installing soil moisture probes and weather stations, laying pipes and drip lines, and assisting with basic system troubleshooting.", mid: "Calibrating irrigation controllers, diagnosing sensor or valve failures, and training farm staff on system operation and basic maintenance.", senior: "Designing end-to-end smart irrigation systems for large commercial farms, managing water use budgets, and integrating the system with crop growth models." },
+    "Supply Chain Manager": { theme: 'sky', entry: "Tracking shipments, coordinating with transporters, and ensuring cold chain temperature logs are correctly maintained.", mid: "Optimizing transport routes, managing warehouse inventory using ERP software, and negotiating contracts with logistics providers.", senior: "Designing the entire supply chain strategy, managing international export compliance and documentation, and implementing risk mitigation plans (e.g., for port delays)." },
+    "Agri-Input Sales": { theme: 'sky', entry: "Visiting small-scale farmers to demonstrate products, taking orders, and providing basic agronomic advice.", mid: "Managing a sales territory, developing relationships with co-operatives and large farms, and conducting farmer training days.", senior: "Developing regional sales strategies, managing key accounts (e.g., large distributors), and providing market feedback to the product development team." },
+    "Farm IoT Engineer": { theme: 'sky', entry: "Assembling and testing IoT devices, installing gateways and sensors in the field, and monitoring network connectivity dashboards.", mid: "Troubleshooting hardware and network issues, writing scripts to process sensor data, and integrating data streams into a cloud platform (e.g., AWS IoT).", senior: "Architecting the entire on-farm IoT network, selecting hardware vendors, ensuring data security, and developing custom analytics from the collected data." },
+    "Post-Harvest Specialist": { theme: 'sky', entry: "Monitoring sorting and grading lines, ensuring hygiene protocols are followed, and conducting basic quality checks (e.g., size, color).", mid: "Implementing food safety standards (e.g., HACCP), managing cold storage conditions, and training workers on quality control procedures.", senior: "Designing post-harvest handling systems to reduce spoilage, auditing facilities for compliance, and researching new preservation or packaging technologies." },
+    "Climate Risk Analyst": { theme: 'sky', entry: "Gathering historical weather data, running pre-built climate models, and creating charts for internal reports.", mid: "Using Python/R to analyze climate data, assessing the probability of events like drought or floods, and contributing to risk reports for insurance products.", senior: "Developing custom climate models for specific regions, advising financial institutions on climate-related investment risks, and engaging with policymakers." },
+    "Digital Extension Officer": { theme: 'sky', entry: "Registering farmers onto a digital platform, providing basic app support via phone, and collecting field data using a tablet.", mid: "Creating and disseminating digital advisory content (SMS, voice messages), analyzing user engagement data, and training lead farmers on new digital tools.", senior: "Designing the digital extension strategy for a region, managing partnerships with NGOs or government, and evaluating the impact of digital advisory on farmer incomes." },
+    "Agricultural Extension Officer": { theme: 'sky', entry: "Conducting farm visits, registering farmers on digital platforms, and distributing educational flyers.", mid: "Organizing field days, training lead farmers, and collecting data on crop yields using mobile tools.", senior: "Managing a team of extension officers, designing curriculum for farmer training, and liaising with research institutions." },
+    "Farm Services Operator": { theme: 'sky', entry: "Operating basic machinery (e.g., threshers) and assisting with drone spraying setups under supervision.", mid: "Independently managing spraying missions, maintaining equipment, and coordinating service schedules with farmer groups.", senior: "Managing a fleet of machinery and operators, negotiating service contracts with cooperatives, and analyzing operational efficiency." },
+    "Irrigation Technician": { theme: 'sky', entry: "Laying drip lines, checking for leaks, and cleaning filters under the guidance of a senior technician.", mid: "Installing solar pumps, calibrating automated controllers, and troubleshooting hydraulic pressure issues.", senior: "Designing irrigation layouts for large farms, managing water use budgets, and training junior installation teams." },
+    "Agro-Processing Technician": { theme: 'sky', entry: "Operating sorting or drying machinery, maintaining hygiene logs, and packaging finished products.", mid: "Supervising a production line, conducting quality assurance tests, and performing routine machine maintenance.", senior: "Managing facility operations, ensuring HACCP compliance, and optimizing production workflows for efficiency." },
+    "Aquaculture Farm Technician": { theme: 'sky', entry: "Feeding fish, cleaning ponds/cages, and recording water quality metrics (pH, oxygen).", mid: "Managing breeding cycles, diagnosing fish health issues, and supervising harvest logistics.", senior: "Overseeing hatchery operations, designing farm expansion plans, and managing production data for investors." },
+    "Fisheries Compliance Officer": { theme: 'sky', entry: "Conducting beach patrols, checking licenses, and recording catch data at landing sites.", mid: "Leading inspection teams, investigating illegal fishing reports, and preparing prosecution case files.", senior: "Developing regional compliance strategies, liaising with maritime police, and analyzing catch data trends for policy." },
 
     // --- ENERGY ---
-    "Solar PV Installer": { theme: 'orange', entry: "Carrying panels, mounting racking systems on roofs, and running cables under the supervision of a lead installer.", mid: "Wiring DC components, connecting inverters and batteries, and commissioning small residential systems according to electrical diagrams.", senior: "Leading an installation crew, conducting site surveys and system design for commercial projects, and ensuring compliance with safety and electrical codes." },
-    "Grid Systems Engineer": { theme: 'orange', entry: "Monitoring grid performance on SCADA screens, logging system events, and assisting with basic power flow calculations.", mid: "Running grid simulation models (e.g., PSS/E) to analyze the impact of new generators, and designing substation protection schemes.", senior: "Planning national grid expansion, developing grid codes for renewable energy integration, and managing the stability of the entire transmission system." },
-    "Energy Auditor": { theme: 'orange', entry: "Collecting utility bills, conducting walk-throughs of facilities to spot energy waste, and taking measurements with light meters or thermal cameras.", mid: "Analyzing energy consumption data, calculating potential savings from retrofits (e.g., LED lighting, new motors), and writing detailed audit reports.", senior: "Managing complex industrial audits, developing corporate energy management strategies (ISO 50001), and providing expert testimony on energy savings." },
-    "Geothermal Technician": { theme: 'orange', entry: "Taking readings from gauges on wellheads and steam pipes, performing routine maintenance on pumps and valves, and assisting with safety checks.", mid: "Operating control room systems to manage steam flow, troubleshooting mechanical or electrical faults in plant equipment, and analyzing plant efficiency data.", senior: "Supervising plant operations during a shift, planning major turbine or generator overhauls, and optimizing the entire steam-to-power generation process." },
-    "Wind Turbine Tech": { theme: 'orange', entry: "Performing routine inspections and lubrication of turbine components, assisting with blade cleaning, and ensuring safety equipment is in order.", mid: "Troubleshooting and repairing electrical or hydraulic faults within the nacelle, performing composite repairs on blades, and analyzing turbine performance data.", senior: "Managing the operations and maintenance (O&M) for a section of a wind farm, planning preventative maintenance schedules, and ensuring high turbine availability." },
-    "Energy Policy Analyst": { theme: 'orange', entry: "Researching energy policies from other countries, summarizing regulatory documents, and preparing briefing notes for senior staff.", mid: "Modeling the financial impact of different tariff structures, writing draft policy papers, and consulting with stakeholders (utilities, consumer groups).", senior: "Leading the development of national energy policy, advising government ministers, and representing the country in international energy forums." },
-    "Smart Meter Tech": { theme: 'orange', entry: "Replacing old analog meters with new smart meters at customer premises and verifying basic network connectivity.", mid: "Troubleshooting communication issues between meters and the central system, performing remote meter diagnostics, and training customers on new features.", senior: "Managing the deployment plan for a large-scale meter rollout, overseeing the AMI network infrastructure, and analyzing meter data for fraud or outage detection." },
-    "Project Manager": { theme: 'orange', entry: "Tracking project tasks and deadlines, organizing team meetings and taking minutes, and preparing simple status reports.", mid: "Managing the budget and schedule for a small-to-medium sized project, coordinating with contractors and suppliers, and managing project risks.", senior: "Overseeing a large, complex energy project (e.g., building a power plant), managing all stakeholder relationships, and being accountable for the project's success." },
-    "Safety Inspector": { theme: 'orange', entry: "Conducting daily site walk-throughs to check for hazards, ensuring workers are using correct PPE, and delivering toolbox safety talks.", mid: "Investigating minor incidents, conducting formal site safety audits, and delivering safety training to workers and contractors.", senior: "Developing and implementing the entire Health, Safety, and Environment (HSE) management system for a company, managing regulatory compliance, and leading major incident investigations." },
-    "Bioenergy Specialist": { theme: 'orange', entry: "Collecting feedstock samples for analysis, monitoring digester temperature and pH levels, and performing routine equipment checks.", mid: "Adjusting feedstock recipes to optimize gas production, troubleshooting operational issues with the digester, and managing the offtake of biogas or digestate.", senior: "Designing new biogas plants, developing business models for waste-to-energy projects, and ensuring compliance with environmental regulations." },
+    "Solar PV Installer": { theme: 'amber', entry: "Carrying panels, mounting racking systems on roofs, and running cables under the supervision of a lead installer.", mid: "Wiring DC components, connecting inverters and batteries, and commissioning small residential systems according to electrical diagrams.", senior: "Leading an installation crew, conducting site surveys and system design for commercial projects, and ensuring compliance with safety and electrical codes." },
+    "Grid Systems Engineer": { theme: 'amber', entry: "Monitoring grid performance on SCADA screens, logging system events, and assisting with basic power flow calculations.", mid: "Running grid simulation models (e.g., PSS/E) to analyze the impact of new generators, and designing substation protection schemes.", senior: "Planning national grid expansion, developing grid codes for renewable energy integration, and managing the stability of the entire transmission system." },
+    "Energy Auditor": { theme: 'amber', entry: "Collecting utility bills, conducting walk-throughs of facilities to spot energy waste, and taking measurements with light meters or thermal cameras.", mid: "Analyzing energy consumption data, calculating potential savings from retrofits (e.g., LED lighting, new motors), and writing detailed audit reports.", senior: "Managing complex industrial audits, developing corporate energy management strategies (ISO 50001), and providing expert testimony on energy savings." },
+    "Geothermal Technician": { theme: 'amber', entry: "Taking readings from gauges on wellheads and steam pipes, performing routine maintenance on pumps and valves, and assisting with safety checks.", mid: "Operating control room systems to manage steam flow, troubleshooting mechanical or electrical faults in plant equipment, and analyzing plant efficiency data.", senior: "Supervising plant operations during a shift, planning major turbine or generator overhauls, and optimizing the entire steam-to-power generation process." },
+    "Wind Turbine Tech": { theme: 'amber', entry: "Performing routine inspections and lubrication of turbine components, assisting with blade cleaning, and ensuring safety equipment is in order.", mid: "Troubleshooting and repairing electrical or hydraulic faults within the nacelle, performing composite repairs on blades, and analyzing turbine performance data.", senior: "Managing the operations and maintenance (O&M) for a section of a wind farm, planning preventative maintenance schedules, and ensuring high turbine availability." },
+    "Energy Policy Analyst": { theme: 'amber', entry: "Researching energy policies from other countries, summarizing regulatory documents, and preparing briefing notes for senior staff.", mid: "Modeling the financial impact of different tariff structures, writing draft policy papers, and consulting with stakeholders (utilities, consumer groups).", senior: "Leading the development of national energy policy, advising government ministers, and representing the country in international energy forums." },
+    "Smart Meter Tech": { theme: 'amber', entry: "Replacing old analog meters with new smart meters at customer premises and verifying basic network connectivity.", mid: "Troubleshooting communication issues between meters and the central system, performing remote meter diagnostics, and training customers on new features.", senior: "Managing the deployment plan for a large-scale meter rollout, overseeing the AMI network infrastructure, and analyzing meter data for fraud or outage detection." },
+    "Project Manager": { theme: 'amber', entry: "Tracking project tasks and deadlines, organizing team meetings and taking minutes, and preparing simple status reports.", mid: "Managing the budget and schedule for a small-to-medium sized project, coordinating with contractors and suppliers, and managing project risks.", senior: "Overseeing a large, complex energy project (e.g., building a power plant), managing all stakeholder relationships, and being accountable for the project's success." },
+    "Safety Inspector": { theme: 'amber', entry: "Conducting daily site walk-throughs to check for hazards, ensuring workers are using correct PPE, and delivering toolbox safety talks.", mid: "Investigating minor incidents, conducting formal site safety audits, and delivering safety training to workers and contractors.", senior: "Developing and implementing the entire Health, Safety, and Environment (HSE) management system for a company, managing regulatory compliance, and leading major incident investigations." },
+    "Bioenergy Specialist": { theme: 'amber', entry: "Collecting feedstock samples for analysis, monitoring digester temperature and pH levels, and performing routine equipment checks.", mid: "Adjusting feedstock recipes to optimize gas production, troubleshooting operational issues with the digester, and managing the offtake of biogas or digestate.", senior: "Designing new biogas plants, developing business models for waste-to-energy projects, and ensuring compliance with environmental regulations." },
 
     // --- DIGITAL ---
     "Data Scientist": { theme: 'indigo', entry: "Cleaning and preparing datasets, performing exploratory data analysis to find trends, and building simple predictive models using libraries like scikit-learn.", mid: "Developing and tuning complex machine learning models, deploying models as APIs, and presenting data-driven insights to business stakeholders.", senior: "Defining the AI/ML strategy for the company, leading a team of data scientists, and researching novel algorithms to solve complex business problems." },
@@ -700,7 +864,20 @@ const roleDayBreakdown = {
     "UX/UI Designer": { theme: 'indigo', entry: "Creating simple wireframes, making small visual updates to existing designs, and creating assets like icons and images.", mid: "Conducting user research (interviews, surveys), creating high-fidelity interactive prototypes in Figma, and developing a consistent design system.", senior: "Leading the overall user experience strategy for a product, mentoring other designers, and using data to inform and validate design decisions." },
     "Product Manager": { theme: 'indigo', entry: "Writing detailed user stories for the development team, organizing user feedback, and conducting competitor analysis.", mid: "Managing the product backlog, prioritizing features for upcoming sprints, and defining and analyzing product metrics to measure success.", senior: "Defining the long-term product vision and strategy, creating and managing the product roadmap, and being accountable for the product's commercial success." },
     "DevOps Engineer": { theme: 'indigo', entry: "Running manual deployment scripts, monitoring application health dashboards, and managing user access in development tools.", mid: "Building and maintaining CI/CD pipelines to automate testing and deployment, managing infrastructure with code (IaC), and implementing containerization with Docker.", senior: "Architecting scalable and resilient infrastructure on the cloud, managing container orchestration with Kubernetes, and implementing advanced monitoring and observability." },
-    "Digital Marketer": { theme: 'indigo', entry: "Scheduling social media posts, building simple email newsletters, and pulling basic reports from Google Analytics.", mid: "Managing paid ad campaigns (Google/Social Media), performing SEO keyword research and on-page optimization, and setting up A/B tests to improve conversion rates.", senior: "Developing the overall digital marketing strategy, managing a multi-channel budget, and building marketing automation workflows to nurture leads." }
+    "Digital Marketer": { theme: 'indigo', entry: "Scheduling social media posts, building simple email newsletters, and pulling basic reports from Google Analytics.", mid: "Managing paid ad campaigns (Google/Social Media), performing SEO keyword research and on-page optimization, and setting up A/B tests to improve conversion rates.", senior: "Developing the overall digital marketing strategy, managing a multi-channel budget, and building marketing automation workflows to nurture leads." },
+    "Android Dev": { theme: 'indigo', entry: "Building simple UI screens in Android Studio, fixing layout bugs, and implementing basic API calls under a senior developer's guidance.", mid: "Developing full features (authentication flows, M-Pesa payment integrations, push notifications), optimizing app performance, and writing unit tests.", senior: "Architecting modular Android apps, leading code reviews, setting up CI/CD for the Play Store, and mentoring junior developers." },
+
+    // --- AGRI (additional) ---
+    "Urban Farming Architect": { theme: 'sky', entry: "Setting up basic hydroponic units, monitoring nutrient solution levels, and maintaining grow-lighting schedules under a senior architect's guidance.", mid: "Designing vertical farming layouts for commercial clients, sourcing automated irrigation systems, and analysing crop yield data to optimise growing cycles.", senior: "Leading urban agriculture projects for municipal and real-estate developers, advising on city food-security policy, and integrating smart sensors across multiple production sites." },
+    "Livestock Health Tech": { theme: 'sky', entry: "Assisting with routine vaccinations, recording health observations on mobile apps, and helping with basic feed distribution and herd checks.", mid: "Using smart collar and sensor data to monitor herd health remotely, diagnosing common diseases, and coordinating treatment plans with supervising veterinarians.", senior: "Managing herd health programmes across large commercial farms, implementing IoT monitoring systems at scale, and training and mentoring junior health technicians." },
+
+    // --- ENERGY (additional) ---
+    "EV Charging Tech": { theme: 'amber', entry: "Installing residential EV charging units, routing cable to consumer units, and testing basic connectivity and earth-fault protection under supervision.", mid: "Commissioning commercial charging hubs, diagnosing network communication faults between chargers and back-office systems, and configuring load-management software.", senior: "Designing multi-point charging infrastructure for logistics fleets and commercial premises, managing charge-point operator relationships, and ensuring compliance with evolving EV installation standards." },
+    "Energy Storage Specialist": { theme: 'amber', entry: "Monitoring battery management systems (BMS), logging daily state-of-charge and cycle data, and assisting with battery cell inspection and replacement under supervision.", mid: "Commissioning BESS installations, programming charge/discharge schedules to optimise grid tariffs and self-consumption, and conducting performance-degradation analysis.", senior: "Designing large-scale battery storage systems, selecting cell chemistry and topology for specific grid or off-grid applications, and managing integration with renewable generation and grid stability services." },
+
+    // --- DIGITAL (additional) ---
+    "Blockchain Developer": { theme: 'indigo', entry: "Writing and testing basic smart contracts on a local testnet, reading existing contract code, and documenting function inputs, outputs, and security assumptions.", mid: "Deploying production smart contracts (ERC-20/ERC-721), building DApp front-ends with Web3.js or Ethers.js, and auditing contracts for common vulnerabilities (re-entrancy, overflow).", senior: "Architecting multi-contract protocols and token economies, leading security audits of production-grade systems, and advising on chain selection and cross-chain bridging strategies." },
+    "Systems Administrator": { theme: 'indigo', entry: "Managing user accounts and access rights, monitoring server health dashboards, and responding to first-line helpdesk tickets under senior guidance.", mid: "Maintaining Linux/Windows server infrastructure, configuring automated backups and disaster-recovery runbooks, and implementing monitoring with tools like Nagios or Grafana.", senior: "Architecting the organisation's IT infrastructure, leading migrations to cloud or hybrid environments, and owning the disaster-recovery and business-continuity strategy." }
 };
 
 // 5. Tools & Technologies
@@ -751,22 +928,23 @@ const roleToolsMap = {
     "DevOps Engineer": ["Jenkins / GitLab", "Docker", "Kubernetes", "Prometheus / Grafana", "AWS/Azure CLI"],
     "Digital Marketer": ["Google Analytics 4", "Google Ads", "Meta Business Suite", "Canva", "Mailchimp / HubSpot"],
     "Blockchain Developer": ["Remix IDE", "Truffle / Hardhat", "Metamask", "Solidity", "Geth"],
-    "Systems Administrator": ["PowerShell / Bash", "Active Directory", "VMware / Hyper-V", "Monitoring Tools (Nagios)", "Backup Software"]
+    "Systems Administrator": ["PowerShell / Bash", "Active Directory", "VMware / Hyper-V", "Monitoring Tools (Nagios)", "Backup Software"],
+    "Android Dev": ["Android Studio", "Kotlin / Java", "Firebase Console", "ADB / Emulator", "Git/GitHub"]
 };
 
 // 6. Read More Resources
 const roleResourcesMap = {
     // --- AGRI ---
     "Precision Ag Specialist": [
-        { title: "CTA: Digitalisation of African Agriculture", url: "https://www.cta.int" },
+        { title: "CTA: Digitalisation of African Agriculture", url: "https://www.cgiar.org/" },
         { title: "Hello Tractor: IoT Fleet Mgmt", url: "https://hellotractor.com/" },
-        { title: "Precision Agriculture for Development (PAD)", url: "https://precisionag.org/" },
+        { title: "Precision Agriculture for Development (PAD)", url: "https://precisiondev.org/" },
         { title: "FAO: E-Agriculture Strategy Guide", url: "https://www.fao.org/e-agriculture/" }
     ],
     "Drone Pilot": [
         { title: "AU-NEPAD: Drones for Agriculture", url: "https://www.nepad.org" },
         { title: "KCAA: UAS Regulatory Framework", url: "https://www.kcaa.or.ke" },
-        { title: "WeRobotics: Flying Labs Network", url: "https://werobotics.org/flyinglabs/" },
+        { title: "WeRobotics: Flying Labs Network", url: "https://werobotics.org/" },
         { title: "African Drone Forum", url: "https://www.africandroneforum.org/" }
     ],
     "Soil Data Analyst": [
@@ -778,14 +956,14 @@ const roleResourcesMap = {
     "Smart Irrigation Tech": [
         { title: "World Bank: Water in Agriculture", url: "https://www.worldbank.org/en/topic/water-in-agriculture" },
         { title: "FAO: Solar-powered Irrigation", url: "https://www.fao.org" },
-        { title: "SunCulture: Solar Irrigation", url: "https://sunculture.com/" },
+        { title: "SunCulture: Solar Irrigation", url: "https://sunculture.io/" },
         { title: "KickStart International", url: "https://kickstart.org/" }
     ],
     "Supply Chain Manager": [
         { title: "AGRA: Africa Agriculture Status Report", url: "https://agra.org" },
         { title: "FAO: Food Loss Index", url: "https://www.fao.org/platform-food-loss-waste" },
         { title: "TradeMark East Africa", url: "https://www.trademarkea.com/" },
-        { title: "Twiga Foods: Supply Chain Tech", url: "https://twiga.com/" }
+        { title: "Twiga Foods: Supply Chain Tech", url: "https://twiga.com" }
     ],
     "Agri-Input Sales": [
         { title: "Apollo Agriculture: Agent Model", url: "https://apolloagriculture.com/" },
@@ -818,7 +996,7 @@ const roleResourcesMap = {
         { title: "Farm.ink: Digital Advisory", url: "https://farm.ink/" }
     ],
     "Urban Farming Architect": [
-        { title: "FAO: Urban Agriculture", url: "https://www.fao.org/urban-agriculture" },
+        { title: "FAO: Urban Agriculture", url: "https://www.fao.org/urban-food-actions/urban-agriculture/en/" },
         { title: "UN-Habitat: Urban Food Systems", url: "https://unhabitat.org" },
         { title: "Vertical Farming Institute", url: "https://vertical-farming.net/" },
         { title: "Hydroponics Africa", url: "https://hydroponicskenya.com/" }
@@ -890,7 +1068,7 @@ const roleResourcesMap = {
         { title: "ESMAP: Utility Modernization", url: "https://www.esmap.org" },
         { title: "IEA: Smart Grids", url: "https://www.iea.org" },
         { title: "KPLC: Smart Metering", url: "https://kplc.co.ke/" },
-        { title: "African Utility Week", url: "https://www.enlit-africa.com/" }
+        { title: "African Utility Week", url: "https://wearevuka.com/energy/enlit-africa/" }
     ],
     "Project Manager": [
         { title: "PMI: Project Management in Africa", url: "https://www.pmi.org" },
@@ -958,11 +1136,11 @@ const roleResourcesMap = {
         { title: "UNESCO: Ethics of AI", url: "https://www.unesco.org" },
         { title: "AU: Artificial Intelligence Strategy", url: "https://au.int" },
         { title: "AI Kenya", url: "https://kenya.ai/" },
-        { title: "Papers with Code", url: "https://paperswithcode.com/" }
+        { title: "Papers with Code", url: "https://huggingface.co/papers/trending" }
     ],
     "UX/UI Designer": [
         { title: "Nielsen Norman Group: UX Research", url: "https://www.nngroup.com" },
-        { title: "Interaction Design Foundation", url: "https://www.interaction-design.org" },
+        { title: "Interaction Design Foundation", url: "https://ixdf.org" },
         { title: "Laws of UX", url: "https://lawsofux.com/" },
         { title: "Smashing Magazine", url: "https://www.smashingmagazine.com/" }
     ],
@@ -980,7 +1158,7 @@ const roleResourcesMap = {
     ],
     "Digital Marketer": [
         { title: "Hootsuite: Digital Trends Report", url: "https://www.hootsuite.com" },
-        { title: "Google: Digital Skills for Africa", url: "https://learndigital.withgoogle.com" },
+        { title: "Google: Digital Skills for Africa", url: "https://grow.google" },
         { title: "HubSpot Academy", url: "https://academy.hubspot.com/" },
         { title: "Moz Blog", url: "https://moz.com/blog" }
     ],
@@ -995,6 +1173,36 @@ const roleResourcesMap = {
         { title: "CompTIA: IT Industry Outlook", url: "https://www.comptia.org" },
         { title: "Server Fault", url: "https://serverfault.com/" },
         { title: "Microsoft Sysinternals", url: "https://learn.microsoft.com/en-us/sysinternals/" }
+    ],
+    "Android Dev": [
+        { title: "Google: Android Developers", url: "https://developer.android.com/" },
+        { title: "Jetpack Compose Pathway", url: "https://developer.android.com/courses/pathways/compose" },
+        { title: "Zindi: Mobile & AI Challenges", url: "https://zindi.africa/" },
+        { title: "AfriLabs: Community & Events", url: "https://www.afrilabs.com/" }
+    ],
+    "Farm Services Operator": [
+        { title: "Hello Tractor: Fleet Management", url: "https://hellotractor.com/" },
+        { title: "FAO: Agricultural Mechanization", url: "https://www.fao.org/agricultural-mechanization/en/" },
+        { title: "Agrilinks: Extension Resources", url: "https://agrilinks.org/" },
+        { title: "GSMA: Mobile for Agriculture", url: "https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/" }
+    ],
+    "Irrigation Technician": [
+        { title: "FAO: Irrigation Water Management", url: "https://www.fao.org/land-water/water/water-management/irrigationwater/en/" },
+        { title: "SunCulture: Solar Irrigation", url: "https://sunculture.io/" },
+        { title: "Irrigation Association: Training", url: "https://www.irrigation.org/" },
+        { title: "iDE: Smallholder Irrigation", url: "https://www.ideglobal.org/" }
+    ],
+    "Aquaculture Farm Technician": [
+        { title: "FAO: State of World Fisheries 2024", url: "https://www.fao.org/fishery/en/sofia" },
+        { title: "WorldFish: Aquaculture Research", url: "https://www.worldfishcenter.org/" },
+        { title: "Aquaculture Alliance: Resources", url: "https://www.globalseafood.org/" },
+        { title: "EAF-Nansen: Fisheries Training", url: "https://www.fao.org/in-action/eaf-nansen/en/" }
+    ],
+    "Fisheries Compliance Officer": [
+        { title: "FAO: Code of Conduct — Responsible Fisheries", url: "https://www.fao.org/fishery/en/publications/cofi" },
+        { title: "FISH-i Africa: IUU Compliance Network", url: "https://swiofish.org/" },
+        { title: "Too Big To Ignore: Small-Scale Fisheries", url: "https://toobigtoignore.net/" },
+        { title: "World Bank: SWIOFISH Programme", url: "https://www.worldbank.org/en/topic/environment/brief/swiofish" }
     ]
 };
 
@@ -1046,7 +1254,8 @@ const roleToOccupationMap = {
     "DevOps Engineer": "DevOps Engineer",
     "Digital Marketer": "Business intelligence analyst / Business analyst (digital)",
     "Blockchain Developer": "Software developer / Software engineer",
-    "Systems Administrator": "Systems analyst / IT solutions specialist"
+    "Systems Administrator": "Systems analyst / IT solutions specialist",
+    "Android Dev": "Software developer / Software engineer"
 };
 
 // 8. Role Qualifications (Minimum Requirements)
@@ -1097,7 +1306,8 @@ const roleQualifications = {
     "DevOps Engineer": { education: "Bachelor's in CS / Engineering", certification: "Docker / Kubernetes (CKA) / AWS DevOps", experience: "3 years in CI/CD automation" },
     "Digital Marketer": { education: "Bachelor's in Marketing / Comms", certification: "Google Ads / Meta Blueprint / HubSpot", experience: "Proven ROI on ad campaigns" },
     "Blockchain Developer": { education: "Bachelor's in CS / Cryptography", certification: "Solidity / Ethereum Dev Cert / CBP", experience: "Deployed Smart Contracts" },
-    "Systems Administrator": { education: "Diploma/Degree in IT", certification: "Red Hat (RHCSA) / Microsoft Certified / CompTIA Server+", experience: "2 years server management" }
+    "Systems Administrator": { education: "Diploma/Degree in IT", certification: "Red Hat (RHCSA) / Microsoft Certified / CompTIA Server+", experience: "2 years server management" },
+    "Android Dev": { education: "Bootcamp Cert or Bachelor's in CS", certification: "Associate Android Developer (Google) / Meta Android Cert", experience: "2+ apps published on Google Play Store" }
 };
 
 // --- 9. Pathway & Diagnostic Configuration (Moved from app.js) ---
@@ -1117,30 +1327,30 @@ const countryPathwayContext = {
 const proofPromptsMap = {
     "Communication (Written)": { text: "Write a 1-page project brief, a stakeholder email, or a short technical report.", link: "https://www.atlassian.com/software/confluence/templates/project-poster", label: "Template: Project Poster" },
     "Written Communication": { text: "Draft a clear, concise email or technical memo for a non-technical audience.", link: "https://www.grammarly.com/blog/how-to-write-a-report/", label: "Guide: Report Writing" },
-    "Communication (Spoken)": { text: "Record a 2-min video update or lead a 15-min team briefing.", link: "https://www.mindtools.com/comm-sk/delivering-a-briefing", label: "Guide: Effective Briefings" },
+    "Communication (Spoken)": { text: "Record a 2-min video update or lead a 15-min team briefing.", link: "https://hbr.org/2016/11/how-to-give-a-killer-presentation", label: "Guide: Effective Briefings" },
     "Public Speaking": { text: "Prepare and deliver a 5-minute presentation on a technical topic.", link: "https://www.ted.com/playlists/226/before_public_speaking", label: "Watch: TED Speaking Tips" },
-    "Active Listening": { text: "Practice active listening in a meeting and summarize key points.", link: "https://www.mindtools.com/CommSkll/ActiveListening.htm", label: "Technique: Active Listening" },
+    "Active Listening": { text: "Practice active listening in a meeting and summarize key points.", link: "https://hbr.org/2024/01/what-is-active-listening", label: "Technique: Active Listening" },
     "Teamwork & Collaboration": { text: "Complete a group project with defined roles and collect peer feedback.", link: "https://www.atlassian.com/team-playbook/plays/roles-and-responsibilities", label: "Tool: Roles & Resp. Play" },
-    "Collaboration": { text: "Use a collaborative tool (Google Docs, Miro) to brainstorm with a peer.", link: "https://www.mural.co/templates/brainstorming", label: "Template: Brainstorming" },
+    "Collaboration": { text: "Use a collaborative tool (Google Docs, Miro) to brainstorm with a peer.", link: "https://www.mural.co/templates", label: "Template: Brainstorming" },
     "Problem-solving": { text: "Write a case study using the ‘problem → options → decision → results’ framework.", link: "https://www.indeed.com/career-advice/resumes-cover-letters/star-method-resume", label: "Framework: S.T.A.R. Method" },
-    "Problem Solving": { text: "Apply the '5 Whys' technique to identify the root cause of a recent issue.", link: "https://www.mindtools.com/pages/article/newTMC_5W.htm", label: "Tool: 5 Whys Analysis" },
+    "Problem Solving": { text: "Apply the '5 Whys' technique to identify the root cause of a recent issue.", link: "https://asq.org/quality-resources/five-whys", label: "Tool: 5 Whys Analysis" },
     "Critical Thinking": { text: "Critique a recent industry report identifying 3 potential biases or gaps.", link: "https://www.futurelearn.com/info/blog/how-to-improve-critical-thinking", label: "Guide: Critical Analysis" },
-    "Analytical Thinking": { text: "Break down a complex problem into smaller, manageable components.", link: "https://www.lucidchart.com/blog/problem-solving-strategies", label: "Guide: Problem Decomposition" },
+    "Analytical Thinking": { text: "Break down a complex problem into smaller, manageable components.", link: "https://lucid.co/blog/problem-solving-strategies", label: "Guide: Problem Decomposition" },
     "Time & Task Management": { text: "Create and execute a 2-week plan with milestones + what you actually delivered.", link: "https://trello.com/templates/personal/personal-productivity-4Hh2QOOU", label: "Template: Personal Productivity" },
     "Time Management": { text: "Use the Eisenhower Matrix to prioritize your tasks for the week.", link: "https://todoist.com/productivity-methods/eisenhower-matrix", label: "Method: Eisenhower Matrix" },
-    "Adaptability & Resilience": { text: "Document a recent project change, describing how you pivoted and what you learned.", link: "https://www.betterup.com/blog/adaptability-skills", label: "Read: Adaptability Skills" },
-    "Adaptability": { text: "Reflect on a recent change and identify one positive opportunity it created.", link: "https://www.mindtools.com/pages/article/adaptability.htm", label: "Guide: Developing Adaptability" },
-    "Professionalism & Reliability": { text: "Maintain a meeting/work log for a month showing punctuality and preparation.", link: "https://clockify.me/blog/productivity/work-log/", label: "Tool: Work Logging" },
-    "Digital Literacy (Tools)": { text: "Create screenshots or a walkthrough of advanced tool use (Sheets, CRM, GIS, Git).", link: "https://support.google.com/a/users/answer/9282959", label: "Tips: Advanced Sheets" },
-    "Tech Savviness": { text: "Learn a new keyboard shortcut or software feature and teach it to a colleague.", link: "https://edu.gcfglobal.org/en/computerbasics/", label: "Course: Computer Basics" },
-    "Data Literacy (Quality)": { text: "Clean a raw dataset and document the errors found and fixed.", link: "https://www.kaggle.com/learn/data-cleaning", label: "Practice: Kaggle Cleaning" },
+    "Adaptability & Resilience": { text: "Document a recent project change, describing how you pivoted and what you learned.", link: "https://www.betterup.com/blog/adaptability", label: "Read: Adaptability Skills" },
+    "Adaptability": { text: "Reflect on a recent change and identify one positive opportunity it created.", link: "https://www.psychologytoday.com/us/basics/adaptability", label: "Guide: Developing Adaptability" },
+    "Professionalism & Reliability": { text: "Maintain a meeting/work log for a month showing punctuality and preparation.", link: "https://clockify.me/blog/productivity/", label: "Tool: Work Logging" },
+    "Digital Literacy (Tools)": { text: "Create screenshots or a walkthrough of advanced tool use (Sheets, CRM, GIS, Git).", link: "https://workspace.google.com/learning-center/", label: "Tips: Advanced Sheets" },
+    "Tech Savviness": { text: "Learn a new keyboard shortcut or software feature and teach it to a colleague.", link: "https://www.learnfree.org/en/computerbasics/", label: "Course: Computer Basics" },
+    "Data Literacy (Quality)": { text: "Clean a raw dataset and document the errors found and fixed.", link: "https://www.kaggle.com/learn/pandas", label: "Practice: Kaggle Cleaning" },
     "Data Storytelling": { text: "Create a chart that clearly communicates a key insight from a dataset.", link: "https://www.storytellingwithdata.com/blog", label: "Blog: Storytelling w/ Data" },
     "Customer/User Orientation": { text: "Map a customer journey or conduct and summarize a user feedback session.", link: "https://miro.com/templates/customer-journey-map/", label: "Template: Journey Map" },
     "Client Communication": { text: "Draft a response to a difficult client query or complaint.", link: "https://www.helpscout.com/blog/customer-service-scenarios/", label: "Examples: Service Scenarios" },
     "Ethics & Integrity": { text: "Draft a privacy statement, risk note, or safety briefing checklist.", link: "https://gdpr.eu/privacy-notice/", label: "Guide: Privacy Notices" },
     "Integrity": { text: "Review a professional code of ethics relevant to your field.", link: "https://www.acm.org/code-of-ethics", label: "Example: ACM Code of Ethics" },
-    "Leadership": { text: "Lead a small project or volunteer initiative.", link: "https://www.mindtools.com/pages/article/newLDR_50.htm", label: "Quiz: Leadership Style" },
-    "Negotiation": { text: "Practice a negotiation scenario with a peer.", link: "https://www.pon.harvard.edu/daily/negotiation-skills-daily/negotiation-skills-5-tips-for-improving-your-negotiation-skills/", label: "Tips: Negotiation Skills" },
+    "Leadership": { text: "Lead a small project or volunteer initiative.", link: "https://hbr.org/topic/subject/leadership", label: "Quiz: Leadership Style" },
+    "Negotiation": { text: "Practice a negotiation scenario with a peer.", link: "https://www.pon.harvard.edu/free-reports/negotiation-skills-negotiation-strategies-and-negotiation-techniques-to-help-you-become-a-better-negotiator/", label: "Tips: Negotiation Skills" },
     "Creativity": { text: "Brainstorm 10 different solutions to a single problem.", link: "https://www.ideou.com/pages/brainstorming", label: "Guide: Effective Brainstorming" },
     "Safety Awareness": { text: "Conduct a mock risk assessment for your workspace.", link: "https://www.osha.gov/safety-management/hazard-identification", label: "Guide: Hazard ID" }
 };
@@ -1151,16 +1361,16 @@ const rolePracticeMap = {
         { title: "Create a VRT Map", desc: "Design a Variable Rate prescription map in QGIS using NDVI data.", icon: "layers", link: "https://qgis.org/" }
     ],
     "Digital Extension Officer": [
-        { title: "Design a Digital Survey", desc: "Build a farmer data collection form using ODK Build or KoboToolbox.", icon: "clipboard", link: "https://build.getodk.org/" },
-        { title: "Record Advisory Content", desc: "Create a 2-min voice advisory message for dissemination via IVR.", icon: "mic", link: "https://farmradio.org/resources/" }
+        { title: "Design a Digital Survey", desc: "Build a farmer data collection form using ODK Build or KoboToolbox.", icon: "clipboard", link: "https://docs.getodk.org/" },
+        { title: "Record Advisory Content", desc: "Create a 2-min voice advisory message for dissemination via IVR.", icon: "mic", link: "https://www.farmradio.org/resources/" }
     ],
     "Solar PV Installer": [
-        { title: "Sizing Calculation", desc: "Calculate battery and panel needs for a 5kW off-grid home system.", icon: "calculator", link: "https://pvwatts.nrel.gov/" },
-        { title: "Wiring Diagram", desc: "Draw a single-line diagram for a DC-coupled system.", icon: "pen-tool", link: "https://www.solar-electric.com/learning-center/solar-system-diagrams.html" }
+        { title: "Sizing Calculation", desc: "Calculate battery and panel needs for a 5kW off-grid home system.", icon: "calculator", link: "https://pvwatts.nrel.gov/pvwatts.php" },
+        { title: "Wiring Diagram", desc: "Draw a single-line diagram for a DC-coupled system.", icon: "pen-tool", link: "https://www.solar-electric.com/learning-center/" }
     ],
     "Data Scientist": [
         { title: "Kaggle Challenge", desc: "Participate in a Zindi Africa challenge (e.g., Crop Yield Prediction).", icon: "database", link: "https://zindi.africa/" },
-        { title: "Clean a Dataset", desc: "Use Python/Pandas to clean a raw CSV and visualize missing values.", icon: "code", link: "https://www.kaggle.com/learn/data-cleaning" }
+        { title: "Clean a Dataset", desc: "Use Python/Pandas to clean a raw CSV and visualize missing values.", icon: "code", link: "https://www.kaggle.com/learn/pandas" }
     ]
 };
 
@@ -1190,7 +1400,7 @@ const sectorContextMap = {
 
 const diagnosticData = {
     agri: {
-        theme: 'green',
+        theme: 'sky',
         foundations: [
             "Basic Agronomy & Crop Science (Soil, Diseases)",
             "Farm Data & Analytics (Yields, Inputs, Viz)",
@@ -1209,7 +1419,7 @@ const diagnosticData = {
         badgeStandard: 'Aligned to: CDACC Agri-Extension Lvl 4'
     },
     energy: {
-        theme: 'orange',
+        theme: 'amber',
         foundations: [
             "Electrical Fundamentals (AC/DC, wiring)",
             "Renewable Systems (PV, Wind, Storage)",
@@ -1298,15 +1508,15 @@ const sectorPathwayResources = {
         { title: "SPARK", desc: "SME coaching in fragile communities.", link: "https://spark.ngo/", icon: "briefcase" }
     ],
     energy: [
-        { title: "Digital Energy Challenge", desc: "Grants for digital energy startups.", link: "https://www.afd.fr/en/digital-energy-challenge", icon: "award" },
+        { title: "Digital Energy Challenge", desc: "Grants for digital energy startups.", link: "https://www.afd.fr/en/digital-and-technology", icon: "award" },
         { title: "SEforALL Open Africa Power", desc: "Leadership for young energy professionals.", link: "https://www.seforall.org/", icon: "users" },
         { title: "AFSIA Jobs", desc: "Africa Solar Industry Association vacancies.", link: "https://afsiasolar.com/career/", icon: "briefcase" },
         { title: "GOGLA Investment Academy", desc: "Off-grid solar finance know-how.", link: "https://www.gogla.org/resources", icon: "trending-up" },
-        { title: "ARE Investment Academy", desc: "DRE investment readiness modules.", link: "https://www.ruralelec.org/", icon: "book-open" },
+        { title: "ARE Investment Academy", desc: "DRE investment readiness modules.", link: "https://renewelec.org/", icon: "book-open" },
         { title: "CareerVillage Coach", desc: "AI Career Coach & Mentorship.", link: "https://www.careervillage.org/", icon: "message-circle" },
         { title: "Kenya Climate Ventures", desc: "Investments for climate-smart energy solutions.", link: "https://kcv.co.ke/", icon: "leaf" },
         { title: "ClimAccelerator", desc: "Global accelerator for climate innovation.", link: "https://climaccelerator.climate-kic.org/", icon: "zap" },
-        { title: "Schneider Electric Univ.", desc: "Free energy & automation training.", link: "https://www.schneideruniversities.com/", icon: "cpu" },
+        { title: "Schneider Electric Univ.", desc: "Free energy & automation training.", link: "https://www.se.com/ww/en/about-us/university/", icon: "cpu" },
         { title: "EEP Africa", desc: "Clean energy financing & knowledge.", link: "https://eepafrica.org/", icon: "sun" }
     ],
     digital: [
@@ -1316,9 +1526,9 @@ const sectorPathwayResources = {
         { title: "Andela Learning", desc: "Tech skills & community.", link: "https://andela.com/learning-community/", icon: "code" },
         { title: "ALX Africa", desc: "Software engineering & AI career tracks.", link: "https://www.alxafrica.com/", icon: "terminal" },
         { title: "Refactory", desc: "Employer-driven software skilling.", link: "https://refactory.academy/", icon: "briefcase" },
-        { title: "Google Digital Skills", desc: "Free digital marketing courses.", link: "https://learndigital.withgoogle.com/digitalskills", icon: "monitor" },
+        { title: "Google Digital Skills", desc: "Free digital marketing courses.", link: "https://grow.google/intl/en_uk/", icon: "monitor" },
         { title: "Zindi Africa", desc: "Data science competitions.", link: "https://zindi.africa/", icon: "database" },
-        { title: "Antler East Africa", desc: "Build your startup from scratch with funding.", link: "https://www.antler.co/location/east-africa", icon: "rocket" },
+        { title: "Antler East Africa", desc: "Build your startup from scratch with funding.", link: "https://www.antler.co/location/nairobi", icon: "rocket" },
         { title: "Norrsken House Kigali", desc: "Largest hub for entrepreneurs in East Africa.", link: "https://www.norrsken.org/eastafrica", icon: "home" },
         { title: "Flat6Labs", desc: "Seed funding & mentorship for startups.", link: "https://flat6labs.com/", icon: "trending-up" },
         { title: "Tony Elumelu Foundation", desc: "Seed capital & training for African entrepreneurs.", link: "https://www.tonyelumelufoundation.org/", icon: "users" },
@@ -1375,102 +1585,92 @@ const skillLevelDescriptions = {
     }
 };
 
-// --- 13. Cross-Sector Skills Matrix (New) ---
+// --- 13. Cross-Sector Skills Matrix ---
 const crossSectorSkillMatrix = {
-    "Data Analysis": {
-        agri: "Yield prediction & soil health models",
-        energy: "Demand forecasting & loss reduction",
-        digital: "User behavior insights & market trends"
-    },
-    "Data Analytics": { // Alias
-        agri: "Yield prediction & soil health models",
-        energy: "Demand forecasting & loss reduction",
-        digital: "User behavior insights & market trends"
-    },
-    "Data Science": { // Alias
-        agri: "Yield prediction & soil health models",
-        energy: "Demand forecasting & loss reduction",
-        digital: "User behavior insights & market trends"
-    },
-    "Machine Learning": {
-        agri: "Pest/disease prediction",
-        energy: "Load balancing models",
-        digital: "Recommendation systems"
+    "Python": {
+        agri: "Crop modeling scripts & automation",
+        energy: "Grid simulation & system modelling",
+        digital: "Backend development & AI pipelines"
     },
     "GIS Mapping": {
         agri: "Precision mapping & land use planning",
         energy: "Network coverage optimisation & site selection",
         digital: "Urban mobility analytics & logistics"
     },
-    "Python": {
-        agri: "Crop modeling scripts & automation",
-        energy: "Grid simulation & system modelling",
-        digital: "Backend development & AI pipelines"
-    },
-    "Project Management": {
-        agri: "Supply chain coordination",
-        energy: "Infrastructure rollout oversight",
-        digital: "Agile product delivery"
-    },
     "IoT Sensors": {
-        agri: "Soil moisture & weather monitoring",
-        energy: "Smart metering & remote diagnostics",
-        digital: "Connected home & industrial automation"
+        agri: "Soil moisture, temperature & humidity monitoring for precision farming",
+        energy: "Smart metering, fault detection & remote grid diagnostics",
+        digital: "Industrial sensor networks & predictive maintenance systems"
     },
-    "IoT": { // Alias
-        agri: "Soil moisture & weather monitoring",
-        energy: "Smart metering & remote diagnostics",
-        digital: "Connected home & industrial automation"
+    "IoT": {
+        agri: "Connecting farm devices to cloud advisory & market platforms",
+        energy: "Remote asset monitoring & automated demand-response control",
+        digital: "API integration, MQTT/LoRaWAN protocols & IoT platform management"
+    },
+    "Data Analysis": {
+        agri: "Yield trend tracking & supply chain performance",
+        energy: "Consumption pattern analysis & outage reporting",
+        digital: "User behaviour analytics, A/B testing & BI dashboards"
+    },
+    "Data Science": {
+        agri: "Crop disease prediction models & climate risk scoring",
+        energy: "Demand forecasting & renewable output prediction",
+        digital: "ML pipelines, NLP & recommendation systems"
+    },
+    "Machine Learning": {
+        agri: "Pest & disease detection from field images",
+        energy: "Load balancing & predictive maintenance models",
+        digital: "Personalisation engines & churn prediction"
+    },
+    "Project Mgmt": {
+        agri: "Supply chain coordination & agri value chain rollout",
+        energy: "Infrastructure deployment, subcontractor management & commissioning",
+        digital: "Agile sprint planning, stakeholder reporting & product delivery"
+    },
+    "Mobile Money API": {
+        agri: "Farmer payments & micro-insurance disbursement",
+        energy: "Pay-as-you-go (PAYG) solar integration",
+        digital: "E-commerce checkout & digital wallet integration"
+    },
+    "Drone Ops": {
+        agri: "Crop spraying & multispectral field imaging",
+        energy: "Power line & wind turbine inspection",
+        digital: "Delivery logistics & aerial surveying"
+    },
+    "Data Viz": {
+        agri: "Yield maps, dashboards & seasonal briefings",
+        energy: "Consumption patterns & outage heat-maps",
+        digital: "Business intelligence dashboards & investor decks"
+    },
+    "Cloud Computing": {
+        agri: "Hosting farm management platforms & sensor data lakes",
+        energy: "Centralised grid data storage & SCADA integrations",
+        digital: "Scalable SaaS infrastructure & serverless deployments"
     },
     "Cybersecurity": {
         agri: "Protecting farm data & supply chain integrity",
-        energy: "Securing critical grid infrastructure (SCADA)",
-        digital: "Data privacy & secure transactions"
-    },
-    "Cloud Computing": {
-        agri: "Hosting farm management platforms",
-        energy: "Centralized grid data storage",
-        digital: "Scalable app infrastructure (SaaS)"
-    },
-    "Mobile Money API": {
-        agri: "Farmer payments & micro-insurance",
-        energy: "Pay-as-you-go (PAYG) solar integration",
-        digital: "E-commerce checkout & wallets"
-    },
-    "Drone Ops": {
-        agri: "Crop spraying & multispectral imaging",
-        energy: "Power line & turbine inspection",
-        digital: "Delivery logistics & aerial videography"
-    },
-    "Project Mgmt": {
-        agri: "Supply chain coordination",
-        energy: "Infrastructure rollout oversight",
-        digital: "Agile product delivery"
-    },
-    "Data Viz": {
-        agri: "Yield maps & dashboarding",
-        energy: "Consumption patterns & outage visualization",
-        digital: "Business intelligence dashboards"
+        energy: "Securing critical grid infrastructure (SCADA/ICS)",
+        digital: "Data privacy, secure APIs & transaction protection"
     },
     "AI": {
         agri: "Crop disease detection & yield prediction",
-        energy: "Grid load forecasting & optimization",
-        digital: "Personalization & process automation"
+        energy: "Grid load forecasting & renewable optimisation",
+        digital: "Personalisation, chatbots & process automation"
     },
     "Web Dev": {
-        agri: "E-commerce platforms for produce",
-        energy: "Customer portals for utility payment",
-        digital: "SaaS applications & websites"
+        agri: "E-commerce platforms for produce & cooperative portals",
+        energy: "Customer self-service portals for utility payment",
+        digital: "SaaS applications, APIs & consumer-facing websites"
     },
     "Digital Marketing": {
-        agri: "Market access & social media sales for produce",
-        energy: "Customer acquisition for solar home systems",
-        digital: "SEO, content strategy & campaign analytics"
+        agri: "Market access, WhatsApp trade & social media sales",
+        energy: "Customer acquisition for off-grid solar home systems",
+        digital: "SEO, content strategy, paid media & campaign analytics"
     },
     "Financial Literacy": {
-        agri: "Farm budgeting & loan application readiness",
-        energy: "PAYG payment planning & ROI calculation",
-        digital: "Unit economics (CAC/LTV) & cash flow management"
+        agri: "Farm budgeting, input credit & loan application readiness",
+        energy: "PAYG payment planning & solar ROI calculation",
+        digital: "Unit economics (CAC/LTV), runway management & cash flow"
     }
 };
 
@@ -1719,14 +1919,38 @@ const countryISOMap = {
     'Nigeria': 'NGA', 'South Africa': 'ZAF', 'all': 'KEN'
 };
 
-// --- 26. Fallback Ventures (Safety Net) ---
+// --- 26. Fallback Ventures (Full set — mirrors ventures.json for offline/file:// use) ---
 const fallbackVentures = [
-    { "country": "All", "sector": "agri", "rank": 1, "title": "Smart-irrigation services", "description": "Low-cost drip systems, sensors, and solar pumps.", "competencies": "Irrigation Tech, Renewable Integration", "capital": "Medium ($2k-$5k)" },
-    { "country": "All", "sector": "agri", "rank": 2, "title": "Agri-advisory micro-enterprises", "description": "Mobile / WhatsApp advisory groups.", "competencies": "Advisory Agent, Digital Literacy", "capital": "Low (<$500)" },
+    { "country": "All", "sector": "agri", "rank": 1, "title": "Smart-irrigation services", "description": "Low-cost drip systems, sensors, and solar pumps. Viable due to high training density in irrigation + renewable energy cross-skills.", "competencies": "Irrigation Tech, Renewable Integration", "capital": "Medium ($2k-$5k)" },
+    { "country": "All", "sector": "agri", "rank": 2, "title": "Agri-advisory micro-enterprises", "description": "Mobile / WhatsApp advisory groups. Viable due to skills gap in extension/advisory and high smartphone adoption.", "competencies": "Advisory Agent, Digital Literacy", "capital": "Low (<$500)" },
+    { "country": "All", "sector": "agri", "rank": 3, "title": "Input retail + soil testing hubs", "description": "Agro-dealer networks with soil testing. Viable due to existing networks and strong SME potential.", "competencies": "Soil Testing, Sales & Distribution", "capital": "Medium ($5k-$10k)" },
+    { "country": "All", "sector": "agri", "rank": 4, "title": "Cold-chain & post-harvest logistics", "description": "Logistics to reduce losses. Viable due to persistent losses and training availability on post-harvest management.", "competencies": "Cold-chain Tech, Supply Chain", "capital": "High ($10k+)" },
+    { "country": "All", "sector": "agri", "rank": 5, "title": "Value-added food processing", "description": "Drying and packaging. Viable as it is gender-inclusive and aligns with TVET modules.", "competencies": "Food Safety, Processing Tech", "capital": "Medium ($2k-$8k)" },
+    { "country": "All", "sector": "agri", "rank": 6, "title": "Organic fertilizer production", "description": "Bio-inputs production. Viable due to circular-economy demand and training supply gap.", "competencies": "Composting, Micro-biotech", "capital": "Low ($1k-$3k)" },
+    { "country": "All", "sector": "agri", "rank": 7, "title": "Digital marketplace for produce", "description": "Agri-e-commerce platforms. Viable due to growth in platform data.", "competencies": "E-commerce, Market Analytics", "capital": "Low (<$1k)" },
+    { "country": "All", "sector": "agri", "rank": 8, "title": "Mechanization-as-a-service", "description": "Tractor / drone hire. Viable due to existing micro-leasing pilots.", "competencies": "Mechanization, Maintenance", "capital": "High ($15k+)" },
+    { "country": "All", "sector": "agri", "rank": 9, "title": "Climate-risk info services", "description": "Weather services. Viable due to high regional investment in agri-data.", "competencies": "GIS, Data Analysis", "capital": "Low ($1k-$5k)" },
+    { "country": "All", "sector": "agri", "rank": 10, "title": "Women-led horticulture enterprises", "description": "Seedling enterprises. Viable due to youth/women training overlap.", "competencies": "Agribusiness Mgmt, Gender Lens", "capital": "Low (<$1k)" },
     { "country": "All", "sector": "energy", "rank": 1, "title": "Mini-grid O&M micro-enterprises", "description": "High installation growth, weak maintenance capacity.", "competencies": "Electrical Tech, Safety Standards", "capital": "Medium ($2k-$5k)" },
     { "country": "All", "sector": "energy", "rank": 2, "title": "Solar-home-system retail & servicing", "description": "Training density + consumer demand.", "competencies": "PV Installation, Sales", "capital": "Low ($500-$2k)" },
+    { "country": "All", "sector": "energy", "rank": 3, "title": "Battery refurbishment / recycling services", "description": "Skills overlap in energy storage.", "competencies": "Battery Tech, Circular Economy", "capital": "High ($10k+)" },
+    { "country": "All", "sector": "energy", "rank": 4, "title": "Appliance distribution for productive use", "description": "Strong link with agri-processing / MSMEs.", "competencies": "Energy Sales, Agribusiness", "capital": "Medium ($5k-$10k)" },
+    { "country": "All", "sector": "energy", "rank": 5, "title": "Energy-efficient cooking / biogas solutions", "description": "Climate mitigation + rural adoption.", "competencies": "Clean-Cooking Tech, Marketing", "capital": "Low ($1k-$3k)" },
+    { "country": "All", "sector": "energy", "rank": 6, "title": "Rooftop / institutional solar integrators", "description": "Emerging urban market.", "competencies": "PV Design, Project Dev", "capital": "High ($15k+)" },
+    { "country": "All", "sector": "energy", "rank": 7, "title": "Renewable energy audit & consulting", "description": "Growing regulatory compliance needs.", "competencies": "Energy Audit, Policy", "capital": "Low (<$1k)" },
+    { "country": "All", "sector": "energy", "rank": 8, "title": "E-mobility charging & conversion services", "description": "Early growth segment.", "competencies": "EV Systems, Entrepreneurship", "capital": "High ($20k+)" },
+    { "country": "All", "sector": "energy", "rank": 9, "title": "Solar irrigation system integrators", "description": "Agritech synergy – high demand.", "competencies": "PV Pumps, Irrigation", "capital": "Medium ($5k-$10k)" },
+    { "country": "All", "sector": "energy", "rank": 10, "title": "Renewable-energy training & certification centres", "description": "Workforce expansion requirement.", "competencies": "Pedagogical, Technical Train-the-Trainer", "capital": "High ($10k+)" },
     { "country": "All", "sector": "digital", "rank": 1, "title": "Data analytics & dashboard services for MSMEs", "description": "Strong demand for local data insights.", "competencies": "Data Analysis, Visualization", "capital": "Low (<$1k)" },
-    { "country": "All", "sector": "digital", "rank": 2, "title": "No-code app / automation micro-agency", "description": "Low-code tool adoption rising.", "competencies": "No-code Dev, Client Ops", "capital": "Low (<$1k)" }
+    { "country": "All", "sector": "digital", "rank": 2, "title": "No-code app / automation micro-agency", "description": "Low-code tool adoption rising.", "competencies": "No-code Dev, Client Ops", "capital": "Low (<$1k)" },
+    { "country": "All", "sector": "digital", "rank": 3, "title": "Digital-marketing / e-commerce agency", "description": "Rapid SME digitalization.", "competencies": "SEO, Campaign Mgmt", "capital": "Low (<$1k)" },
+    { "country": "All", "sector": "digital", "rank": 4, "title": "AI-enabled content / translation services", "description": "Regional language data scarcity.", "competencies": "NLP, Localization", "capital": "Low ($1k-$3k)" },
+    { "country": "All", "sector": "digital", "rank": 5, "title": "Tech support / cyber-safety services for SMEs", "description": "Security skills gap.", "competencies": "IT Support, Cyber Basics", "capital": "Low ($500-$2k)" },
+    { "country": "All", "sector": "digital", "rank": 6, "title": "Cloud integration / migration consulting", "description": "Enterprise adoption of SaaS.", "competencies": "Cloud Ops, Project Mgmt", "capital": "Low (<$1k)" },
+    { "country": "All", "sector": "digital", "rank": 7, "title": "Digital-skills bootcamp / training hub", "description": "Youth upskilling demand.", "competencies": "Instructional Design, Mentorship", "capital": "Medium ($5k-$10k)" },
+    { "country": "All", "sector": "digital", "rank": 8, "title": "Agritech/healthtech data platforms", "description": "Cross-sector innovation driver.", "competencies": "Data Engineering, Domain Knowledge", "capital": "High ($10k+)" },
+    { "country": "All", "sector": "digital", "rank": 9, "title": "Freelance AI model-labeling / annotation teams", "description": "Expanding AI data pipeline demand.", "competencies": "Data Curation, Ethics", "capital": "Low (<$500)" },
+    { "country": "All", "sector": "digital", "rank": 10, "title": "Remote-work co-ops / talent collectives", "description": "Gig-economy trend, shared infrastructure.", "competencies": "Platform Mgmt, Co-op Gov", "capital": "Low ($1k-$3k)" }
 ];
 
 // --- 30. Sector Map ---
@@ -1859,10 +2083,10 @@ const pathwayConstraints = [
 
 // --- 37. Pathway Goals ---
 const pathwayGoals = [
-    { "title": "Workforce Readiness & Employability", "desc": "I want to build core work-readiness skills and professional competencies.", "icon": "book-open" },
-    { "title": "Placements and Apprenticeships", "desc": "I want to learn on the job through a work placement or with a mentor.", "icon": "users" },
-    { "title": "Entry Level Job or Internship", "desc": "I want to find my first job or an internship.", "icon": "briefcase" },
-    { "title": "Upskilling & Lifelong Learning", "desc": "I want to strengthen my current skills levels for work and life.", "icon": "trending-up" },
+    { "title": "Build My Foundation", "desc": "I want to strengthen my core skills before applying for roles or placements.", "icon": "layers" },
+    { "title": "Apprenticeships and Job Placements", "desc": "I want to gain hands-on experience through a structured apprenticeship or workplace placement.", "icon": "users" },
+    { "title": "Entry Level Job", "desc": "I want to find my first job in the sector and start building my career.", "icon": "briefcase" },
+    { "title": "Start my own Venture", "desc": "I want to launch a business or freelance venture.", "icon": "rocket" },
 ];
 
 // --- 38. Interview Questions ---
@@ -1924,9 +2148,9 @@ const pathwayToolsInterestMap = {
 const apprenticeshipStandards = [
     { c: 'Kenya', name: 'NITA Guidelines', url: 'https://www.nita.go.ke/' },
     { c: 'Tanzania', name: 'VETA Apprenticeship', url: 'https://www.veta.go.tz/' },
-    { c: 'Uganda', name: 'DIT Standards', url: 'https://dituganda.org/' },
+    { c: 'Uganda', name: 'DIT Standards', url: 'https://www.ictau.ug/' },
     { c: 'Rwanda', name: 'RTB Workplace Learning', url: 'https://www.rtb.gov.rw/' },
-    { c: 'all', name: 'EAC TVET Harmonization', url: 'https://www.eac.int/education/tvet' }
+    { c: 'all', name: 'EAC TVET Harmonization', url: 'https://www.eac.int/education' }
 ];
 
 // --- 39. National Mentorships ---
@@ -1934,7 +2158,7 @@ const nationalMentorships = {
     'Kenya': [{ title: "KamiLimu", desc: "Structured mentorship for CS students.", link: "https://kamilimu.org/", type: "Mentorship" }],
     'Rwanda': [{ title: "Girls in ICT Rwanda", desc: "Mentorship and networking.", link: "https://girlsinict.rw/", type: "Mentorship" }],
     'Uganda': [{ title: "Women in Technology Uganda", desc: "Networking and mentorship.", link: "https://witug.org/", type: "Mentorship" }],
-    'Tanzania': [{ title: "Apps and Girls", desc: "Coding and mentorship for girls.", link: "https://appsandgirls.com/", type: "Mentorship" }]
+    'Tanzania': [{ title: "Apps and Girls", desc: "Coding and mentorship for girls.", link: "https://www.girlscode.com/", type: "Mentorship" }]
 };
 
 // --- 40. Outreach Templates ---
@@ -1990,7 +2214,7 @@ const pivotAuditSections = [
 
 // --- 43. Application Kits Config (Job Board) ---
 const applicationKitsConfig = {
-    'all': { title: "General Job Applications Kit", icon: "briefcase", cv: "Standard Professional CV", check: "LinkedIn Updated, References Ready", test: "General Aptitude" },
+    'all': { title: "General Job Applications Checklist", icon: "briefcase", cv: "Standard Professional CV", check: "LinkedIn Updated, References Ready", test: "General Aptitude" },
     'internship': { title: "Internship Starter Kit", icon: "graduation-cap", cv: "Academic/Project-based CV", check: "Transcript, Cover Letter", test: "Basic Logic / Personality" },
     'placement': { title: "Work Placement Kit", icon: "id-card", cv: "Placement CV / Bio-data", check: "Placement Letter, Insurance Form", test: "Work Readiness Assessment" },
     'freelance': { title: "Freelancer Toolkit", icon: "laptop", cv: "Portfolio/Case Studies", check: "Rate Card, Contract Template", test: "Skill Assessment (e.g. Coding)" },
@@ -2000,12 +2224,12 @@ const applicationKitsConfig = {
 
 // --- 44. Application Kits Resources (Download) ---
 const applicationKitsResources = {
-    'all': { title: "General Job Applications Kit", items: ["Master CV Template (ATS-Optimized)", "Cover Letter Guide & Examples", "LinkedIn Profile Optimization Checklist", "Common Interview Questions & STAR Answers", "Salary Negotiation Script"] },
+    'all': { title: "General Job Applications Checklist", items: ["Master CV Template (ATS-Optimized)", "Cover Letter Guide & Examples", "LinkedIn Profile Optimization Checklist", "Common Interview Questions & STAR Answers", "Salary Negotiation Script"] },
     'internship': { title: "Internship Starter Kit", items: ["Student/Graduate Resume Template", "University Recommendation Letter Request", "Internship Cover Letter (No Experience)", "Learning Agreement Template", "Internship Report Guidelines"] },
     'placement': { title: "Work Placement Kit", items: ["Placement Application Letter", "Daily Work Logbook Template", "Supervisor Evaluation Form", "Placement Report Structure", "Workplace Safety Checklist"] },
     'freelance': { title: "Freelancer Toolkit", items: ["Freelance Service Rate Card", "Client Contract & SOW Template", "Portfolio Website Checklist", "Cold Pitch Email Templates", "Invoice & Payment Tracker"] },
     'tender': { title: "Founder Tender Kit", items: ["Company Profile / Capability Statement", "Tax Compliance Checklist (KRA/TRA/URA)", "Technical Proposal Structure", "Financial Proposal Budget Sheet", "Pre-qualification Questionnaire Guide"] },
-    'volunteer': { title: "Volunteer Applications Kit", items: ["Skills-Based Volunteer Resume", "Motivation Statement / Personal Essay", "Availability & Commitment Schedule", "Soft Skills Self-Assessment", "Volunteer Code of Conduct Preview"] }
+    'volunteer': { title: "Volunteer Applications Checklist", items: ["Skills-Based Volunteer Resume", "Motivation Statement / Personal Essay", "Availability & Commitment Schedule", "Soft Skills Self-Assessment", "Volunteer Code of Conduct Preview"] }
 };
 
 // --- 45. Hero Persona Content ---
@@ -2044,7 +2268,7 @@ const realCourses = [
         "sector": "digital",
         "skills": ["AI", "Neural Networks", "Deep Learning"],
         "occupations": ["AI Engineer", "Data Scientist"],
-        "url": "https://www.nvidia.com/en-us/training/online/",
+        "url": "https://learn.nvidia.com/en-us/training/self-paced-courses",
         "country": "all",
         "description": "A quick, high-level introduction to how neural networks learn from data.",
         "language": "English",
@@ -2158,12 +2382,58 @@ const realCourses = [
         "mode": "Online",
         "cost": "Free",
         "type": "Short Course",
-        "url": "https://www.africanmanagers.org/",
+        "url": "https://www.africanmanagers.com/",
         "skills": ["Agribusiness", "Financial Literacy", "Market Access"],
         "occupations": ["Agri-Entrepreneur", "Co-op Manager"],
-        "unesco_unevoc": true,
         "lastUpdated": "2024"
-    }
+    },
+    { "id": "d1", "name": "Google Data Analytics Professional Certificate", "provider": "Google via Coursera", "type": "Professional Certificate", "level": "med", "duration": "6 months", "durationHours": 120, "difficulty": "Beginner", "cost": "Free (Audit) / $49/mo", "costType": "Freemium", "mode": "Online", "sector": "digital", "skills": ["Data Analysis", "SQL", "Tableau", "R Programming", "Data Science", "Data Viz"], "url": "https://www.coursera.org/professional-certificates/google-data-analytics", "country": "all", "description": "Gain an immersive understanding of the practices and processes used by a junior or associate data analyst.", "language": "English", "lastUpdated": "2024" },
+    { "id": "d3", "name": "Google IT Support Professional Certificate", "provider": "Google via Coursera", "type": "Professional Certificate", "level": "med", "duration": "6 months", "durationHours": 120, "difficulty": "Beginner", "cost": "Free (Audit) / $49/mo", "costType": "Freemium", "mode": "Online", "sector": "digital", "skills": ["Networking", "IT Support", "System Admin", "Cybersecurity", "Cloud Computing"], "url": "https://www.coursera.org/professional-certificates/google-it-support", "country": "all", "description": "Prepare for an entry-level role in IT support. Learn computer assembly, wireless networking, and customer service.", "language": "English", "lastUpdated": "2024" },
+    { "id": "d6", "name": "Google AI Essentials", "provider": "Google via Coursera", "type": "Micro-Credential", "level": "short", "duration": "10 hours", "durationHours": 10, "difficulty": "Beginner", "cost": "Free (Audit) / $49", "costType": "Freemium", "mode": "Online", "sector": "digital", "skills": ["AI", "Machine Learning", "Digital Tools", "Automation"], "url": "https://www.coursera.org/learn/google-ai-essentials", "country": "all", "description": "Learn how to use generative AI tools to help speed up daily tasks, make more informed decisions, and develop new ideas.", "language": "English", "lastUpdated": "2024" },
+    { "id": "d7", "name": "IBM Cybersecurity Analyst Professional Certificate", "provider": "IBM via Coursera", "type": "Professional Certificate", "level": "med", "duration": "8 months", "durationHours": 160, "difficulty": "Beginner", "cost": "Free (Audit) / $49/mo", "costType": "Freemium", "mode": "Online", "sector": "digital", "skills": ["Network Security", "Incident Response", "Threat Intelligence", "Cybersecurity", "Compliance"], "url": "https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst", "country": "all", "description": "Develop the knowledge and skills to enter the cybersecurity workforce.", "language": "English", "lastUpdated": "2024" },
+    { "id": "d11", "name": "Low-Code App Development", "provider": "OutSystems", "type": "Learning Path", "level": "med", "duration": "Self-paced", "durationHours": 0, "difficulty": "Beginner", "cost": "Free", "costType": "Free", "mode": "Online", "sector": "digital", "skills": ["Web Dev", "Automation", "AI", "Prototyping", "Product Design"], "url": "https://www.outsystems.com/learn/", "country": "all", "description": "Build and deploy enterprise-grade applications with minimal coding.", "language": "English", "lastUpdated": "2024" },
+    { "id": "d12", "name": "AI Fundamentals", "provider": "IBM SkillsBuild", "type": "Micro-Credential", "level": "short", "duration": "4 hours", "durationHours": 4, "difficulty": "Beginner", "cost": "Free", "costType": "Free", "mode": "Online", "sector": "digital", "skills": ["AI", "Machine Learning", "Cybersecurity", "Data Science"], "url": "https://skillsbuild.org/", "country": "all", "description": "A foundational course on Artificial Intelligence, covering key concepts, applications, and ethical considerations.", "language": "English", "lastUpdated": "2024" },
+    { "id": "d_pan_1", "name": "ALX Software Engineering", "provider": "ALX Africa", "type": "Bootcamp", "level": "long", "duration": "12 months", "durationHours": 1500, "difficulty": "Intermediate", "cost": "Free (Sponsored)", "costType": "Subsidized", "mode": "Online", "sector": "digital", "skills": ["Web Dev", "Python", "DevOps", "Software Engineering", "C Programming"], "url": "https://www.alxafrica.com/", "country": "all", "description": "Rigorous full-stack software engineering curriculum. Fully sponsored for eligible African youth.", "language": "English", "lastUpdated": "2024" },
+    { "id": "d_pan_2", "name": "ALX Virtual Assistant", "provider": "ALX Africa", "type": "Short Course", "level": "short", "duration": "8 weeks", "durationHours": 100, "difficulty": "Beginner", "cost": "Free (Sponsored)", "costType": "Subsidized", "mode": "Online", "sector": "digital", "skills": ["Digital Tools", "Communication", "Remote Work", "Google Workspace"], "url": "https://www.alxafrica.com/", "country": "all", "description": "Prepares learners for remote work opportunities as virtual assistants.", "language": "English", "lastUpdated": "2024" },
+    { "id": "e1", "name": "Renewable Energy Technology Fundamentals", "provider": "Univ. of Colorado Boulder (Coursera)", "type": "Specialization", "level": "short", "duration": "4 months", "durationHours": 80, "difficulty": "Beginner", "cost": "Free (Audit) / $49/mo", "costType": "Freemium", "mode": "Online", "sector": "energy", "skills": ["Solar PV", "Wind Power", "Grid Systems", "Energy Efficiency", "Green Tech"], "url": "https://www.coursera.org/learn/renewable-energy-fundamentals", "country": "all", "description": "Foundation in renewable energy technologies including solar, wind, and storage systems.", "language": "English", "lastUpdated": "2023" },
+    { "id": "e_online_1", "name": "Energy University", "provider": "Schneider Electric", "type": "Learning Platform", "level": "short", "duration": "Self-paced", "durationHours": 0, "difficulty": "All Levels", "cost": "Free", "costType": "Free", "mode": "Online", "sector": "energy", "skills": ["Energy Efficiency", "Data Center Mgmt", "Sustainability"], "url": "https://university.se.com/", "country": "all", "description": "Free online courses on energy efficiency and data center management from industry experts.", "language": "English", "lastUpdated": "2024" },
+    { "id": "e_online_2", "name": "Introduction to Biogas", "provider": "DBFZ / Biogas Training", "type": "Short Course", "level": "short", "duration": "Self-paced", "durationHours": 20, "difficulty": "Beginner", "cost": "Free", "costType": "Free", "mode": "Online", "sector": "energy", "skills": ["Biomass", "Safety Protocols", "Green Tech"], "url": "https://www.biogas-training.de/", "country": "all", "description": "Basics of biogas production, digester types, and safety. Relevant for rural energy access.", "language": "English", "lastUpdated": "2024" },
+    { "id": "e_online_3", "name": "Solar Water Pumping", "provider": "Solar Energy International", "type": "Short Course", "level": "short", "duration": "6 weeks", "durationHours": 40, "difficulty": "Intermediate", "cost": "Paid", "costType": "Paid", "mode": "Online", "sector": "energy", "skills": ["Solar PV", "Water Management", "Irrigation", "Installation"], "url": "https://www.solarenergy.org/", "country": "all", "description": "Design and installation of solar water pumping systems, critical for off-grid agriculture.", "language": "English", "lastUpdated": "2024" },
+    { "id": "e_online_4", "name": "Wind Energy", "provider": "DTU (Coursera)", "type": "Short Course", "level": "short", "duration": "5 weeks", "durationHours": 30, "difficulty": "Intermediate", "cost": "Free (Audit)", "costType": "Freemium", "mode": "Online", "sector": "energy", "skills": ["Wind Power", "Project Mgmt", "Engineering"], "url": "https://www.coursera.org/learn/wind-energy", "country": "all", "description": "Engineering aspects of wind energy technology from the Technical University of Denmark.", "language": "English", "lastUpdated": "2024" },
+    { "id": "e2", "name": "Diploma in Renewable Energy", "provider": "Jomo Kenyatta Univ. (JKUAT)", "type": "Diploma", "level": "med", "duration": "2 years", "durationHours": 2400, "cost": "Variable (KES)", "costType": "Paid", "mode": "In-Person", "sector": "energy", "skills": ["Solar PV", "Wind Power", "Green Tech", "Installation", "Field Ops"], "url": "https://www.jkuat.ac.ke/institutes/ieet/", "country": "Kenya", "description": "Hands-on diploma covering the installation, maintenance, and design of renewable energy systems.", "language": "English", "lastUpdated": "2023" },
+    { "id": "c_solar_t1", "name": "Solar T1/T2 License", "provider": "EPRA / ERC", "type": "License", "level": "med", "duration": "Exam", "durationHours": 4, "cost": "Paid", "costType": "Paid", "mode": "In-Person", "sector": "energy", "skills": ["Solar PV", "Safety Protocols", "Installation", "Electrical Wiring"], "url": "https://www.epra.go.ke/", "country": "Kenya", "description": "National license for solar PV technicians. Required for installation and maintenance of solar systems.", "language": "English", "lastUpdated": "2024" },
+    { "id": "e_ke_2", "name": "Solar PV Training (T3)", "provider": "Strathmore Energy Research Centre", "type": "Professional Certificate", "level": "short", "duration": "2 weeks", "durationHours": 80, "cost": "Paid", "costType": "Paid", "mode": "In-Person", "sector": "energy", "skills": ["Solar PV", "Grid Systems", "Installation", "Safety Protocols"], "url": "https://serc.strathmore.edu/", "country": "Kenya", "description": "Advanced solar training for designing and installing complex grid-tie and hybrid systems.", "language": "English", "lastUpdated": "2024" },
+    { "id": "e_ug_2", "name": "Solar Systems Installation Level 1", "provider": "Nakawa Vocational Training Institute", "type": "Certificate", "level": "short", "duration": "3 months", "durationHours": 360, "cost": "Variable", "costType": "Paid", "mode": "In-Person", "sector": "energy", "skills": ["Solar PV", "Installation", "Safety Protocols", "Electrical Wiring"], "url": "https://www.nakawavtc.ac.ug/", "country": "Uganda", "description": "Vocational training for solar technicians, covering basic installation and maintenance.", "language": "English", "lastUpdated": "2024" },
+    { "id": "a2", "name": "Smart Farming", "provider": "atingi", "type": "Short Course", "level": "short", "duration": "Self-paced", "durationHours": 0, "difficulty": "Intermediate", "cost": "Free", "costType": "Free", "mode": "Online", "sector": "agri", "skills": ["Precision Ag", "IoT Sensors", "Digital Advisory", "Farm Management", "Digital Tools"], "url": "https://www.atingi.org/en/", "country": "all", "description": "Digital tools for agriculture including weather apps, market price platforms, and farm management software.", "language": "English", "lastUpdated": "2023" },
+    { "id": "a3", "name": "Digital Agriculture Africa (DAA) Program", "provider": "GIZ", "type": "Initiative", "level": "med", "duration": "Ongoing", "durationHours": 0, "difficulty": "Intermediate", "cost": "Free", "costType": "Free", "mode": "Hybrid", "sector": "agri", "skills": ["Farm Management", "Food Security", "Precision Ag", "Digital Advisory", "Data Collection"], "url": "https://www.giz.de/en/worldwide/77241.html", "country": "all", "description": "Trainings cover data privacy, user-centered design for farmers, and business models for agritech.", "language": "English", "lastUpdated": "2024" },
+    { "id": "a5", "name": "Climate Smart Agriculture", "provider": "SkillEd", "type": "Blended Course", "level": "med", "duration": "Self-paced", "durationHours": 0, "difficulty": "Intermediate", "cost": "Free", "costType": "Free", "mode": "Hybrid", "sector": "agri", "skills": ["Climate Adaptation", "Water Management", "Agribusiness", "Sustainability", "Crop Science"], "url": "https://www.skill-ed.org/programmes", "country": "all", "description": "Designed for low-connectivity environments, covering climate-smart agriculture, water management, and agribusiness.", "language": "English", "lastUpdated": "2024" },
+    { "id": "p8", "name": "FAO eLearning Academy", "provider": "FAO", "type": "Learning Platform", "level": "short", "duration": "Self-paced", "durationHours": 0, "difficulty": "All Levels", "cost": "Free", "costType": "Free", "mode": "Online", "sector": "agri", "skills": ["Food Security", "Climate Smart Ag", "Nutrition", "Sustainability", "Digital Advisory"], "url": "https://elearning.fao.org/", "country": "all", "description": "Free multilingual courses on food and nutrition security, social development, and sustainable natural resource management.", "language": "English", "lastUpdated": "2024" },
+    { "id": "a_online_2", "name": "Agribusiness Management", "provider": "African Management Institute (AMI)", "type": "Short Course", "level": "short", "duration": "4 months", "durationHours": 100, "difficulty": "Intermediate", "cost": "Paid", "costType": "Paid", "mode": "Online", "sector": "agri", "skills": ["Agribusiness", "Economics", "Farm Management", "Entrepreneurship"], "url": "https://www.africanmanagers.com/", "country": "all", "description": "Practical business management course tailored for entrepreneurs in the agricultural sector.", "language": "English", "lastUpdated": "2024" },
+    { "id": "a_online_3", "name": "Introduction to Precision Agriculture", "provider": "Coursera (Various)", "type": "Short Course", "level": "short", "duration": "20 hours", "durationHours": 20, "difficulty": "Beginner", "cost": "Free (Audit)", "costType": "Freemium", "mode": "Online", "sector": "agri", "skills": ["GIS Mapping", "Precision Ag", "Remote Sensing"], "url": "https://www.coursera.org/", "country": "all", "description": "Overview of precision agriculture technologies and their application.", "language": "English", "lastUpdated": "2024" },
+    { "id": "a1", "name": "Bachelor of Science in Agriculture (Online)", "provider": "Egerton University", "type": "University Degree", "level": "long", "duration": "4 years", "durationHours": 4800, "cost": "Variable (KES)", "costType": "Paid", "mode": "Hybrid", "sector": "agri", "skills": ["Crop Science", "Economics", "Farm Management", "Soil Analysis", "Agribusiness"], "url": "https://www.egerton.ac.ke/faculty-of-agriculture-foa", "country": "Kenya", "description": "Comprehensive degree covering crop production, animal science, and agricultural economics.", "language": "English", "lastUpdated": "2023" },
+    { "id": "a_rw_1", "name": "Advanced Diploma in Crop Production", "provider": "Rwanda Polytechnic (IPRC)", "type": "TVET Diploma", "level": "med", "duration": "2 years", "durationHours": 2400, "cost": "Subsidized", "costType": "Subsidized", "mode": "In-Person", "sector": "agri", "skills": ["Crop Science", "Water Management", "Mechanization", "Farm Management"], "url": "https://www.rp.ac.rw/", "country": "Rwanda", "description": "Hands-on technical training in modern crop production techniques and farm mechanization.", "language": "English", "lastUpdated": "2024" },
+    { "id": "a_ke_2", "name": "Certificate in Entrepreneurial Agriculture", "provider": "Latia Agripreneurship Institute", "type": "Certificate", "level": "med", "duration": "6 months", "durationHours": 720, "cost": "Paid", "costType": "Paid", "mode": "In-Person", "sector": "agri", "skills": ["Agribusiness", "Farm Management", "Manufacturing", "Entrepreneurship"], "url": "https://www.latiaagribusinesssolutions.com/", "country": "Kenya", "description": "Apprenticeship-based training focusing on the business side of farming and practical skills.", "language": "English", "lastUpdated": "2024" },
+    { "id": "ent_yali", "name": "YALI Regional Leadership", "provider": "YALI / USAID", "type": "Fellowship", "level": "med", "duration": "4 weeks", "durationHours": 160, "cost": "Free (Funded)", "costType": "Subsidized", "mode": "Hybrid", "sector": "all", "skills": ["Leadership", "Entrepreneurship", "Civic Engagement", "Management"], "url": "https://www.rlceastafrica.org/", "country": "all", "description": "Transformational leadership training for young Africans, covering business, civic leadership, and public management.", "language": "English", "lastUpdated": "2025" },
+    { "id": "ent_tef_1", "name": "TEF Entrepreneurship Programme", "provider": "Tony Elumelu Foundation", "type": "Bootcamp", "level": "med", "duration": "12 weeks", "durationHours": 100, "cost": "Free (Grant Opportunity)", "costType": "Subsidized", "mode": "Online", "sector": "all", "skills": ["Entrepreneurship", "Business Mgmt", "Strategy", "Financial Literacy"], "url": "https://www.tonyelumelufoundation.org/", "country": "all", "description": "Training, mentorship, and seed capital for African entrepreneurs across all 54 countries.", "language": "English", "lastUpdated": "2025" },
+
+    // --- NEW 2024–2025 ADDITIONS ---
+
+    // AGRITECH
+    { "id": "a_atingi_agri", "name": "Agribusiness e-Academy", "provider": "atingi / Agribusiness Facility for Africa", "type": "Learning Platform", "level": "short", "duration": "Self-paced", "durationHours": 0, "difficulty": "All Levels", "cost": "Free", "costType": "Free", "mode": "Online", "sector": "agri", "skills": ["Agribusiness", "Climate Smart Ag", "Farm Management", "Food Processing", "Market Access", "Livestock"], "occupations": ["Agri-Entrepreneur", "Farm Manager", "Agricultural Advisor", "Agribusiness Analyst"], "url": "https://online.atingi.org/local/partner/page.php?id=6", "country": "all", "description": "Free multilingual platform (English, Kiswahili, French, Spanish, Portuguese) covering cocoa, maize, cashew, livestock, and climate-smart agriculture. 55,000+ learners. Works offline via mobile app. Includes a 2025–2026 funding programme for agripreneurs.", "language": "English, Kiswahili, French", "lastUpdated": "2025" },
+    { "id": "a_tagdev_2", "name": "Agrisiti + TAGDev 2.0 Agribusiness Training", "provider": "IFAD / Agrisiti", "type": "Short Course", "level": "med", "duration": "12 weeks", "durationHours": 120, "difficulty": "Beginner", "cost": "Free", "costType": "Free", "mode": "Hybrid", "sector": "agri", "skills": ["Agribusiness", "Climate Adaptation", "Digital Tools", "Entrepreneurship", "Food Security"], "occupations": ["Agri-Entrepreneur", "Farm Manager", "Agricultural Advisor"], "url": "https://www.ifad.org/en/tagdev", "country": "all", "description": "Free 12-week hybrid training (Telegram + in-person demo hubs) in agribusiness and climate-smart skills for young Africans. Digital certificate on completion.", "language": "English", "lastUpdated": "2025" },
+    { "id": "a_sfa_1", "name": "Agritech for Smallholder Farmers", "provider": "Skills for Africa", "type": "Short Course", "level": "short", "duration": "5 days", "durationHours": 40, "difficulty": "Intermediate", "cost": "Paid", "costType": "Paid", "mode": "In-Person", "sector": "agri", "skills": ["Precision Ag", "Digital Tools", "Farm Management", "IoT Sensors", "Agribusiness"], "occupations": ["Smallholder Farmer", "Agricultural Extension Officer", "Agritech Specialist"], "url": "https://skillsforafrica.org/us/course/agritech-for-smallholder-farmers-practical-solutions-training-course", "country": "all", "description": "Hands-on training in agritech tools for small-scale farmers, covering precision agriculture, mobile apps, and data-driven farm management.", "language": "English", "lastUpdated": "2025" },
+
+    // RENEWABLE ENERGY
+    { "id": "e_irena_ea", "name": "Eastern Africa Regional Energy Planning Programme", "provider": "IRENA / EAPP", "type": "Certificate", "level": "med", "duration": "Ongoing (2024–2026)", "durationHours": 0, "difficulty": "Intermediate", "cost": "Free (Funded)", "costType": "Subsidized", "mode": "Hybrid", "sector": "energy", "skills": ["Energy Policy", "Grid Systems", "Energy Planning", "Data Analysis", "Sustainability"], "occupations": ["Energy Planner", "Policy Analyst", "Renewable Energy Engineer", "Energy Advisor"], "url": "https://www.irena.org/energytransition/Energy-Planning-Support/Regional-training-workshops", "country": "all", "description": "IRENA technical capacity-building programme covering all 8 East African Compass countries via the Eastern Africa Power Pool. Mix of regional workshops, virtual sessions, and e-learning modules (Nov 2024–Nov 2026).", "language": "English", "lastUpdated": "2025" },
+    { "id": "e_toolkit_ke", "name": "Renewable Energy Installation & Maintenance", "provider": "Toolkit Africa", "type": "Certificate", "level": "med", "duration": "6 months", "durationHours": 720, "difficulty": "Beginner", "cost": "Variable", "costType": "Paid", "mode": "In-Person", "sector": "energy", "skills": ["Solar PV", "Installation", "Maintenance", "Electrical Wiring", "Safety Protocols"], "occupations": ["Solar Technician", "Renewable Energy Installer", "Field Technician"], "url": "https://toolkitafrica.ac.ke/our-ventures/renewable-energy/", "country": "Kenya", "description": "Youth-focused vocational training in renewable energy installation and maintenance in Nairobi. Equips graduates for employment and self-employment in Kenya's growing RE sector.", "language": "English", "lastUpdated": "2025" },
+    { "id": "e_wb_ret", "name": "Effective Renewable Energy Tendering in Africa", "provider": "World Bank Academy (with IRENA & GIZ)", "type": "Professional Certificate", "level": "long", "duration": "9 months", "durationHours": 300, "difficulty": "Advanced", "cost": "Free (Sponsored)", "costType": "Subsidized", "mode": "Hybrid", "sector": "energy", "skills": ["Project Finance", "Energy Policy", "Procurement", "Contract Management", "Renewable Energy"], "occupations": ["Energy Policy Analyst", "Project Developer", "Procurement Specialist", "Energy Advisor"], "url": "https://academy.worldbank.org/en/infrastructure/energy/effective-renewable-energy-tendering-in-africa", "country": "all", "description": "9-month hybrid programme for African energy professionals covering competitive renewable energy procurement, IPP structuring, and contract negotiation. Fully sponsored for eligible participants.", "language": "English", "lastUpdated": "2025" },
+
+    // DIGITAL ECONOMY
+    { "id": "d_undp_ms", "name": "Africa Centre of Competence — Digital & AI Skilling", "provider": "UNDP / Microsoft", "type": "Learning Platform", "level": "short", "duration": "Self-paced", "durationHours": 0, "difficulty": "All Levels", "cost": "Free (Subsidized)", "costType": "Subsidized", "mode": "Hybrid", "sector": "digital", "skills": ["AI", "Data Science", "Cybersecurity", "Cloud Computing", "Digital Tools", "Deep Tech"], "occupations": ["AI Engineer", "Data Scientist", "Cybersecurity Analyst", "Cloud Architect", "Digital Transformation Officer"], "url": "https://www.undp.org/kenya/africa-centre-competence-digital-and-artificial-intelligence-skilling", "country": "all", "description": "Nairobi-based hub launched Dec 2024, targeting 100,000 professionals across Kenya, Rwanda, Uganda, Tanzania and beyond. Covers AI, data science, cybersecurity, and deep tech via hub-and-spokes delivery model.", "language": "English", "lastUpdated": "2025" },
+    { "id": "d_aiaca_1", "name": "Data Analytics & AI Training", "provider": "AI Academy Africa", "type": "Learning Platform", "level": "med", "duration": "Self-paced", "durationHours": 0, "difficulty": "Beginner", "cost": "Free (Audit)", "costType": "Freemium", "mode": "Online", "sector": "digital", "skills": ["Data Analytics", "Data Science", "AI", "Machine Learning", "Python"], "occupations": ["Data Analyst", "Data Scientist", "AI Engineer", "Business Intelligence Analyst"], "url": "https://www.aiacademy.africa/", "country": "all", "description": "Free and low-cost Data Analytics, Data Science, and AI training for African learners. No prior degree or experience required. New cohorts open for 2026.", "language": "English", "lastUpdated": "2025" },
+    { "id": "d_datalens", "name": "AI Talents Program", "provider": "DataLens Africa", "type": "Short Course", "level": "short", "duration": "Self-paced", "durationHours": 60, "difficulty": "Beginner", "cost": "Free", "costType": "Free", "mode": "Online", "sector": "digital", "skills": ["AI", "Data Annotation", "Quality Assurance", "Machine Learning", "LLM Fine-Tuning"], "occupations": ["AI Data Annotator", "QA Engineer", "Machine Learning Engineer", "Data Curator"], "url": "https://www.datalens.africa/ai-talents-program", "country": "all", "description": "Free certified training in Data Annotation, QA, and LLM Fine-Tuning. Connects graduates to paid remote projects with AI companies worldwide.", "language": "English", "lastUpdated": "2025" },
+    { "id": "d_andela_cloud", "name": "Cloud-Native & Kubernetes Engineering", "provider": "Andela / CNCF", "type": "Bootcamp", "level": "med", "duration": "6 months", "durationHours": 500, "difficulty": "Intermediate", "cost": "Free (Sponsored)", "costType": "Subsidized", "mode": "Online", "sector": "digital", "skills": ["Cloud Computing", "Kubernetes", "DevOps", "Software Engineering", "Container Orchestration"], "occupations": ["Cloud Engineer", "DevOps Engineer", "Platform Engineer", "Site Reliability Engineer"], "url": "https://andela.com/", "country": "all", "description": "CNCF-partnered programme training African technologists in cloud-native technologies and Kubernetes. Targeting 30,000 engineers by 2028. Graduates connected to global tech employers via Andela's network.", "language": "English", "lastUpdated": "2025" },
+    { "id": "d_ajira_ke", "name": "Ajira Digital Skills Programme", "provider": "Ajira Digital / Kenya ICT Authority", "type": "Learning Platform", "level": "short", "duration": "Self-paced", "durationHours": 0, "difficulty": "Beginner", "cost": "Free", "costType": "Free", "mode": "Hybrid", "sector": "digital", "skills": ["Digital Tools", "Freelancing", "Remote Work", "Digital Marketing", "Data Entry", "Content Creation"], "occupations": ["Freelancer", "Virtual Assistant", "Digital Marketer", "Content Creator", "Data Entry Specialist"], "url": "https://ajiradigital.go.ke/", "country": "Kenya", "description": "Government of Kenya initiative with 391,000 youth trained as of June 2024. 101 Ajira Youth Empowerment Centres provide free internet, computers, and guided digital training in freelancing and online work.", "language": "English, Kiswahili", "lastUpdated": "2025" }
 ];
 
 // --- 47. Fallback Scholarships ---
@@ -2171,16 +2441,16 @@ const fallbackScholarships = [
     { "id": "aid_001", "name": "Mastercard Foundation Scholars Program", "provider": "Mastercard Foundation", "type": "Scholarship", "coverage": "Full (Tuition + Stipend)", "country": "Regional", "target": "Undergraduate / Master's", "deadline": "Varies by University", "link": "https://mastercardfdn.org/all/scholars/", "desc": "Comprehensive support for academically talented young leaders from economically disadvantaged backgrounds." },
     { "id": "aid_002", "name": "HELB Undergraduate Loan", "provider": "Government of Kenya", "type": "Loan", "coverage": "Partial (Tuition + Upkeep)", "country": "Kenya", "target": "Undergraduate (Public/Private)", "deadline": "Annual (August)", "link": "https://www.helb.co.ke/", "desc": "Low-interest government loans for Kenyan students in recognized universities and TVETs." },
     { "id": "aid_003", "name": "HESLB Loan", "provider": "Higher Education Students' Loans Board", "type": "Loan", "coverage": "Partial (Tuition + Meals)", "country": "Tanzania", "target": "Undergraduate", "deadline": "Annual (July-Sept)", "link": "https://www.heslb.go.tz/", "desc": "Loans for needy Tanzanian students admitted to accredited higher education institutions." },
-    { "id": "aid_004", "name": "HESFB Loan Scheme", "provider": "Higher Education Students Financing Board", "type": "Loan", "coverage": "Tuition Fees", "country": "Uganda", "target": "Undergraduate / Diploma", "deadline": "Annual (July)", "link": "https://www.hesfb.go.ug/", "desc": "Loans for Ugandan students pursuing STEM programs and persons with disabilities." },
+    { "id": "aid_004", "name": "HESFB Loan Scheme", "provider": "Higher Education Students Financing Board", "type": "Loan", "coverage": "Tuition Fees", "country": "Uganda", "target": "Undergraduate / Diploma", "deadline": "Annual (July)", "link": "https://www.moesvtcs.go.ug/", "desc": "Loans for Ugandan students pursuing STEM programs and persons with disabilities." },
     { "id": "aid_005", "name": "Ashinaga Africa Initiative", "provider": "Ashinaga", "type": "Scholarship", "coverage": "Full (International)", "country": "Regional", "target": "Undergraduate", "deadline": "Annual (January)", "link": "https://en.ashinaga.org/apply/aai/", "desc": "Academic leadership program for orphaned students to study abroad and return to contribute to Sub-Saharan Africa." },
     { "id": "aid_006", "name": "Equity Wings to Fly / Elimu", "provider": "Equity Group Foundation", "type": "Scholarship", "coverage": "Full (Secondary + Uni Support)", "country": "Kenya", "target": "Secondary / TVET / Uni", "deadline": "Annual (December)", "link": "https://equitygroupfoundation.com/wings-to-fly/", "desc": "Comprehensive secondary school scholarship and leadership training for academically promising but financially challenged students." },
     { "id": "aid_007", "name": "BRD Student Loan (MinEduc)", "provider": "Development Bank of Rwanda", "type": "Loan", "coverage": "Tuition + Living Allowance", "country": "Rwanda", "target": "Undergraduate", "deadline": "Annual", "link": "https://www.brd.rw/brd/education-financing/", "desc": "Government-backed student loans for Rwandan students in public and private higher learning institutions." },
     { "id": "aid_008", "name": "IUCEA-Kyung Dong Scholarship", "provider": "IUCEA", "type": "Scholarship", "coverage": "Partial (Tuition)", "country": "Regional", "target": "Undergraduate", "deadline": "Annual (March)", "link": "https://www.iucea.org/", "desc": "Scholarships for students from EAC partner states to study at Kyung Dong University in South Korea." },
     { "id": "aid_009", "name": "Windle International Scholarship", "provider": "Windle International", "type": "Scholarship", "coverage": "Full", "country": "Regional (Refugee Focus)", "target": "Undergraduate / Master's", "deadline": "Varies", "link": "https://windle.org/", "desc": "Education opportunities for refugees and conflict-affected communities in East Africa." },
-    { "id": "aid_010", "name": "KCB Foundation Tujiajiri", "provider": "KCB Foundation", "type": "Grant / Training", "coverage": "Vocational Training", "country": "Kenya", "target": "TVET / Youth", "deadline": "Rolling", "link": "https://kcbgroup.com/foundation/tujiajiri/", "desc": "Vocational skills training and mentorship for youth to establish their own businesses." },
+    { "id": "aid_010", "name": "KCB Foundation Tujiajiri", "provider": "KCB Foundation", "type": "Grant / Training", "coverage": "Vocational Training", "country": "Kenya", "target": "TVET / Youth", "deadline": "Rolling", "link": "https://www.kcbfoundation.org/", "desc": "Vocational skills training and mentorship for youth to establish their own businesses." },
     { "id": "aid_011", "name": "DAAD In-Country/In-Region", "provider": "DAAD", "type": "Scholarship", "coverage": "Full (Tuition + Stipend)", "country": "Regional", "target": "Master's / PhD", "deadline": "Varies", "link": "https://www.daad.or.ke/en/", "desc": "Support for postgraduate studies at selected partner universities within the East African region." },
     { "id": "aid_012", "name": "Madhvani Foundation Scholarship", "provider": "Madhvani Foundation", "type": "Scholarship", "coverage": "Tuition Fees", "country": "Uganda", "target": "Undergraduate", "deadline": "Annual (April)", "link": "https://www.madhvanifoundation.com/", "desc": "Scholarships for Ugandan university students demonstrating financial need and academic merit." },
-    { "id": "aid_013", "name": "Excellentia Program", "provider": "Denise Nyakeru Tshisekedi Foundation", "type": "Scholarship", "coverage": "Full", "country": "DR Congo", "target": "Undergraduate", "deadline": "Annual", "link": "https://fondationdnt.org/excellentia/", "desc": "Promoting academic excellence by awarding scholarships to top-performing state exam graduates in DRC." },
+    { "id": "aid_013", "name": "Excellentia Program", "provider": "Denise Nyakeru Tshisekedi Foundation", "type": "Scholarship", "coverage": "Full", "country": "DR Congo", "target": "Undergraduate", "deadline": "Annual", "link": "https://fondationdnt.org/", "desc": "Promoting academic excellence by awarding scholarships to top-performing state exam graduates in DRC." },
     { "id": "aid_014", "name": "Iftin Foundation Education Fund", "provider": "Iftin Foundation", "type": "Grant", "coverage": "Partial", "country": "Somalia", "target": "Youth / TVET", "deadline": "Rolling", "link": "https://iftinfoundation.org/", "desc": "Support for skills development and education for youth in Somalia." },
     { "id": "aid_015", "name": "EAC Scholarship Programme", "provider": "EAC / KfW", "type": "Scholarship", "coverage": "Full", "country": "Regional", "target": "Master's", "deadline": "Bi-annual", "link": "https://www.eac.int/",
     "desc": "Scholarships for Master's students in Mathematics, Engineering, Informatics, Science, Technology and Business Science." },
@@ -2217,7 +2487,7 @@ const apprenticeshipFrameworks = {
 
 // --- 49. AI Tools ---
 const aiTools = [
-    { title: "ChatGPT / Claude", desc: "Drafting cover letters & interview practice.", link: "https://chat.openai.com/", icon: "message-square" },
+    { title: "ChatGPT / Claude", desc: "Drafting cover letters & interview practice.", link: "https://chatgpt.com/", icon: "message-square" },
     { title: "Resume Worded", desc: "AI scoring for your CV content.", link: "https://resumeworded.com/", icon: "file-text" },
     { title: "CareerVillage Coach", desc: "Personalized AI Career Coach.", link: "https://www.careervillage.org/", icon: "user-check" },
     { title: "Interview Warmup", desc: "Google's AI interview practice tool.", link: "https://grow.google/certificates/interview-warmup/", icon: "mic" },
@@ -2228,8 +2498,8 @@ const aiTools = [
 // --- 50. Library Resources ---
 const libraryResources = [
     { title: "How to Write an ATS-Friendly CV", desc: "Optimize your resume to pass through automated screening systems.", icon: "file-text", link: "https://www.jobscan.co/blog/ats-resume/" },
-    { title: "Mastering the STAR Method for Interviews", desc: "Structure your answers to behavioral questions effectively.", icon: "star", link: "https://www.thebalancecareers.com/what-is-the-star-interview-response-technique-2061629" },
-    { title: "Networking for Introverts", desc: "Strategies to build professional connections authentically.", icon: "users", link: "https://hbr.org/2016/08/an-introverts-guide-to-networking" },
+    { title: "Mastering the STAR Method for Interviews", desc: "Structure your answers to behavioral questions effectively.", icon: "star", link: "https://www.thebalancemoney.com/what-is-the-star-interview-response-technique-2061629" },
+    { title: "Networking for Introverts", desc: "Strategies to build professional connections authentically.", icon: "users", link: "https://hbr.org/2011/02/a-networking-guide-for-introverts" },
     { title: "Salary Negotiation 101", desc: "Tips and scripts for discussing compensation.", icon: "banknote", link: "https://www.glassdoor.com/blog/guide/how-to-negotiate-your-salary/" },
     { title: "Building Your Personal Brand on LinkedIn", desc: "Optimize your profile to attract recruiters.", icon: "linkedin", link: "https://www.linkedin.com/business/marketing/blog/linkedin-ads/how-to-build-your-personal-brand-on-linkedin" },
     { title: "A Guide to Informational Interviews", desc: "Learn from professionals in your target field.", icon: "message-square", link: "https://career.berkeley.edu/start-exploring/informational-interviews/" }
@@ -2252,31 +2522,3 @@ const alumniNetworks = [
     { name: "East Africa Women in Tech Alumni", platform: "LinkedIn" }
 ];
 
-// --- 53. Specific Mentors (Mock Data) ---
-const specificMentors = {
-    'Kenya': {
-        'agri': [
-            { name: "Dr. Jane Kamau", role: "Soil Scientist", company: "KALRO", bio: "20+ years in soil health and regenerative agriculture.", image: "https://i.pravatar.cc/150?u=jane" },
-            { name: "David Ochieng", role: "Agri-Tech Founder", company: "FarmSmart", bio: "Building digital market linkages for smallholders.", image: "https://i.pravatar.cc/150?u=david" }
-        ],
-        'energy': [
-            { name: "Sarah Wanjiku", role: "Solar Engineer", company: "SunKing", bio: "Specialist in mini-grid design and rural electrification.", image: "https://i.pravatar.cc/150?u=sarah" },
-            { name: "Eng. Peter Njoroge", role: "Grid Analyst", company: "KPLC", bio: "Expert in SCADA systems and grid stability.", image: "https://i.pravatar.cc/150?u=peter" }
-        ],
-        'digital': [
-            { name: "Wanjiru Ng'ang'a", role: "Senior Dev", company: "Safaricom", bio: "Backend architecture and fintech APIs.", image: "https://i.pravatar.cc/150?u=wanjiru" },
-            { name: "Kevin M.", role: "Product Manager", company: "Microsoft ADC", bio: "Leading cloud solutions for African markets.", image: "https://i.pravatar.cc/150?u=kevin" }
-        ]
-    },
-    'Rwanda': {
-        'digital': [
-            { name: "Jean-Paul M.", role: "CTO", company: "Irembo", bio: "Digitizing government services.", image: "https://i.pravatar.cc/150?u=jp" },
-            { name: "Grace U.", role: "Data Scientist", company: "Bank of Kigali", bio: "Fintech credit scoring models.", image: "https://i.pravatar.cc/150?u=grace" }
-        ]
-    },
-    'all': {
-        'agri': [{ name: "Regional Mentor", role: "Expert", company: "EAC", bio: "Cross-border trade specialist.", image: "https://i.pravatar.cc/150?u=reg" }],
-        'energy': [{ name: "Regional Mentor", role: "Expert", company: "EAPP", bio: "Power pool integration.", image: "https://i.pravatar.cc/150?u=reg2" }],
-        'digital': [{ name: "Regional Mentor", role: "Expert", company: "Smart Africa", bio: "Digital policy and infrastructure.", image: "https://i.pravatar.cc/150?u=reg3" }]
-    }
-};

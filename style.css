@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap'); /* For Certificates */
+
+body {
+    font-family: 'Inter';
+    background-color: #ffffff;
+    color: #212121; /* UNESCO Black */
+}
+/* UNESCO/Bootstrap 5.3 heading weight; !important needed to beat existing font-bold utility classes */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500 !important;
+}
+/* Star Rating Colors */
+.star-5 { color: #357A63; background: #EAF8F3; border: 1px solid #A6DDCB; } /* Proven */
+.star-3 { color: #B8801E; background: #FBF1DC; border: 1px solid #EECF93; } /* Self-Reported */
+.star-1 { color: #4C5054; background: #F1F4F6; border: 1px solid #D5DADD; } /* No Data */
+/* Low Bandwidth Mode toggles */
+body.low-bandwidth .heavy-chart { display: none !important; }
+body.low-bandwidth .simple-stat { display: block !important; }
+.simple-stat { display: none; }
+/* Top Sector Cards */
+.btn-sector-card { transition: all 0.2s; border-width: 1px; cursor: pointer; position: relative; overflow: hidden; }
+.btn-sector-card:hover { transform: translateY(-3px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+.btn-sector-card.active { border-width: 2px; transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+
+/* Sector Themes for Cards (UNESCO data-viz palette) */
+.card-agri.active { border-color: #4FB293; background-color: #EAF8F3; }
+.card-energy.active { border-color: #E4A429; background-color: #FBF1DC; }
+.card-digital.active { border-color: #4B6AD9; background-color: #EEF0FA; }
+.card-agri.active h3 { color: #357A63; }
+.card-energy.active h3 { color: #B8801E; }
+.card-digital.active h3 { color: #38509E; }
+/* Custom Scrollbar */
+.custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+.custom-scroll::-webkit-scrollbar-track { background: #F1F4F6; }
+.custom-scroll::-webkit-scrollbar-thumb { background: #B1BABE; border-radius: 4px; }
+.custom-scroll::-webkit-scrollbar-thumb:hover { background: #7F888F; }
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+/* Animation */
+.animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+/* Drawer Transition */
+.drawer { transition: transform 0.3s ease-in-out; }
+.drawer.open { transform: translateX(0) !important; }
+/* Tab Styles */
+.tab-btn { padding: 0.75rem 1.25rem; border-bottom: 2px solid transparent; font-weight: 600; color: #4C5054; transition: all 0.2s; }
+.tab-btn.active-tab { border-color: #0077D4; color: #212121; }
+/* Certificate Font */
+.font-serif { font-family: 'Playfair Display', serif; }
+/* LOW BANDWIDTH MODE */
+body.low-bandwidth img,
+body.low-bandwidth canvas,
+body.low-bandwidth .icon-box i { display: none !important; }
+body.low-bandwidth .icon-box::after { content: attr(data-alt); font-size: 10px; }
+body.low-bandwidth * { box-shadow: none !important; transition: none !important; animation: none !important; background-image: none !important; }
+body.low-bandwidth .btn-sector-card { border: 1px solid #D5DADD; background: white; }

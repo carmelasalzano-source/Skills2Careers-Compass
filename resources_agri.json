@@ -4,19 +4,33 @@
     { "initials": "JO", "name": "John O.", "role": "Agri-Supply Chain Expert", "color": "emerald" }
   ],
   "lmi": [
-    { "name": "CGIAR", "desc": "Research on climate-smart agrifood systems.", "link": "https://www.cgiar.org/" },
-    { "name": "FAOSTAT", "desc": "Global agriculture/food statistics.", "link": "https://www.fao.org/faostat/en/" },
-    { "name": "IFPRI", "desc": "Policy research on food systems.", "link": "https://www.ifpri.org/" },
-    { "name": "FEWS NET", "desc": "Food security early warning data.", "link": "https://fews.net/" },
-    { "name": "ILO Green Jobs", "desc": "Evidence on green jobs in agriculture.", "link": "https://www.ilo.org/greenjobs" },
-    { "name": "Feed the Future", "desc": "Global food security initiative.", "link": "https://www.feedthefuture.gov/" }
+    { "name": "CGIAR Research Programme", "desc": "World's largest agricultural research network — climate-smart agrifood systems and East Africa field programmes.", "type": "Sector Intelligence", "link": "https://www.cgiar.org/" },
+    { "name": "AGRA", "desc": "Alliance for a Green Revolution in Africa — investment signals, market intelligence and value chain data.", "type": "Sector Intelligence", "link": "https://agra.org/" },
+    { "name": "FAO Regional Office for Africa", "desc": "FAO field programmes, country briefs and agricultural data for East African nations.", "type": "Sector Intelligence", "link": "https://www.fao.org/africa/en/" },
+    { "name": "FEWS NET", "desc": "Food security early warning data — EAC country-level seasonal outlooks and market conditions.", "type": "Sector Intelligence", "link": "https://fews.net/" },
+    { "name": "USAID Feed the Future", "desc": "Global food security initiative — evidence base for East Africa agritech investment and demand.", "type": "Sector Intelligence", "link": "https://www.feedthefuture.gov/" },
+    { "name": "African Agri Council", "desc": "Continental agricultural industry body — market reports and sector outlook for African agribusiness.", "type": "Sector Intelligence", "link": "https://www.africanagriculture.co/" },
+    { "name": "FAOSTAT", "desc": "FAO global agricultural statistics portal — production, trade and labour data for all EAC countries.", "type": "Sector Data", "link": "https://www.fao.org/faostat/en/" },
+    { "name": "World Bank Agriculture", "desc": "Agriculture sector reports, lending data and impact evaluations — East Africa focus.", "type": "Global Report", "link": "https://www.worldbank.org/en/topic/agriculture" },
+    { "name": "FAO State of Food & Agriculture", "desc": "Annual flagship report on the global agrifood landscape, including East Africa regional analysis.", "type": "Global Report", "link": "https://www.fao.org/publications/sofa/" },
+    { "name": "OECD-FAO Agricultural Outlook", "desc": "10-year projections for global agricultural commodity markets and investment flows.", "type": "Global Report", "link": "https://www.oecd.org/agriculture/oecd-fao-agricultural-outlook/" },
+    { "name": "ILO Green Jobs in Agriculture", "desc": "ILO evidence base on green employment transitions in agricultural sectors globally and in East Africa.", "type": "Global Report", "link": "https://www.ilo.org/global/topics/green-jobs/lang--en/index.htm" },
+    { "name": "EAC Agriculture Statistics", "desc": "East African Community — regional agri production, trade and food security data portal.", "type": "Regional Report", "link": "https://www.eac.int/agriculture" },
+    { "name": "COMESA Agricultural Markets", "desc": "COMESA regional food and agricultural trade data — market prices, volumes and cross-border flows.", "type": "Regional Report", "link": "https://www.comesa.int/agriculture/" },
+    { "name": "AfDB Agriculture & Agribusiness", "desc": "African Development Bank — country and continental agri investment, employment and transformation data.", "type": "Regional Report", "link": "https://www.afdb.org/en/topics-and-sectors/sectors/agriculture-agro-industry" },
+    { "name": "IFPRI Research Library", "desc": "International Food Policy Research Institute — peer-reviewed policy research on food systems and rural livelihoods.", "type": "Research Report", "link": "https://www.ifpri.org/publications/" },
+    { "name": "Mastercard Foundation Agri Finance", "desc": "Evidence on rural and agricultural finance mechanisms across Sub-Saharan Africa.", "type": "Research Report", "link": "https://mastercardfdn.org/work/agriculture/" },
+    { "name": "GSMA AgriTech — Sub-Saharan Africa", "desc": "Mobile-enabled agriculture services — adoption data, market intelligence and operator case studies.", "type": "Research Report", "link": "https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/our-work/digital-agriculture/" },
+    { "name": "Apollo Agriculture", "desc": "Kenya digital agri-finance platform — data on smallholder credit access and yield-linked financing.", "type": "Platform Economy", "link": "https://apolloagriculture.com/" },
+    { "name": "Twiga Foods", "desc": "B2B agri-supply platform connecting smallholder farmers to urban retailers in Kenya and beyond.", "type": "Platform Economy", "link": "https://twiga.com/" },
+    { "name": "USAID Digital Agriculture Market Systems", "desc": "Frameworks and evidence on informal digital agri market systems operating across East Africa.", "type": "Informal Sector", "link": "https://www.marketlinks.org/topics/digital-agriculture" }
   ],
   "communities": [
     { "name": "EAFF", "desc": "Eastern Africa Farmers Federation network.", "type": "Network", "link": "https://www.eaffu.org/" },
-    { "name": "AgriProFocus", "desc": "Agribusiness communities of practice.", "type": "Community", "link": "https://agriprofocus.com/" },
     { "name": "AfriLabs", "desc": "Pan-African network of innovation hubs.", "type": "Network", "link": "https://www.afrilabs.com/" },
     { "name": "Digital Farmers Kenya", "desc": "Facebook Group • 200k+ Members", "type": "Community", "link": "https://www.facebook.com/groups/DigitalFarmersKenya/" },
-    { "name": "Young Professionals for Ag. Dev", "desc": "Global Network • Africa Chapter", "type": "Network", "link": "https://ypard.net/" }
+    { "name": "Young Professionals for Ag. Dev", "desc": "Global Network • Africa Chapter", "type": "Network", "link": "https://ypard.net/" },
+    { "name": "RUFORUM", "desc": "Regional Universities Forum for Capacity Building in Agriculture — 175 universities across 40 African countries, HQ Kampala, Uganda.", "type": "Network", "link": "https://ruforum.org/" }
   ],
   "jobs": [
     { "title": "AgCareers.com", "company": "Global", "type": "Portal", "link": "https://www.agcareers.com/" },
@@ -41,6 +55,13 @@
     "tools": [
       { "name": "AgPlan Business Planner", "desc": "Interactive business plan creator.", "icon": "table", "link": "https://agplan.umn.edu/" },
       { "name": "GlobalG.A.P. Standards", "desc": "Certification guide for export.", "icon": "file-check", "link": "https://www.globalgap.org/" }
+    ],
+    "research": [
+      { "name": "GSMA Mobile Agriculture Report", "desc": "Data on mobile-enabled agri services and smallholder adoption across Sub-Saharan Africa.", "link": "https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/our-work/digital-agriculture/" },
+      { "name": "CGIAR Foresight Report", "desc": "Strategic outlook on technology adoption, climate adaptation and agrifood transformation in East Africa.", "link": "https://www.cgiar.org/research/" },
+      { "name": "FAO Digital Agriculture", "desc": "FAO's global report on the state of digital agriculture — technology adoption, policy and investment.", "link": "https://www.fao.org/digital-agriculture/en/" },
+      { "name": "Dalberg Agritech Innovation Map", "desc": "Mapping of agritech innovation across Africa — investment trends, business models and impact evidence.", "link": "https://dalberg.com/our-ideas/" },
+      { "name": "MIT LEAP Agriculture", "desc": "Labour mobility and productivity research across East African agricultural value chains.", "link": "https://www.povertyactionlab.org/research/" }
     ]
   },
   "country_resources": {
@@ -58,89 +79,55 @@
       ],
       "jobs": [
         { "title": "BrighterMonday", "desc": "Agribusiness roles.", "link": "https://www.brightermonday.co.ke/" }
-      ],
-      "data": [
-        { "title": "KNBS", "desc": "Economic Survey.", "link": "https://www.knbs.or.ke/" }
-      ]
-    },
-    "Uganda": {
-      "policy": [
-        { "title": "MAAIF", "desc": "Ministry of Agriculture.", "link": "https://www.agriculture.go.ug/" },
-        { "title": "UNBS", "desc": "Bureau of Standards.", "link": "https://www.unbs.go.ug/" }
-      ],
-      "hubs": [
-        { "title": "NARO", "desc": "Agricultural Research.", "link": "https://www.naro.go.ug/" },
-        { "title": "aBi Development", "desc": "Agribusiness incubation.", "link": "https://www.abi.co.ug/" }
-      ],
-      "jobs": []
-    },
-    "Tanzania": {
-      "policy": [
-        { "title": "Ministry of Agriculture", "desc": "Official info & programmes.", "link": "https://www.kilimo.go.tz/" },
-        { "title": "TFRA", "desc": "Fertilizer Regulatory Authority.", "link": "https://tfra.go.tz/" }
-      ],
-      "hubs": [
-        { "title": "TARI", "desc": "Agricultural Research.", "link": "https://www.tari.go.tz/" },
-        { "title": "SAGCOT", "desc": "Agricultural Growth Corridor.", "link": "https://sagcot.co.tz/" }
-      ],
-      "jobs": [
-        { "title": "Ajira Portal", "desc": "Public service jobs.", "link": "https://www.ajira.go.tz/" }
       ]
     },
     "Rwanda": {
       "policy": [
         { "title": "MINAGRI", "desc": "Ministry of Agriculture.", "link": "https://www.minagri.gov.rw/" },
-        { "title": "RSB", "desc": "Standards Board.", "link": "https://www.rsb.gov.rw/" }
+        { "title": "RAB", "desc": "Rwanda Agriculture Board.", "link": "https://www.rab.gov.rw/" }
       ],
       "hubs": [
-        { "title": "RAB", "desc": "Agriculture Board.", "link": "https://rab.gov.rw/" },
-        { "title": "NAEB", "desc": "Export Development Board.", "link": "https://naeb.gov.rw/" }
+        { "title": "IWAWA Institute", "desc": "Agriculture & vocational skills.", "link": "https://www.iwawa.gov.rw/" }
       ],
-      "jobs": []
+      "jobs": [
+        { "title": "Job in Rwanda", "desc": "Agribusiness vacancies.", "link": "https://www.jobinrwanda.com/" }
+      ]
     },
-    "Burundi": {
+    "Tanzania": {
       "policy": [
-        { "title": "MINEAGRIE", "desc": "Ministry of Agriculture.", "link": "https://www.mineagrie.gov.bi/" }
+        { "title": "MAFC", "desc": "Ministry of Agriculture.", "link": "https://www.kilimo.go.tz/" },
+        { "title": "TOSCI", "desc": "Seed certification institute.", "link": "https://www.tosci.go.tz/" }
       ],
       "hubs": [
-        { "title": "ISABU", "desc": "Agronomic Sciences Inst.", "link": "https://isabu.bi/" }
+        { "title": "TARI", "desc": "Tanzania Agricultural Research Institute.", "link": "https://www.tari.go.tz/" }
       ],
-      "jobs": []
+      "jobs": [
+        { "title": "TaESA Jobs Gateway", "desc": "Agricultural sector vacancies.", "link": "https://jobs.kazi.go.tz/" }
+      ]
     },
-    "DR Congo": {
+    "Uganda": {
       "policy": [
-        { "title": "Min. Agriculture", "desc": "Ministry of Agriculture.", "link": "https://agriculture.gouv.cd/" }
+        { "title": "MAAIF", "desc": "Ministry of Agriculture, Animal Industry and Fisheries.", "link": "https://www.agriculture.go.ug/" },
+        { "title": "NARO", "desc": "National Agricultural Research Organisation.", "link": "https://www.naro.go.ug/" }
       ],
       "hubs": [
-        { "title": "INERA", "desc": "Agronomic Research.", "link": "https://inera-rdc.cd/" }
+        { "title": "Makerere AgriFood Innovation", "desc": "University-linked agri research.", "link": "https://www.mak.ac.ug/" }
       ],
-      "jobs": []
+      "jobs": [
+        { "title": "BrighterMonday Uganda", "desc": "Agribusiness roles.", "link": "https://www.brightermonday.co.ug/" }
+      ]
     },
-    "Somalia": {
+    "Ethiopia": {
       "policy": [
-        { "title": "MOAI", "desc": "Ministry of Agriculture.", "link": "https://moa.gov.so/" }
+        { "title": "MoA Ethiopia", "desc": "Ministry of Agriculture.", "link": "https://www.moa.gov.et/" },
+        { "title": "EIAR", "desc": "Ethiopian Institute of Agricultural Research.", "link": "https://www.eiar.gov.et/" }
       ],
       "hubs": [
-        { "title": "iRise Hub", "desc": "Agritech & climate hub.", "link": "https://irisehub.com/" }
+        { "title": "AgriLink Ethiopia", "desc": "Agritech platform and innovation hub.", "link": "https://agrilink.et/" }
       ],
-      "jobs": []
-    },
-    "South Sudan": {
-      "policy": [
-        { "title": "MAFS", "desc": "Min. Agriculture & Food Security.", "link": "https://mafs.gov.ss/" }
-      ],
-      "hubs": [],
-      "jobs": []
+      "jobs": [
+        { "title": "Ethiojobs", "desc": "Agricultural sector vacancies.", "link": "https://www.ethiojobs.net/" }
+      ]
     }
-  },
-  "signals": {
-    "Sector Value-Chain Gaps": [
-      { "title": "FAOSTAT Value Chain", "desc": "Global food and agriculture data.", "link": "https://www.fao.org/faostat/en/#data" },
-      { "title": "World Bank Agriculture", "desc": "Data on agricultural development.", "link": "https://data.worldbank.org/topic/agriculture" }
-    ],
-    "Innovation Investments/Grants": [
-      { "title": "AgFunder News", "desc": "AgriFoodTech investment news.", "link": "https://agfundernews.com/" },
-      { "title": "Briter Bridges", "desc": "Innovation ecosystem intelligence.", "link": "https://briterbridges.com/" }
-    ]
   }
 }

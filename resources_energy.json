@@ -4,13 +4,28 @@
     { "initials": "DL", "name": "David L.", "role": "EPRA Audit Consultant", "color": "brown" }
   ],
   "lmi": [
-    { "name": "EPRA Energy Statistics", "desc": "National energy generation data.", "link": "https://www.epra.go.ke/" },
-    { "name": "IRENA Renewable Jobs", "desc": "Global employment trends.", "link": "https://www.irena.org/Data" },
-    { "name": "AFSIA Job Board", "desc": "Solar vacancies & alerts.", "link": "https://www.afsiasolar.com/careers/jobs/" }
+    { "name": "SEforALL Research & Analysis", "desc": "Sustainable Energy for All — tracking SDG 7 progress, energy access data and workforce signals across East Africa.", "type": "Sector Intelligence", "link": "https://www.seforall.org/our-work/research-analysis" },
+    { "name": "GOGLA Market Intelligence", "desc": "Global Off-Grid Lighting Association — off-grid solar sales volumes, employment trends and financing data.", "type": "Sector Intelligence", "link": "https://www.gogla.org/resources" },
+    { "name": "AFSIA Job Signals", "desc": "Africa Solar Industry Association — solar sector vacancies, employer alerts and wage benchmarks.", "type": "Sector Intelligence", "link": "https://www.afsiasolar.com/" },
+    { "name": "EEP Africa Reports", "desc": "Energy and Environment Partnership — clean energy project pipeline, financing flows and impact outcomes.", "type": "Sector Intelligence", "link": "https://eepafrica.org/" },
+    { "name": "Energy 4 Impact", "desc": "Data on off-grid energy entrepreneurs, business models and enterprise support across Sub-Saharan Africa.", "type": "Sector Intelligence", "link": "https://energy4impact.org/" },
+    { "name": "EPRA Energy Statistics", "desc": "Kenya Energy & Petroleum Regulatory Authority — national generation capacity, grid data and sector employment.", "type": "Sector Data", "link": "https://www.epra.go.ke/" },
+    { "name": "IRENA Renewable Energy Statistics", "desc": "IRENA global database — renewable capacity, investment flows and employment by technology and country.", "type": "Global Report", "link": "https://www.irena.org/Data" },
+    { "name": "IEA Africa Energy Outlook", "desc": "International Energy Agency — Africa-specific energy scenarios, investment needs and jobs projections.", "type": "Global Report", "link": "https://www.iea.org/regions/africa" },
+    { "name": "REN21 Global Status Report", "desc": "Annual benchmark of renewable energy policy, investment and deployment worldwide.", "type": "Global Report", "link": "https://www.ren21.net/reports/global-status-report/" },
+    { "name": "World Bank Energy Sector", "desc": "Energy access, grid investment and employment — World Bank country and regional programme data.", "type": "Global Report", "link": "https://www.worldbank.org/en/topic/energy" },
+    { "name": "IRENA Annual Jobs Review", "desc": "Renewable Energy and Jobs — annual review of employment by technology, country and value chain segment.", "type": "Research Report", "link": "https://www.irena.org/publications" },
+    { "name": "NREL Africa Technical Resources", "desc": "US National Renewable Energy Lab — solar, wind and mini-grid resource assessments for East African nations.", "type": "Research Report", "link": "https://www.nrel.gov/international/africa.html" },
+    { "name": "Dalberg Clean Energy Impact", "desc": "Impact evidence on off-grid energy businesses — income, employment and household outcomes in East Africa.", "type": "Research Report", "link": "https://dalberg.com/our-ideas/" },
+    { "name": "AfDB Energy Sector Reports", "desc": "African Development Bank — continental energy investment data, annual yearbook and country sector profiles.", "type": "Regional Report", "link": "https://www.afdb.org/en/topics-and-sectors/sectors/energy" },
+    { "name": "EAC Energy Infrastructure", "desc": "East African Community — regional energy policy, cross-border projects and electrification targets.", "type": "Regional Report", "link": "https://www.eac.int/infrastructure/energy-infrastructure" },
+    { "name": "COMESA Energy Reports", "desc": "COMESA energy sector statistics and regional power pool development data.", "type": "Regional Report", "link": "https://www.comesa.int/energy/" },
+    { "name": "GOGLA Off-Grid Technician Market", "desc": "Data on commission-based and informal installation technicians in the off-grid solar supply chain.", "type": "Gig Economy", "link": "https://www.gogla.org/resources" },
+    { "name": "SEforALL Energy Access Platform", "desc": "Tracking informal energy entrepreneurs and last-mile electrification across East Africa.", "type": "Informal Sector", "link": "https://www.seforall.org/" }
   ],
   "communities": [
-    { "name": "Women in Renewable Energy", "desc": "Mentorship & Networking", "type": "Community", "link": "https://wire-network.org/" },
-    { "name": "Solar Africa Expo", "desc": "KICC Nairobi • Annual Event", "type": "Event", "link": "https://www.solarafricaexpo.com/" }
+    { "name": "AFSIA", "desc": "Africa Solar Industry Association — connect with solar professionals across the continent.", "type": "Community", "link": "https://www.afsiasolar.com/" },
+    { "name": "GOGLA", "desc": "Global Off-Grid Solar Forum — industry association for off-grid energy access.", "type": "Community", "link": "https://www.gogla.org/" }
   ],
   "jobs": [
     { "title": "Solar Sales Agent", "company": "M-KOPA", "type": "Commission", "link": "https://m-kopa.com/careers/" },
@@ -31,10 +46,73 @@
       { "name": "PVWatts Calculator", "desc": "Estimate solar production.", "icon": "calculator", "link": "https://pvwatts.nrel.gov/" },
       { "name": "EPRA Licensing Portal", "desc": "Requirements for Solar Tech.", "icon": "check-square", "link": "https://www.epra.go.ke/" },
       { "name": "GOGLA Investment Academy", "desc": "Off-grid solar finance.", "icon": "trending-up", "link": "https://www.gogla.org/" },
-      { "name": "ARE Investment Academy", "desc": "DRE investment readiness.", "icon": "briefcase", "link": "https://www.ruralelec.org/" }
+      { "name": "ARE Investment Academy", "desc": "DRE investment readiness.", "icon": "briefcase", "link": "https://renewelec.org/" }
+    ],
+    "research": [
+      { "name": "IRENA Renewable Energy and Jobs", "desc": "Comprehensive annual review of renewable energy employment by technology segment and region.", "link": "https://www.irena.org/publications" },
+      { "name": "GOGLA Off-Grid Market Trends", "desc": "Bi-annual off-grid solar market data — unit sales, financing volumes and consumer segment analysis.", "link": "https://www.gogla.org/resources" },
+      { "name": "SEforALL Mini-Grid Investment Report", "desc": "Investment landscape and business model analysis for mini-grid deployment across East Africa.", "link": "https://www.seforall.org/our-work/research-analysis" },
+      { "name": "World Bank Energy Sector Jobs Study", "desc": "Evidence on job creation through energy access programmes — Kenya, Tanzania, Uganda country cases.", "link": "https://www.worldbank.org/en/topic/energy/publication/climate-and-energy-finance" },
+      { "name": "Dalberg Energy Access Report", "desc": "Impact evidence and market sizing for off-grid energy businesses across Sub-Saharan Africa.", "link": "https://dalberg.com/our-ideas/" }
     ]
   },
   "country_resources": {
+    "Kenya": {
+      "policy": [
+        { "title": "EPRA", "desc": "Energy & Petroleum Regulatory Authority.", "link": "https://www.epra.go.ke/" },
+        { "title": "REREC", "desc": "Rural Electrification & Renewable Energy Corp.", "link": "https://www.rerec.co.ke/" },
+        { "title": "Ministry of Energy", "desc": "National energy policy.", "link": "https://energy.go.ke/" }
+      ],
+      "hubs": [
+        { "title": "KPLC Innovation", "desc": "Kenya Power grid & innovation.", "link": "https://kplc.co.ke/" },
+        { "title": "KCIC Clean Energy", "desc": "Clean energy incubation.", "link": "https://kenyacic.org/" }
+      ],
+      "jobs": [
+        { "title": "BrighterMonday Energy", "desc": "Energy sector vacancies.", "link": "https://www.brightermonday.co.ke/" }
+      ]
+    },
+    "Tanzania": {
+      "policy": [
+        { "title": "EWURA", "desc": "Energy and Water Utilities Regulatory Authority.", "link": "https://www.ewura.go.tz/" },
+        { "title": "REA Tanzania", "desc": "Rural Energy Agency.", "link": "https://www.rea.go.tz/" },
+        { "title": "TANESCO", "desc": "National utility company.", "link": "https://www.tanesco.co.tz/" }
+      ],
+      "hubs": [],
+      "jobs": [
+        { "title": "TaESA Jobs Gateway", "desc": "Energy sector vacancies.", "link": "https://jobs.kazi.go.tz/" }
+      ]
+    },
+    "Uganda": {
+      "policy": [
+        { "title": "ERA Uganda", "desc": "Electricity Regulatory Authority.", "link": "https://www.era.go.ug/" },
+        { "title": "UEDCL", "desc": "Uganda Electricity Distribution Co.", "link": "https://www.uedcl.co.ug/" },
+        { "title": "UMEME", "desc": "National electricity distributor.", "link": "https://www.umeme.co.ug/" }
+      ],
+      "hubs": [],
+      "jobs": [
+        { "title": "BrighterMonday Uganda", "desc": "Energy sector roles.", "link": "https://www.brightermonday.co.ug/" }
+      ]
+    },
+    "Rwanda": {
+      "policy": [
+        { "title": "REG Rwanda", "desc": "Rwanda Energy Group.", "link": "https://www.reg.rw/" },
+        { "title": "RURA Energy", "desc": "Utilities regulation.", "link": "https://rura.rw/" }
+      ],
+      "hubs": [],
+      "jobs": [
+        { "title": "Job in Rwanda", "desc": "Energy sector vacancies.", "link": "https://www.jobinrwanda.com/" }
+      ]
+    },
+    "Ethiopia": {
+      "policy": [
+        { "title": "EEP Ethiopia", "desc": "Ethiopian Electric Power.", "link": "https://www.eep.com.et/" },
+        { "title": "MoWE", "desc": "Ministry of Water & Energy.", "link": "https://www.mowe.gov.et/" }
+      ],
+      "hubs": [],
+      "jobs": [
+        { "title": "Ethiojobs", "desc": "Energy sector vacancies.", "link": "https://www.ethiojobs.net/" }
+      ]
+    },
     "Somalia": {
       "policy": [
         { "title": "MoEWR", "desc": "Ministry of Energy & Water Resources.", "link": "https://moewr.gov.so/" }
@@ -47,7 +125,7 @@
   },
   "signals": {
     "Sector Value-Chain Gaps": [
-      { "title": "SEforALL Knowledge Hub", "desc": "Sustainable Energy for All data.", "link": "https://www.seforall.org/data-and-evidence" },
+      { "title": "SEforALL Research & Analysis", "desc": "Sustainable Energy for All data.", "link": "https://www.seforall.org/our-work/research-analysis" },
       { "title": "IRENA Data", "desc": "Renewable energy statistics.", "link": "https://www.irena.org/Data" }
     ],
     "Innovation Investments/Grants": [

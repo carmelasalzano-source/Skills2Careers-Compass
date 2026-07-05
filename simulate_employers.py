@@ -1,8 +1,10 @@
 import json
 import random
+import os
 
-# TARGET FILE: Pointing to the file in your Prototype folder
-file_path = r'c:\Users\Salzano\OneDrive\Documents\Claude\ai4eac-compass\Prototype files\wages.json'
+# TARGET FILE: Pointing to the wages.json file
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(BASE_DIR, 'wages.json')
 
 # Define typical employers by Country and Sector
 employer_map = {

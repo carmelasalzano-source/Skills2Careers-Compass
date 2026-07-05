@@ -1,0 +1,22 @@
+
+# Local Netlify folder
+.netlify/
+
+# Dependencies — never commit
+node_modules/
+
+# Local tool settings
+.claude/
+.vscode/
+
+# Disabled config stubs
+.prettierrc.disabled
+.htmlhintrc.disabled
+
+# Internal documents — keep private
+demo-run-of-show.html
+gitlab-setup-guide.html
+
+# Unrelated files
+YEN/
+*.zip

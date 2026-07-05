@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "aid_001",
     "name": "Mastercard Foundation Scholars Program",
@@ -56,7 +56,7 @@
     "country": "Regional",
     "target": "Undergraduate",
     "deadline": "Annual (January)",
-    "link": "https://en.ashinaga.org/apply/aai/",
+    "link": "https://ashinaga.org/",
     "desc": "Academic leadership program for orphaned students to study abroad and return to contribute to Sub-Saharan Africa."
   },
   {
@@ -80,7 +80,7 @@
     "country": "Rwanda",
     "target": "Undergraduate",
     "deadline": "Annual",
-    "link": "https://www.brd.rw/brd/education-financing/",
+    "link": "https://www.brd.rw/student-loans/",
     "desc": "Government-backed student loans for Rwandan students in public and private higher learning institutions."
   },
   {
@@ -116,7 +116,7 @@
     "country": "Kenya",
     "target": "TVET / Youth",
     "deadline": "Rolling",
-    "link": "https://kcbgroup.com/foundation/tujiajiri/",
+    "link": "https://kcbgroup.com/foundation/",
     "desc": "Vocational skills training and mentorship for youth to establish their own businesses."
   },
   {
@@ -128,7 +128,7 @@
     "country": "Regional",
     "target": "Master's / PhD",
     "deadline": "Varies",
-    "link": "https://www.daad.or.ke/en/",
+    "link": "https://www.daad.de/en/",
     "desc": "Support for postgraduate studies at selected partner universities within the East African region."
   },
   {
@@ -142,18 +142,6 @@
     "deadline": "Annual (April)",
     "link": "https://www.madhvanifoundation.com/",
     "desc": "Scholarships for Ugandan university students demonstrating financial need and academic merit."
-  },
-  {
-    "id": "aid_013",
-    "name": "Excellentia Program",
-    "provider": "Denise Nyakeru Tshisekedi Foundation",
-    "type": "Scholarship",
-    "coverage": "Full",
-    "country": "DR Congo",
-    "target": "Undergraduate",
-    "deadline": "Annual",
-    "link": "https://fondationdnt.org/excellentia/",
-    "desc": "Promoting academic excellence by awarding scholarships to top-performing state exam graduates in DRC."
   },
   {
     "id": "aid_014",
@@ -224,7 +212,7 @@
     "country": "Uganda",
     "target": "Employees / Interns",
     "deadline": "Call for Proposals",
-    "link": "https://www.psfuganda.org/sdf/",
+    "link": "https://www.psfuganda.org/projects/skills-development-facility.html",
     "desc": "Grants to support short-term skills training for employees, interns, and entrepreneurs to boost productivity and competitiveness."
   },
   {

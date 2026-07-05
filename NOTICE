@@ -1,0 +1,33 @@
+Skills2Careers Compass
+======================
+
+Copyright 2026 United Nations Educational, Scientific and Cultural
+Organization (UNESCO), 7 Place de Fontenoy, 75352 Paris 07 SP, France.
+
+Original development: [Development Partner Name and Country]
+Project coordination: UNESCO [Section name — e.g. Section for Youth, Literacy
+and Skills Development], Education Sector
+
+This product was developed under UNESCO's mandate to support quality education
+and lifelong learning opportunities for all, in alignment with Sustainable
+Development Goal 4 (SDG4) and the EAC regional skills agenda.
+
+Labour market intelligence data is sourced from Lightcast
+(lightcast.io), LinkedIn Economic Graph, and national Labour Market
+Information Systems (LMIS) of participating East African Community
+member states. Data is used under licence; it may not be redistributed
+separately from this platform without prior written consent from the
+respective data providers.
+
+The UNESCO name, logo, and wordmark are protected under international
+law. Their use in connection with this software requires separate
+written authorisation from UNESCO's Bureau of Public Information and
+is not granted by this licence.
+
+Third-party components included in the vendor/ directory:
+- Chart.js (MIT Licence) — https://www.chartjs.org
+- Tailwind CSS (MIT Licence) — https://tailwindcss.com
+- Lucide Icons (ISC Licence) — https://lucide.dev
+- jsPDF (MIT Licence) — https://github.com/parallax/jsPDF
+
+Full licence texts for the above are available in vendor/LICENSES.txt.

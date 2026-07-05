@@ -1,4 +1,4 @@
-{
+﻿{
   "country_resources": {
     "Kenya": {
       "policy": [
@@ -17,15 +17,13 @@
         { "title": "Gearbox", "desc": "Makerspace & prototyping.", "link": "https://gearbox.co.ke/" },
         { "title": "Endeavor Kenya", "desc": "High-impact entrepreneur network.", "link": "https://kenya.endeavor.org/" },
         { "title": "Founder Institute Kenya", "desc": "Pre-seed accelerator.", "link": "https://fi.co/apply/kenya" },
-        { "title": "iBizAfrica", "desc": "Strathmore University incubator.", "link": "http://www.ibizafrica.co.ke/" },
         { "title": "C4DLab", "desc": "University of Nairobi innovation lab.", "link": "http://c4dlab.ac.ke/" },
         { "title": "AfriLabs Kenya", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Kenya" },
         { "title": "AkiraChix", "desc": "Tech training & mentorship for women.", "link": "https://akirachix.com/" },
         { "title": "codeHive", "desc": "AkiraChix coding bootcamp.", "link": "https://akirachix.com/codehive/" },
         { "title": "KICTANet", "desc": "ICT policy community.", "link": "https://www.kictanet.or.ke/" },
         { "title": "LakeHub", "desc": "Technology innovation hub in Kisumu.", "link": "https://lakehub.co.ke/" },
-        { "title": "Swahilipot Hub", "desc": "Community hub in Mombasa.", "link": "https://swahilipothub.co.ke/" },
-        { "title": "Pwani Teknowgalz", "desc": "STEM, digital skills & mentorship for women.", "link": "https://pwaniteknowgalz.org/" }
+        { "title": "Swahilipot Hub", "desc": "Community hub in Mombasa.", "link": "https://swahilipothub.co.ke/" }
       ],
       "jobs": [
         { "title": "Ajira Digital Program", "desc": "Digital skills & online work.", "link": "https://ajiradigital.go.ke/" },
@@ -38,12 +36,11 @@
         { "title": "Kenya LMIS (KLMIS)", "desc": "Labour market data & insights.", "link": "https://labourmarket.go.ke/" }
       ],
       "education": [
-        { "title": "TVETA Accredited Institutions", "desc": "Official list of accredited TVET institutions.", "link": "https://www.tveta.go.ke/institutions/" }
+        { "title": "TVETA", "desc": "Technical and Vocational Education and Training Authority.", "link": "https://www.tveta.go.ke/" }
       ],
       "communities": [
         { "title": "AI Kenya", "desc": "Community for AI/ML practitioners.", "link": "https://kenya.ai/" },
         { "title": "Nairobi Women in ML & DS", "desc": "Support for women in data fields.", "link": "https://www.wimlds.org/" },
-        { "title": "Women in Tech Kenya", "desc": "Networking & mentorship for women in tech.", "link": "https://womenintech.co.ke/" },
         { "title": "Technovation Girls Kenya", "desc": "Mentor-guided tech entrepreneurship clubs.", "link": "https://technovationchallenge.org/" }
       ]
     },
@@ -53,24 +50,19 @@
         { "title": "Ministry of ICT", "desc": "National ICT policy.", "link": "https://ict.go.ug/" },
         { "title": "NITA-U", "desc": "Digital govt & infrastructure.", "link": "https://www.nita.go.ug/" },
         { "title": "PDPO", "desc": "Privacy compliance guidance.", "link": "https://www.pdpo.go.ug/" },
-        { "title": "UGCERT", "desc": "Cyber incident response.", "link": "https://www.ugcert.ug/" },
         { "title": "URSB", "desc": "Company registration services.", "link": "https://www.ursb.go.ug/" },
         { "title": "Uganda Investment Authority", "desc": "Investor guidance.", "link": "https://www.ugandainvest.go.ug/" }
       ],
       "hubs": [
-        { "title": "Outbox", "desc": "Incubation & entrepreneurship.", "link": "https://outbox.co.ug/" },
-        { "title": "Innovation Village", "desc": "Startup support & community.", "link": "https://innovationvillage.co.ug/" },
-        { "title": "Hive Colab", "desc": "Co-working & programmes.", "link": "https://www.hivecolab.com/" },
-        { "title": "Makerere Innovation and Incubation Centre (MIIC)", "desc": "University-based incubator.", "link": "https://miic.mak.ac.ug/" },
-        { "title": "Stanbic Business Incubator", "desc": "SME capacity building.", "link": "https://stanbicbusinessincubator.co.ug/" },
+        { "title": "Innovation Village", "desc": "Startup support & community.", "link": "https://innovationvillage.africa/" },
+        { "title": "Hive Colab", "desc": "Co-working & programmes.", "link": "https://hivecolab.org/" },
         { "title": "AfriLabs Uganda", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Uganda" },
         { "title": "Standard Chartered Futuremakers", "desc": "Women in Tech incubator.", "link": "https://www.sc.com/ug/sustainability/futuremakers/" }
       ],
       "jobs": [
         { "title": "BrighterMonday Uganda", "desc": "Job vacancies.", "link": "https://www.brightermonday.co.ug/" },
         { "title": "EEMIS", "desc": "Vetted overseas jobs.", "link": "https://eemis.mglsd.go.ug/" },
-        { "title": "Fuzu Uganda", "desc": "Jobs & career coaching.", "link": "https://www.fuzu.com/uganda" },
-        { "title": "MyJobMag Uganda", "desc": "Job vacancies & career resources.", "link": "https://www.myjobmag.co.ug/" }
+        { "title": "Fuzu Uganda", "desc": "Jobs & career coaching.", "link": "https://www.fuzu.com/uganda" }
       ],
       "data": [
         { "title": "MGLSD LMIS.Stat", "desc": "Labour market indicators.", "link": "https://de.lmis.mglsd.go.ug/" },
@@ -80,7 +72,7 @@
         { "title": "NCHE Recognized Institutions", "desc": "List of accredited universities and tertiary institutions.", "link": "https://unche.or.ug/institutions/" }
       ],
       "communities": [
-        { "title": "Data Science Uganda", "desc": "Data science meetups & training.", "link": "https://twitter.com/DataScienceUG" },
+        { "title": "Data Science Uganda", "desc": "Data science meetups & training.", "link": "https://x.com/DataScienceUG" },
         { "title": "PyData Kampala", "desc": "Python & data community.", "link": "https://www.meetup.com/PyData-Kampala/" },
         { "title": "WITU", "desc": "Women in Technology Uganda (Mentorship & Skills).", "link": "https://witu.org/" }
       ]
@@ -88,7 +80,6 @@
     "Tanzania": {
       "policy": [
         { "title": "TCRA", "desc": "Communications regulation.", "link": "https://www.tcra.go.tz/" },
-        { "title": "Tanzania ICT Commission", "desc": "Digital economy coordination.", "link": "https://www.ictc.go.tz/" },
         { "title": "e-Government Authority", "desc": "Public digital services.", "link": "https://www.ega.go.tz/" },
         { "title": "COSTECH", "desc": "Science/innovation system.", "link": "https://www.costech.or.tz/" },
         { "title": "PDPC", "desc": "Data protection compliance.", "link": "https://www.pdpc.go.tz/" },
@@ -100,7 +91,6 @@
         { "title": "Buni Innovation Hub", "desc": "Innovation hub & community.", "link": "https://bunihub.or.tz/" },
         { "title": "dLab Tanzania", "desc": "Data/innovation lab.", "link": "https://www.dlab.or.tz/" },
         { "title": "Sahara Ventures", "desc": "Acceleration & investment.", "link": "https://saharaventures.com/" },
-        { "title": "Apps and Girls", "desc": "Coding for girls & women.", "link": "https://www.appsandgirls.com/" },
         { "title": "Robotech Labs", "desc": "Robotics & IoT innovation.", "link": "https://robotech.co.tz/" },
         { "title": "AfriLabs Tanzania", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Tanzania" },
         { "title": "Ndoto Hub", "desc": "Innovation hub for women entrepreneurs.", "link": "https://ndotohub.com/" }
@@ -108,7 +98,6 @@
       "jobs": [
         { "title": "TaESA Jobs Gateway / Kazi Jobs", "desc": "Job opportunities gateway.", "link": "https://jobs.kazi.go.tz/" },
         { "title": "ZoomTanzania Jobs", "desc": "Job listings & alerts.", "link": "https://www.zoomtanzania.net/jobs/" },
-        { "title": "BrighterMonday Tanzania", "desc": "Job vacancies & career resources.", "link": "https://www.brightermonday.co.tz/" },
         { "title": "Empower Jobs", "desc": "Professional recruitment & HR services.", "link": "https://empower.co.tz/jobs" }
       ],
       "data": [
@@ -118,9 +107,8 @@
         { "title": "NACTVET Registered Institutions", "desc": "List of registered and accredited institutions.", "link": "https://www.nactvet.go.tz/" }
       ],
       "communities": [
-        { "title": "Tanzania AI Community (CoP)", "desc": "Community of Practice fostering AI growth.", "link": "https://twitter.com/TanzaniaAI" },
-        { "title": "PyData Dar es Salaam", "desc": "Python & Data Science community.", "link": "https://www.meetup.com/PyData-Dar-es-Salaam/" },
-        { "title": "She Codes for Change", "desc": "Girls in tech, digital skills & mentorship.", "link": "https://shecodesforchange.org/" }
+        { "title": "Tanzania AI Community (CoP)", "desc": "Community of Practice fostering AI growth.", "link": "https://x.com/TanzaniaAI" },
+        { "title": "PyData Dar es Salaam", "desc": "Python & Data Science community.", "link": "https://www.meetup.com/PyData-Dar-es-Salaam/" }
       ]
     },
     "Rwanda": {
@@ -128,7 +116,6 @@
         { "title": "RURA", "desc": "Utilities & comms regulation.", "link": "https://rura.rw/" },
         { "title": "MINICT", "desc": "National ICT policy.", "link": "https://www.minict.gov.rw/" },
         { "title": "RISA", "desc": "Digital govt & platforms.", "link": "https://risa.gov.rw/" },
-        { "title": "NCSA", "desc": "Cybersecurity governance.", "link": "https://ncsa.gov.rw/" },
         { "title": "Rwanda CERT", "desc": "Advisories & reporting.", "link": "https://www.cert.gov.rw/" },
         { "title": "DPO Rwanda", "desc": "Privacy compliance.", "link": "https://dpo.gov.rw/" },
         { "title": "Rwanda Development Board", "desc": "Investment & startup support.", "link": "https://rdb.rw/" },
@@ -137,9 +124,7 @@
       "hubs": [
         { "title": "kLab Rwanda", "desc": "Incubation & community.", "link": "https://klab.rw/" },
         { "title": "Norrsken Kigali", "desc": "Impact startup hub.", "link": "https://www.norrsken.org/kigali" },
-        { "title": "Kigali Innovation City", "desc": "Innovation district.", "link": "https://kigaliinnovationcity.com/" },
         { "title": "ICT Chamber", "desc": "Industry coordination.", "link": "https://www.ictchamber.rw/" },
-        { "title": "Westerwelle Startup Haus", "desc": "Co-working & maker space.", "link": "https://westerwelle.haus/en/locations/kigali/" },
         { "title": "Impact Hub Kigali", "desc": "Social innovation community.", "link": "https://kigali.impacthub.net/" },
         { "title": "AfriLabs Rwanda", "desc": "Directory of hubs.", "link": "https://new.afrilabs.com/hubs/?country=Rwanda" },
         { "title": "FabLab Rwanda", "desc": "Digital fabrication laboratory.", "link": "http://www.fablab.rw/" }
@@ -147,14 +132,13 @@
       "jobs": [
         { "title": "Job in Rwanda", "desc": "Vacancies & recruitment.", "link": "https://www.jobinrwanda.com/" },
         { "title": "Kora Job Portal", "desc": "Career guidance & job opportunities.", "link": "https://kora.rw/" },
-        { "title": "Rwanda Recruitment Portal", "desc": "Public service jobs.", "link": "https://recruitmentportal.gov.rw/" },
         { "title": "ReliefWeb Rwanda", "desc": "NGO/UN vacancies.", "link": "https://reliefweb.int/jobs?advanced-search=%28C198%29&list=Rwanda+Jobs" }
       ],
       "data": [
         { "title": "Rwanda LMIS", "desc": "Labour market trends.", "link": "https://www.lmis.rw/" }
       ],
       "communities": [
-        { "title": "Rwanda AI Community", "desc": "AI enthusiasts and professionals.", "link": "https://twitter.com/RwandaAI" },
+        { "title": "Rwanda AI Community", "desc": "AI enthusiasts and professionals.", "link": "https://x.com/RwandaAI" },
         { "title": "Girls in ICT Rwanda", "desc": "Empowering women in STEM through mentorship.", "link": "https://girlsinict.rw/" }
       ]
     },
@@ -229,18 +213,42 @@
     { "initials": "PW", "name": "Peter W.", "role": "Fintech Product Manager", "color": "blue" }
   ],
   "lmi": [
-    { "name": "BrighterMonday Trends", "desc": "Kenya job market reports.", "link": "https://www.brightermonday.co.ke/blog" },
-    { "name": "Stack Overflow Trends", "desc": "Tech skill demand analytics.", "link": "https://insights.stackoverflow.com/trends" }
+    { "name": "BrighterMonday Tech Trends", "desc": "Kenya digital job market reports — tech salary benchmarks, most-hired roles and employer demand signals.", "type": "Sector Data", "link": "https://www.brightermonday.co.ke/blog" },
+    { "name": "Stack Overflow Developer Survey", "desc": "Global tech skill demand, salary data and emerging tool adoption — East Africa cohort included.", "type": "Sector Data", "link": "https://survey.stackoverflow.co/2024" },
+    { "name": "Disrupt Africa Ecosystem Reports", "desc": "Startup ecosystem investment data — funding rounds, sector breakdowns and East Africa growth trends.", "type": "Sector Intelligence", "link": "https://disrupt-africa.com/reports/" },
+    { "name": "Partech Africa Investment Report", "desc": "Annual VC investment data for African tech startups — deal volumes, sectors and country breakdowns.", "type": "Sector Intelligence", "link": "https://partechpartners.com/africa-reports/" },
+    { "name": "Digest Africa", "desc": "East Africa tech ecosystem intelligence — funding rounds, sector growth and startup activity tracker.", "type": "Sector Intelligence", "link": "https://digestafrica.com/" },
+    { "name": "CrunchBase Africa Tech", "desc": "Startup funding database — filter by country, sector and stage for East African digital ventures.", "type": "Sector Data", "link": "https://www.crunchbase.com/" },
+    { "name": "Africa Tech Summit Intelligence", "desc": "Sector reports and market intelligence published around the annual Africa Tech Summit.", "type": "Sector Intelligence", "link": "https://www.africatechsummit.com/" },
+    { "name": "GSMA Mobile Economy Sub-Saharan Africa", "desc": "Sub-Saharan Africa mobile economy data — subscribers, revenue, employment and internet penetration.", "type": "Global Report", "link": "https://www.gsma.com/mobileeconomy/sub-saharan-africa/" },
+    { "name": "ITU ICT Statistics", "desc": "International Telecommunication Union — global digital access, broadband penetration and ICT workforce data.", "type": "Global Report", "link": "https://www.itu.int/en/ITU-D/Statistics/Pages/default.aspx" },
+    { "name": "World Bank Digital Development", "desc": "Digital skills, infrastructure investment and jobs — World Bank country and regional programme data.", "type": "Global Report", "link": "https://www.worldbank.org/en/topic/digitaldevelopment" },
+    { "name": "IFC e-Conomy Africa", "desc": "IFC / Google — Africa's internet economy valuation, sector opportunity sizing and skills gap analysis.", "type": "Research Report", "link": "https://www.ifc.org/en/industries/infrastructure/telecom-media-and-technology" },
+    { "name": "WEF Future of Jobs Report", "desc": "World Economic Forum — technology skills, automation impacts and future of work for East African economies.", "type": "Research Report", "link": "https://www.weforum.org/reports/the-future-of-jobs-report-2025" },
+    { "name": "UNESCO Digital Skills Global Report", "desc": "UNESCO framework report on digital skills readiness and ICT workforce development across Africa.", "type": "Research Report", "link": "https://www.unesco.org/en/digital-education" },
+    { "name": "AfDB ICT & Skills Reports", "desc": "African Development Bank — ICT infrastructure investment, digital workforce gaps and youth employment evidence.", "type": "Regional Report", "link": "https://www.afdb.org/en/topics-and-sectors/sectors/technology" },
+    { "name": "ECA Digital Transformation", "desc": "UN Economic Commission for Africa — policy and data on digital transformation across EAC member states.", "type": "Regional Report", "link": "https://www.uneca.org/eca-programmes/digital-centre-excellence" },
+    { "name": "Upwork Future of Work Report", "desc": "Platform data on global freelance demand — top in-demand skills and remote work trends in East Africa.", "type": "Platform Economy", "link": "https://www.upwork.com/research/" },
+    { "name": "Gebeya Talent Report", "desc": "East Africa-focused platform economy report — tech skills demand, earnings benchmarks and gig worker profiles.", "type": "Gig Economy", "link": "https://gebeya.com/" },
+    { "name": "GSMA / Caribou Digital Platform Work", "desc": "Evidence on gig worker earnings, labour conditions and digital platform dynamics in East Africa.", "type": "Gig Economy", "link": "https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/our-work/digital-skills/" }
   ],
   "communities": [
     { "name": "Nairobi Devs", "desc": "Discord Server • 5k+ Devs", "type": "Community", "link": "N/A" },
-    { "name": "Africa Tech Summit", "desc": "Nairobi • Industry Leaders", "type": "Event", "link": "https://www.africatechsummit.com/" }
+    { "name": "Africa Tech Summit", "desc": "Nairobi • Industry Leaders", "type": "Event", "link": "https://www.africatechsummit.com/" },
+    { "name": "Afretec Network", "desc": "African Engineering and Technology Network — Mastercard Foundation-funded, led by Carnegie Mellon University Africa (Kigali).", "type": "Network", "link": "https://www.engineering.cmu.edu/afretec/index.html" }
   ],
   "jobs": [
     { "title": "Junior React Dev", "company": "Safaricom", "type": "Full Time" },
     { "title": "Data Entry Intern", "company": "CloudFactory", "type": "Part Time" }
   ],
   "entrepreneurship": {
+    "research": [
+      { "name": "Partech Africa Ecosystem Report", "desc": "Annual venture capital investment data across African tech sectors — East Africa trends and deal analysis.", "link": "https://partechpartners.com/africa-reports/" },
+      { "name": "IFC / Google e-Conomy Africa", "desc": "Comprehensive sizing of Africa's internet economy — digital sector opportunity and skills gap evidence.", "link": "https://www.ifc.org/en/industries/infrastructure/telecom-media-and-technology" },
+      { "name": "GSMA Innovation Fund Research", "desc": "Evidence on digital innovation adoption — fintech, agritech and healthtech deployment in East Africa.", "link": "https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/gsma-innovation-fund/" },
+      { "name": "WEF Technology and Innovation Report", "desc": "World Economic Forum — technology readiness, frontier tech adoption and digital economy impacts in Africa.", "link": "https://www.weforum.org/reports" },
+      { "name": "Disrupt Africa Startup Ecosystem", "desc": "Annual review of African startup activity, funding rounds and sector growth — with East Africa deep dive.", "link": "https://disrupt-africa.com/reports/" }
+    ],
     "digital": {
       "title": "Digital Economy",
       "theme": "indigo",

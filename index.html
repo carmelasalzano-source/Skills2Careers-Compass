@@ -3,31 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills2Careers Compass</title>
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Skills2Careers Compass — Career & Skills Navigator for East Africa</title>
 
    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K99RWVH5');</script>
+})(window,document,'script','dataLayer','GTM-T9NW');</script>
 <!-- End Google Tag Manager -->
 
-    <meta name="description" content="Careers2Skills Compass Prototype">
-    <meta name="theme-color" content="#4f46e5">
+    <meta name="description" content="Discover in-demand careers in Agritech, Renewable Energy and Digital sectors across East Africa. Map your skills and find accredited training pathways.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skills2careers-compass.org/">
+
+    <!-- Open Graph / WhatsApp / LinkedIn sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skills2careers-compass.org/">
+    <meta property="og:site_name" content="Skills2Careers Compass">
+    <meta property="og:title" content="Skills2Careers Compass — Career & Skills Navigator for East Africa">
+    <meta property="og:description" content="Discover in-demand careers in Agritech, Renewable Energy and Digital sectors across East Africa. Map your skills and find accredited training pathways.">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image" content="https://skills2careers-compass.org/social-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Skills2Careers Compass — Career &amp; Skills Navigator for East Africa">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://skills2careers-compass.org/social-card.png">
+    <meta name="twitter:title" content="Skills2Careers Compass — Career & Skills Navigator for East Africa">
+    <meta name="twitter:description" content="Discover in-demand careers in Agritech, Renewable Energy and Digital sectors across East Africa. Map your skills and find accredited training pathways.">
+
+    <meta name="theme-color" content="#0077D4">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="/manifest.json">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="https://unpkg.com/lucide@latest" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+    <script src="vendor/tailwind.js"></script>
+    <script>
+      // UNESCO Design System palette (https://www.unesco.org/themes/custom/bunesco8/style-guide/index.html)
+      // remaps existing Tailwind color families to official UNESCO tokens so no class names elsewhere need to change.
+      // indigo/sky -> UNESCO Primary Blue (site chrome) · blue -> UNESCO Purple (Digital sector, kept distinct from chrome blue)
+      // green -> UNESCO Green (Agritech) · yellow/amber/orange -> UNESCO Orange (Energy + warning) · red/rose -> UNESCO Danger
+      tailwind.config = {
+        theme: {
+          extend: {
+            borderRadius: {
+              DEFAULT: '0.375rem' // UNESCO/Bootstrap 5.3 base radius (buttons, form controls, small cards)
+            },
+            colors: {
+              slate:  { 50:'#F1F4F6', 100:'#F1F4F6', 200:'#D5DADD', 300:'#B1BABE', 400:'#7F888F', 500:'#4C5054', 600:'#4C5054', 700:'#212121', 800:'#212121', 900:'#212121', 950:'#212121' },
+              indigo: { 50:'#F2F7FC', 100:'#E5EFF9', 200:'#CFE3F5', 300:'#B2D6F2', 400:'#4DA3E0', 500:'#0077D4', 600:'#0077D4', 700:'#115A9E', 800:'#0E4280', 900:'#0E4280', 950:'#0E4280' },
+              sky:    { 50:'#F2F7FC', 100:'#E5EFF9', 200:'#CFE3F5', 300:'#B2D6F2', 400:'#4DA3E0', 500:'#0077D4', 600:'#0077D4', 700:'#115A9E', 800:'#0E4280', 900:'#0E4280', 950:'#0E4280' },
+              blue:   { 50:'#F4F5FB', 100:'#EEF0FA', 200:'#DBDFF1', 300:'#C2CBEC', 400:'#8497E0', 500:'#4B6AD9', 600:'#4B6AD9', 700:'#38509E', 800:'#2A3B73', 900:'#2A3B73', 950:'#2A3B73' },
+              green:  { 50:'#F4FBF8', 100:'#EAF8F3', 200:'#D3EFE5', 300:'#A6DDCB', 400:'#7BC7AB', 500:'#4FB293', 600:'#4FB293', 700:'#357A63', 800:'#25584A', 900:'#25584A', 950:'#25584A' },
+              yellow: { 50:'#FBF6EA', 100:'#FBF1DC', 200:'#F5E2BC', 300:'#EECF93', 400:'#E9BA5E', 500:'#E4A429', 600:'#E4A429', 700:'#B8801E', 800:'#8C6116', 900:'#8C6116', 950:'#8C6116' },
+              amber:  { 50:'#FBF6EA', 100:'#FBF1DC', 200:'#F5E2BC', 300:'#EECF93', 400:'#E9BA5E', 500:'#E4A429', 600:'#E4A429', 700:'#B8801E', 800:'#8C6116', 900:'#8C6116', 950:'#8C6116' },
+              orange: { 50:'#FBF6EA', 100:'#FBF1DC', 200:'#F5E2BC', 300:'#EECF93', 400:'#E9BA5E', 500:'#E4A429', 600:'#E4A429', 700:'#B8801E', 800:'#8C6116', 900:'#8C6116', 950:'#8C6116' },
+              red:    { 50:'#FBF1ED', 100:'#F5D9CD', 200:'#ECBEB5', 300:'#ECBEB5', 400:'#D6664F', 500:'#D6664F', 600:'#D8552C', 700:'#D8552C', 800:'#A8401F', 900:'#A8401F', 950:'#A8401F' },
+              rose:   { 50:'#FBF1ED', 100:'#F5D9CD', 200:'#ECBEB5', 300:'#ECBEB5', 400:'#D6664F', 500:'#D6664F', 600:'#D8552C', 700:'#D8552C', 800:'#A8401F', 900:'#A8401F', 950:'#A8401F' }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="vendor/chart.min.js" defer></script>
+    <script src="vendor/lucide.min.js" defer></script>
+    <script src="vendor/jspdf.umd.min.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        html { overflow-x: hidden; }
         body { font-family: 'Inter', sans-serif; }
+
+        /* Hide off-screen drawers so their box-shadow doesn't bleed into the viewport */
+        #unified-hub-modal.translate-x-full,
+        #career-hub-drawer.translate-x-full,
+        #community-hub-drawer.translate-x-full,
+        #training-hub-drawer.translate-x-full {
+            visibility: hidden;
+            transition: transform 0.3s ease, visibility 0s 0.3s;
+        }
+        #unified-hub-modal:not(.translate-x-full),
+        #career-hub-drawer:not(.translate-x-full),
+        #community-hub-drawer:not(.translate-x-full),
+        #training-hub-drawer:not(.translate-x-full) {
+            visibility: visible;
+            transition: transform 0.3s ease, visibility 0s;
+        }
         
         /* Lite Mode Optimizations for Low Bandwidth */
         body.low-bandwidth .text-transparent {
@@ -47,49 +114,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body class="antialiased overflow-x-hidden">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K99RWVH5"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NW"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Password Gate -->
+    <div id="password-gate" class="fixed inset-0 z-[99999] flex items-center justify-center" style="background: linear-gradient(135deg, #0E4280 0%, #0077D4 60%, #115A9E 100%);">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 sm:p-10 w-full max-w-sm mx-4 text-center">
+            <h1 class="text-xl font-bold text-slate-900 mb-1">Skills2Careers Compass</h1>
+            <p class="text-sm text-slate-500 mb-6">Preview access — enter the password to continue</p>
+            <input id="gate-input" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')checkGate()"
+                class="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-3">
+            <p id="gate-error" class="text-xs text-red-500 mb-3 hidden">Incorrect password. Please try again.</p>
+            <button onclick="checkGate()" class="w-full py-3 bg-[#0077D4] hover:bg-[#115A9E] text-white font-bold rounded-lg text-sm transition-colors">Enter</button>
+        </div>
+    </div>
+    <script>
+        (function() {
+            var PASS = 'compass2026';
+            if (sessionStorage.getItem('s2c_auth') === '1') {
+                document.getElementById('password-gate').style.display = 'none';
+            }
+            window.checkGate = function() {
+                var val = document.getElementById('gate-input').value;
+                if (val === PASS) {
+                    sessionStorage.setItem('s2c_auth', '1');
+                    document.getElementById('password-gate').style.display = 'none';
+                } else {
+                    document.getElementById('gate-error').classList.remove('hidden');
+                    document.getElementById('gate-input').value = '';
+                    document.getElementById('gate-input').focus();
+                }
+            };
+        })();
+    </script>
 
     <div id="global-loader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
         <div class="w-12 h-12 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin"></div>
     </div>
 
-    <div id="proto-banner" class="bg-indigo-600 text-white text-xs py-2 px-4 flex flex-wrap justify-center items-center relative z-[60] gap-x-4 gap-y-1">
-        <div class="flex items-center gap-2">
-            <span class="font-bold bg-white text-indigo-600 px-2 py-0.5 rounded text-[10px] uppercase">Prototype v1.4</span>
-        </div>
-        <span class="hidden sm:inline text-white/80">Demonstrating UI flow for Skills2Careers Compass.</span>
-    </div>
 
-    <nav class="bg-white text-slate-900 sticky top-0 z-50 shadow-sm border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-2 sm:px-4 py-3 sm:py-4 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
-            <div class="flex flex-row items-center justify-between sm:justify-start gap-3 sm:gap-6 w-full md:w-auto">
-                <div class="flex items-center gap-3">
-                    <button onclick="toggleAboutDrawer()" class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center shadow-inner text-white shrink-0 hover:opacity-90 transition-opacity" title="About">
-                        <i data-lucide="info" class="w-6 h-6"></i>
-                    </button>
-                    <button onclick="toggleUsersDrawer()" class="w-10 h-10 bg-white border border-slate-200 text-slate-600 rounded-lg flex items-center justify-center shadow-sm shrink-0 hover:bg-slate-50 transition-colors" title="Users">
-                        <i data-lucide="users" class="w-6 h-6"></i>
-                    </button>
-                    <div class="min-w-0">
+    <div class="sticky top-0 z-50 shadow-sm">
+        <!-- Identity Bar -->
+        <div class="bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6 flex flex-row justify-between items-center gap-2 sm:gap-6">
+                <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                    <div class="flex items-center gap-5 min-w-0">
+                        <div class="flex flex-col leading-tight min-w-0">
+                            <span class="text-[15px] font-bold uppercase tracking-wider text-slate-400 whitespace-nowrap">Skills2Careers</span>
+                            <span class="text-2xl font-bold text-slate-900 tracking-tight">Compass</span>
+                        </div>
                     </div>
                 </div>
-                <div class="flex items-center gap-2 sm:border-l sm:border-slate-200 sm:pl-6 ml-auto sm:ml-0">
-                    <select id="language-selector" class="text-xs border border-slate-200 rounded px-2 py-1 bg-white text-slate-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 shrink-0" aria-label="Select Language">
-                        <option value="en">EN (English)</option>
-                        <option value="sw">SW (Kiswahili)</option>
-                        <option value="fr">FR (Français)</option>
-                    </select>
-                    <button onclick="toggleLowBandwidth()" id="lb-toggle" class="text-xs text-slate-500 hover:text-slate-900 border border-slate-200 hover:bg-slate-50 px-2 py-1 rounded shrink-0">Lite</button>
-                    </div>
-            </div>
-
-            <div class="flex flex-col gap-2 w-full md:w-auto">
-                <div class="flex justify-center md:justify-end items-center w-full">
-                    <div class="flex items-center bg-slate-50 rounded-lg p-1 border border-slate-200 shrink-0 w-auto">
-                        <span class="px-3 text-xs text-slate-500 uppercase tracking-wider font-semibold">Region:</span>
-                        <select id="country-selector" onchange="setGlobalCountry(this.value)" class="bg-transparent text-sm font-semibold text-slate-700 focus:outline-none px-2 py-1 cursor-pointer">
+                <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                    <div class="flex items-center bg-slate-50 rounded-lg px-1.5 py-1 border border-slate-200 shrink-0 max-w-[84px] sm:max-w-none overflow-hidden">
+                        <span class="hidden sm:inline px-2 text-[15px] text-slate-500 uppercase tracking-wider font-semibold">Region:</span>
+                        <select id="country-selector" onchange="setGlobalCountry(this.value)" class="w-full bg-transparent text-sm font-semibold text-slate-700 focus:outline-none px-1 sm:px-2 py-0.5 cursor-pointer">
                             <option value="all"> 🌍  East Africa (All)</option>
                             <option value="Kenya"> 🇰🇪  Kenya</option>
                             <option value="Tanzania"> 🇹🇿  Tanzania</option>
@@ -101,42 +181,121 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <option value="Somalia"> 🇸🇴  Somalia</option>
                         </select>
                     </div>
+                    <button onclick="toggleLowBandwidth()" id="lb-toggle" class="text-[15px] text-slate-500 hover:text-slate-900 border border-slate-200 hover:bg-slate-50 px-2 py-1 rounded shrink-0">Lite</button>
                 </div>
             </div>
         </div>
-    </nav>
 
-    <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
-        <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-10 text-center shadow-sm relative overflow-hidden">
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80')] bg-cover bg-center opacity-[0.03] pointer-events-none"></div>
-            
-            <div class="relative z-10 max-w-4xl mx-auto">
-                <div class="flex items-center justify-center gap-3 mb-4">
-                    <div class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-xl bg-slate-900 text-white shadow-sm">
-                        <i data-lucide="compass" class="w-6 h-6 md:w-7 md:h-7"></i>
-                    </div>
-                    <h2 class="text-2xl md:text-4xl font-bold text-slate-900 tracking-tight whitespace-nowrap">Skills2Careers Compass</h2>
+        <!-- Horizontal Nav Bar -->
+        <nav class="bg-indigo-600 relative">
+            <div class="overflow-x-auto scrollbar-none">
+                <div class="flex items-center min-w-max px-1.5 sm:px-4 gap-0 sm:gap-1">
+                    <button id="nav-home" onclick="setActiveNav('nav-home'); closeAllModals(); closeNavDropdowns(); window.scrollTo({top:0,behavior:'smooth'})" class="nav-btn px-3 sm:px-4 py-3 text-[11px] sm:text-[15px] font-bold uppercase tracking-wide text-white hover:bg-white/10 transition-colors whitespace-nowrap">Home</button>
+                    <button id="nav-hubs-trigger" onclick="toggleNavDropdown('hubs-dropdown')" class="nav-btn px-3 sm:px-4 py-3 text-[11px] sm:text-[15px] font-normal uppercase tracking-wide text-white/75 hover:text-white hover:bg-white/10 transition-colors whitespace-nowrap flex items-center gap-1.5">Hubs <i data-lucide="chevron-down" class="w-3 h-3 opacity-70 shrink-0"></i></button>
+                    <button id="nav-resources-trigger" onclick="toggleNavDropdown('resources-dropdown')" class="nav-btn px-3 sm:px-4 py-3 text-[11px] sm:text-[15px] font-normal uppercase tracking-wide text-white/75 hover:text-white hover:bg-white/10 transition-colors whitespace-nowrap flex items-center gap-1.5">Resources <i data-lucide="chevron-down" class="w-3 h-3 opacity-70 shrink-0"></i></button>
+                    <button id="nav-observatory" onclick="setActiveNav('nav-observatory'); closeNavDropdowns(); toggleObservatoryDrawer()" class="nav-btn px-3 sm:px-4 py-3 text-[11px] sm:text-[15px] font-normal uppercase tracking-wide text-white/75 hover:text-white hover:bg-white/10 transition-colors whitespace-nowrap"><span class="sm:hidden">Intel</span><span class="hidden sm:inline">Observatory</span></button>
+                    <button id="nav-data" onclick="setActiveNav('nav-data'); closeNavDropdowns(); toggleDataSourcesDrawer()" class="nav-btn px-3 sm:px-4 py-3 text-[11px] sm:text-[15px] font-normal uppercase tracking-wide text-white/75 hover:text-white hover:bg-white/10 transition-colors whitespace-nowrap"><span class="sm:hidden">Data</span><span class="hidden sm:inline">Data Sources</span></button>
+                    <button id="nav-about" onclick="setActiveNav('nav-about'); closeNavDropdowns(); toggleAboutDrawer()" class="nav-btn px-3 sm:px-4 py-3 text-[11px] sm:text-[15px] font-normal uppercase tracking-wide text-white/75 hover:text-white hover:bg-white/10 transition-colors whitespace-nowrap">About</button>
                 </div>
-                
-                <p class="text-sm md:text-base text-slate-500 mb-6 leading-relaxed max-w-2xl mx-auto">
-                    Your tool for navigating <span class="font-semibold text-slate-900">the future of work</span> and <span class="font-semibold text-slate-900">lifelong learning</span> 
-                    in green, digital and AI economies. In 5 minutes, you'll have a shortlist of in-demand occupations and entrepreneurship opportunities across high growth sectors, a solid knowledge of skills requirements, and links to targeted training pathways and careers support.
-                </p>
+            </div>
 
-                <!-- Stats Container (Populated by app.js) -->
-                <div id="hero-stats" class="flex justify-center"></div>
-                
-                <!-- Legacy ID for compatibility -->
-                <div id="hero-desc" class="hidden"></div>
+            <!-- Hubs mega-menu -->
+            <div id="hubs-dropdown" class="hidden absolute top-full left-0 right-0 bg-white shadow-lg z-[200] border-t-2 border-indigo-600">
+                <div class="flex flex-col sm:flex-row max-w-7xl mx-auto">
+                    <button id="nav-sector" onclick="closeNavDropdowns(); setActiveNav('nav-sector'); toggleSectorHub()" class="flex-1 px-5 py-4 text-left flex items-center gap-3 hover:bg-slate-50 border-b sm:border-b-0 sm:border-r border-slate-100 transition-colors">
+                        <i data-lucide="bar-chart-2" class="w-5 h-5 text-blue-500 shrink-0"></i>
+                        <div><div class="text-sm font-bold text-slate-800">Sector Hub</div><div class="text-xs text-slate-500">Jobs, trends &amp; investment data</div></div>
+                    </button>
+                    <button id="nav-skills" onclick="closeNavDropdowns(); setActiveNav('nav-skills'); openUnifiedHub(); renderSkillsHubDashboard()" class="flex-1 px-5 py-4 text-left flex items-center gap-3 hover:bg-slate-50 border-b sm:border-b-0 sm:border-r border-slate-100 transition-colors">
+                        <i data-lucide="layers" class="w-5 h-5 text-green-500 shrink-0"></i>
+                        <div><div class="text-sm font-bold text-slate-800">Skills Hub</div><div class="text-xs text-slate-500">Skills, pathways &amp; assessment</div></div>
+                    </button>
+                    <button id="nav-career" onclick="closeNavDropdowns(); setActiveNav('nav-career'); toggleCareerHub()" class="flex-1 px-5 py-4 text-left flex items-center gap-3 hover:bg-slate-50 transition-colors">
+                        <i data-lucide="briefcase" class="w-5 h-5 text-amber-500 shrink-0"></i>
+                        <div><div class="text-sm font-bold text-slate-800">Career Hub</div><div class="text-xs text-slate-500">CV tools, job search &amp; mentors</div></div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resources mega-menu -->
+            <div id="resources-dropdown" class="hidden absolute top-full left-0 right-0 bg-white shadow-lg z-[200] border-t-2 border-indigo-600">
+                <div class="flex flex-col sm:flex-row max-w-7xl mx-auto">
+                    <button onclick="closeNavDropdowns(); setActiveNav('nav-skills'); openUnifiedHub('pp-courses', null, null, true)" class="flex-1 px-5 py-4 text-left flex items-center gap-3 hover:bg-slate-50 border-b sm:border-b-0 sm:border-r border-slate-100 transition-colors">
+                        <i data-lucide="book-open" class="w-5 h-5 text-indigo-500 shrink-0"></i>
+                        <div><div class="text-sm font-bold text-slate-800">Find Courses</div><div class="text-xs text-slate-500">200+ courses by sector &amp; skill</div></div>
+                    </button>
+                    <button onclick="closeNavDropdowns(); setActiveNav('nav-skills'); openUnifiedHub('pp-finance', null, null, true)" class="flex-1 px-5 py-4 text-left flex items-center gap-3 hover:bg-slate-50 border-b sm:border-b-0 sm:border-r border-slate-100 transition-colors">
+                        <i data-lucide="banknote" class="w-5 h-5 text-green-500 shrink-0"></i>
+                        <div><div class="text-sm font-bold text-slate-800">Financial Aid &amp; Scholarships</div><div class="text-xs text-slate-500">Funding, bursaries &amp; free pathways</div></div>
+                    </button>
+                    <button onclick="closeNavDropdowns(); setActiveNav('nav-sector'); closeAllModals('sector-hub-drawer'); (function(){ var d=document.getElementById('sector-hub-drawer'); if(d){ d.classList.remove('translate-x-full'); setTimeout(renderEntrepreneurshipView, 350); } refreshIcons(); })()" class="flex-1 px-5 py-4 text-left flex items-center gap-3 hover:bg-slate-50 transition-colors">
+                        <i data-lucide="rocket" class="w-5 h-5 text-sky-500 shrink-0"></i>
+                        <div><div class="text-sm font-bold text-slate-800">Startup Resources</div><div class="text-xs text-slate-500">Venture ideas &amp; toolkits</div></div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Photo Hero: full-bleed, no rounded corners -->
+    <div class="relative" style="background-image: linear-gradient(180deg, rgba(15,23,42,0.25), rgba(15,23,42,0.75)), url('img/hero-photo-eac.webp'); background-size: cover; background-position: center center; min-height: 460px;">
+        <div class="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 sm:px-8 md:px-12 py-12 sm:py-16 min-h-[460px]">
+            <div class="flex items-center justify-center mb-6">
+                <div class="text-center">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight whitespace-nowrap">Skills2Careers Compass</h1>
+                </div>
+            </div>
+
+            <p class="text-base md:text-2xl font-normal text-white leading-snug max-w-2xl mx-auto mb-8">
+                A navigation tool for careers in East Africa's green and digital economies.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3 items-center justify-center w-full px-2 sm:px-0 sm:max-w-none max-w-[300px] mx-auto">
+                <button onclick="setActiveNav('nav-skills'); openUnifiedHub('pp-practice')" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3 flex items-center justify-center gap-2 transition-colors shadow-lg text-sm sm:text-base">
+                    Explore Career Pathways <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+                </button>
+                <button onclick="setActiveNav('nav-sector'); toggleSectorHub()" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/40 text-white font-bold px-6 py-3 flex items-center justify-center gap-2 transition-colors backdrop-blur-sm text-sm sm:text-base">
+                    Explore Job Trends <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
+                </button>
             </div>
         </div>
-        
+        <div class="absolute bottom-2 right-3 text-[9px] text-white/60">Photo: Iwaria Inc. &middot; Unsplash</div>
+    </div>
 
-        <div class="text-center mb-10">
-            <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-2 tracking-tight">Start Navigating</h2>
-            <p class="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">Select a pathway below to start your journey.</p>
+    <main class="pb-0">
+
+        <!-- Platform Stats: clean full-width band -->
+        <div class="bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 py-5 sm:py-6 text-center">
+            <div class="grid grid-cols-4 gap-x-2 text-center">
+                <div>
+                    <div class="text-xl sm:text-3xl font-bold text-indigo-600" id="stat-roles">43</div>
+                    <div class="text-[8px] sm:text-[13px] font-semibold text-slate-400 uppercase tracking-widest leading-tight">Mapped Roles</div>
+                </div>
+                <div>
+                    <div class="text-xl sm:text-3xl font-bold text-indigo-600" id="stat-skills">91</div>
+                    <div class="text-[8px] sm:text-[13px] font-semibold text-slate-400 uppercase tracking-widest leading-tight">Skills Tracked</div>
+                </div>
+                <div>
+                    <div class="text-xl sm:text-3xl font-bold text-indigo-600" id="stat-courses">200+</div>
+                    <div class="text-[8px] sm:text-[13px] font-semibold text-slate-400 uppercase tracking-widest leading-tight">Courses</div>
+                </div>
+                <div>
+                    <div class="text-xl sm:text-3xl font-bold text-indigo-600" id="stat-ventures">30</div>
+                    <div class="text-[8px] sm:text-[13px] font-semibold text-slate-400 uppercase tracking-widest leading-tight">Ventures</div>
+                </div>
+            </div>
+
+            <!-- Country Signal Bar -->
+            <div id="hero-country-signal" class="flex items-center justify-center gap-2 flex-wrap mt-4 pt-4 border-t border-slate-200">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-slate-200 rounded-full text-[10px] text-slate-500">
+                    <i data-lucide="globe" class="w-3 h-3"></i> EAC-wide &middot; 8 countries covered &middot; select a country above to localise
+                </span>
+            </div>
+        </div>
         </div>
 
+        <!-- Page content: constrained to max-width -->
         <!-- includes the necessary CSS, we list all possible dynamic class combinations here.
 
           bg-green-50 bg-yellow-50 bg-blue-50
@@ -145,9 +304,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           bg-blue-100 text-blue-600 group-hover:text-blue-700 hover:bg-blue-200 text-blue-700 border-blue-600 ring-blue-600
         -->
 
-        <div id="dashboard-content" class="min-h-[400px]"></div>
+        <div id="dashboard-content" class="min-h-0"></div>
 
-        <div id="occupation-modal" class="fixed inset-0 z-[100] hidden flex items-start justify-center p-4 pt-4 md:pt-10">
+        <div id="occupation-modal" class="fixed inset-0 z-[110] hidden flex items-start justify-center p-4 pt-4 md:pt-10">
             <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal('occupation-modal')"></div>
             <div class="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all scale-95 opacity-0" id="occupation-modal-panel">
                 <div class="bg-white border-b border-slate-200">
@@ -157,23 +316,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <span id="modal-sector-badge" class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-200 text-slate-600">Sector</span>
                             </div>
                             <h2 id="modal-title" class="text-xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-indigo-900 tracking-tight leading-tight break-words">Occupation Title</h2>
-                            <p id="modal-alt-titles" class="text-xs md:text-sm text-slate-500 mt-1 font-medium">Alternative Titles...</p>
+                            <p id="modal-alt-titles" class="text-[15px] md:text-sm text-slate-500 mt-1 font-medium">Alternative Titles...</p>
                         </div>
                         <button onclick="closeModal('occupation-modal')" aria-label="Close modal" class="p-1.5 md:p-2 bg-white rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 border border-slate-200 transition-colors shadow-sm shrink-0"><i data-lucide="x" class="w-5 h-5"></i></button>
                     </div>
                 </div>
-                <div class="flex-1 overflow-y-auto custom-scroll bg-white p-4 md:p-8 space-y-6 md:space-y-8">
+                <div class="flex-1 overflow-y-auto min-h-0 custom-scroll bg-white p-4 md:p-8 space-y-5 sm:space-y-8">
                     <div id="modal-snapshot-section"></div>
                     <div id="modal-demand-section"></div>
                     <section>
-                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-3 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">1</span> Role Snapshot
+                            <h3 class="text-[15px] font-bold text-slate-400 uppercase tracking-wide mb-3 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded bg-slate-100 text-slate-500 flex items-center justify-center text-[15px] font-bold">1</span> Role Snapshot
                         </h3>
-                        <div id="occ-desc" class="text-slate-800 text-base leading-relaxed font-medium">Description loading...</div>
+                        <div id="occ-desc" class="text-slate-800 text-base leading-relaxed font-medium"></div>
                     </section>
                     <section>
-                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-3 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">2</span> Typical Skills Required
+                            <h3 class="text-[15px] font-bold text-slate-400 uppercase tracking-wide mb-3 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded bg-slate-100 text-slate-500 flex items-center justify-center text-[15px] font-bold">2</span> Typical Skills Required
                         </h3>
                         <div id="occ-skills-list" class="flex flex-wrap gap-2"></div>
                     </section>
@@ -186,30 +345,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
         </div>
 
-        <div id="skill-modal" class="fixed inset-0 z-[100] hidden flex items-start justify-center p-4 pt-4 md:pt-10">
+        <div id="skill-modal" class="fixed inset-0 z-[110] hidden flex items-start justify-center p-4 pt-4 md:pt-10">
             <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal('skill-modal')"></div>
             <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all scale-95 opacity-0" id="skill-modal-panel">
                 <div class="p-6 border-b border-slate-100 flex justify-between items-start bg-white">
                     <div>
                         <div class="flex items-center gap-2 mb-1"><span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">Skill Profile</span></div>
-                        <h2 id="skill-modal-title" class="text-2xl font-bold text-slate-900">Skill Name</h2>
+                        <h2 id="skill-modal-title" class="text-2xl font-bold text-slate-900"></h2>
                     </div>
                     <button onclick="closeModal('skill-modal')" aria-label="Close modal" class="p-2 bg-white rounded-full text-slate-400 hover:text-slate-600 transition-colors shadow-sm"><i data-lucide="x" class="w-5 h-5"></i></button>
                 </div>
-                <div class="flex-1 overflow-y-auto p-6 space-y-8 custom-scroll">
+                <div class="flex-1 overflow-y-auto min-h-0 p-6 space-y-5 sm:space-y-8 custom-scroll">
                     <div>
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">1</span> Definition & Context
+                        <h3 class="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded bg-indigo-50 text-indigo-600 flex items-center justify-center text-xs font-bold">1</span> Definition & Context
                         </h3>
                         <p id="skill-def" class="text-sm text-slate-700 leading-relaxed">...</p>
                     </div>
                     <div>
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-3 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">2</span> Proficiency Levels
+                        <h3 class="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-3 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded bg-indigo-50 text-indigo-600 flex items-center justify-center text-xs font-bold">2</span> Proficiency Levels
                         </h3>
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div class="p-3 bg-slate-50 rounded border border-slate-100">
-                                <div class="text-[10px] font-bold text-emerald-600 uppercase mb-1">Beginner</div>
+                                <div class="text-[10px] font-bold text-blue-600 uppercase mb-1">Beginner</div>
                                 <p id="skill-lvl-beg" class="text-xs text-slate-600 leading-snug">...</p>
                             </div>
                             <div class="p-3 bg-slate-50 rounded border border-slate-100">
@@ -217,20 +376,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <p id="skill-lvl-int" class="text-xs text-slate-600 leading-snug">...</p>
                             </div>
                             <div class="p-3 bg-slate-50 rounded border border-slate-100">
-                                <div class="text-[10px] font-bold text-purple-600 uppercase mb-1">Advanced</div>
+                                <div class="text-[10px] font-bold text-indigo-600 uppercase mb-1">Advanced</div>
                                 <p id="skill-lvl-adv" class="text-xs text-slate-600 leading-snug">...</p>
                             </div>
                         </div>
                     </div>
                     <div id="skill-synergies-section" class="hidden">
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">3</span> Skills Often Paired With
+                        <h3 class="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded bg-indigo-50 text-indigo-600 flex items-center justify-center text-xs font-bold">3</span> Skills Often Paired With
                         </h3>
                         <div id="skill-synergies-list" class="flex flex-wrap gap-2"></div>
                     </div>
                     <div>
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">4</span> Common Job Titles
+                        <h3 class="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded bg-indigo-50 text-indigo-600 flex items-center justify-center text-xs font-bold">4</span> Common Job Titles
                         </h3>
                         <div class="flex flex-wrap gap-2 items-center">
                             <div id="skill-roles-primary" class="flex gap-2"></div>
@@ -262,9 +421,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        <div id="unified-hub-modal" class="fixed inset-y-0 right-0 z-[100] w-full max-w-xl md:max-w-2xl bg-white shadow-2xl flex flex-col transition-transform duration-300 translate-x-full">
             <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-white shrink-0">
                 <div>
-                    <h2 id="pp-header-title" class="text-xl font-bold text-slate-900 flex items-center gap-2"><i data-lucide="layers" class="w-6 h-6 text-indigo-600"></i> Skills & Training Hub</h2>
-                     </div>
-                <button onclick="closeUnifiedHub()" aria-label="Close drawer" class="p-2 bg-white rounded-full text-slate-400 hover:text-slate-600 transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
+                    <h2 id="pp-header-title" class="text-xl font-bold text-slate-900 flex items-center gap-2"><i data-lucide="layers" class="w-6 h-6 text-indigo-600"></i> Learning, Skills & Career Pathways</h2>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div id="pp-header-action"></div>
+                    <button onclick="closeUnifiedHub()" aria-label="Close drawer" class="p-2 bg-white rounded-full text-slate-400 hover:text-slate-600 transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
+                </div>
             </div>
             <div id="pp-scroll-container" class="flex-1 overflow-y-auto p-6 bg-white custom-scroll">
                 
@@ -294,7 +456,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                                     <div class="space-y-1">
-                                        <label class="text-xs font-bold text-slate-500 uppercase">Target Sector</label>
+                                        <label class="text-[15px] font-bold text-slate-500 uppercase">Target Sector</label>
                                         <select id="pathway-sector" class="w-full border-slate-300 rounded-lg text-sm focus:ring-indigo-500">
                                             <option>Digital Economy</option>
                                             <option>Agriculture</option>
@@ -302,7 +464,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </select>
                                     </div>
                                     <div class="space-y-1">
-                                        <label class="text-xs font-bold text-slate-500 uppercase">Target Role</label>
+                                        <label class="text-[15px] font-bold text-slate-500 uppercase">Target Role</label>
                                         <select id="pathway-role" class="w-full border-slate-300 rounded-lg text-sm focus:ring-indigo-500">
                                             <option>Data Scientist</option>
                                             <option>Software Engineer</option>
@@ -312,7 +474,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         </select>
                                     </div>
                                     <div class="space-y-1">
-                                        <label class="text-xs font-bold text-slate-500 uppercase">Starting Point</label>
+                                        <label class="text-[15px] font-bold text-slate-500 uppercase">Starting Point</label>
                                         <select id="pathway-start" class="w-full border-slate-300 rounded-lg text-sm focus:ring-indigo-500">
                                             <option>Complete Beginner</option>
                                             <option>Some Experience</option>
@@ -335,7 +497,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <i data-lucide="map" class="w-5 h-5 text-indigo-600"></i> 
                                         <span>Recommended Path: <span id="pathway-role-display" class="text-indigo-600">...</span></span>
                                     </h4>
-                                    <button class="text-xs text-slate-500 hover:text-indigo-600 flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3"></i> Share</button>
+                                    <button class="text-[15px] text-slate-500 hover:text-indigo-600 flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3"></i> Share</button>
                                 </div>
                                 
                                 <div id="pathway-timeline-container" class="relative">
@@ -350,175 +512,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div id="pp-top-skills" class="pp-view-content hidden space-y-6"></div>
 
                 <!-- TAB 3: COURSES (Consolidated from Training Hub) -->
-                <div id="pp-courses" class="pp-view-content hidden space-y-6">
-                    <!-- Value Prop Header -->
-                    <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-100 flex items-start gap-3">
-                        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg shrink-0"><i data-lucide="search" class="w-5 h-5"></i></div>
-                        <div>
-                            <h3 class="font-bold text-emerald-900 text-sm">Find training that matches your needs</h3>
-                            <p class="text-xs text-emerald-700 mt-1">Search a curated database of training providers across the East Africa Community. Filter by certificate type, cost, duration, and mode.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4">
-                        <h4 class="font-bold text-slate-800 text-sm mb-2 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Verification Checklist</h4>
-                        <ul class="text-xs text-slate-600 space-y-2">
-                            <li class="flex items-start gap-2"><i data-lucide="briefcase" class="w-3 h-3 mt-0.5 text-slate-400"></i> <span><strong>Employer Acceptance:</strong> Check if certificates and credentials are recognized by target employers in your industry.</span></li>
-                            <li class="flex items-start gap-2"><i data-lucide="globe" class="w-3 h-3 mt-0.5 text-slate-400"></i> <span><strong>Credit Transfer:</strong> Look for EACATS or ECTS-recognized credentials if you plan to pursue a degree or diplomain another EAC country or Europe.</span></li>
-                        </ul>
-                    </div>
-
-                    <!-- Filters Section -->
-                    <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h3 class="font-bold text-slate-800 text-sm flex items-center gap-2"><i data-lucide="filter" class="w-4 h-4 text-emerald-500"></i> Granular Search</h3>
-                            <div class="flex gap-2 items-center">
-                                <button onclick="document.getElementById('course-filters-grid').classList.toggle('hidden')" class="md:hidden text-[10px] font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded border border-indigo-100">Toggle Filters</button>
-                                <button onclick="clearCourseFilters()" class="text-xs text-slate-500 hover:text-indigo-600 font-bold flex items-center gap-1 transition-colors"><i data-lucide="rotate-ccw" class="w-3 h-3"></i> Clear All</button>
-                            </div>
-                        </div>
-                        <div class="mb-4 relative">
-                            <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400"></i>
-                            <input type="text" id="filter-search" onkeyup="renderProviderTable()" placeholder="Search by course name or provider..." class="w-full border border-slate-300 rounded-lg pl-9 pr-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500 shadow-sm">
-                        </div>
-                        <div id="course-filters-grid" class="grid grid-cols-2 gap-3">
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Credential Type</label>
-                                <select id="filter-type" onchange="renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="all">All Types</option>
-                                    <option value="cert">Certificate / License</option>
-                                    <option value="micro">Micro-credential</option>
-                                    <option value="degree">Degree / Diploma</option>
-                                    <option value="bootcamp">Bootcamp / Practical</option>
-                                    <option value="tvet">TVET / Polytechnic</option>
-                                    <option value="platform">Platforms & Communities</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Mode</label>
-                                <select id="filter-mode" onchange="renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="all">Any Mode</option>
-                                    <option value="Online">Online</option>
-                                    <option value="In-Person">In-Person</option>
-                                    <option value="Hybrid">Hybrid</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Cost Model</label>
-                                <select id="filter-cost" onchange="renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="all">Any Cost</option>
-                                    <option value="free">Free / Audit Available</option>
-                                    <option value="paid">Paid / Subscription</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Sort Results</label>
-                                <select id="filter-sort" onchange="renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="default">Relevance (Location)</option>
-                                    <option value="duration_asc">Duration (Shortest)</option>
-                                    <option value="cost_asc">Cost (Lowest)</option>
-                                    <option value="rating_desc">Rating (Highest)</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div id="extra-course-filters" class="hidden grid grid-cols-2 md:grid-cols-3 gap-3 mt-3">
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Sector</label>
-                                <select id="filter-sector" onchange="populateSkillFilter(); renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="all">All Sectors</option>
-                                    <option value="agri">Agritech</option>
-                                    <option value="energy">Renewable Energy</option>
-                                    <option value="digital">Digital Economy</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Location</label>
-                                <select id="filter-country" onchange="renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="all">All Locations</option>
-                                    <option value="Kenya">Kenya</option>
-                                    <option value="Uganda">Uganda</option>
-                                    <option value="Tanzania">Tanzania</option>
-                                    <option value="Rwanda">Rwanda</option>
-                                    <option value="Burundi">Burundi</option>
-                                    <option value="South Sudan">South Sudan</option>
-                                    <option value="DRC">DR Congo</option>
-                                    <option value="Somalia">Somalia</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Skill</label>
-                                <select id="filter-skill" onchange="renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="all">All Skills</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Duration</label>
-                                <select id="filter-duration" onchange="renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="all">Any Duration</option>
-                                    <option value="short">&lt; 1 Month</option>
-                                    <option value="1-3m">1 - 3 Months</option>
-                                    <option value="3-6m">3 - 6 Months</option>
-                                    <option value="6-12m">6 - 12 Months</option>
-                                    <option value="1-2y">1 - 2 Years</option>
-                                    <option value="2y+">2+ Years</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-600 mb-1">Language</label>
-                                <select id="filter-lang" onchange="renderProviderTable()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-xs focus:ring-emerald-500 focus:border-emerald-500">
-                                    <option value="all">Any Language</option>
-                                    <option value="English">English</option>
-                                    <option value="Swahili">Kiswahili</option>
-                                    <option value="French">French</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="mt-2">
-                            <button onclick="document.getElementById('extra-course-filters').classList.toggle('hidden'); this.textContent = this.textContent.includes('More') ? 'View Less Filters' : 'View More Filters';" class="text-xs font-bold text-indigo-600 hover:text-indigo-700 flex items-center gap-1">
-                                View More Filters
-                            </button>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-slate-100 flex justify-end">
-                            <button onclick="renderProviderTable()" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold shadow-sm transition-colors flex items-center gap-2">
-                                Apply Filters <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Results Table -->
-                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
-                        <div class="hidden md:block overflow-x-auto">
-                            <table class="w-full text-left">
-                                <thead class="bg-slate-50 text-slate-500 font-bold border-b border-slate-200 text-[10px] uppercase">
-                                    <tr>
-                                        <th class="px-4 py-3">Provider / Course</th>
-                                        <th class="px-4 py-3">Context</th>
-                                        <th class="px-4 py-3">
-                                            <div class="flex items-center gap-1">
-                                                Outcomes Rating <i data-lucide="info" class="w-3 h-3 text-slate-400 cursor-help" title="Data Reliability Rating:&#10;5★: Independently Audited&#10;3★: Self-Reported Data&#10;1★: No Public Data"></i>
-                                            </div>
-                                        </th>
-                                        <th class="px-4 py-3">
-                                            <div class="flex items-center gap-1">
-                                                Metric <i data-lucide="info" class="w-3 h-3 text-slate-400 cursor-help" title="Key Outcome Indicator:&#10;e.g. Salary Uplift, Placement Rate, or Reach."></i>
-                                            </div>
-                                        </th>
-                                        <th class="px-4 py-3">Updated</th>
-                                        <th class="px-4 py-3 text-right">Link</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="db-body" class="bg-white divide-y divide-slate-100"></tbody>
-                            </table>
-                        </div>
-                        <!-- Mobile Cards Container -->
-                        <div id="db-mobile-cards" class="md:hidden divide-y divide-slate-100"></div>
-                        <div class="p-3 bg-slate-50 border-t border-slate-200 text-[10px] text-slate-500 flex justify-between">
-                            <span id="provider-counter">Loading...</span>
-                        </div>
-                    </div>
-                </div>
+                <div id="pp-courses" class="pp-view-content hidden space-y-6"></div>
 
                 <!-- TAB 4: LAUNCHPAD -->
                 <div id="pp-launchpad" class="pp-view-content hidden space-y-6"></div>
@@ -534,10 +528,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <!-- TAB 6: RESOURCE LIBRARY -->
                 <div id="pp-resources" class="pp-view-content hidden space-y-6"></div>
 
+                <!-- TAB: FOR MANAGERS & HR -->
+                <div id="pp-employer" class="pp-view-content hidden space-y-6"></div>
+
+                <!-- TAB: SELF-EMPLOYMENT & GIG WORK -->
+                <div id="pp-self-employment" class="pp-view-content hidden space-y-6"></div>
+
+                <!-- TAB: SECTOR + AI HYBRID SKILLS -->
+                <div id="pp-sector-ai" class="pp-view-content hidden space-y-6"></div>
+
             </div>
         </div>
 
-        <div id="venture-modal" class="fixed inset-0 z-[100] hidden flex items-start justify-center p-4 pt-4 md:pt-10">
+        <div id="venture-modal" class="fixed inset-0 z-[110] hidden flex items-start justify-center p-4 pt-4 md:pt-10">
             <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal('venture-modal')"></div>
             <div class="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all scale-95 opacity-0" id="venture-modal-panel">
                 <div class="bg-white border-b border-slate-200">
@@ -551,23 +554,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <button onclick="closeModal('venture-modal')" aria-label="Close modal" class="p-1.5 md:p-2 bg-white rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 border border-slate-200 transition-colors shadow-sm shrink-0"><i data-lucide="x" class="w-5 h-5"></i></button>
                     </div>
                 </div>
-                <div class="flex-1 overflow-y-auto custom-scroll bg-white p-4 md:p-8 space-y-6 md:space-y-8">
+                <div class="flex-1 overflow-y-auto min-h-0 custom-scroll bg-white p-4 md:p-8 space-y-5 sm:space-y-8">
                     <div id="venture-modal-content" class="space-y-8"></div>
                 </div>
                 <div class="p-4 border-t border-slate-100 bg-slate-50 flex justify-end items-center">
-                    <button onclick="closeModal('venture-modal')" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-xs font-bold text-slate-700 hover:bg-slate-50">Close</button>
+                    <button onclick="closeModal('venture-modal')" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-[15px] font-bold text-slate-700 hover:bg-slate-50">Close</button>
                 </div>
             </div>
         </div>
 
-        <div id="resource-modal" class="fixed inset-0 z-[100] hidden flex items-start justify-center p-4 pt-4 md:pt-10">
+        <div id="resource-modal" class="fixed inset-0 z-[110] hidden flex items-start justify-center p-4 pt-4 md:pt-10">
             <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal('resource-modal')"></div>
             <div class="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all scale-95 opacity-0" id="resource-modal-panel">
                 <div class="p-5 border-b border-slate-100 bg-white flex justify-between items-center">
                     <h2 id="resource-modal-title" class="text-lg font-bold text-slate-900">Resource</h2>
                     <button onclick="closeModal('resource-modal')" aria-label="Close modal" class="p-2 bg-white rounded-full text-slate-400 hover:text-slate-600 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></button>
                 </div>
-                <div class="p-5 overflow-y-auto" id="resource-modal-content"></div>
+                <div class="flex-1 p-5 overflow-y-auto min-h-0" id="resource-modal-content"></div>
             </div>
         </div>
 
@@ -581,7 +584,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div id="community-hub-drawer" class="fixed inset-y-0 right-0 z-[95] w-full max-w-md bg-white shadow-2xl drawer flex flex-col translate-x-full">
             <div class="p-5 border-b border-slate-100 flex justify-between items-center bg-white">
-                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2"><i data-lucide="users" class="w-5 h-5 text-pink-600"></i> Careers Hub</h2>
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2"><i data-lucide="users" class="w-5 h-5 text-sky-600"></i> Community Hub</h2>
                 <button onclick="toggleCommunityHub()" class="p-2 bg-white rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors" aria-label="Close Community Hub"><i data-lucide="x" class="w-5 h-5"></i></button>
             </div>
             <div id="community-hub-content" class="flex-1 overflow-y-auto p-5 space-y-6"></div>
@@ -589,59 +592,119 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <div id="training-hub-drawer" class="fixed inset-y-0 right-0 z-[95] w-full max-w-md bg-white shadow-2xl drawer flex flex-col translate-x-full">
             <div class="p-5 border-b border-slate-100 flex justify-between items-center bg-white">
-                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2"><i data-lucide="graduation-cap" class="w-5 h-5 text-emerald-600"></i> Training Hub</h2>
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2"><i data-lucide="graduation-cap" class="w-5 h-5 text-blue-600"></i> Training Hub</h2>
                 <button onclick="toggleTrainingHub()" class="p-2 bg-white rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors" aria-label="Close Training Hub"><i data-lucide="x" class="w-5 h-5"></i></button>
             </div>
             <div id="training-hub-content" class="flex-1 overflow-y-auto p-5 space-y-6 custom-scroll"></div>
         </div>
     </main>
 
-    <footer class="bg-white border-t border-slate-200 mt-auto py-6 md:py-12 pb-24 md:pb-12">
+    <footer class="bg-white border-t border-slate-200 mt-auto py-10 pb-20">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-start">
-                <div class="space-y-3 md:space-y-4">
-                    <div class="flex items-center gap-3">
-                        <span class="font-bold text-slate-900 text-base md:text-lg"></span>
-                        <span class="px-2 py-1 rounded bg-slate-100 border border-slate-200 text-[10px] font-bold uppercase tracking-wider text-slate-600 flex items-center gap-1"><i data-lucide="github" class="w-3 h-3"></i> Open Source.</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 my-3">
-                        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-[10px] font-medium text-slate-600" title="No personal data is sent to servers">
-                            <i data-lucide="shield" class="w-3 h-3 text-slate-400"></i> Privacy-first: Local Storage
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-slate-100">
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="flex flex-col leading-tight">
+                            <span class="text-[11px] sm:text-[13px] font-bold uppercase tracking-wider text-slate-400">Skills2Careers</span>
+                            <span class="text-base sm:text-xl font-bold text-slate-800 leading-tight">Compass</span>
                         </div>
-                        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-[10px] font-medium text-slate-600">
-                            <i data-lucide="zap" class="w-3 h-3 text-slate-400"></i> Lite Mode: Saves Data
-                        </div>
-                        <button onclick="clearAppCache()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200 text-[10px] font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" title="Clear local data cache">
-                            <i data-lucide="trash-2" class="w-3 h-3 text-slate-400"></i> Clear Cache
-                        </button>
-                    </div>
-                    <div class="flex flex-col gap-1 text-[10px] md:text-xs text-slate-400">
                     </div>
                 </div>
+                <div class="flex items-center gap-3 text-[10px] text-slate-400">
+                    <button onclick="clearAppCache()" class="hover:text-slate-700 transition-colors">Clear Cache</button>
+                    <span class="text-slate-300">&middot;</span>
+                    <button onclick="toggleDataSourcesDrawer()" class="hover:text-slate-700 transition-colors">Data Sources</button>
+                    <span class="text-slate-300">&middot;</span>
+                    <span>&copy; 2026</span>
+                </div>
+            </div>
+            <div class="pt-5 text-[10px] text-slate-400 leading-relaxed">
+                <div class="font-bold uppercase tracking-wider text-slate-500 mb-1">Disclaimer</div>
+                <p>Skills2Careers Compass is a prototype platform developed to support career navigation across East Africa's green, digital and AI economies. <strong class="text-slate-600">This is not an official UNESCO website.</strong> Content and analysis presented herein reflect the work of the platform's contributors and do not necessarily represent the positions, policies, or decisions of UNESCO or its Member States.</p>
             </div>
         </div>
     </footer>
 
-    <!-- My Plan Widget -->
-    <div id="my-plan-widget" class="fixed bottom-6 right-6 z-[90] flex flex-col items-end gap-4 print:hidden">
-        <!-- Panel (Hidden by default) -->
-        <div id="my-plan-panel" class="hidden bg-white rounded-xl shadow-2xl border border-slate-200 w-80 max-w-[calc(100vw-3rem)] overflow-hidden mb-2 transition-all origin-bottom-right animate-fade-in">
-            <div class="bg-indigo-600 p-4 flex justify-between items-center text-white">
-                <h3 class="font-bold flex items-center gap-2 text-sm"><i data-lucide="bookmark" class="w-4 h-4"></i> My Career Plan</h3>
-                <button onclick="toggleMyPlan()" class="hover:bg-indigo-700 p-1 rounded transition-colors"><i data-lucide="x" class="w-4 h-4"></i></button>
-            </div>
-            <div id="my-plan-content" class="p-4 max-h-96 overflow-y-auto custom-scroll space-y-4 bg-slate-50 min-h-[150px]">
-                <!-- Dynamic Content -->
-            </div>
+    <!-- My Career Plan Panel (pops up above the bottom bar) -->
+    <div id="my-plan-panel" class="hidden fixed bottom-16 right-4 z-[95] bg-white rounded-xl shadow-2xl border border-slate-200 w-80 max-w-[calc(100vw-2rem)] overflow-hidden animate-fade-in print:hidden">
+        <div class="bg-indigo-600 p-4 flex justify-between items-center text-white">
+            <h3 class="font-bold flex items-center gap-2 text-sm"><i data-lucide="bookmark" class="w-4 h-4"></i> My Career Plan</h3>
+            <button onclick="toggleMyPlan()" class="hover:bg-indigo-700 p-1 rounded transition-colors"><i data-lucide="x" class="w-4 h-4"></i></button>
         </div>
-
-        <!-- Floating Button -->
-        <button onclick="toggleMyPlan()" class="bg-indigo-600 hover:bg-indigo-700 text-white p-3.5 rounded-full shadow-lg flex items-center gap-2 transition-transform hover:scale-105 group relative">
-            <i data-lucide="bookmark" class="w-6 h-6"></i>
-            <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap text-sm font-bold">My Plan</span>
-            <span id="plan-badge" class="absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full hidden shadow-sm border border-white">0</span>
-        </button>
+        <div id="my-plan-content" class="p-4 max-h-96 overflow-y-auto custom-scroll space-y-4 bg-slate-50 min-h-[150px]">
+            <!-- Dynamic Content -->
+        </div>
     </div>
 
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <!-- Add to Plan hint popover -->
+    <div id="add-to-plan-hint" class="hidden fixed bottom-16 left-4 z-[95] bg-slate-900 text-white text-[15px] rounded-xl p-4 w-72 max-w-[calc(100vw-2rem)] shadow-2xl animate-fade-in print:hidden">
+        <button onclick="document.getElementById('add-to-plan-hint').classList.add('hidden')" class="absolute top-2 right-2 text-white/60 hover:text-white"><i data-lucide="x" class="w-3.5 h-3.5"></i></button>
+        <p class="font-bold mb-1 flex items-center gap-1.5"><i data-lucide="info" class="w-3.5 h-3.5 text-indigo-300 shrink-0"></i> Saving to your Career Plan</p>
+        <p class="text-white/80 leading-snug">Use the <span class="inline-flex items-center gap-0.5 bg-white/10 px-1.5 py-0.5 rounded font-bold"><i data-lucide="bookmark" class="w-3 h-3"></i></span> bookmark icons on courses, roles, and skills as you explore to save them here.</p>
+        <p class="text-indigo-300 text-[10px] mt-2 font-bold uppercase tracking-wide">Full career plan builder coming at MVP</p>
+    </div>
+
+    <!-- Persistent Career Plan Bottom Bar -->
+    <div id="career-plan-bar" class="fixed bottom-0 left-0 right-0 z-[90] bg-white border-t border-slate-200 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] print:hidden">
+        <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between gap-3">
+            <span class="text-[10px] text-slate-400 hidden sm:flex items-center gap-1.5">
+                <i data-lucide="compass" class="w-3 h-3"></i> Items saved locally to your device
+            </span>
+            <div class="flex items-center gap-2 ml-auto">
+                <button onclick="document.getElementById('add-to-plan-hint').classList.toggle('hidden'); refreshIcons();" class="flex items-center gap-1.5 px-3 py-2 text-[15px] font-bold text-slate-600 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg transition-colors">
+                    <i data-lucide="plus-circle" class="w-3.5 h-3.5 text-slate-500"></i>
+                    <span class="sm:hidden">Save</span><span class="hidden sm:inline">Add to Career Plan</span>
+                </button>
+                <button onclick="toggleMyPlan()" class="flex items-center gap-1.5 px-3 py-2 text-[15px] font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors relative">
+                    <i data-lucide="bookmark" class="w-3.5 h-3.5"></i>
+                    <span class="sm:hidden">My Plan</span><span class="hidden sm:inline">My Career Plan</span>
+                    <span id="plan-badge" class="absolute -top-1.5 -right-1.5 bg-rose-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full hidden shadow-sm border border-white">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js?v=20260622e"></script>
+    <script src="state.js?v=20260622e"></script>
+    <script src="data-manager.js?v=20260622e"></script>
+    <script src="render-courses.js?v=20260622e"></script>
+    <script src="render-hub.js?v=20260624c"></script>
+    <script src="render-sectors.js?v=20260624a"></script>
+    <script src="init.js?v=20260623d"></script>
+    <script>
+        function setActiveNav(id) {
+            document.querySelectorAll('.nav-btn').forEach(function(b) {
+                b.classList.remove('font-bold');
+                b.classList.add('font-normal');
+                b.classList.remove('text-white');
+                b.classList.add('text-white/75');
+            });
+            // Hub sub-items highlight the parent Hubs trigger
+            var parentMap = { 'nav-sector': 'nav-hubs-trigger', 'nav-skills': 'nav-hubs-trigger', 'nav-career': 'nav-hubs-trigger' };
+            var activeId = parentMap[id] || id;
+            var el = document.getElementById(activeId);
+            if (el) {
+                el.classList.remove('font-normal');
+                el.classList.add('font-bold');
+                el.classList.remove('text-white/75');
+                el.classList.add('text-white');
+            }
+        }
+        function toggleNavDropdown(id) {
+            ['hubs-dropdown', 'resources-dropdown'].forEach(function(d) {
+                if (d !== id) document.getElementById(d).classList.add('hidden');
+            });
+            document.getElementById(id).classList.toggle('hidden');
+        }
+        function closeNavDropdowns() {
+            ['hubs-dropdown', 'resources-dropdown'].forEach(function(id) {
+                document.getElementById(id).classList.add('hidden');
+            });
+        }
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#nav-hubs-trigger') && !e.target.closest('#hubs-dropdown') &&
+                !e.target.closest('#nav-resources-trigger') && !e.target.closest('#resources-dropdown')) {
+                closeNavDropdowns();
+            }
+        });
+    </script>

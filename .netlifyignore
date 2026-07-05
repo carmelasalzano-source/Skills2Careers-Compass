@@ -1,0 +1,14 @@
+Zindi/
+YEN/
+*.zip
+*.docx
+*.pdf
+*.py
+*.csv
+*.xlsx
+*.docx
+validate_*.py
+simulate_*.py
+export_*.py
+Skills_Landscape_Analysis.docx
+2022-Career Pathways Guide-1.pdf

@@ -12,7 +12,14 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Data Analysis", "SQL", "Tableau", "R Programming", "Data Science", "Data Viz"],
+    "skills": [
+      "Data Analysis",
+      "SQL",
+      "Tableau",
+      "R Programming",
+      "Data Science",
+      "Data Viz"
+    ],
     "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
     "country": "all",
     "description": "Gain an immersive understanding of the practices and processes used by a junior or associate data analyst. Learn key analytical skills (data cleaning, analysis, & visualization) and tools (spreadsheets, SQL, R programming, Tableau).",
@@ -23,7 +30,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": "62%", "m6": "85%", "y1": "94%" },
+      "placement": {
+        "d90": "62%",
+        "m6": "85%",
+        "y1": "94%"
+      },
       "uplift": "+45%",
       "methodology": "Independent Audit",
       "stars": 4
@@ -42,7 +53,14 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Python", "Data Science", "Machine Learning", "SQL", "Data Analysis", "Data Viz"],
+    "skills": [
+      "Python",
+      "Data Science",
+      "Machine Learning",
+      "SQL",
+      "Data Analysis",
+      "Data Viz"
+    ],
     "url": "https://www.coursera.org/professional-certificates/ibm-data-science",
     "country": "all",
     "description": "Master the tools of Data Science with this 10-course Professional Certificate from IBM. Learn Python, SQL, data analysis, and visualization, and build machine learning models.",
@@ -53,7 +71,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "Global Avg", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "Global Avg",
+        "y1": null
+      },
       "uplift": "Varies",
       "methodology": "Self-Reported",
       "stars": 3
@@ -72,7 +94,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Networking", "IT Support", "System Admin", "Cybersecurity", "Cloud Computing"],
+    "skills": [
+      "Networking",
+      "IT Support",
+      "System Admin",
+      "Cybersecurity",
+      "Cloud Computing"
+    ],
     "url": "https://www.coursera.org/professional-certificates/google-it-support",
     "country": "all",
     "description": "Prepare for an entry-level role in IT support. Learn to perform day-to-day IT support tasks including computer assembly, wireless networking, installing programs, and customer service.",
@@ -83,7 +111,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "Global Avg", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "Global Avg",
+        "y1": null
+      },
       "uplift": "Varies",
       "methodology": "Self-Reported",
       "stars": 3
@@ -102,14 +134,20 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Database Mgmt", "Web Dev", "Data Analysis", "Strategy", "Project Mgmt"],
-    "url": "https://digital.ku.ac.ke/",
+    "skills": [
+      "Database Mgmt",
+      "Web Dev",
+      "Data Analysis",
+      "Strategy",
+      "Project Mgmt"
+    ],
+    "url": "https://dsvol.ku.ac.ke/all-categories/academic-programs/undegraduate-programmes",
     "country": "Kenya",
     "description": "Prepares students to work in the dynamic IT environment by integrating business management with information technology. It covers programming, database systems, and business strategy.",
     "language": "English",
     "prerequisites": "KCSE C+ (Math C, English C)",
     "tracerAvailable": false,
-    "lastUpdated": "2023",
+    "lastUpdated": "2025",
     "outcomeData": {
       "available": true,
       "accreditation": "Accredited"
@@ -128,7 +166,13 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Project Mgmt", "Strategy", "Economics", "Digital Marketing", "Product Management"],
+    "skills": [
+      "Project Mgmt",
+      "Strategy",
+      "Economics",
+      "Digital Marketing",
+      "Product Management"
+    ],
     "url": "https://www.usiu.ac.ke/usiuonline/",
     "country": "Kenya",
     "description": "For working professionals. Focuses on strategic management, entrepreneurship, and digital transformation in the African context.",
@@ -154,7 +198,12 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Machine Learning", "Digital Tools", "Automation"],
+    "skills": [
+      "AI",
+      "Machine Learning",
+      "Digital Tools",
+      "Automation"
+    ],
     "url": "https://www.coursera.org/learn/google-ai-essentials",
     "country": "all",
     "description": "Learn how to use generative AI tools to help speed up daily tasks, make more informed decisions, and develop new ideas and content. No prior AI experience required.",
@@ -164,7 +213,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "Global Avg", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "Global Avg",
+        "y1": null
+      },
       "uplift": "Varies",
       "methodology": "Self-Reported",
       "stars": 3
@@ -183,7 +236,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Network Security", "Incident Response", "Threat Intelligence", "Cybersecurity", "Compliance"],
+    "skills": [
+      "Network Security",
+      "Incident Response",
+      "Threat Intelligence",
+      "Cybersecurity",
+      "Compliance"
+    ],
     "url": "https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst",
     "country": "all",
     "description": "Develop the knowledge and skills to enter the cybersecurity workforce. Learn about network security, threat intelligence, and compliance protocols.",
@@ -194,7 +253,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "Global Avg", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "Global Avg",
+        "y1": null
+      },
       "uplift": "Varies",
       "methodology": "Self-Reported",
       "stars": 3
@@ -213,7 +276,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Web Dev", "Automation", "AI", "Prototyping", "Product Design"],
+    "skills": [
+      "Web Dev",
+      "Automation",
+      "AI",
+      "Prototyping",
+      "Product Design"
+    ],
     "url": "https://www.outsystems.com/learn/",
     "country": "all",
     "description": "Learn to build and deploy enterprise-grade applications with minimal coding using the OutSystems low-code platform. Includes AI-assisted development features.",
@@ -223,7 +292,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "Global Avg", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "Global Avg",
+        "y1": null
+      },
       "uplift": "Varies",
       "methodology": "Self-Reported",
       "stars": 3
@@ -242,7 +315,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Machine Learning", "Cybersecurity", "Data Science"],
+    "skills": [
+      "AI",
+      "Machine Learning",
+      "Cybersecurity",
+      "Data Science"
+    ],
     "url": "https://skillsbuild.org/",
     "country": "all",
     "description": "A foundational course on Artificial Intelligence, covering key concepts, applications, and ethical considerations. Earn a verified digital credential from IBM.",
@@ -252,7 +330,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "Global Avg", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "Global Avg",
+        "y1": null
+      },
       "uplift": "Varies",
       "methodology": "Self-Reported",
       "stars": 3
@@ -271,17 +353,27 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Solar PV", "Wind Power", "Grid Systems", "Energy Efficiency", "Green Tech"],
-    "url": "https://www.coursera.org/learn/renewable-energy-fundamentals",
+    "skills": [
+      "Solar PV",
+      "Wind Power",
+      "Grid Systems",
+      "Energy Efficiency",
+      "Green Tech"
+    ],
+    "url": "https://www.coursera.org/specializations/renewable-energy",
     "country": "all",
     "description": "This specialization provides a foundation in renewable energy technologies. Learn about solar, wind, and storage systems and how to assess their economic viability.",
     "language": "English",
     "prerequisites": "Basic math/science",
     "tracerAvailable": false,
-    "lastUpdated": "2023",
+    "lastUpdated": "2025",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "Global Avg", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "Global Avg",
+        "y1": null
+      },
       "uplift": "Varies",
       "methodology": "Self-Reported",
       "stars": 3
@@ -300,17 +392,27 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Solar PV", "Wind Power", "Green Tech", "Installation", "Field Ops"],
+    "skills": [
+      "Solar PV",
+      "Wind Power",
+      "Green Tech",
+      "Installation",
+      "Field Ops"
+    ],
     "url": "https://www.jkuat.ac.ke/institutes/ieet/",
     "country": "Kenya",
     "description": "A hands-on diploma covering the installation, maintenance, and design of renewable energy systems. Focuses on solar PV, wind, and biomass technologies relevant to Kenya.",
     "language": "English",
     "prerequisites": "KCSE C-",
     "tracerAvailable": false,
-    "lastUpdated": "2023",
+    "lastUpdated": "2025",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": null, "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": null,
+        "y1": null
+      },
       "uplift": null,
       "methodology": "No Data",
       "stars": 0,
@@ -330,7 +432,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Green Tech", "Grid Systems", "Climate Adaptation", "Policy", "Economics"],
+    "skills": [
+      "Green Tech",
+      "Grid Systems",
+      "Climate Adaptation",
+      "Policy",
+      "Economics"
+    ],
     "url": "https://graduateprograms.brown.edu/graduate-program/sustainable-energy-scm",
     "country": "all",
     "description": "An interdisciplinary program preparing students to lead the transition to sustainable energy. Curriculum covers engineering, economics, and policy.",
@@ -356,7 +464,13 @@
     "costType": "Free",
     "mode": "Hybrid",
     "sector": "all",
-    "skills": ["Green Tech", "Sustainability", "Agribusiness", "Project Mgmt", "Strategy"],
+    "skills": [
+      "Green Tech",
+      "Sustainability",
+      "Agribusiness",
+      "Project Mgmt",
+      "Strategy"
+    ],
     "url": "https://growthafrica.com/",
     "country": "all",
     "description": "An acceleration program for green and digital startups in East Africa. Provides mentorship, business modelling support, and access to investment networks.",
@@ -378,7 +492,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Sustainability", "Green Tech", "Energy Efficiency", "Digital Tools"],
+    "skills": [
+      "Sustainability",
+      "Green Tech",
+      "Energy Efficiency",
+      "Digital Tools"
+    ],
     "url": "https://skillsbuild.org/",
     "country": "all",
     "description": "Learn about the principles of sustainability, green technologies, and how IT can be used to create a more sustainable future. Earn a verified digital credential.",
@@ -389,7 +508,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "Global Avg", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "Global Avg",
+        "y1": null
+      },
       "uplift": "Varies",
       "methodology": "Self-Reported",
       "stars": 3
@@ -408,8 +531,14 @@
     "costType": "Free",
     "mode": "Hybrid",
     "sector": "agri",
-    "skills": ["Climate Adaptation", "Water Management", "Agribusiness", "Sustainability", "Crop Science"],
-    "url": "https://www.skill-ed.org/programmes",
+    "skills": [
+      "Climate Adaptation",
+      "Water Management",
+      "Agribusiness",
+      "Sustainability",
+      "Crop Science"
+    ],
+    "url": "https://www.skill-ed.org/",
     "country": "all",
     "description": "A blended learning package designed for slow or no-connectivity environments, covering climate-smart agriculture, water management, and agribusiness models.",
     "language": "English",
@@ -419,7 +548,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": null, "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": null,
+        "y1": null
+      },
       "uplift": null,
       "methodology": "No Data",
       "stars": 0
@@ -438,14 +571,20 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "agri",
-    "skills": ["Crop Science", "Economics", "Farm Management", "Soil Analysis", "Agribusiness"],
-    "url": "https://www.egerton.ac.ke/faculty-of-agriculture",
+    "skills": [
+      "Crop Science",
+      "Economics",
+      "Farm Management",
+      "Soil Analysis",
+      "Agribusiness"
+    ],
+    "url": "https://www.egerton.ac.ke/faculty-of-agriculture-foa",
     "country": "Kenya",
     "description": "A comprehensive degree program covering crop production, animal science, and agricultural economics. Blends theoretical knowledge with practical field attachment.",
     "language": "English",
     "prerequisites": "KCSE C+",
     "tracerAvailable": false,
-    "lastUpdated": "2023",
+    "lastUpdated": "2025",
     "outcomeData": {
       "available": true,
       "accreditation": "Accredited"
@@ -454,7 +593,10 @@
       "credit_recognition": true,
       "standalone_cert": true,
       "alternative_pathway": false,
-      "partners": ["Coursera", "Cisco"]
+      "partners": [
+        "Coursera",
+        "Cisco"
+      ]
     }
   },
   {
@@ -470,7 +612,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Precision Ag", "IoT Sensors", "Digital Advisory", "Farm Management", "Digital Tools"],
+    "skills": [
+      "Precision Ag",
+      "IoT Sensors",
+      "Digital Advisory",
+      "Farm Management",
+      "Digital Tools"
+    ],
     "url": "https://www.atingi.org/en/",
     "country": "all",
     "description": "Learn about digital tools for agriculture, including weather apps, market price platforms, and farm management software. Designed for extension agents and progressive farmers.",
@@ -478,10 +626,14 @@
     "gsa_member": true,
     "prerequisites": "None",
     "tracerAvailable": false,
-    "lastUpdated": "2023",
+    "lastUpdated": "2025",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": null, "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": null,
+        "y1": null
+      },
       "uplift": "Varies",
       "stars": 2
     }
@@ -499,8 +651,14 @@
     "costType": "Free",
     "mode": "Hybrid",
     "sector": "agri",
-    "skills": ["Farm Management", "Food Security", "Precision Ag", "Digital Advisory", "Data Collection"],
-    "url": "https://international-partnerships.ec.europa.eu/policies/programming/projects/digital-agriculture-africa",
+    "skills": [
+      "Farm Management",
+      "Food Security",
+      "Precision Ag",
+      "Digital Advisory",
+      "Data Collection"
+    ],
+    "url": "https://www.giz.de/en/worldwide/85527.html",
     "country": "all",
     "description": "A program focused on scaling digital solutions for agriculture. Trainings cover data privacy, user-centered design for farmers, and business models for agritech.",
     "language": "English",
@@ -509,7 +667,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": null, "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": null,
+        "y1": null
+      },
       "uplift": null,
       "methodology": "No Data",
       "stars": 0
@@ -528,17 +690,27 @@
     "costType": "Subsidized",
     "mode": "Hybrid",
     "sector": "all",
-    "skills": ["Digital Marketing", "Data Analytics", "Entrepreneurship", "Innovation", "Industry 4.0"],
-    "url": "https://dskills.iucea.org",
+    "skills": [
+      "Digital Marketing",
+      "Data Analytics",
+      "Entrepreneurship",
+      "Innovation",
+      "Industry 4.0"
+    ],
+    "url": "https://www.eac.int/",
     "country": "all",
-    "description": "Regional initiative offering digital skills training (short courses, Master's), internships, and entrepreneurship support (Innovators Sprint Up) across EAC Partner States.",
+    "description": "EAC Digital Skills for East African Industry initiative. The 2019–2025 dSkills@EA project concluded March 2025. See EAC for successor programmes.",
     "language": "English",
     "prerequisites": "Basic digital literacy",
     "tracerAvailable": false,
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": null, "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": null,
+        "y1": null
+      },
       "uplift": null,
       "methodology": "No Data",
       "stars": 0
@@ -557,7 +729,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["AI", "Web Dev", "Networking", "Machine Learning", "Cloud Computing"],
+    "skills": [
+      "AI",
+      "Web Dev",
+      "Networking",
+      "Machine Learning",
+      "Cloud Computing"
+    ],
     "url": "https://www.africa.engineering.cmu.edu/",
     "country": "Rwanda",
     "description": "A world-class graduate program in engineering with a focus on African challenges. Covers AI, software systems, and telecommunications infrastructure.",
@@ -567,7 +745,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": "90%", "m6": "98%", "y1": "100%" },
+      "placement": {
+        "d90": "90%",
+        "m6": "98%",
+        "y1": "100%"
+      },
       "uplift": "High",
       "methodology": "University Report",
       "stars": 4
@@ -592,7 +774,14 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Python", "Web Dev", "Communication", "JavaScript", "React", "Backend Dev"],
+    "skills": [
+      "Python",
+      "Web Dev",
+      "Communication",
+      "JavaScript",
+      "React",
+      "Backend Dev"
+    ],
     "url": "https://kadea.academy/",
     "country": "DR Congo",
     "description": "An intensive coding bootcamp in Kinshasa. Students learn HTML, CSS, JS, React, and Node.js through project-based learning and peer programming.",
@@ -602,7 +791,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": "70%", "m6": "85%", "y1": "90%" },
+      "placement": {
+        "d90": "70%",
+        "m6": "85%",
+        "y1": "90%"
+      },
       "uplift": "Significant",
       "methodology": "Self-Reported",
       "stars": 3
@@ -621,7 +814,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "all",
-    "skills": ["Field Ops", "Manufacturing", "Green Tech", "Installation", "Safety Protocols"],
+    "skills": [
+      "Field Ops",
+      "Manufacturing",
+      "Green Tech",
+      "Installation",
+      "Safety Protocols"
+    ],
     "url": "https://eastrip.iucea.org/",
     "country": "all",
     "description": "World Bank funded flagship TVET institutes across East Africa specializing in energy, manufacturing, and transport. Focus on competency-based education and training (CBET).",
@@ -632,7 +831,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": null, "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": null,
+        "y1": null
+      },
       "uplift": null,
       "methodology": "No Data",
       "stars": 0,
@@ -652,7 +855,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Web Dev", "Data Science", "AI", "Economics", "Digital Marketing"],
+    "skills": [
+      "Web Dev",
+      "Data Science",
+      "AI",
+      "Economics",
+      "Digital Marketing"
+    ],
     "url": "https://www.coursera.org/",
     "country": "all",
     "description": "Global online learning platform offering courses, certificates, and degrees from top universities and companies.",
@@ -674,7 +883,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Web Dev", "Field Ops", "Data Science", "Computer Science", "Engineering"],
+    "skills": [
+      "Web Dev",
+      "Field Ops",
+      "Data Science",
+      "Computer Science",
+      "Engineering"
+    ],
     "url": "https://www.edx.org/",
     "country": "all",
     "description": "Access university-level courses in computer science, engineering, and more from institutions like MIT and Harvard.",
@@ -694,7 +909,13 @@
     "cost": "Free",
     "costType": "Free",
     "mode": "Online",
-    "skills": ["Web Dev", "Python", "Data Viz", "JavaScript", "Frontend Dev"],
+    "skills": [
+      "Web Dev",
+      "Python",
+      "Data Viz",
+      "JavaScript",
+      "Frontend Dev"
+    ],
     "url": "https://www.freecodecamp.org/",
     "country": "all",
     "description": "Learn to code for free. Build projects and earn certifications in Responsive Web Design, JavaScript, and more.",
@@ -715,7 +936,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Data Science", "Machine Learning", "Python", "Data Analysis", "Deep Learning"],
+    "skills": [
+      "Data Science",
+      "Machine Learning",
+      "Python",
+      "Data Analysis",
+      "Deep Learning"
+    ],
     "url": "https://www.kaggle.com/learn",
     "country": "all",
     "description": "Practical data science and ML skills. Micro-courses designed to get you started with coding and data analysis quickly.",
@@ -736,7 +963,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AWS/Azure", ".NET", "Power Platform", "Cloud Computing", "AI"],
+    "skills": [
+      "AWS/Azure",
+      ".NET",
+      "Power Platform",
+      "Cloud Computing",
+      "AI"
+    ],
     "url": "https://learn.microsoft.com/",
     "country": "all",
     "description": "Technical documentation and learning paths for Microsoft technologies, including Azure cloud and AI.",
@@ -758,7 +991,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Cloud Computing", "DevOps", "Serverless", "AWS/Azure", "Cloud Architecture"],
+    "skills": [
+      "Cloud Computing",
+      "DevOps",
+      "Serverless",
+      "AWS/Azure",
+      "Cloud Architecture"
+    ],
     "url": "https://skillbuilder.aws/",
     "country": "all",
     "description": "Digital training from AWS experts. Build cloud skills with 600+ free courses and interactive labs.",
@@ -779,7 +1018,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Networking", "Cybersecurity", "IoT", "Network Security", "Python"],
+    "skills": [
+      "Networking",
+      "Cybersecurity",
+      "IoT",
+      "Network Security",
+      "Python"
+    ],
     "url": "https://www.netacad.com/",
     "country": "all",
     "description": "Global IT and cybersecurity education program that partners with learning institutions to empower people with career skills.",
@@ -801,7 +1046,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Food Security", "Climate Smart Ag", "Nutrition", "Sustainability", "Digital Advisory"],
+    "skills": [
+      "Food Security",
+      "Climate Smart Ag",
+      "Nutrition",
+      "Sustainability",
+      "Digital Advisory"
+    ],
     "url": "https://elearning.fao.org/",
     "country": "all",
     "description": "Free multilingual courses on thematic areas including food and nutrition security, social and economic development, and sustainable management of natural resources.",
@@ -823,7 +1074,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Solar PV", "Economics", "Agribusiness", "Project Mgmt"],
+    "skills": [
+      "Solar PV",
+      "Economics",
+      "Agribusiness",
+      "Project Mgmt"
+    ],
     "url": "https://www.gogla.org/",
     "country": "all",
     "description": "Specialized training for companies in the off-grid solar sector to improve their investment readiness and financial management.",
@@ -844,7 +1100,13 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Web Dev", "Data Science", "Cybersecurity", "Python", "Software Engineer"],
+    "skills": [
+      "Web Dev",
+      "Data Science",
+      "Cybersecurity",
+      "Python",
+      "Software Engineer"
+    ],
     "url": "https://moringaschool.com/",
     "country": "Kenya",
     "description": "A multi-disciplinary learning-accelerator committed to closing the skills gap in Africa's job market by providing high-potential tech talent with the skills they need.",
@@ -853,7 +1115,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": "62%", "m6": "85%", "y1": "94%" },
+      "placement": {
+        "d90": "62%",
+        "m6": "85%",
+        "y1": "94%"
+      },
       "uplift": "+140%",
       "methodology": "Independent Audit",
       "stars": 5
@@ -872,7 +1138,13 @@
     "costType": "Subsidized",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Web Dev", "Cloud Computing", "Cybersecurity", "DevOps", "Software Engineer"],
+    "skills": [
+      "Web Dev",
+      "Cloud Computing",
+      "Cybersecurity",
+      "DevOps",
+      "Software Engineer"
+    ],
     "url": "https://safaricom.gebeya.com/",
     "country": "Kenya",
     "description": "A platform connecting Kenyan talent with training and freelance opportunities. Focuses on in-demand digital skills.",
@@ -893,7 +1165,12 @@
     "costType": "Free",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Digital Tools", "Digital Marketing", "Communication", "Data Entry"],
+    "skills": [
+      "Digital Tools",
+      "Digital Marketing",
+      "Communication",
+      "Data Entry"
+    ],
     "url": "https://ajiradigital.go.ke/",
     "description": "A government initiative to empower over one million young people to access digital job opportunities. Offers free training and mentorship.",
     "language": "English",
@@ -913,7 +1190,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Drone Ops", "Regulatory Compl.", "Flight Planning", "Air Law", "Remote Sensing"],
+    "skills": [
+      "Drone Ops",
+      "Regulatory Compl.",
+      "Flight Planning",
+      "Air Law",
+      "Remote Sensing"
+    ],
     "url": "https://www.kcaa.or.ke/",
     "country": "Kenya",
     "description": "License for commercial drone operations. Covers air law, flight planning, and practical flight tests. Standard: Civil Aviation Regs.",
@@ -924,7 +1207,10 @@
       "accreditation_status": "Approved ATO",
       "regulator_id": "KCAA/ATO/001",
       "practical_theory_ratio": "60:40",
-      "industry_partners": ["Astral Aerial", "Kenya Airways"]
+      "industry_partners": [
+        "Astral Aerial",
+        "Kenya Airways"
+      ]
     },
     "outcomeData": {
       "available": true,
@@ -944,7 +1230,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Solar PV", "Safety Protocols", "Installation", "Electrical Wiring"],
+    "skills": [
+      "Solar PV",
+      "Safety Protocols",
+      "Installation",
+      "Electrical Wiring"
+    ],
     "url": "https://www.epra.go.ke/",
     "country": "Kenya",
     "description": "National license for solar PV technicians. Required for installation and maintenance of solar systems.",
@@ -955,7 +1246,10 @@
       "accreditation_status": "Accredited",
       "regulator_id": "NITA/TRN/123",
       "practical_theory_ratio": "70:30",
-      "industry_partners": ["Davis & Shirtliff", "Knights Energy"]
+      "industry_partners": [
+        "Davis & Shirtliff",
+        "Knights Energy"
+      ]
     },
     "outcomeData": {
       "available": true,
@@ -975,7 +1269,13 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Data Science", "Cloud Architecture", "SQL", "Big Data", "Python"],
+    "skills": [
+      "Data Science",
+      "Cloud Architecture",
+      "SQL",
+      "Big Data",
+      "Python"
+    ],
     "url": "https://cloud.google.com/learn/certification/data-engineer",
     "country": "all",
     "description": "Professional certification for data engineers. Validates ability to design, build, and operationalize data processing systems. Standard: Industry Cert.",
@@ -996,7 +1296,11 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Digital Advisory", "Communication", "Digital Tools"],
+    "skills": [
+      "Digital Advisory",
+      "Communication",
+      "Digital Tools"
+    ],
     "url": "https://elearning.fao.org/",
     "country": "all",
     "description": "Certification in digital extension methods for agriculture. Standard: Global GAP / FAO.",
@@ -1017,7 +1321,11 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Data Collection", "Communication", "Digital Tools"],
+    "skills": [
+      "Data Collection",
+      "Communication",
+      "Digital Tools"
+    ],
     "url": "https://www.atingi.org/",
     "country": "all",
     "description": "Micro-credential for field agents. Aligned to: CDACC Agri-Extension Lvl 4.",
@@ -1038,7 +1346,11 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Communication", "Installation", "Customer Service"],
+    "skills": [
+      "Communication",
+      "Installation",
+      "Customer Service"
+    ],
     "url": "https://www.nita.go.ke/",
     "country": "Kenya",
     "description": "Unit of Competency: Solar T2 Curriculum. Focuses on educating customers on system usage and safety.",
@@ -1063,7 +1375,11 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Cybersecurity", "Communication", "Digital Tools"],
+    "skills": [
+      "Cybersecurity",
+      "Communication",
+      "Digital Tools"
+    ],
     "url": "https://skillsbuild.org/",
     "country": "all",
     "description": "Verifiable via Credly / OpenBadges. Covers essential digital hygiene and documentation standards.",
@@ -1084,7 +1400,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Digital Tools", "AI", "Cybersecurity", "Data Science", "Cloud Computing"],
+    "skills": [
+      "Digital Tools",
+      "AI",
+      "Cybersecurity",
+      "Data Science",
+      "Cloud Computing"
+    ],
     "url": "https://skillsbuild.org/",
     "country": "all",
     "description": "Explore job roles, learning pathways, and earn digital credentials.",
@@ -1106,8 +1428,14 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Web Dev", "DevOps", "Project Mgmt", "Software Engineer", "Cloud Computing"],
-    "url": "https://andela.com/learning-community/",
+    "skills": [
+      "Web Dev",
+      "DevOps",
+      "Project Mgmt",
+      "Software Engineer",
+      "Cloud Computing"
+    ],
+    "url": "https://www.andela.com/andela-learning",
     "country": "all",
     "description": "Join a community of learners with curated programs and mentorship.",
     "language": "English",
@@ -1115,7 +1443,11 @@
     "lastUpdated": "2024",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": null, "m6": "High", "y1": null },
+      "placement": {
+        "d90": null,
+        "m6": "High",
+        "y1": null
+      },
       "uplift": "+87%",
       "methodology": "IFC Case Study",
       "stars": 4
@@ -1134,7 +1466,11 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Communication", "Project Mgmt", "Career Planning"],
+    "skills": [
+      "Communication",
+      "Project Mgmt",
+      "Career Planning"
+    ],
     "url": "https://www.fuzu.com/",
     "country": "all",
     "description": "Career development platform offering jobs, learning, and career guidance.",
@@ -1155,7 +1491,13 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "energy",
-    "skills": ["Solar PV", "AutoCAD", "Field Ops", "Installation", "Safety Protocols"],
+    "skills": [
+      "Solar PV",
+      "AutoCAD",
+      "Field Ops",
+      "Installation",
+      "Safety Protocols"
+    ],
     "url": "https://www.solarenergy.org/",
     "country": "all",
     "description": "Practical solar training (Design/Install/O&M).",
@@ -1176,8 +1518,12 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Grid Systems", "Solar PV", "Project Mgmt"],
-    "url": "https://core-academy.io/",
+    "skills": [
+      "Grid Systems",
+      "Solar PV",
+      "Project Mgmt"
+    ],
+    "url": "https://core-initiative.org/practitioner-activities/",
     "country": "all",
     "description": "DRE/Mini-grid practitioner certification.",
     "language": "English",
@@ -1197,8 +1543,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Green Tech", "Policy", "Economics", "Sustainability"],
-    "url": "https://www.res4africa.org/",
+    "skills": [
+      "Green Tech",
+      "Policy",
+      "Economics",
+      "Sustainability"
+    ],
+    "url": "https://res4africa.org/programmes/res4africa-academy/",
     "country": "all",
     "description": "Capacity building for renewable energy professionals.",
     "language": "English",
@@ -1218,13 +1569,16 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Green Tech", "Economics", "Finance"],
+    "skills": [
+      "Green Tech",
+      "Economics",
+      "Finance"
+    ],
     "url": "https://www.renac.de/",
     "country": "all",
     "description": "Green energy & climate finance training.",
     "language": "English",
     "lastUpdated": "2024"
-
   },
   {
     "id": "a_ug_1",
@@ -1239,7 +1593,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Crop Science", "Soil Analysis", "Economics", "Sustainability", "Research"],
+    "skills": [
+      "Crop Science",
+      "Soil Analysis",
+      "Economics",
+      "Sustainability",
+      "Research"
+    ],
     "url": "https://caes.mak.ac.ug/",
     "country": "Uganda",
     "description": "A premier degree program in the region focusing on sustainable agriculture, rural development, and agricultural research.",
@@ -1250,7 +1610,9 @@
       "credit_recognition": false,
       "standalone_cert": true,
       "alternative_pathway": false,
-      "partners": ["Mastercard Foundation"]
+      "partners": [
+        "Mastercard Foundation"
+      ]
     }
   },
   {
@@ -1266,7 +1628,11 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Crop Science", "Agribusiness", "Supply Chain"],
+    "skills": [
+      "Crop Science",
+      "Agribusiness",
+      "Supply Chain"
+    ],
     "url": "https://www.sua.ac.tz/",
     "country": "Tanzania",
     "description": "Specialized training in fruit, vegetable, and flower production, crucial for Tanzania's export market.",
@@ -1291,7 +1657,12 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Crop Science", "Water Management", "Mechanization", "Farm Management"],
+    "skills": [
+      "Crop Science",
+      "Water Management",
+      "Mechanization",
+      "Farm Management"
+    ],
     "url": "https://www.rp.ac.rw/",
     "country": "Rwanda",
     "description": "Hands-on technical training in modern crop production techniques and farm mechanization.",
@@ -1316,8 +1687,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Agribusiness", "Farm Management", "Manufacturing", "Entrepreneurship"],
-    "url": "https://latia.ac.ke/",
+    "skills": [
+      "Agribusiness",
+      "Farm Management",
+      "Manufacturing",
+      "Entrepreneurship"
+    ],
+    "url": "https://www.latiaagribusinesssolutions.com/",
     "country": "Kenya",
     "description": "Apprenticeship-based training focusing on the business side of farming and practical skills.",
     "language": "English",
@@ -1341,7 +1717,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Climate Adaptation", "Farm Management", "Crop Science", "Water Management"],
+    "skills": [
+      "Climate Adaptation",
+      "Farm Management",
+      "Crop Science",
+      "Water Management"
+    ],
     "url": "https://simad.edu.so/",
     "country": "Somalia",
     "description": "Focuses on agricultural challenges in arid and semi-arid environments.",
@@ -1366,7 +1747,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Crop Science", "Field Ops", "Manufacturing", "Soil Analysis"],
+    "skills": [
+      "Crop Science",
+      "Field Ops",
+      "Manufacturing",
+      "Soil Analysis"
+    ],
     "url": "https://ub.edu.bi/",
     "country": "Burundi",
     "description": "Comprehensive agronomy engineering degree covering crop, animal, and environmental sciences.",
@@ -1391,7 +1777,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Crop Science", "Sustainability", "Soil Analysis", "Forestry"],
+    "skills": [
+      "Crop Science",
+      "Sustainability",
+      "Soil Analysis",
+      "Forestry"
+    ],
     "url": "https://unikin.ac.cd/",
     "country": "DR Congo",
     "description": "Foundational degree in agronomic sciences with a focus on the Congo Basin ecosystem.",
@@ -1416,7 +1807,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Sustainability", "Climate Adaptation", "Forestry", "Natural Resource Mgmt"],
+    "skills": [
+      "Sustainability",
+      "Climate Adaptation",
+      "Forestry",
+      "Natural Resource Mgmt"
+    ],
     "url": "https://uoj.edu.ss/",
     "country": "South Sudan",
     "description": "Covers the management of natural resources including agriculture, forestry, and fisheries.",
@@ -1441,7 +1837,12 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Sustainability", "Crop Science", "Food Security", "Supply Chain"],
+    "skills": [
+      "Sustainability",
+      "Crop Science",
+      "Food Security",
+      "Supply Chain"
+    ],
     "url": "https://www.edx.org/",
     "country": "all",
     "description": "Learn the principles of sustainable food production from a world-leading agricultural university.",
@@ -1462,7 +1863,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Policy", "Biomass", "Solar PV", "Project Mgmt", "Economics"],
+    "skills": [
+      "Policy",
+      "Biomass",
+      "Solar PV",
+      "Project Mgmt",
+      "Economics"
+    ],
     "url": "https://cedat.mak.ac.ug/",
     "country": "Uganda",
     "description": "Advanced training in renewable energy technologies, policy, and management.",
@@ -1487,7 +1894,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Thermodynamics", "Grid Systems", "Power Generation", "Mechanical Engineering"],
+    "skills": [
+      "Thermodynamics",
+      "Grid Systems",
+      "Power Generation",
+      "Mechanical Engineering"
+    ],
     "url": "https://coet.udsm.ac.tz/",
     "country": "Tanzania",
     "description": "Focuses on power generation and renewable energy systems.",
@@ -1512,7 +1924,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Grid Systems", "Green Tech", "Grid Mgmt", "Energy Efficiency"],
+    "skills": [
+      "Grid Systems",
+      "Green Tech",
+      "Grid Mgmt",
+      "Energy Efficiency"
+    ],
     "url": "https://cst.ur.ac.rw/",
     "country": "Rwanda",
     "description": "Focuses on electrical power systems, renewable energy integration, and energy efficiency.",
@@ -1537,7 +1954,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Solar PV", "Grid Systems", "Installation", "Safety Protocols"],
+    "skills": [
+      "Solar PV",
+      "Grid Systems",
+      "Installation",
+      "Safety Protocols"
+    ],
     "url": "https://serc.strathmore.edu/",
     "country": "Kenya",
     "description": "Advanced solar training for designing and installing complex grid-tie and hybrid systems. Prepares for EPRA T3 licensing.",
@@ -1562,8 +1984,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Energy Efficiency", "Data Center Mgmt", "Sustainability"],
-    "url": "https://www.schneideruniversities.com/",
+    "skills": [
+      "Energy Efficiency",
+      "Data Center Mgmt",
+      "Sustainability"
+    ],
+    "url": "https://www.se.com/ww/en/about-us/university/",
     "country": "all",
     "description": "Free online courses on energy efficiency and data center management from industry experts.",
     "language": "English/French",
@@ -1583,8 +2009,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Biomass", "Safety Protocols", "Green Tech"],
-    "url": "https://www.biogas-training.de/",
+    "skills": [
+      "Biomass",
+      "Safety Protocols",
+      "Green Tech"
+    ],
+    "url": "https://www.dbfz.de/en/",
     "country": "all",
     "description": "Basics of biogas production, digester types, and safety. Relevant for rural energy access.",
     "language": "English",
@@ -1604,8 +2034,14 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Software Engineer", "Agile", "Python", "JavaScript", "Design Thinking"],
-    "url": "https://refactory.academy/catalyst/",
+    "skills": [
+      "Software Engineer",
+      "Agile",
+      "Python",
+      "JavaScript",
+      "Design Thinking"
+    ],
+    "url": "https://refactory.academy/programs/",
     "country": "Uganda",
     "description": "A foundational course for aspiring software engineers. Focuses on programming logic, object-oriented design, and professional soft skills.",
     "language": "English",
@@ -1625,7 +2061,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Data Science", "Web Dev", "AI", "Computer Science", "Software Engineer"],
+    "skills": [
+      "Data Science",
+      "Web Dev",
+      "AI",
+      "Computer Science",
+      "Software Engineer"
+    ],
     "url": "https://coict.udsm.ac.tz/",
     "country": "Tanzania",
     "description": "Foundational computer science degree covering theory, programming, and systems design.",
@@ -1650,7 +2092,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Web Dev", "Data Science", "Entrepreneurship", "Leadership"],
+    "skills": [
+      "Web Dev",
+      "Data Science",
+      "Entrepreneurship",
+      "Leadership"
+    ],
     "url": "https://www.alueducation.com/",
     "country": "Rwanda",
     "description": "Project-based degree program emphasizing leadership and mission-driven technology solutions.",
@@ -1665,7 +2112,9 @@
       "credit_recognition": true,
       "standalone_cert": false,
       "alternative_pathway": true,
-      "partners": ["ALX"]
+      "partners": [
+        "ALX"
+      ]
     }
   },
   {
@@ -1681,7 +2130,13 @@
     "costType": "Subsidized",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Web Dev", "Python", "DevOps", "Software Engineer", "C Programming"],
+    "skills": [
+      "Web Dev",
+      "Python",
+      "DevOps",
+      "Software Engineer",
+      "C Programming"
+    ],
     "url": "https://www.alxafrica.com/",
     "country": "all",
     "description": "Rigorous, Holberton-based curriculum training full-stack software engineers. Fully sponsored for eligible African youth.",
@@ -1702,7 +2157,12 @@
     "costType": "Subsidized",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Digital Tools", "Communication", "Remote Work", "Google Workspace"],
+    "skills": [
+      "Digital Tools",
+      "Communication",
+      "Remote Work",
+      "Google Workspace"
+    ],
     "url": "https://www.alxafrica.com/",
     "country": "all",
     "description": "Prepares learners for remote work opportunities as virtual assistants. Covers tools like Google Workspace and remote etiquette.",
@@ -1723,8 +2183,13 @@
     "costType": "Subsidized",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Python", "Web Dev", "Software Engineer", "Dart/Flutter"],
-    "url": "https://powerlearnproject.org/",
+    "skills": [
+      "Python",
+      "Web Dev",
+      "Software Engineer",
+      "Dart/Flutter"
+    ],
+    "url": "https://powerlearnprojectafrica.org/",
     "country": "all",
     "description": "Pan-African scholarship program offering software development training to youth across the continent.",
     "language": "English",
@@ -1744,7 +2209,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Web Dev", "Mobile App Dev", "Android", "Java/Kotlin"],
+    "skills": [
+      "Web Dev",
+      "Mobile App Dev",
+      "Android",
+      "Java/Kotlin"
+    ],
     "url": "https://zalegoacademy.ac.ke/",
     "country": "Kenya",
     "description": "Specialized training in mobile application development for the Android ecosystem.",
@@ -1754,8 +2224,8 @@
   },
   {
     "id": "d_drc_1",
-    "name": "Digital Marketing",
-    "provider": "Kinshasa Digital Academy",
+    "name": "Digital Marketing (Kadea Academy)",
+    "provider": "Kadea Academy",
     "type": "Bootcamp",
     "level": "med",
     "duration": "6 months",
@@ -1765,8 +2235,13 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["SEO", "Social Media", "Digital Marketing", "Content Strategy"],
-    "url": "https://kinshasadigital.academy/",
+    "skills": [
+      "SEO",
+      "Social Media",
+      "Digital Marketing",
+      "Content Strategy"
+    ],
+    "url": "https://www.kadea.academy/",
     "country": "DR Congo",
     "description": "Intensive professional training in digital marketing. Tuition is free for selected candidates, often with job placement support.",
     "language": "French",
@@ -1786,7 +2261,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Python", "Networking", "Database Mgmt", "Computer Science"],
+    "skills": [
+      "Python",
+      "Networking",
+      "Database Mgmt",
+      "Computer Science"
+    ],
     "url": "https://just.edu.so/",
     "country": "Somalia",
     "description": "Leading CS program in Mogadishu, covering software engineering and network administration.",
@@ -1811,7 +2291,11 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Networking", "IT Support", "System Admin"],
+    "skills": [
+      "Networking",
+      "IT Support",
+      "System Admin"
+    ],
     "url": "https://starford.edu.ss/",
     "country": "South Sudan",
     "description": "Practical IT diploma for entry-level technical roles in Juba.",
@@ -1836,7 +2320,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Database Mgmt", "Project Mgmt", "Business Analysis", "IT Management"],
+    "skills": [
+      "Database Mgmt",
+      "Project Mgmt",
+      "Business Analysis",
+      "IT Management"
+    ],
     "url": "https://ult.bi/",
     "country": "Burundi",
     "description": "Combines computer science skills with business management principles.",
@@ -1861,7 +2350,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Crop Science", "Farm Management", "Digital Advisory", "Extension Services"],
+    "skills": [
+      "Crop Science",
+      "Farm Management",
+      "Digital Advisory",
+      "Extension Services"
+    ],
     "url": "https://www.bukuracollege.ac.ke/",
     "country": "Kenya",
     "description": "Middle-level training for agricultural extension officers and farm managers.",
@@ -1886,7 +2380,11 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Crop Science", "Soil Analysis", "Farm Management"],
+    "skills": [
+      "Crop Science",
+      "Soil Analysis",
+      "Farm Management"
+    ],
     "url": "https://bac.ac.ug/",
     "country": "Uganda",
     "description": "Practical diploma focusing on crop value chains and sustainable farming.",
@@ -1911,7 +2409,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Food Security", "Policy", "Research", "Nutrition"],
+    "skills": [
+      "Food Security",
+      "Policy",
+      "Research",
+      "Nutrition"
+    ],
     "url": "https://www.nm-aist.ac.tz/",
     "country": "Tanzania",
     "description": "Advanced research degree addressing food security challenges in the region.",
@@ -1936,8 +2439,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Solar PV", "Installation", "Safety Protocols", "Electrical Wiring"],
-    "url": "https://nakawavti.ac.ug/",
+    "skills": [
+      "Solar PV",
+      "Installation",
+      "Safety Protocols",
+      "Electrical Wiring"
+    ],
+    "url": "https://www.nakawavtc.ac.ug/",
     "country": "Uganda",
     "description": "Vocational training for solar technicians, covering basic installation and maintenance.",
     "language": "English",
@@ -1961,7 +2469,11 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Biomass", "Installation", "Construction"],
+    "skills": [
+      "Biomass",
+      "Installation",
+      "Construction"
+    ],
     "url": "https://camartec.go.tz/",
     "country": "Tanzania",
     "description": "Practical training on constructing domestic biogas plants.",
@@ -1986,7 +2498,12 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Cloud Computing", "AWS/Azure", "SQL", "Data Management"],
+    "skills": [
+      "Cloud Computing",
+      "AWS/Azure",
+      "SQL",
+      "Data Management"
+    ],
     "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/",
     "country": "all",
     "description": "Foundational knowledge of core data concepts and how they are implemented using Microsoft Azure data services.",
@@ -2007,7 +2524,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Python", "API Design", "DevOps", "Backend Dev", "Cloud Computing"],
+    "skills": [
+      "Python",
+      "API Design",
+      "DevOps",
+      "Backend Dev",
+      "Cloud Computing"
+    ],
     "url": "https://www.coursera.org/professional-certificates/meta-back-end-developer",
     "country": "all",
     "description": "Launch your career as a back-end developer. Build job-ready skills for an in-demand career.",
@@ -2027,7 +2550,12 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Cloud Computing", "AWS/Azure", "Cybersecurity", "Cloud Architecture"],
+    "skills": [
+      "Cloud Computing",
+      "AWS/Azure",
+      "Cybersecurity",
+      "Cloud Architecture"
+    ],
     "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
     "country": "all",
     "description": "Validates overall understanding of the AWS Cloud platform. Entry-level certification.",
@@ -2048,8 +2576,13 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Agribusiness", "Economics", "Farm Management", "Entrepreneurship"],
-    "url": "https://www.africanmanagers.org/",
+    "skills": [
+      "Agribusiness",
+      "Economics",
+      "Farm Management",
+      "Entrepreneurship"
+    ],
+    "url": "https://www.africanmanagers.com/",
     "country": "all",
     "description": "Practical business management course tailored for entrepreneurs in the agricultural sector.",
     "language": "English",
@@ -2069,7 +2602,12 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Solar PV", "Water Management", "Irrigation", "Installation"],
+    "skills": [
+      "Solar PV",
+      "Water Management",
+      "Irrigation",
+      "Installation"
+    ],
     "url": "https://www.solarenergy.org/",
     "country": "all",
     "description": "Design and installation of solar water pumping systems, critical for off-grid agriculture.",
@@ -2090,7 +2628,12 @@
     "costType": "Subsidized",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Data Science", "Data Viz", "Python", "Civic Tech"],
+    "skills": [
+      "Data Science",
+      "Data Viz",
+      "Python",
+      "Civic Tech"
+    ],
     "url": "https://pollicy.org/",
     "country": "Uganda",
     "description": "Fellowship program for women in data science, focusing on using data for civic engagement.",
@@ -2112,7 +2655,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Strategy", "Innovation", "Agribusiness", "Data Analysis"],
+    "skills": [
+      "Strategy",
+      "Innovation",
+      "Agribusiness",
+      "Data Analysis"
+    ],
     "url": "https://saharaventures.com/",
     "country": "Tanzania",
     "description": "Workshops and labs for corporate and startup innovation using data and digital tools.",
@@ -2133,7 +2681,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Economics", "Policy", "Research", "Agribusiness"],
+    "skills": [
+      "Economics",
+      "Policy",
+      "Research",
+      "Agribusiness"
+    ],
     "url": "https://agriculture.uonbi.ac.ke/",
     "country": "Kenya",
     "description": "Advanced degree focusing on the economic aspects of agriculture and food policy.",
@@ -2158,7 +2711,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Green Tech", "Thermodynamics", "Renewable Energy", "Engineering"],
+    "skills": [
+      "Green Tech",
+      "Thermodynamics",
+      "Renewable Energy",
+      "Engineering"
+    ],
     "url": "https://engineering.ku.ac.ke/",
     "country": "Kenya",
     "description": "Degree program covering a wide range of energy technologies including solar, wind, geothermal, and bioenergy.",
@@ -2183,7 +2741,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Web Dev", "Data Science", "Cybersecurity", "IT Management"],
+    "skills": [
+      "Web Dev",
+      "Data Science",
+      "Cybersecurity",
+      "IT Management"
+    ],
     "url": "https://www.africa.engineering.cmu.edu/",
     "country": "Rwanda",
     "description": "Interdisciplinary IT degree preparing students for leadership in the tech sector.",
@@ -2208,7 +2771,11 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Farm Management", "Agribusiness", "Livestock Health"],
+    "skills": [
+      "Farm Management",
+      "Agribusiness",
+      "Livestock Health"
+    ],
     "url": "https://cavm.ur.ac.rw/",
     "country": "Rwanda",
     "description": "Focuses on livestock management, animal health, and production systems.",
@@ -2233,7 +2800,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Electrical Wiring", "Field Ops", "Grid Systems", "Mechanical Engineering"],
+    "skills": [
+      "Electrical Wiring",
+      "Field Ops",
+      "Grid Systems",
+      "Mechanical Engineering"
+    ],
     "url": "https://ub.edu.bi/",
     "country": "Burundi",
     "description": "Engineering degree covering electrical and mechanical systems, relevant for hydro and power plants.",
@@ -2258,7 +2830,12 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Network Security", "Cybersecurity", "Compliance", "Threat Intelligence"],
+    "skills": [
+      "Network Security",
+      "Cybersecurity",
+      "Compliance",
+      "Threat Intelligence"
+    ],
     "url": "https://moringaschool.com/",
     "country": "Kenya",
     "description": "Practical cybersecurity training with Flatiron School curriculum.",
@@ -2279,7 +2856,11 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["GIS Mapping", "Precision Ag", "Remote Sensing"],
+    "skills": [
+      "GIS Mapping",
+      "Precision Ag",
+      "Remote Sensing"
+    ],
     "url": "https://www.coursera.org/",
     "country": "all",
     "description": "Overview of precision agriculture technologies and their application.",
@@ -2300,7 +2881,11 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Wind Power", "Project Mgmt", "Engineering"],
+    "skills": [
+      "Wind Power",
+      "Project Mgmt",
+      "Engineering"
+    ],
     "url": "https://www.coursera.org/learn/wind-energy",
     "country": "all",
     "description": "Engineering aspects of wind energy technology from the Technical University of Denmark.",
@@ -2321,7 +2906,11 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Cybersecurity", "Network Security", "Digital Hygiene"],
+    "skills": [
+      "Cybersecurity",
+      "Network Security",
+      "Digital Hygiene"
+    ],
     "url": "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity",
     "country": "all",
     "description": "Introductory course on protecting personal digital life and business insights.",
@@ -2342,7 +2931,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Water Management", "GIS Mapping", "Irrigation", "Engineering"],
+    "skills": [
+      "Water Management",
+      "GIS Mapping",
+      "Irrigation",
+      "Engineering"
+    ],
     "url": "https://www.waterinstitute.ac.tz/",
     "country": "Tanzania",
     "description": "Technical training for designing and managing irrigation systems.",
@@ -2367,7 +2961,12 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Electrical Wiring", "Installation", "Field Ops", "Safety Protocols"],
+    "skills": [
+      "Electrical Wiring",
+      "Installation",
+      "Field Ops",
+      "Safety Protocols"
+    ],
     "url": "https://www.rp.ac.rw/",
     "country": "Rwanda",
     "description": "Vocational training in domestic and industrial electrical installation.",
@@ -2392,7 +2991,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Web Dev", "DevOps", "Project Mgmt", "Software Engineer"],
+    "skills": [
+      "Web Dev",
+      "DevOps",
+      "Project Mgmt",
+      "Software Engineer"
+    ],
     "url": "https://cocis.mak.ac.ug/",
     "country": "Uganda",
     "description": "Specialized degree in the principles and practice of software engineering.",
@@ -2417,7 +3021,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Sustainability", "Farm Management", "Livestock Health", "Ecology"],
+    "skills": [
+      "Sustainability",
+      "Farm Management",
+      "Livestock Health",
+      "Ecology"
+    ],
     "url": "https://agriculture.uonbi.ac.ke/",
     "country": "Kenya",
     "description": "Management of arid and semi-arid lands for sustainable livestock production.",
@@ -2442,7 +3051,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Green Tech", "Policy", "Energy Efficiency", "Sustainability"],
+    "skills": [
+      "Green Tech",
+      "Policy",
+      "Energy Efficiency",
+      "Sustainability"
+    ],
     "url": "https://www.nm-aist.ac.tz/",
     "country": "Tanzania",
     "description": "Postgraduate research and training in sustainable energy solutions.",
@@ -2467,7 +3081,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["UX Research", "Figma", "Prototyping", "UI Design", "Product Design"],
+    "skills": [
+      "UX Research",
+      "Figma",
+      "Prototyping",
+      "UI Design",
+      "Product Design"
+    ],
     "url": "https://www.coursera.org/professional-certificates/google-ux-design",
     "country": "all",
     "description": "Prepare for a career in UX design. Learn foundations of UX research, wireframing, and prototyping.",
@@ -2492,7 +3112,11 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Soil Analysis", "Sustainability", "Crop Science"],
+    "skills": [
+      "Soil Analysis",
+      "Sustainability",
+      "Crop Science"
+    ],
     "url": "https://www.edx.org/",
     "country": "all",
     "description": "Learn about the importance of soil and how to manage it sustainably for crop production.",
@@ -2513,7 +3137,11 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["Grid Systems", "Electrical Wiring", "Power Generation"],
+    "skills": [
+      "Grid Systems",
+      "Electrical Wiring",
+      "Power Generation"
+    ],
     "url": "https://www.coursera.org/learn/electric-power-systems",
     "country": "all",
     "description": "Learn the standards and policies of the electric utility industry, and the basic vocabulary used in the business.",
@@ -2534,7 +3162,11 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Cloud Computing", "DevOps", "AWS/Azure"],
+    "skills": [
+      "Cloud Computing",
+      "DevOps",
+      "AWS/Azure"
+    ],
     "url": "https://www.coursera.org/learn/introduction-to-cloud",
     "country": "all",
     "description": "This course introduces you to the core concepts of cloud computing.",
@@ -2554,7 +3186,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Agribusiness", "Manufacturing", "Farm Management", "Livestock Health"],
+    "skills": [
+      "Agribusiness",
+      "Manufacturing",
+      "Farm Management",
+      "Livestock Health"
+    ],
     "url": "https://dti.ac.ke/",
     "country": "Kenya",
     "description": "Specialized training for the dairy value chain.",
@@ -2579,7 +3216,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Electrical Wiring", "Grid Systems", "Field Ops", "Engineering"],
+    "skills": [
+      "Electrical Wiring",
+      "Grid Systems",
+      "Field Ops",
+      "Engineering"
+    ],
     "url": "https://kyu.ac.ug/",
     "country": "Uganda",
     "description": "Practical engineering degree with a focus on industrial application.",
@@ -2603,7 +3245,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Python", "Database Mgmt", "Networking", "IT Support"],
+    "skills": [
+      "Python",
+      "Database Mgmt",
+      "Networking",
+      "IT Support"
+    ],
     "url": "https://www.ifm.ac.tz/",
     "country": "Tanzania",
     "description": "Technical diploma in computing and IT.",
@@ -2628,7 +3275,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Agribusiness", "Supply Chain", "Economics", "Entrepreneurship"],
+    "skills": [
+      "Agribusiness",
+      "Supply Chain",
+      "Economics",
+      "Entrepreneurship"
+    ],
     "url": "https://cavm.ur.ac.rw/",
     "country": "Rwanda",
     "description": "Advanced business training for the agricultural sector.",
@@ -2653,7 +3305,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Biomass", "Installation", "Field Ops", "Safety Protocols"],
+    "skills": [
+      "Biomass",
+      "Installation",
+      "Field Ops",
+      "Safety Protocols"
+    ],
     "url": "https://www.kirdi.go.ke/",
     "country": "Kenya",
     "description": "Practical skills for constructing and maintaining biogas digesters.",
@@ -2678,7 +3335,11 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Python", "Data Analysis", "Programming"],
+    "skills": [
+      "Python",
+      "Data Analysis",
+      "Programming"
+    ],
     "url": "https://www.coursera.org/specializations/python",
     "country": "all",
     "description": "Learn to program and analyze data with Python.",
@@ -2703,10 +3364,15 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["AI", "Data Analysis", "Precision Ag", "Big Data"],
-    "url": "https://www.edx.org/professional-certificate/wageningenx-big-data-for-smart-farming",
+    "skills": [
+      "AI",
+      "Data Analysis",
+      "Precision Ag",
+      "Big Data"
+    ],
+    "url": "https://www.edx.org/school/wageningenx",
     "country": "all",
-    "description": "Learn how to use big data and AI to analyze farm systems, predict yields, and optimize supply chains in agriculture.",
+    "description": "Professional courses on big data and smart farming from Wageningen University. Visit WageningenX on edX for current offerings — individual course URLs change with each cohort.",
     "language": "English",
     "prerequisites": "Basic Statistics",
     "lastUpdated": "2025"
@@ -2724,10 +3390,15 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["AI", "Grid Systems", "Data Science", "Energy Efficiency"],
-    "url": "https://www.edx.org/learn/energy/delft-university-of-technology-data-science-for-energy-system-modeling",
+    "skills": [
+      "AI",
+      "Grid Systems",
+      "Data Science",
+      "Energy Efficiency"
+    ],
+    "url": "https://learningforlife.tudelft.nl/our-courses/",
     "country": "all",
-    "description": "Apply data science and AI techniques to model energy systems, forecast demand, and optimize renewable integration.",
+    "description": "TU Delft offers multiple data science and energy systems courses online. Visit their online learning platform for current enrollable courses — individual course URLs change with each cohort.",
     "language": "English",
     "prerequisites": "Python Basics",
     "lastUpdated": "2025"
@@ -2745,7 +3416,12 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Digital Tools", "Strategy", "Innovation"],
+    "skills": [
+      "AI",
+      "Digital Tools",
+      "Strategy",
+      "Innovation"
+    ],
     "url": "https://www.coursera.org/learn/generative-ai-for-everyone",
     "country": "all",
     "description": "Understand how generative AI works, its capabilities and limitations, and how to apply it in professional settings.",
@@ -2767,10 +3443,15 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Cloud Computing", "Machine Learning", "AWS/Azure"],
+    "skills": [
+      "AI",
+      "Cloud Computing",
+      "Machine Learning",
+      "AWS/Azure"
+    ],
     "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/",
     "country": "all",
-    "description": "Professional certification for building, managing, and deploying AI solutions that leverage Azure AI Services.",
+    "description": "Professional certification for building, managing, and deploying AI solutions that leverage Azure AI Services. Note: This certification version retires June 2026 — check Microsoft Learn for the updated AI-102 successor.",
     "language": "English",
     "prerequisites": "Azure Fundamentals",
     "lastUpdated": "2025"
@@ -2788,7 +3469,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["AI", "Remote Sensing", "Climate Adaptation", "GIS Mapping"],
+    "skills": [
+      "AI",
+      "Remote Sensing",
+      "Climate Adaptation",
+      "GIS Mapping"
+    ],
     "url": "https://www.futurelearn.com/courses/artificial-intelligence-for-earth-monitoring",
     "country": "all",
     "description": "Explore how AI and Earth observation data are used to monitor crop health, land use, and climate change impacts.",
@@ -2809,10 +3495,15 @@
     "costType": "Subsidized",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Digital Tools", "Communication", "Productivity"],
-    "url": "https://www.alxafrica.com/ai-career-essentials/",
+    "skills": [
+      "AI",
+      "Digital Tools",
+      "Communication",
+      "Productivity"
+    ],
+    "url": "https://www.alxafrica.com/programmes/",
     "country": "all",
-    "description": "Master the fundamentals of Artificial Intelligence and learn how to leverage AI tools to boost your productivity and career growth.",
+    "description": "ALX Africa AI and technology programmes for African professionals. Visit the programmes page for current AI and digital career offerings.",
     "language": "English",
     "prerequisites": "None",
     "lastUpdated": "2025"
@@ -2830,7 +3521,12 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Web Dev", "Digital Marketing", "Communication", "Freelancing"],
+    "skills": [
+      "Web Dev",
+      "Digital Marketing",
+      "Communication",
+      "Freelancing"
+    ],
     "url": "https://eldohub.co.ke/",
     "country": "Kenya",
     "description": "A specialized training program in Eldoret focusing on equipping youth with in-demand digital skills and connecting them to work.",
@@ -2851,10 +3547,15 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Climate Adaptation", "Food Security", "Sustainability", "Farm Management"],
-    "url": "https://ustawi.afrika/",
+    "skills": [
+      "Climate Adaptation",
+      "Food Security",
+      "Sustainability",
+      "Farm Management"
+    ],
+    "url": "https://www.kalro.org/",
     "country": "Kenya",
-    "description": "Community-focused training on sustainable farming practices and climate resilience for rural farmers.",
+    "description": "Climate Smart Agriculture training programmes in Kenya. Delivered through KALRO and affiliated extension services.",
     "language": "English/Swahili",
     "prerequisites": "None",
     "lastUpdated": "2025"
@@ -2872,10 +3573,15 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Python", "Web Dev", "Data Science", "Software Engineer"],
-    "url": "https://outbox.co.ug/",
+    "skills": [
+      "Python",
+      "Web Dev",
+      "Data Science",
+      "Software Engineer"
+    ],
+    "url": "https://outboxuganda.org/",
     "country": "Uganda",
-    "description": "An immersive coding bootcamp in Kampala designed to turn beginners into professional software developers.",
+    "description": "Outbox Uganda is a leading tech hub providing software development training and co-working space in Kampala.",
     "language": "English",
     "prerequisites": "Assessment",
     "lastUpdated": "2025"
@@ -2893,7 +3599,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["IoT", "Robotics", "Python", "Automation"],
+    "skills": [
+      "IoT",
+      "Robotics",
+      "Python",
+      "Automation"
+    ],
     "url": "https://robotech.co.tz/",
     "country": "Tanzania",
     "description": "Hands-on training in Dar es Salaam focusing on Internet of Things (IoT) and robotics applications for local challenges.",
@@ -2914,8 +3625,13 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Prototyping", "Product Design", "AutoCAD", "Manufacturing"],
-    "url": "http://www.fablab.rw/",
+    "skills": [
+      "Prototyping",
+      "Product Design",
+      "AutoCAD",
+      "Manufacturing"
+    ],
+    "url": "https://www.fablab.rw/",
     "country": "Rwanda",
     "description": "Learn how to turn ideas into prototypes using 3D printers, laser cutters, and CNC machines.",
     "language": "English",
@@ -2935,7 +3651,12 @@
     "costType": "Free",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Entrepreneurship", "Design Thinking", "Strategy", "Innovation"],
+    "skills": [
+      "Entrepreneurship",
+      "Design Thinking",
+      "Strategy",
+      "Innovation"
+    ],
     "url": "https://bunihub.or.tz/",
     "country": "Tanzania",
     "description": "A technology hub in Dar es Salaam fostering innovation and entrepreneurship through mentoring and community programs.",
@@ -2956,7 +3677,12 @@
     "costType": "Free",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Digital Marketing", "Entrepreneurship", "Economics", "Business Mgmt"],
+    "skills": [
+      "Digital Marketing",
+      "Entrepreneurship",
+      "Economics",
+      "Business Mgmt"
+    ],
     "url": "https://ndotohub.com/",
     "country": "Tanzania",
     "description": "A digital business academy specifically for young women entrepreneurs in Tanzania.",
@@ -2978,10 +3704,15 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Web Dev", "Programming", "Problem Solving", "Software Engineer"],
-    "url": "https://www.appsandgirls.com/",
+    "skills": [
+      "Web Dev",
+      "Programming",
+      "Problem Solving",
+      "Software Engineer"
+    ],
+    "url": "https://www.facebook.com/appsandgirlstanzania",
     "country": "Tanzania",
-    "description": "Empowering girls and young women to create the world they want to live in using technology.",
+    "description": "Coding bootcamp for girls in Tanzania (Dar es Salaam). Domain temporarily offline — contact via social media for current enrollment.",
     "language": "English",
     "women_focused": true,
     "prerequisites": "None",
@@ -3000,7 +3731,12 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Web Dev", "UI Design", "Digital Marketing", "Graphic Design"],
+    "skills": [
+      "Web Dev",
+      "UI Design",
+      "Digital Marketing",
+      "Graphic Design"
+    ],
     "url": "https://lakehub.co.ke/",
     "country": "Kenya",
     "description": "Technology innovation hub in Kisumu offering digital skills training for youth in Western Kenya.",
@@ -3021,7 +3757,12 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Web Dev", "Mobile App Dev", "STEM", "Software Engineer"],
+    "skills": [
+      "Web Dev",
+      "Mobile App Dev",
+      "STEM",
+      "Software Engineer"
+    ],
     "url": "https://swahilipothub.co.ke/",
     "country": "Kenya",
     "description": "Innovation hub in Mombasa supporting youth through arts and technology training.",
@@ -3043,8 +3784,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["GIS Mapping", "Remote Sensing", "Data Analysis", "Precision Ag"],
-    "url": "https://www.rcmrd.org/training",
+    "skills": [
+      "GIS Mapping",
+      "Remote Sensing",
+      "Data Analysis",
+      "Precision Ag"
+    ],
+    "url": "https://www.rcmrd.org/en/opportunities/training",
     "country": "Kenya",
     "description": "Specialized short courses in GIS, Remote Sensing, and Data Science tailored for development resources and mapping across Eastern Africa.",
     "language": "English",
@@ -3064,7 +3810,12 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "agri",
-    "skills": ["Drone Ops", "GIS Mapping", "Remote Sensing", "Precision Ag"],
+    "skills": [
+      "Drone Ops",
+      "GIS Mapping",
+      "Remote Sensing",
+      "Precision Ag"
+    ],
     "url": "https://www.orbital.co.ke/training",
     "country": "Kenya",
     "description": "Comprehensive training in geospatial technologies, including drone piloting and mapping for professional applications. Serves Kenya, Uganda, Tanzania, and Rwanda.",
@@ -3085,7 +3836,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Drone Ops", "IoT Sensors", "Remote Sensing", "Precision Ag"],
+    "skills": [
+      "Drone Ops",
+      "IoT Sensors",
+      "Remote Sensing",
+      "Precision Ag"
+    ],
     "url": "https://aceiot.ur.ac.rw/",
     "country": "Rwanda",
     "description": "Short course integrating drone imaging with IoT systems for agricultural and environmental monitoring.",
@@ -3106,7 +3862,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Drone Ops", "Data Collection", "Safety Protocols", "Precision Ag"],
+    "skills": [
+      "Drone Ops",
+      "Data Collection",
+      "Safety Protocols",
+      "Precision Ag"
+    ],
     "url": "https://flyinglabs.org/tanzania/",
     "country": "Tanzania",
     "description": "Hands-on training in professional drone piloting, safety, and data acquisition for local impact.",
@@ -3127,8 +3888,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Drone Ops", "Digital Advisory", "Sustainability", "Precision Ag"],
-    "url": "https://learning.irri.org/",
+    "skills": [
+      "Drone Ops",
+      "Digital Advisory",
+      "Sustainability",
+      "Precision Ag"
+    ],
+    "url": "https://openlearning.cgiar.org/",
     "country": "all",
     "description": "Bite-sized learning modules covering drone operations and digital & regenerative agriculture topics.",
     "language": "English",
@@ -3148,8 +3914,13 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Digital Advisory", "Precision Ag", "Data Analysis", "Agribusiness"],
-    "url": "https://www.cgiar.org/",
+    "skills": [
+      "Digital Advisory",
+      "Precision Ag",
+      "Data Analysis",
+      "Agribusiness"
+    ],
+    "url": "https://openlearning.cgiar.org/",
     "country": "all",
     "description": "A structured certificate-style course providing comprehensive training in digital agriculture technologies and applications.",
     "language": "English",
@@ -3169,7 +3940,11 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Crop Science", "Digital Advisory", "Farm Management"],
+    "skills": [
+      "Crop Science",
+      "Digital Advisory",
+      "Farm Management"
+    ],
     "url": "https://academy.cabi.org/",
     "country": "all",
     "description": "Self-paced online courses and certifications focusing on crop health, advisory services, and digital development for agriculture.",
@@ -3190,7 +3965,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Agribusiness", "Digital Tools", "Entrepreneurship", "Innovation"],
+    "skills": [
+      "Agribusiness",
+      "Digital Tools",
+      "Entrepreneurship",
+      "Innovation"
+    ],
     "url": "https://knowledge.uneca.org/idep/",
     "country": "all",
     "description": "Online course track specifically framed around digital agri-entrepreneurship for youth business growth.",
@@ -3211,8 +3991,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Digital Advisory", "Precision Ag", "Policy", "Agribusiness"],
-    "url": "https://olc.worldbank.org/",
+    "skills": [
+      "Digital Advisory",
+      "Precision Ag",
+      "Policy",
+      "Agribusiness"
+    ],
+    "url": "https://www.worldbank.org/en/topic/agriculture/brief/digital-agriculture",
     "country": "all",
     "description": "Introduction to Digital Agricultural Technologies concepts, use cases, and their impact on the sector.",
     "language": "English",
@@ -3232,7 +4017,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Remote Sensing", "Climate Adaptation", "GIS Mapping", "Data Analysis"],
+    "skills": [
+      "Remote Sensing",
+      "Climate Adaptation",
+      "GIS Mapping",
+      "Data Analysis"
+    ],
     "url": "https://eoafrica-rd.org/space-academy/",
     "country": "all",
     "description": "Online learning assets and MOOC on drought assessment and monitoring using space-based technologies.",
@@ -3253,8 +4043,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["GIS Mapping", "Remote Sensing", "Water Management", "Climate Adaptation"],
-    "url": "https://climwar.unesco.org/",
+    "skills": [
+      "GIS Mapping",
+      "Remote Sensing",
+      "Water Management",
+      "Climate Adaptation"
+    ],
+    "url": "https://www.unesco.org/en/climate-change/education",
     "country": "all",
     "description": "Open online course on Remote Sensing and GIS applications for catchment and water resources management.",
     "language": "English",
@@ -3274,7 +4069,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Drone Ops", "Precision Ag", "Safety Protocols", "Field Ops"],
+    "skills": [
+      "Drone Ops",
+      "Precision Ag",
+      "Safety Protocols",
+      "Field Ops"
+    ],
     "url": "https://precisionfieldacademy.com/",
     "country": "Nigeria",
     "description": "Specialized training in operating agricultural drones for crop spraying and mapping. Pan-African cohorts available.",
@@ -3295,7 +4095,13 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "agri",
-    "skills": ["GIS Mapping", "IoT Sensors", "Entrepreneurship", "AI", "Precision Ag"],
+    "skills": [
+      "GIS Mapping",
+      "IoT Sensors",
+      "Entrepreneurship",
+      "AI",
+      "Precision Ag"
+    ],
     "url": "https://precisionfieldacademy.com/",
     "country": "Nigeria",
     "description": "Comprehensive incubation program covering drone tech, GIS, data, IoT, AI/ML, and entrepreneurship in agriculture.",
@@ -3316,8 +4122,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["IoT Sensors", "Drone Ops", "Precision Ag", "Data Analysis"],
-    "url": "https://euroafrique.co.uk/",
+    "skills": [
+      "IoT Sensors",
+      "Drone Ops",
+      "Precision Ag",
+      "Data Analysis"
+    ],
+    "url": "https://www.euroafriquecorporateskills.com/",
     "country": "all",
     "description": "A short professional programme focused on using IoT and drones for precision agriculture applications.",
     "language": "English",
@@ -3337,8 +4148,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["GIS Mapping", "Remote Sensing", "Data Analysis", "Precision Ag"],
-    "url": "https://www.uj.ac.za/",
+    "skills": [
+      "GIS Mapping",
+      "Remote Sensing",
+      "Data Analysis",
+      "Precision Ag"
+    ],
+    "url": "https://www.su.ac.za/english/faculties/science/departments/geography-environmental-studies",
     "country": "South Africa",
     "description": "Short Learning Programme providing a strong foundation for precision agriculture and remote sensing pathways.",
     "language": "English",
@@ -3358,8 +4174,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Remote Sensing", "Water Management", "Climate Adaptation", "GIS Mapping"],
-    "url": "https://ukzn.ac.za/",
+    "skills": [
+      "Remote Sensing",
+      "Water Management",
+      "Climate Adaptation",
+      "GIS Mapping"
+    ],
+    "url": "https://www.ukzn.ac.za/",
     "country": "South Africa",
     "description": "Applied training course on remote sensing and earth observation for water resources management.",
     "language": "English",
@@ -3380,7 +4201,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Precision Ag", "GIS Mapping", "IoT Sensors", "Data Analysis"],
+    "skills": [
+      "Precision Ag",
+      "GIS Mapping",
+      "IoT Sensors",
+      "Data Analysis"
+    ],
     "url": "https://trainingcred.com/",
     "country": "South Africa",
     "description": "Structured short course explicitly referencing GIS, drones, and IoT for farm monitoring and management.",
@@ -3401,7 +4227,12 @@
     "costType": "Subsidized",
     "mode": "Hybrid",
     "sector": "agri",
-    "skills": ["Climate Modeling", "Remote Sensing", "Water Management", "Climate Adaptation"],
+    "skills": [
+      "Climate Modeling",
+      "Remote Sensing",
+      "Water Management",
+      "Climate Adaptation"
+    ],
     "url": "https://wascal.org/",
     "country": "all",
     "description": "Capacity-building training in hydro-climate and remote sensing, relevant for West Africa and beyond.",
@@ -3422,7 +4253,12 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "agri",
-    "skills": ["Agribusiness", "Crop Science", "Sustainability", "Farm Management"],
+    "skills": [
+      "Agribusiness",
+      "Crop Science",
+      "Sustainability",
+      "Farm Management"
+    ],
     "url": "https://www.sun.ac.za/",
     "country": "South Africa",
     "description": "Catalogue of accredited online and self-study short courses covering various agricultural topics.",
@@ -3443,7 +4279,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Drone Ops", "Precision Ag", "Remote Sensing", "Data Analysis"],
+    "skills": [
+      "Drone Ops",
+      "Precision Ag",
+      "Remote Sensing",
+      "Data Analysis"
+    ],
     "url": "https://www.skillsforafrica.org/",
     "country": "Kenya",
     "description": "Specialized training on using drone-based multi-spectral imaging for precision agriculture applications.",
@@ -3464,7 +4305,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "agri",
-    "skills": ["Drone Ops", "GIS Mapping", "Data Collection", "Remote Sensing"],
+    "skills": [
+      "Drone Ops",
+      "GIS Mapping",
+      "Data Collection",
+      "Remote Sensing"
+    ],
     "url": "https://www.skillsforafrica.org/",
     "country": "Kenya",
     "description": "Geospatial and UAV skills training relevant to agriculture and land monitoring projects.",
@@ -3485,7 +4331,12 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "agri",
-    "skills": ["Drone Ops", "Remote Sensing", "Farm Management", "Precision Ag"],
+    "skills": [
+      "Drone Ops",
+      "Remote Sensing",
+      "Farm Management",
+      "Precision Ag"
+    ],
     "url": "https://www.nobleprog.com/",
     "country": "all",
     "description": "Comprehensive training on using drones for agriculture, including remote sensing and FMIS integration.",
@@ -3506,7 +4357,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Digital Marketing", "Google Ads", "Analytics", "Cloud Computing"],
+    "skills": [
+      "Digital Marketing",
+      "Google Ads",
+      "Analytics",
+      "Cloud Computing"
+    ],
     "url": "https://skillshop.withgoogle.com/",
     "country": "all",
     "description": "Free training and certifications for Google products including Ads, Analytics, and Cloud.",
@@ -3527,7 +4383,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Cloud Computing", "AWS", "Machine Learning", "Cloud Architecture"],
+    "skills": [
+      "Cloud Computing",
+      "AWS",
+      "Machine Learning",
+      "Cloud Architecture"
+    ],
     "url": "https://aws.amazon.com/education/awseducate/",
     "country": "all",
     "description": "Free cloud content and learning pathways for students and beginners to build cloud skills.",
@@ -3548,7 +4409,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Generative AI", "Digital Tools", "Productivity"],
+    "skills": [
+      "AI",
+      "Generative AI",
+      "Digital Tools",
+      "Productivity"
+    ],
     "url": "https://learn.microsoft.com/ai/",
     "country": "all",
     "description": "A comprehensive library of AI learning paths, from introductory concepts to advanced engineering, tailored for the African market.",
@@ -3568,8 +4434,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "energy",
-    "skills": ["AI", "Energy Efficiency", "Data Center Mgmt", "Sustainability"],
-    "url": "https://www.schneideruniversities.com/",
+    "skills": [
+      "AI",
+      "Energy Efficiency",
+      "Data Center Mgmt",
+      "Sustainability"
+    ],
+    "url": "https://www.se.com/ww/en/about-us/university/",
     "country": "all",
     "description": "Learn how Artificial Intelligence is revolutionizing energy efficiency in data centers and buildings.",
     "language": "English",
@@ -3588,8 +4459,13 @@
     "costType": "Subsidized",
     "mode": "Hybrid",
     "sector": "all",
-    "skills": ["Leadership", "Entrepreneurship", "Civic Engagement", "Management"],
-    "url": "https://yali.state.gov/rlc/",
+    "skills": [
+      "Leadership",
+      "Entrepreneurship",
+      "Civic Engagement",
+      "Management"
+    ],
+    "url": "https://www.rlceastafrica.org/",
     "country": "all",
     "description": "Transformational leadership training for young Africans, covering business, civic leadership, and public management.",
     "language": "English/French",
@@ -3608,8 +4484,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Generative AI", "LLMs", "OCI", "Python"],
-    "url": "https://education.oracle.com/generative-ai",
+    "skills": [
+      "Generative AI",
+      "LLMs",
+      "OCI",
+      "Python"
+    ],
+    "url": "https://education.oracle.com/oracle-cloud-infrastructure-2025-generative-ai-professional/pexam_1Z0-1127-25",
     "country": "all",
     "description": "Become an Oracle Cloud Infrastructure Generative AI Certified Professional. Learn to build and deploy LLMs.",
     "language": "English",
@@ -3629,8 +4510,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Generative AI", "LLMs", "Google Cloud", "AI Ethics"],
-    "url": "https://www.cloudskillsboost.google/paths/118",
+    "skills": [
+      "Generative AI",
+      "LLMs",
+      "Google Cloud",
+      "AI Ethics"
+    ],
+    "url": "https://www.skills.google/paths/118",
     "country": "all",
     "description": "An introductory level micro-learning course that explains what Generative AI is, how it is used, and how it differs from traditional machine learning.",
     "language": "English",
@@ -3650,7 +4536,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Machine Learning", "Deep Learning", "Neural Networks", "TensorFlow", "PyTorch"],
+    "skills": [
+      "Machine Learning",
+      "Deep Learning",
+      "Neural Networks",
+      "TensorFlow",
+      "PyTorch"
+    ],
     "url": "https://www.coursera.org/professional-certificates/ai-engineer",
     "country": "all",
     "description": "Launch a career as an AI Engineer. Master Machine Learning and Deep Learning concepts and frameworks.",
@@ -3671,7 +4563,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Policy", "Economics", "Energy Law", "Regulatory Compl.", "Grid Mgmt"],
+    "skills": [
+      "Policy",
+      "Economics",
+      "Energy Law",
+      "Regulatory Compl.",
+      "Grid Mgmt"
+    ],
     "url": "https://www.eac.int/",
     "country": "all",
     "description": "A regional centre in Arusha offering sector-specific training in energy regulation, market design, energy law, and economics.",
@@ -3691,7 +4589,13 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Software Engineer", "AI", "Coding", "Career Planning", "Leadership"],
+    "skills": [
+      "Software Engineer",
+      "AI",
+      "Coding",
+      "Career Planning",
+      "Leadership"
+    ],
     "url": "https://groundbreaker.org/",
     "country": "Uganda",
     "description": "A residential tech training hub focused on young women, offering coding, software & AI engineering apprenticeships and career readiness.",
@@ -3712,7 +4616,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "all",
-    "skills": ["Entrepreneurship", "Business Mgmt", "Strategy", "Financial Literacy"],
+    "skills": [
+      "Entrepreneurship",
+      "Business Mgmt",
+      "Strategy",
+      "Financial Literacy"
+    ],
     "url": "https://mglsd.go.ug/",
     "country": "Uganda",
     "description": "Provides entrepreneurship and business training that enhances employability, small business establishment and economic participation.",
@@ -3732,8 +4641,14 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["React", "Node.js", "DevOps", "Cloud Computing", "Project Mgmt"],
-    "url": "https://refactory.academy/bootcamp/",
+    "skills": [
+      "React",
+      "Node.js",
+      "DevOps",
+      "Cloud Computing",
+      "Project Mgmt"
+    ],
+    "url": "https://refactory.academy/programs/",
     "country": "Uganda",
     "description": "An intense, project-based bootcamp for Catalyst graduates or intermediate developers to master full-stack development and industry tools.",
     "language": "English",
@@ -3753,8 +4668,13 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Digital Tools", "Communication", "Data Entry", "Cybersecurity"],
-    "url": "https://refactory.academy/icdl/",
+    "skills": [
+      "Digital Tools",
+      "Communication",
+      "Data Entry",
+      "Cybersecurity"
+    ],
+    "url": "https://refactory.academy/programs/",
     "country": "Uganda",
     "description": "International Computer Driving License (ICDL) certification to build essential digital competence for the workplace.",
     "language": "English",
@@ -3774,7 +4694,12 @@
     "costType": "Paid",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Leadership", "Strategy", "Management", "Agile"],
+    "skills": [
+      "Leadership",
+      "Strategy",
+      "Management",
+      "Agile"
+    ],
     "url": "https://refactory.academy/",
     "country": "Uganda",
     "description": "Executive training for technology leaders and managers to drive digital transformation and manage technical teams.",
@@ -3795,7 +4720,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Career Planning", "Communication", "Mentorship", "Freelancing", "Soft Skills"],
+    "skills": [
+      "Career Planning",
+      "Communication",
+      "Mentorship",
+      "Freelancing",
+      "Soft Skills"
+    ],
     "url": "https://sasakazi.com/",
     "country": "Kenya",
     "description": "A mentorship and job linkage program connecting junior tech talent with industry mentors and employment opportunities.",
@@ -3816,8 +4747,14 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "all",
-    "skills": ["Entrepreneurship", "Business Model", "Innovation", "Pitching", "Strategy"],
-    "url": "https://eldohub.co.ke/entrepreneurship/",
+    "skills": [
+      "Entrepreneurship",
+      "Business Model",
+      "Innovation",
+      "Pitching",
+      "Strategy"
+    ],
+    "url": "https://eldohub.co.ke/",
     "country": "Kenya",
     "description": "Support for early-stage startups in Western Kenya with workspace, mentorship, and access to funding networks.",
     "language": "English",
@@ -3837,8 +4774,13 @@
     "costType": "Subsidized",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Entrepreneurship", "Product Design", "Digital Marketing", "Innovation"],
-    "url": "https://innovationvillage.co.ug/",
+    "skills": [
+      "Entrepreneurship",
+      "Product Design",
+      "Digital Marketing",
+      "Innovation"
+    ],
+    "url": "https://innovationvillage.africa/",
     "country": "Uganda",
     "description": "A launchpad for innovators and entrepreneurs offering skilling, mentorship, and access to markets.",
     "language": "English",
@@ -3858,7 +4800,12 @@
     "costType": "Free",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Web Dev", "Mobile App Dev", "Mentorship", "Career Planning"],
+    "skills": [
+      "Web Dev",
+      "Mobile App Dev",
+      "Mentorship",
+      "Career Planning"
+    ],
     "url": "https://klab.rw/",
     "country": "Rwanda",
     "description": "An open space for IT entrepreneurs and innovators to collaborate, learn, and receive mentorship.",
@@ -3879,7 +4826,12 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "digital",
-    "skills": ["Digital Tools", "Basic IT", "Innovation", "Communication"],
+    "skills": [
+      "Digital Tools",
+      "Basic IT",
+      "Innovation",
+      "Communication"
+    ],
     "url": "https://konetahub.org/",
     "country": "South Sudan",
     "description": "Community innovation hub providing digital skills training and youth empowerment in Juba.",
@@ -3900,7 +4852,12 @@
     "costType": "Subsidized",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Cloud Computing", "Software Engineer", "Sales", "Consulting"],
+    "skills": [
+      "Cloud Computing",
+      "Software Engineer",
+      "Sales",
+      "Consulting"
+    ],
     "url": "https://www.oracle.com/careers/generation-oracle/",
     "country": "all",
     "description": "A career development program for graduates to explore, innovate, and excel. Offers immersive training and hands-on projects regardless of academic background.",
@@ -3921,8 +4878,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Oracle Cloud", "Data Science", "Multicloud"],
-    "url": "https://education.oracle.com/race-to-certification",
+    "skills": [
+      "AI",
+      "Oracle Cloud",
+      "Data Science",
+      "Multicloud"
+    ],
+    "url": "https://education.oracle.com/race-to-certification-2025",
     "country": "all",
     "description": "Accelerate your learning with free digital training and professional certifications in AI, OCI, and Data. Available through Oct 31, 2025.",
     "language": "English",
@@ -3942,7 +4904,12 @@
     "costType": "Subsidized",
     "mode": "Remote",
     "sector": "digital",
-    "skills": ["Software Engineer", "Leadership", "Remote Work", "Full Stack"],
+    "skills": [
+      "Software Engineer",
+      "Leadership",
+      "Remote Work",
+      "Full Stack"
+    ],
     "url": "https://andela.com/",
     "country": "all",
     "description": "A career accelerator for African software engineers, offering technical training and global job placement support.",
@@ -3951,7 +4918,11 @@
     "lastUpdated": "2025",
     "outcomeData": {
       "available": true,
-      "placement": { "d90": "High", "m6": "Very High", "y1": "Global" },
+      "placement": {
+        "d90": "High",
+        "m6": "Very High",
+        "y1": "Global"
+      },
       "uplift": "Global Rates",
       "methodology": "Employer Data",
       "stars": 5
@@ -3970,7 +4941,12 @@
     "costType": "Subsidized",
     "mode": "Online",
     "sector": "all",
-    "skills": ["Entrepreneurship", "Business Mgmt", "Strategy", "Financial Literacy"],
+    "skills": [
+      "Entrepreneurship",
+      "Business Mgmt",
+      "Strategy",
+      "Financial Literacy"
+    ],
     "url": "https://www.tonyelumelufoundation.org/",
     "country": "all",
     "description": "Training, mentorship, and seed capital ($5,000) for African entrepreneurs across all 54 countries.",
@@ -3991,7 +4967,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Data Entry", "Digital Marketing", "Virtual Assistant", "Transcription"],
+    "skills": [
+      "Data Entry",
+      "Digital Marketing",
+      "Virtual Assistant",
+      "Transcription"
+    ],
     "url": "https://ajiradigital.go.ke/",
     "country": "Kenya",
     "description": "Foundational training in online work skills including transcription, digital marketing, and virtual assistance. Part of the national Ajira Digital program.",
@@ -4012,7 +4993,12 @@
     "costType": "Subsidized",
     "mode": "In-Person",
     "sector": "all",
-    "skills": ["Entrepreneurship", "Business Mgmt", "Financial Literacy", "Market Access"],
+    "skills": [
+      "Entrepreneurship",
+      "Business Mgmt",
+      "Financial Literacy",
+      "Market Access"
+    ],
     "url": "https://www.psfuganda.org/",
     "country": "Uganda",
     "description": "Technical and business skills training for women entrepreneurs to transition enterprises from micro to small/medium scale.",
@@ -4034,7 +5020,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "all",
-    "skills": ["Management", "Leadership", "Strategy", "Finance"],
+    "skills": [
+      "Management",
+      "Leadership",
+      "Strategy",
+      "Finance"
+    ],
     "url": "https://psf.org.rw/",
     "country": "Rwanda",
     "description": "Capacity building for private sector professionals in leadership, management, and operational efficiency.",
@@ -4055,7 +5046,13 @@
     "costType": "Subsidized",
     "mode": "Hybrid",
     "sector": "all",
-    "skills": ["Entrepreneurship", "Agribusiness", "Green Tech", "Industry 4.0", "Sustainability"],
+    "skills": [
+      "Entrepreneurship",
+      "Agribusiness",
+      "Green Tech",
+      "Industry 4.0",
+      "Sustainability"
+    ],
     "url": "https://www.iucea.org/",
     "country": "all",
     "description": "A $972 million regional program targeting 18 million youth across Eastern and Southern Africa, aligning TVET and university training with private sector value chains in Agribusiness, Energy, Healthcare, Tourism, and Manufacturing.",
@@ -4076,8 +5073,13 @@
     "costType": "Free",
     "mode": "Hybrid",
     "sector": "all",
-    "skills": ["Sustainability", "Agribusiness", "Climate Adaptation", "Water Management"],
-    "url": "https://eajobcenter.com/",
+    "skills": [
+      "Sustainability",
+      "Agribusiness",
+      "Climate Adaptation",
+      "Water Management"
+    ],
+    "url": "https://www.eac.int/environment/aquatic-ecosystems/blue-economy",
     "country": "all",
     "description": "Short training (March 23–30, 2026) focusing on equipping youth and women with opportunities in the Blue Economy sector.",
     "language": "English",
@@ -4098,7 +5100,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "all",
-    "skills": ["Safety Protocols", "Engineering", "Field Ops", "Logistics"],
+    "skills": [
+      "Safety Protocols",
+      "Engineering",
+      "Field Ops",
+      "Logistics"
+    ],
     "url": "https://www.nit.ac.tz/",
     "country": "Tanzania",
     "description": "EASA-certified aviation maintenance and pilot training hub for East Africa, offering specialized aeronautical and transport certifications.",
@@ -4123,7 +5130,12 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Generative AI", "AI", "Python", "Cloud Computing"],
+    "skills": [
+      "Generative AI",
+      "AI",
+      "Python",
+      "Cloud Computing"
+    ],
     "url": "https://skillsbuild.org/",
     "country": "all",
     "description": "Learn to design, test, and deploy conversational chatbots using the IBM watsonx platform.",
@@ -4144,7 +5156,13 @@
     "costType": "Free",
     "mode": "Hybrid",
     "sector": "digital",
-    "skills": ["Entrepreneurship", "AI", "Business Mgmt", "Innovation", "Product Design"],
+    "skills": [
+      "Entrepreneurship",
+      "AI",
+      "Business Mgmt",
+      "Innovation",
+      "Product Design"
+    ],
     "url": "https://technovationchallenge.org/",
     "country": "all",
     "description": "Empowering youth to identify community problems and build AI-powered business solutions. Focuses on tech entrepreneurship.",
@@ -4166,7 +5184,12 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "all",
-    "skills": ["Project Mgmt", "Communication", "Digital Tools", "Business Mgmt"],
+    "skills": [
+      "Project Mgmt",
+      "Communication",
+      "Digital Tools",
+      "Business Mgmt"
+    ],
     "url": "https://alison.com/",
     "country": "all",
     "description": "A highly accessible platform offering thousands of free courses and lightweight diplomas. Very popular for rapid upskilling in emerging markets.",
@@ -4187,7 +5210,13 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Data Science", "Python", "SQL", "Machine Learning", "Data Analysis"],
+    "skills": [
+      "Data Science",
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Data Analysis"
+    ],
     "url": "https://www.datacamp.com/",
     "country": "all",
     "description": "Interactive learning platform focused heavily on Data Science, AI, and analytics using Python, R, and SQL.",
@@ -4208,7 +5237,12 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "all",
-    "skills": ["Sustainability", "Agribusiness", "Digital Tools", "Business Mgmt"],
+    "skills": [
+      "Sustainability",
+      "Agribusiness",
+      "Digital Tools",
+      "Business Mgmt"
+    ],
     "url": "https://www.futurelearn.com/",
     "country": "all",
     "description": "Offers diverse courses from global universities, including excellent tracks on Climate Smart Agriculture and digital business.",
@@ -4229,7 +5263,13 @@
     "costType": "Free",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Digital Marketing", "SEO", "Communication", "Social Media", "Strategy"],
+    "skills": [
+      "Digital Marketing",
+      "SEO",
+      "Communication",
+      "Social Media",
+      "Strategy"
+    ],
     "url": "https://academy.hubspot.com/",
     "country": "all",
     "description": "Industry-standard, free certifications in inbound marketing, sales, and customer service. Excellent for digital entrepreneurs.",
@@ -4250,7 +5290,12 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "all",
-    "skills": ["Communication", "Leadership", "Software Engineer", "Cloud Computing"],
+    "skills": [
+      "Communication",
+      "Leadership",
+      "Software Engineer",
+      "Cloud Computing"
+    ],
     "url": "https://www.linkedin.com/learning/",
     "country": "all",
     "description": "Comprehensive library for employability soft skills, software development, and IT administration.",
@@ -4271,7 +5316,13 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["Software Engineer", "DevOps", "Cybersecurity", "Cloud Architecture", "Python"],
+    "skills": [
+      "Software Engineer",
+      "DevOps",
+      "Cybersecurity",
+      "Cloud Architecture",
+      "Python"
+    ],
     "url": "https://www.pluralsight.com/",
     "country": "all",
     "description": "Deep, specialized technical courses for IT professionals, covering Cloud Architecture, Cybersecurity, and DevOps.",
@@ -4292,7 +5343,13 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Machine Learning", "Cloud Computing", "Data Science", "Drone Ops"],
+    "skills": [
+      "AI",
+      "Machine Learning",
+      "Cloud Computing",
+      "Data Science",
+      "Drone Ops"
+    ],
     "url": "https://www.udacity.com/",
     "country": "all",
     "description": "High-quality, project-based tech education (Nanodegrees) built with industry partners like Google and AWS.",
@@ -4313,7 +5370,13 @@
     "costType": "Paid",
     "mode": "Online",
     "sector": "all",
-    "skills": ["Web Dev", "Solar PV", "Agribusiness", "Digital Marketing", "React"],
+    "skills": [
+      "Web Dev",
+      "Solar PV",
+      "Agribusiness",
+      "Digital Marketing",
+      "React"
+    ],
     "url": "https://www.udemy.com/",
     "country": "all",
     "description": "A massive, affordable marketplace covering almost every conceivable skill, from practical Solar PV business models to React development.",
@@ -4334,7 +5397,12 @@
     "costType": "Paid",
     "mode": "In-Person",
     "sector": "energy",
-    "skills": ["Grid Systems", "Solar PV", "Project Mgmt", "Energy Efficiency"],
+    "skills": [
+      "Grid Systems",
+      "Solar PV",
+      "Project Mgmt",
+      "Energy Efficiency"
+    ],
     "url": "https://serc.strathmore.edu/",
     "country": "Kenya",
     "description": "Comprehensive course on designing, operating, and managing renewable mini-grids in rural areas.",
@@ -4355,12 +5423,539 @@
     "costType": "Freemium",
     "mode": "Online",
     "sector": "digital",
-    "skills": ["AI", "Machine Learning", "Cloud Computing", "Python"],
+    "skills": [
+      "AI",
+      "Machine Learning",
+      "Cloud Computing",
+      "Python"
+    ],
     "url": "https://www.coursera.org/google-cloud",
     "country": "all",
     "description": "Learn to build, train, and deploy machine learning models using Google Cloud AI tools.",
     "language": "English",
     "prerequisites": "Basic Python",
     "lastUpdated": "2026"
+  },
+  {
+    "id": "n_cisco_ccna",
+    "name": "CCNA (Cisco Certified Network Associate)",
+    "provider": "Cisco Networking Academy",
+    "type": "Professional Certificate",
+    "level": "med",
+    "duration": "6 months",
+    "durationHours": 200,
+    "difficulty": "Intermediate",
+    "cost": "Paid",
+    "costType": "Paid",
+    "mode": "Online / In-Person",
+    "sector": "digital",
+    "skills": [
+      "Networking",
+      "Cybersecurity",
+      "Cloud Computing",
+      "IT Support",
+      "System Admin"
+    ],
+    "occupations": [
+      "Network Engineer",
+      "IT Support Specialist",
+      "Systems Administrator"
+    ],
+    "url": "https://www.netacad.com/courses/networking/ccna",
+    "country": "all",
+    "description": "Industry-standard networking certification covering IP connectivity, security fundamentals, and network access. One of the most recognised entry-level certs by East African telecoms and IT employers.",
+    "language": "English",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "n_comptia_a",
+    "name": "CompTIA A+ Certification",
+    "provider": "CompTIA",
+    "type": "Professional Certificate",
+    "level": "short",
+    "duration": "3-6 months",
+    "durationHours": 120,
+    "difficulty": "Beginner",
+    "cost": "Paid",
+    "costType": "Paid",
+    "mode": "Online",
+    "sector": "digital",
+    "skills": [
+      "IT Support",
+      "Networking",
+      "Cybersecurity",
+      "System Admin",
+      "Cloud Computing"
+    ],
+    "occupations": [
+      "IT Support Technician",
+      "Help Desk Analyst",
+      "Systems Administrator"
+    ],
+    "url": "https://www.comptia.org/certifications/a",
+    "country": "all",
+    "description": "Vendor-neutral foundational IT certification covering hardware, networking, and troubleshooting. Widely recognised by African employers as proof of entry-level IT competence.",
+    "language": "English",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "n_ml_deeplearning",
+    "name": "Machine Learning Specialization",
+    "provider": "DeepLearning.AI / Coursera",
+    "type": "Specialization",
+    "level": "med",
+    "duration": "3 months",
+    "durationHours": 90,
+    "difficulty": "Intermediate",
+    "cost": "Free (Audit) / \\/mo",
+    "costType": "Freemium",
+    "mode": "Online",
+    "sector": "digital",
+    "skills": [
+      "Machine Learning",
+      "Python",
+      "Data Science",
+      "AI",
+      "Deep Learning"
+    ],
+    "occupations": [
+      "Machine Learning Engineer",
+      "AI/ML Engineer",
+      "Data Scientist"
+    ],
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "country": "all",
+    "description": "Andrew Ng's foundational ML specialization — the most widely taken ML course globally (6M+ enrolled). Covers supervised/unsupervised learning, neural networks, and best practices. Gateway to AI careers.",
+    "language": "English",
+    "lastUpdated": "2025",
+    "gsa_member": true
+  },
+  {
+    "id": "n_irena_re",
+    "name": "IRENA Renewable Energy Learning Platform",
+    "provider": "IRENA",
+    "type": "Learning Platform",
+    "level": "short",
+    "duration": "Self-paced",
+    "durationHours": 0,
+    "difficulty": "All Levels",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "energy",
+    "skills": [
+      "Solar PV",
+      "Wind Power",
+      "Energy Policy",
+      "Sustainability",
+      "Green Tech"
+    ],
+    "occupations": [
+      "Energy Policy Analyst",
+      "Renewable Energy Technician",
+      "Project Manager"
+    ],
+    "url": "https://www.irena.org/Energy-Transition/Partnerships/Youth-Engagement",
+    "country": "all",
+    "description": "UN-backed renewable energy capacity building platform designed for developing countries. Covers off-grid solutions, energy transition policy, and renewable technology deployment — directly Africa-relevant.",
+    "language": "English",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "n_cgiar_open",
+    "name": "CGIAR Open Learning Courses",
+    "provider": "CGIAR / CCAFS",
+    "type": "Learning Platform",
+    "level": "short",
+    "duration": "Self-paced",
+    "durationHours": 0,
+    "difficulty": "All Levels",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "agri",
+    "skills": [
+      "Climate Smart Ag",
+      "Food Security",
+      "Precision Ag",
+      "Digital Advisory",
+      "Farm Management"
+    ],
+    "occupations": [
+      "Agricultural Extension Officer",
+      "Climate Risk Analyst",
+      "Digital Extension Officer"
+    ],
+    "url": "https://openlearning.cgiar.org/",
+    "country": "all",
+    "description": "50+ free courses from CGIAR's global research network on climate-smart agriculture, food systems, digital extension, and sustainable farming — replacing the retired WageningenX edX and IRRI eLearning links.",
+    "language": "English / French",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "n_aws_restart",
+    "name": "AWS re/Start (Cloud Career Accelerator)",
+    "provider": "AWS",
+    "type": "Bootcamp",
+    "level": "med",
+    "duration": "12 weeks",
+    "durationHours": 480,
+    "difficulty": "Beginner",
+    "cost": "Free (Sponsored)",
+    "costType": "Subsidized",
+    "mode": "In-Person",
+    "sector": "digital",
+    "skills": [
+      "Cloud Computing",
+      "AWS/Azure",
+      "Networking",
+      "Python",
+      "DevOps"
+    ],
+    "occupations": [
+      "Cloud Engineer",
+      "Systems Administrator",
+      "DevOps Engineer"
+    ],
+    "url": "https://aws.amazon.com/training/restart/",
+    "country": "all",
+    "description": "Full-time, 12-week cloud computing accelerator for unemployed/underemployed youth, with a direct pathway to AWS certifications. Active in Kenya, South Africa, Nigeria, and Rwanda.",
+    "language": "English",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "n_pmp_prep",
+    "name": "PMP (Project Management Professional) Certification",
+    "provider": "PMI / Coursera",
+    "type": "Professional Certificate",
+    "level": "med",
+    "duration": "6 months",
+    "durationHours": 200,
+    "difficulty": "Intermediate",
+    "cost": "Paid",
+    "costType": "Paid",
+    "mode": "Online",
+    "sector": "digital",
+    "skills": [
+      "Project Mgmt",
+      "Agile",
+      "Strategy",
+      "Leadership",
+      "Regulatory Compl."
+    ],
+    "occupations": [
+      "Project Manager",
+      "Programme Manager",
+      "Operations Manager"
+    ],
+    "url": "https://www.pmi.org/certifications/project-management-pmp",
+    "country": "all",
+    "description": "The world's most recognised project management certification. Relevant across all three sectors — managing agri, energy, and digital projects in Africa increasingly requires PMP-level credentials.",
+    "language": "English",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "n_alu_entrepreneurship",
+    "name": "Entrepreneurial Leadership Certificate",
+    "provider": "African Leadership University (ALU)",
+    "type": "Certificate",
+    "level": "med",
+    "duration": "4 months",
+    "durationHours": 120,
+    "difficulty": "Intermediate",
+    "cost": "Paid",
+    "costType": "Paid",
+    "mode": "Online",
+    "sector": "all",
+    "skills": [
+      "Entrepreneurship",
+      "Leadership",
+      "Strategy",
+      "Business Mgmt",
+      "Financial Literacy"
+    ],
+    "occupations": [
+      "Entrepreneur",
+      "Product Manager",
+      "Business Development Manager"
+    ],
+    "url": "https://www.alueducation.com/programs/",
+    "country": "all",
+    "description": "ALU's entrepreneurial leadership program is Africa's premier business curriculum, built for the continent by Africans. Integrates purpose-driven leadership with practical venture-building skills.",
+    "language": "English",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "n_ifc_climate",
+    "name": "Climate Finance and Investment",
+    "provider": "IFC / World Bank OLC",
+    "type": "Short Course",
+    "level": "short",
+    "duration": "Self-paced",
+    "durationHours": 20,
+    "difficulty": "Intermediate",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "energy",
+    "skills": [
+      "Green Tech",
+      "Policy",
+      "Economics",
+      "Sustainability",
+      "Entrepreneurship"
+    ],
+    "occupations": [
+      "Energy Policy Analyst",
+      "Project Manager",
+      "Agri-Entrepreneur"
+    ],
+    "url": "https://www.worldbank.org/en/olc/course/72228",
+    "country": "all",
+    "description": "IFC and World Bank course covering green bonds, carbon markets, and climate finance for African markets. Critical for energy and agri entrepreneurs seeking investment and understanding sustainability finance.",
+    "language": "English",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "n_data_ethics_africa",
+    "name": "Data Ethics and Responsible AI",
+    "provider": "Pollicy / Mozilla Foundation",
+    "type": "Short Course",
+    "level": "short",
+    "duration": "Self-paced",
+    "durationHours": 10,
+    "difficulty": "Beginner",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "digital",
+    "skills": [
+      "AI",
+      "Cybersecurity",
+      "Policy",
+      "Data Analysis",
+      "User Research"
+    ],
+    "occupations": [
+      "AI Ethics Officer",
+      "Product Manager",
+      "Policy Analyst",
+      "Data Scientist"
+    ],
+    "url": "https://pollicy.org/resources/",
+    "country": "all",
+    "description": "Africa-focused responsible AI and data ethics training from Pollicy (Uganda). Covers algorithmic accountability, data governance, and digital rights — a critical gap in AI education for the African context.",
+    "language": "English",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x1",
+    "name": "M-Pesa Daraja API — Developer Training",
+    "provider": "Safaricom Developer",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "Self-paced",
+    "durationHours": 20,
+    "difficulty": "Intermediate",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "all",
+    "skills": ["Mobile Money API", "API Design", "JavaScript", "Web Dev"],
+    "url": "https://developer.safaricom.co.ke/",
+    "country": "all",
+    "description": "Official M-Pesa Daraja 2.0 API integration training — STK Push, B2C, B2B and C2B payment flows with sandbox testing and certification.",
+    "language": "English",
+    "prerequisites": "Basic programming knowledge",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x2",
+    "name": "Africa's Talking API Integration",
+    "provider": "Africa's Talking",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "Self-paced",
+    "durationHours": 15,
+    "difficulty": "Beginner",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "all",
+    "skills": ["Mobile Money API", "API Design", "Python", "Digital Tools"],
+    "url": "https://africastalking.com/",
+    "country": "all",
+    "description": "Integrate Africa's Talking APIs for SMS, mobile payments, voice and USSD across East Africa's mobile networks — used by 40,000+ developers.",
+    "language": "English",
+    "prerequisites": "None",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x3",
+    "name": "FinTech for Africa — Mobile Money & Digital Payments",
+    "provider": "ALX Africa",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "4 weeks",
+    "durationHours": 40,
+    "difficulty": "Beginner",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "all",
+    "skills": ["Mobile Money API", "Financial Literacy", "Digital Tools", "Entrepreneurship"],
+    "url": "https://www.alxafrica.com/",
+    "country": "all",
+    "description": "Mobile money infrastructure, digital payment integration and financial inclusion strategies for East Africa — covering M-Pesa, MTN MoMo and Airtel Money.",
+    "language": "English",
+    "prerequisites": "None",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x4",
+    "name": "Data Science for Agriculture",
+    "provider": "Wageningen University (edX)",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "8 weeks",
+    "durationHours": 48,
+    "difficulty": "Intermediate",
+    "cost": "Free (Audit) / $149",
+    "costType": "Freemium",
+    "mode": "Online",
+    "sector": "agri",
+    "skills": ["Python", "Data Science", "Machine Learning", "Data Analysis", "Precision Ag"],
+    "url": "https://www.edx.org/learn/data-science",
+    "country": "all",
+    "description": "Applying data science to crop yield prediction, soil analysis, climate risk modelling and supply chain optimisation — practical Python labs using real East Africa field data.",
+    "language": "English",
+    "prerequisites": "Basic programming",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x5",
+    "name": "Python & Data Analysis for Energy Systems",
+    "provider": "IRENA",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "6 weeks",
+    "durationHours": 30,
+    "difficulty": "Intermediate",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "energy",
+    "skills": ["Python", "Data Science", "Data Analysis", "Data Viz", "Energy Efficiency"],
+    "url": "https://www.irena.org/energytransition/Energy-Technology-and-Innovation",
+    "country": "all",
+    "description": "Grid modelling, renewable output simulation and energy data analysis using Python — based on IRENA's open energy system modelling tools (PyPSA, PLEXOS).",
+    "language": "English",
+    "prerequisites": "Basic Python",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x6",
+    "name": "IoT for Smart Energy & Grid Monitoring",
+    "provider": "IBM SkillsBuild",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "4 weeks",
+    "durationHours": 20,
+    "difficulty": "Beginner",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "energy",
+    "skills": ["IoT", "IoT Sensors", "Data Analysis", "Cloud Computing", "Cybersecurity"],
+    "url": "https://skillsbuild.org/",
+    "country": "all",
+    "description": "IoT sensor networks for smart grid monitoring, fault detection and energy demand management — from meter data to cloud dashboards in utility and off-grid solar contexts.",
+    "language": "English",
+    "prerequisites": "None",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x7",
+    "name": "Machine Learning for Energy & Climate",
+    "provider": "DeepLearning.AI (Coursera)",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "6 weeks",
+    "durationHours": 35,
+    "difficulty": "Intermediate",
+    "cost": "Free (Audit) / $49/mo",
+    "costType": "Freemium",
+    "mode": "Online",
+    "sector": "energy",
+    "skills": ["Machine Learning", "Python", "Data Science", "AI", "Green Tech"],
+    "url": "https://www.coursera.org/",
+    "country": "all",
+    "description": "Applying machine learning to renewable energy challenges — solar output forecasting, load prediction, predictive maintenance and grid optimisation models.",
+    "language": "English",
+    "prerequisites": "Basic Python, ML fundamentals",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x8",
+    "name": "GIS & Remote Sensing for Energy Planning",
+    "provider": "NM-AIST",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "6 weeks",
+    "durationHours": 36,
+    "difficulty": "Intermediate",
+    "cost": "Subsidized",
+    "costType": "Subsidized",
+    "mode": "Blended",
+    "sector": "energy",
+    "skills": ["GIS Mapping", "Remote Sensing", "Drone Ops", "Data Viz"],
+    "url": "https://www.nm-aist.ac.tz/",
+    "country": "Tanzania",
+    "description": "Using GIS and satellite imagery for mini-grid site selection, solar resource assessment and off-grid electrification planning across rural East Africa.",
+    "language": "English",
+    "prerequisites": "None",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x9",
+    "name": "Cybersecurity for Critical Infrastructure",
+    "provider": "CISCO Networking Academy",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "8 weeks",
+    "durationHours": 40,
+    "difficulty": "Intermediate",
+    "cost": "Free",
+    "costType": "Free",
+    "mode": "Online",
+    "sector": "energy",
+    "skills": ["Cybersecurity", "Network Security", "IoT", "Cloud Computing"],
+    "url": "https://www.netacad.com/",
+    "country": "all",
+    "description": "Securing SCADA systems, operational technology (OT) and critical grid infrastructure — covering ICS/SCADA vulnerabilities, threat detection and incident response for utility environments.",
+    "language": "English",
+    "prerequisites": "Basic networking",
+    "lastUpdated": "2025"
+  },
+  {
+    "id": "x10",
+    "name": "Cloud Computing for Agritech Platforms",
+    "provider": "Google via Coursera",
+    "type": "Short Course",
+    "level": "med",
+    "duration": "5 weeks",
+    "durationHours": 25,
+    "difficulty": "Beginner",
+    "cost": "Free (Audit) / $49/mo",
+    "costType": "Freemium",
+    "mode": "Online",
+    "sector": "agri",
+    "skills": ["Cloud Computing", "Data Analysis", "IoT", "Web Dev", "Digital Tools"],
+    "url": "https://www.coursera.org/",
+    "country": "all",
+    "description": "Deploying and managing cloud infrastructure for farm management platforms, sensor data lakes and agricultural advisory services — Google Cloud applied to agritech use cases.",
+    "language": "English",
+    "prerequisites": "None",
+    "lastUpdated": "2025"
   }
 ]

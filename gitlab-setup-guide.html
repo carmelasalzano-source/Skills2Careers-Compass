@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills2Careers Compass — UNESCO GitLab Setup Guide</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f8fafc; color: #1e293b; }
+
+    .page { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+
+    /* Header */
+    .header { background: linear-gradient(135deg, #1e3a5f 0%, #0f766e 100%); border-radius: 12px; padding: 32px 36px; margin-bottom: 32px; color: white; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+    .header-text h1 { font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+    .header-text p { font-size: 13px; opacity: 0.8; }
+    .header-meta { text-align: right; font-size: 11px; opacity: 0.7; line-height: 1.8; flex-shrink: 0; }
+    .logo-chip { background: rgba(255,255,255,0.15); border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; display: inline-block; margin-bottom: 8px; }
+
+    /* Section headings */
+    .section-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 12px; margin-top: 36px; padding-bottom: 6px; border-bottom: 1px solid #e2e8f0; }
+
+    /* Step cards */
+    .step-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .step-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; }
+    .step-card.priority { border-top: 3px solid #16a34a; }
+    .step-card.secondary { border-top: 3px solid #3b82f6; }
+    .step-num { display: inline-block; background: #16a34a; color: white; font-size: 10px; font-weight: 800; border-radius: 20px; padding: 2px 8px; margin-bottom: 8px; }
+    .step-num.blue { background: #3b82f6; }
+    .step-card h3 { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 8px; }
+
+    /* File lists */
+    .file-list { list-style: none; }
+    .file-list li { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 12px; color: #475569; border-bottom: 1px solid #f1f5f9; }
+    .file-list li:last-child { border-bottom: none; }
+    .file-list li::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: #16a34a; flex-shrink: 0; }
+    .file-list li.blue::before { background: #3b82f6; }
+    code.fname { font-family: 'Consolas', 'Courier New', monospace; font-size: 11px; background: #f1f5f9; padding: 1px 5px; border-radius: 3px; color: #1e293b; }
+
+    /* Do not upload */
+    .dont-list { list-style: none; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 14px 16px; }
+    .dont-list li { font-size: 12px; color: #92400e; padding: 3px 0; display: flex; align-items: center; gap: 8px; }
+    .dont-list li::before { content: '✕'; color: #ef4444; font-weight: 700; font-size: 10px; flex-shrink: 0; }
+
+    /* File content boxes */
+    .file-block { background: white; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 20px; overflow: hidden; }
+    .file-block-header { background: #1e293b; color: white; padding: 10px 16px; display: flex; align-items: center; gap: 10px; }
+    .file-block-header .fname-big { font-family: 'Consolas', 'Courier New', monospace; font-size: 13px; font-weight: 700; color: #7dd3fc; }
+    .file-block-header .file-desc { font-size: 11px; color: #94a3b8; }
+    .file-block pre { font-family: 'Consolas', 'Courier New', monospace; font-size: 11px; line-height: 1.7; color: #334155; padding: 16px; white-space: pre-wrap; word-break: break-word; background: #f8fafc; border-top: 1px solid #e2e8f0; max-height: 500px; overflow-y: auto; }
+
+    /* Callout */
+    .callout { background: #f0fdf4; border: 2px solid #16a34a; border-radius: 10px; padding: 14px 18px; margin-bottom: 20px; }
+    .callout strong { color: #14532d; font-size: 13px; }
+    .callout p { font-size: 12px; color: #166534; margin-top: 4px; line-height: 1.6; }
+
+    /* Two col layout */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    @media print {
+      body { background: white; }
+      .page { padding: 20px; }
+      .file-block pre { max-height: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-text">
+      <div class="logo-chip">UNESCO · Skills2Careers Compass</div>
+      <h1>GitLab Repository Setup Guide</h1>
+      <p>Step-by-step upload checklist and all required file contents</p>
+    </div>
+    <div class="header-meta">
+      Prepared: June 2026<br>
+      Repository: code.unesco.org/skills2careers/compass<br>
+      Licence: Apache 2.0 · UNESCO copyright
+    </div>
+  </div>
+
+  <!-- Callout -->
+  <div class="callout">
+    <strong>Do the first commit before sharing code with any external party.</strong>
+    <p>The GitLab commit timestamp is cryptographically immutable and publicly auditable. Once the five governance files are committed under UNESCO's namespace, UNESCO's ownership predates any MoU, funder agreement, or partner contract — making it structurally very difficult for any party to later challenge UNESCO's primacy.</p>
+  </div>
+
+  <!-- Upload checklist -->
+  <div class="section-label">Upload Checklist</div>
+  <div class="step-grid">
+
+    <div class="step-card priority">
+      <span class="step-num">Commit 1 — Do First</span>
+      <h3>Governance &amp; IP Files</h3>
+      <p style="font-size:11px; color:#64748b; margin-bottom:10px;">These five files establish UNESCO's ownership. Upload them alone as the very first commit.</p>
+      <ul class="file-list">
+        <li><code class="fname">LICENSE</code></li>
+        <li><code class="fname">NOTICE</code></li>
+        <li><code class="fname">CONTRIBUTING.md</code></li>
+        <li><code class="fname">GOVERNANCE.md</code></li>
+        <li><code class="fname">README.md</code></li>
+      </ul>
+    </div>
+
+    <div class="step-card secondary">
+      <span class="step-num blue">Commit 2 — Application Code</span>
+      <h3>JavaScript &amp; HTML Source</h3>
+      <ul class="file-list">
+        <li class="blue"><code class="fname">index.html</code></li>
+        <li class="blue"><code class="fname">data.js</code></li>
+        <li class="blue"><code class="fname">data-manager.js</code></li>
+        <li class="blue"><code class="fname">render-hub.js</code></li>
+        <li class="blue"><code class="fname">render-sectors.js</code></li>
+        <li class="blue"><code class="fname">init.js</code></li>
+        <li class="blue"><code class="fname">state.js</code></li>
+        <li class="blue"><code class="fname">style.css</code></li>
+        <li class="blue"><code class="fname">sw.js</code></li>
+        <li class="blue"><code class="fname">manifest.json</code></li>
+        <li class="blue"><code class="fname">robots.txt</code></li>
+        <li class="blue"><code class="fname">sitemap.xml</code></li>
+        <li class="blue"><code class="fname">netlify.toml</code></li>
+        <li class="blue"><code class="fname">eslint.config.js</code></li>
+        <li class="blue"><code class="fname">.stylelintrc.json</code></li>
+        <li class="blue"><code class="fname">.gitignore</code></li>
+      </ul>
+    </div>
+
+    <div class="step-card secondary">
+      <span class="step-num blue">Commit 2 — Data Files</span>
+      <h3>JSON Data</h3>
+      <ul class="file-list">
+        <li class="blue"><code class="fname">courses.json</code></li>
+        <li class="blue"><code class="fname">app_data.json</code></li>
+        <li class="blue"><code class="fname">sector_data.json</code></li>
+        <li class="blue"><code class="fname">top_skills.json</code></li>
+        <li class="blue"><code class="fname">top_occupations.json</code></li>
+        <li class="blue"><code class="fname">wages.json</code></li>
+        <li class="blue"><code class="fname">ventures.json</code></li>
+        <li class="blue"><code class="fname">scholarships.json</code></li>
+        <li class="blue"><code class="fname">resources_agri.json</code></li>
+        <li class="blue"><code class="fname">resources_energy.json</code></li>
+        <li class="blue"><code class="fname">resources_digital.json</code></li>
+        <li class="blue"><code class="fname">resources_evidence.json</code></li>
+        <li class="blue"><code class="fname">resources_general.json</code></li>
+      </ul>
+    </div>
+
+    <div class="step-card secondary">
+      <span class="step-num blue">Commit 2 — Assets &amp; Vendor</span>
+      <h3>Images, Icons &amp; Libraries</h3>
+      <p style="font-size:11px; color:#64748b; margin-bottom:8px; font-style:italic;">Upload into subfolders: img/ and vendor/</p>
+      <ul class="file-list">
+        <li class="blue"><code class="fname">img/hero-photo.jpg</code></li>
+        <li class="blue"><code class="fname">img/hero-photo-eac.webp</code></li>
+        <li class="blue"><code class="fname">img/unesco-logo.png</code></li>
+        <li class="blue"><code class="fname">social-card.svg</code></li>
+        <li class="blue"><code class="fname">vendor/tailwind.js</code></li>
+        <li class="blue"><code class="fname">vendor/chart.min.js</code></li>
+        <li class="blue"><code class="fname">vendor/lucide.min.js</code></li>
+        <li class="blue"><code class="fname">vendor/jspdf.umd.min.js</code></li>
+        <li class="blue"><code class="fname">validate_links.py</code></li>
+        <li class="blue"><code class="fname">validate_data.py</code></li>
+        <li class="blue"><code class="fname">simulate_wages.py</code></li>
+        <li class="blue"><code class="fname">simulate_employers.py</code></li>
+        <li class="blue"><code class="fname">guidance-note-training-supply.md</code></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Do not upload -->
+  <div class="section-label" style="margin-top:28px;">Do NOT Upload — Leave These Out</div>
+  <ul class="dont-list">
+    <li><code class="fname">node_modules/</code> — never commit dependencies; they are auto-installed from package.json</li>
+    <li><code class="fname">.netlify/</code> — deployment secrets and local state</li>
+    <li><code class="fname">.claude/</code> — local AI assistant settings</li>
+    <li><code class="fname">YEN/</code> and <code class="fname">Yen-*.zip</code> — unrelated competition submission files</li>
+    <li><code class="fname">demo-run-of-show.html</code> — internal strategy document with sensitive funder and governance content; keep private</li>
+    <li><code class="fname">gitlab-setup-guide.html</code> — this document; internal use only</li>
+    <li><code class="fname">.prettierrc.disabled</code> and <code class="fname">.htmlhintrc.disabled</code> — disabled config stubs</li>
+    <li><code class="fname">.vscode/settings.json</code> — local editor configuration</li>
+  </ul>
+
+  <!-- File contents -->
+  <div class="section-label" style="margin-top:40px;">File Contents — Commit 1 (Governance Files)</div>
+  <p style="font-size:12px; color:#64748b; margin-bottom:20px;">Copy the content below exactly into each file. The two items marked <strong>[fill in]</strong> should be completed by UNESCO before the first commit.</p>
+
+  <!-- LICENSE -->
+  <div class="file-block">
+    <div class="file-block-header">
+      <span class="fname-big">LICENSE</span>
+      <span class="file-desc">Apache 2.0 with UNESCO copyright header and trademark clause — the primary IP registration instrument</span>
+    </div>
+    <pre>Copyright 2026 United Nations Educational, Scientific and Cultural Organization (UNESCO)
+7, Place de Fontenoy, 75352 Paris 07 SP, France
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-------------------------------------------------------------------------------
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all other
+      entities that control, are controlled by, or are under common control
+      with that entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity exercising
+      permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form.
+
+      "Work" shall mean the work of authorship made available under
+      the License, as indicated by a copyright notice included in or
+      attached to the work.
+
+      "Derivative Works" shall mean any work based on (or derived from)
+      the Work for which editorial revisions, annotations, elaborations,
+      or other modifications represent, as a whole, an original work
+      of authorship.
+
+      "Contribution" shall mean any work of authorship submitted to the
+      Licensor for inclusion in the Work.
+
+      "Contributor" shall mean Licensor and any Legal Entity on behalf of
+      whom a Contribution has been received by the Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work.
+
+   4. Redistribution. You may reproduce and distribute copies of the Work
+      or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You meet
+      the following conditions:
+
+      (a) You must give any other recipients of the Work or Derivative
+          Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work; and
+
+      (d) If the Work includes a "NOTICE" text file, You must include a
+          readable copy of the attribution notices contained within such
+          NOTICE file in any Derivative Works You distribute.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      shall be under the terms and conditions of this License, without
+      any additional terms or conditions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      including the UNESCO name, logo, and wordmark, except as required
+      for reasonable and customary use in describing the origin of the Work
+      and reproducing the content of the NOTICE file. Use of the UNESCO name,
+      logo, or wordmark requires separate written authorisation from UNESCO's
+      Bureau of Public Information.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or agreed
+      to in writing, Licensor provides the Work on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE.
+
+   8. Limitation of Liability. In no event and under no legal theory shall
+      any Contributor be liable to You for damages, including any direct,
+      indirect, special, incidental, or exemplary damages arising as a
+      result of this License or out of the use or inability to use the Work.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer, and
+      charge a fee for, acceptance of support, warranty, indemnity, or
+      other liability obligations consistent with this License.
+
+   END OF TERMS AND CONDITIONS</pre>
+  </div>
+
+  <!-- NOTICE -->
+  <div class="file-block">
+    <div class="file-block-header">
+      <span class="fname-big">NOTICE</span>
+      <span class="file-desc">Attribution file — must travel with every fork; records UNESCO ownership, development partner, and data source licences</span>
+    </div>
+    <pre>Skills2Careers Compass
+======================
+
+Copyright 2026 United Nations Educational, Scientific and Cultural
+Organization (UNESCO), 7 Place de Fontenoy, 75352 Paris 07 SP, France.
+
+Original development: [Development Partner Name and Country]  ← FILL IN
+Project coordination: UNESCO [Section name]                   ← FILL IN
+
+This product was developed under UNESCO's mandate to support quality
+education and lifelong learning opportunities for all, in alignment
+with Sustainable Development Goal 4 (SDG4) and the EAC regional
+skills agenda.
+
+Labour market intelligence data is sourced from Lightcast
+(lightcast.io), LinkedIn Economic Graph, and national Labour Market
+Information Systems (LMIS) of participating East African Community
+member states. Data is used under licence; it may not be redistributed
+separately from this platform without prior written consent from the
+respective data providers.
+
+The UNESCO name, logo, and wordmark are protected under international
+law. Their use requires separate written authorisation from UNESCO's
+Bureau of Public Information and is not granted by this licence.
+
+Third-party components included in the vendor/ directory:
+- Chart.js (MIT Licence) — https://www.chartjs.org
+- Tailwind CSS (MIT Licence) — https://tailwindcss.com
+- Lucide Icons (ISC Licence) — https://lucide.dev
+- jsPDF (MIT Licence) — https://github.com/parallax/jsPDF</pre>
+  </div>
+
+  <!-- CONTRIBUTING.md -->
+  <div class="file-block">
+    <div class="file-block-header">
+      <span class="fname-big">CONTRIBUTING.md</span>
+      <span class="file-desc">Contributor Licence Agreement — all contributions assigned to UNESCO; prevents fragmentation of copyright ownership</span>
+    </div>
+    <pre># Contributing to Skills2Careers Compass
+
+This project is owned by UNESCO and maintained under Apache License 2.0.
+
+## Contributor Licence Agreement (CLA)
+
+Before any contribution can be merged, you must sign the UNESCO CLA.
+By submitting a merge request you confirm that:
+
+1. You have the legal right to grant the rights described here.
+2. Your contribution is your original work, or you have permission to submit it.
+3. You assign to UNESCO all copyright in your contribution, granting UNESCO a
+   perpetual, worldwide, irrevocable, royalty-free licence to use, copy, modify,
+   distribute, and sublicense your contribution under any open-source licence
+   UNESCO chooses to apply now or in the future.
+4. You retain the right to use your contribution in other projects under any
+   licence of your own choosing, provided that use does not represent a claim
+   of ownership over the Skills2Careers Compass codebase.
+
+To sign the CLA, open a GitLab issue titled "CLA: [Your Name]" and include:
+
+  "I, [Full Name], agree to the UNESCO Skills2Careers Compass Contributor
+   Licence Agreement as described in CONTRIBUTING.md. I confirm that all
+   contributions I submit are my original work and that I have the right
+   to assign copyright to UNESCO."
+
+A UNESCO team member will countersign and close the issue.
+
+## How to contribute
+
+1. Fork the repository under your own GitLab namespace.
+2. Create a feature branch: git checkout -b feature/my-change
+3. Make your changes, keeping commits focused and descriptive.
+4. Open a Merge Request against the main branch.
+5. Reference your CLA issue in the MR description.
+
+## Code standards
+
+- No build step required. The application runs as a static site.
+- JavaScript: ES2020, no frameworks. Follow the existing module structure.
+- Data files are JSON. Validate with: python validate_data.py
+- Do not commit node_modules/, .netlify/, or any credentials or API keys.
+
+## Governance
+
+Major changes require Governance Board approval. See GOVERNANCE.md.</pre>
+  </div>
+
+  <!-- GOVERNANCE.md -->
+  <div class="file-block">
+    <div class="file-block-header">
+      <span class="fname-big">GOVERNANCE.md</span>
+      <span class="file-desc">Three-tier ownership structure; permanent seats; licence-change veto clause; dispute resolution</span>
+    </div>
+    <pre># Skills2Careers Compass — Governance
+
+## Ownership
+
+Skills2Careers Compass is owned by UNESCO. The canonical source of
+record is: code.unesco.org/skills2careers/compass
+
+## Governance Board
+
+### Permanent seats (voting — cannot be removed or transferred)
+
+| Seat              | Holder                                    | Role                         |
+|-------------------|-------------------------------------------|------------------------------|
+| Global Custodian  | UNESCO HQ                                 | Platform owner; holds IP     |
+| Regional Co-owner | Inter-University Council for East Africa  | EAC academic integration     |
+| Regional Co-owner | East African Community Secretariat        | Regional policy alignment    |
+
+### Observer seats (non-voting, Funder Advisory Panel)
+
+Funders and implementing partners may hold observer seats.
+Observer seats confer no governance rights and no veto.
+
+## Decision-making
+
+| Decision                              | Authority                              |
+|---------------------------------------|----------------------------------------|
+| Day-to-day maintenance                | Maintainer team                        |
+| New features                          | Maintainer team with UNESCO notification |
+| New data source integrations          | Governance Board majority              |
+| Architectural changes                 | Governance Board majority              |
+| Changes to licence terms              | Governance Board unanimous vote        |
+| Transfer of repository ownership      | Unanimous vote + UNESCO legal sign-off |
+| Changes to permanent Board seats      | Unanimous vote + UNESCO legal sign-off |
+
+## Licence-change veto
+
+The licence may only be changed by unanimous vote of all three permanent
+seat-holders. No funder, technology partner, or implementing organisation
+may compel a licence change unilaterally. Any purported licence change
+enacted without unanimous board approval is void.
+
+## Forks and derivative works
+
+Forks must:
+- Retain the original copyright notice naming UNESCO as copyright holder.
+- Include the NOTICE file unmodified (additional notices may be appended).
+- Not use the UNESCO name, logo, or wordmark to imply UNESCO endorsement
+  without separate written authorisation from UNESCO.
+
+## Dispute resolution
+
+Unresolved disputes are subject to the internal dispute resolution
+mechanisms of UNESCO as an international organisation, in accordance
+with the UNESCO Constitution and the 1947 Convention on the Privileges
+and Immunities of the Specialized Agencies.</pre>
+  </div>
+
+  <!-- README.md -->
+  <div class="file-block">
+    <div class="file-block-header">
+      <span class="fname-big">README.md</span>
+      <span class="file-desc">Public-facing document — first thing any partner, auditor or fork author reads; leads with UNESCO copyright and canonical URL</span>
+    </div>
+    <pre># Skills2Careers Compass
+
+**© 2026 United Nations Educational, Scientific and Cultural Organization (UNESCO)**
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![UNESCO](https://img.shields.io/badge/Owner-UNESCO-e63329)](https://unesco.org)
+
+A career navigation and labour market intelligence platform for East Africa,
+supporting learners, educators, and policymakers across agriculture, energy,
+and digital economy sectors. Developed in partnership with the Inter-University
+Council for East Africa (IUCEA) and the East African Community (EAC).
+
+---
+
+## What it does
+
+- **Career pathway explorer** — guided wizard matching learner profiles to
+  sector-specific career pathways across three priority sectors and six EAC
+  member states.
+- **Labour market intelligence** — live and curated data on hot skills,
+  occupations, wages, and employer demand, sourced from Lightcast, LinkedIn
+  Economic Graph, and national LMIS.
+- **Training supply observatory** — cross-sector view of course availability,
+  provider landscape, regional access gaps, and skills coverage.
+- **Resource hub** — curated scholarships, research reports, and sector evidence.
+
+## Status
+
+Prototype — validated with partner institutions. Production pathway in development.
+
+## Technology
+
+Vanilla JavaScript · Tailwind CSS · Chart.js · No build step required.
+Deployable as a static site on Netlify, GitHub Pages, or any web server.
+
+## Getting started
+
+    git clone https://code.unesco.org/skills2careers/compass.git
+    cd compass
+    open index.html          # or: npx serve .
+
+## Data sources
+
+- Lightcast (primary LMI data provider)
+- LinkedIn Economic Graph
+- National LMIS of EAC member states
+
+Data is used under licence and may not be redistributed separately. See NOTICE.
+
+## Contributing
+
+See CONTRIBUTING.md. All contributors must sign the UNESCO CLA before merging.
+
+## Governance
+
+See GOVERNANCE.md. Permanent Governance Board seats: UNESCO HQ, IUCEA, EAC Secretariat.
+
+## Licence
+
+Copyright 2026 United Nations Educational, Scientific and Cultural
+Organization (UNESCO).
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+The UNESCO name, logo, and wordmark are not covered by this licence.
+Their use requires separate written authorisation from UNESCO's Bureau
+of Public Information.
+
+## Contact
+
+UNESCO Education Sector
+7, Place de Fontenoy, 75352 Paris 07 SP, France</pre>
+  </div>
+
+  <!-- Footer -->
+  <div style="margin-top:48px; padding-top:16px; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-size:11px; color:#94a3b8;">Skills2Careers Compass · UNESCO GitLab Setup Guide · June 2026</div>
+    <div style="font-size:11px; color:#94a3b8;">Internal use only — do not upload this file to the public repository</div>
+  </div>
+
+</div>
+</body>
+</html>
