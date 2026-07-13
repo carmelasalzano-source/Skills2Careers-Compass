@@ -15,11 +15,11 @@
     injectSectorDrawer(); // Inject the new Sector Drawer
     injectAboutDrawer(); // Inject About panel (triggered from horizontal nav bar)
     injectDataSourcesDrawer(); // Inject Data Sources panel (triggered from horizontal nav bar)
-    injectObservatoryDrawer(); // Inject Sector Intelligence Observatory (triggered from horizontal nav bar)
     injectCourseSubmissionDrawer(); // Inject Course Submission drawer for training institutions
     renderMainLanding(); // Render the 3-Pillar Dashboard
     refreshIcons();
-    const _savedSector = localStorage.getItem('ai4eac_sector') || 'agri';
+    const _rawSector = localStorage.getItem('ai4eac_sector') || 'agri';
+    const _savedSector = ['agri', 'energy', 'digital'].includes(_rawSector) ? _rawSector : 'agri';
     const _savedCountry = localStorage.getItem('ai4eac_country') || 'all';
     setGlobalSector(_savedSector);
     if (_savedCountry !== 'all') setGlobalCountry(_savedCountry);

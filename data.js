@@ -43,7 +43,7 @@
                     hotspots: "Rift Valley (Geothermal), Lake Turkana",
                     source: "IEA Kenya 2024",
                     sourceUrl: "https://www.iea.org/reports/kenya-2024/executive-summary"
-                }
+                },
             },
             'Rwanda': {
                 'digital': {
@@ -70,7 +70,7 @@
                     hotspots: "Kigali, Lake Kivu, Rural Electrification Zones",
                     source: "RURA / IRENA",
                     sourceUrl: "https://www.rura.rw/sectors/energy/overview"
-                }
+                },
             },
             'Tanzania': {
                 'energy': {
@@ -98,7 +98,7 @@
                     hotspots: "Dar es Salaam (Masaki, Msasani)",
                     source: "TICGL / Chanzo Digital Economy 2024",
                     sourceUrl: "https://thechanzo.com/2024/05/22/see-how-tanzanias-journey-towards-digital-economy-is-gaining-momentum/"
-                }
+                },
             },
              'Uganda': {
                 'agri': {
@@ -128,7 +128,7 @@
                     hotspots: "Kampala (Kololo, Nakasero)",
                     source: "CIPESA / UNCTAD 2025",
                     sourceUrl: "https://cipesa.org/2025/05/the-future-of-work-in-uganda-challenges-and-prospects-in-the-context-of-the-digital-economy/"
-                }
+                },
             },
             'Burundi': {
                 'agri': {
@@ -158,7 +158,7 @@
                     hotspots: "Bujumbura",
                     source: "Digital Watch / IFC CPSD Burundi",
                     sourceUrl: "https://dig.watch/countries/burundi"
-                }
+                },
             },
             'South Sudan': {
                 'agri': {
@@ -188,7 +188,7 @@
                     hotspots: "Juba",
                     source: "World Bank South Sudan (Estimated)",
                     sourceUrl: "https://www.worldbank.org/en/country/southsudan/overview"
-                }
+                },
             },
             'DRC': {
                 'agri': {
@@ -218,7 +218,7 @@
                     hotspots: "Kinshasa (Gombe)",
                     source: "World Bank DRC Digital Project 2023",
                     sourceUrl: "https://www.worldbank.org/en/topic/digitaldevelopment"
-                }
+                },
             },
             'Somalia': {
                 'agri': {
@@ -248,7 +248,7 @@
                     hotspots: "Mogadishu, Hargeisa",
                     source: "CBS Somalia / UNDP 2023",
                     sourceUrl: "https://sominvest.gov.so/key-sectors/ict-digital-economy/"
-                }
+                },
             }
         };
 
@@ -1957,7 +1957,7 @@ const fallbackVentures = [
 const sectorMap = {
     'agri': 'Agriculture',
     'energy': 'Renewables',
-    'digital': 'Digital/AI'
+    'digital': 'Digital/AI',
 };
 
 // --- 31. Outcome Scorecard Configuration ---
@@ -2071,7 +2071,7 @@ const sectorCardConfig = [
 const sectorThemes = {
     agri: { color: 'green', feedback: "Solid alignment with Agritech standards." },
     energy: { color: 'orange', feedback: "Meets renewable energy competency baselines." },
-    digital: { color: 'indigo', feedback: "Strong digital literacy demonstrated." }
+    digital: { color: 'indigo', feedback: "Strong digital literacy demonstrated." },
 };
 
 // --- 36. Pathway Constraints ---
@@ -2093,14 +2093,14 @@ const pathwayGoals = [
 const interviewQuestions = {
     agri: "Describe a time you used data to improve a crop yield or farm process.",
     energy: "How do you ensure safety compliance when installing a new system?",
-    digital: "Tell me about a challenging bug you fixed and your process."
+    digital: "Tell me about a challenging bug you fixed and your process.",
 };
 
 // --- 39. Sector Tooltips ---
 const sectorTooltips = {
     agri: "Metrics: Job Growth (High), Tech Adoption (Rapid). Key focus on precision ag and value addition.",
     energy: "Metrics: Investment (Very High), Skills Gap (Critical). Focus on solar, wind, and grid stability.",
-    digital: "Metrics: Remote Work (High), Salary (Competitive). Focus on software, data, and AI."
+    digital: "Metrics: Remote Work (High), Salary (Competitive). Focus on software, data, and AI.",
 };
 
 // --- 36. Venture Playbooks ---
@@ -2122,7 +2122,7 @@ const venturePlaybooks = {
         economics: "CAC < LTV (3:1 Ratio)",
         pricing: "Freemium, Tiered Subscription (SaaS)",
         gtm: "SEO/Content, LinkedIn B2B, App Stores"
-    }
+    },
 };
 
 // --- 37. Pathway Tools Interest Map ---
@@ -2141,7 +2141,7 @@ const pathwayToolsInterestMap = {
         'tech': ['ArcGIS Pro', 'Python for Ag', 'Drone Deploy'],
         'field': ['Soil Spectrometers', 'GPS Units', 'Farm ERP'],
         'biz': ['QuickBooks', 'Supply Chain Soft.', 'Market Analytics']
-    }
+    },
 };
 
 // --- 38. Apprenticeship Standards ---

@@ -8,9 +8,9 @@
     if (scrollContainer) scrollContainer.scrollTop = 0;
 
     const sectorName = activeSectorId === 'agri' ? 'Agritech' : activeSectorId === 'energy' ? 'Renewable Energy' : 'Digital Economy';
-    
+
     // Determine Theme based on Sector
-    const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo' };
+    const themeConfig = (typeof sectorThemes !== 'undefined' && sectorThemes[activeSectorId]) ? sectorThemes[activeSectorId] : { color: 'indigo', feedback: 'Keep exploring your sector.' };
     const themeColor = themeConfig.color;
     
     const details = getOccupationDetails(title, sectorName);
@@ -444,8 +444,7 @@ function closeAllModals(exceptId = null) {
         'training-hub-drawer',
         'sector-hub-drawer',
         'community-hub-drawer',
-        'data-sources-drawer',
-        'observatory-drawer'
+        'data-sources-drawer'
     ];
     drawers.forEach(id => {
         if (id !== exceptId) {
@@ -772,9 +771,9 @@ window.renderSectorAIHub = function(sector, focus, subFocus) {
     const _exp = pathwayState.upskillingExperience || 'building';
 
     const sectorOptions = [
-        { id: 'agri',    label: 'Agritech',         icon: 'leaf',  desc: 'Agriculture, food systems & rural value chains' },
-        { id: 'energy',  label: 'Renewable Energy',  icon: 'sun',   desc: 'Solar, wind, grid & energy access' },
-        { id: 'digital', label: 'Digital Economy',   icon: 'globe', desc: 'Tech, fintech & digital services' }
+        { id: 'agri',    label: 'Agritech',        icon: 'leaf',  desc: 'Agriculture, food systems & rural value chains' },
+        { id: 'energy',  label: 'Renewable Energy', icon: 'sun',   desc: 'Solar, wind, grid & energy access' },
+        { id: 'digital', label: 'Digital Economy',  icon: 'globe', desc: 'Tech, fintech & digital services' }
     ];
 
     const focusOptions = [
@@ -1497,7 +1496,7 @@ window.renderSkillsHubSkills = function(containerIdOverride) {
     const moreSkills = displaySkills.slice(6, 15);
 
     // Styling
-    const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo' };
+    const themeConfig = (typeof sectorThemes !== 'undefined' && sectorThemes[activeSectorId]) ? sectorThemes[activeSectorId] : { color: 'indigo', feedback: 'Keep exploring your sector.' };
     const themeColor = themeConfig.color;
     const sectorLabel = activeSectorId === 'agri' ? 'Agritech' : activeSectorId === 'energy' ? 'Renewable Energy' : 'Digital Economy';
     const countryLabel = activeCountry === 'all' ? 'Regional' : activeCountry;
@@ -1608,7 +1607,7 @@ window.renderFindCoursesView = function() {
 
     const sectorLabel = activeSectorId === 'agri' ? 'Agritech' : activeSectorId === 'energy' ? 'Renewable Energy' : 'Digital Economy';
     const countryLabel = activeCountry === 'all' ? 'Regional' : activeCountry;
-    const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo' };
+    const themeConfig = (typeof sectorThemes !== 'undefined' && sectorThemes[activeSectorId]) ? sectorThemes[activeSectorId] : { color: 'indigo', feedback: 'Keep exploring your sector.' };
     const themeColor = themeConfig.color;
 
     container.innerHTML = `
@@ -1980,7 +1979,7 @@ window.submitPracticeTask = function(badgeName) {
     
     // Mock delay then result
     setTimeout(() => {
-        const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo', feedback: "Great work." };
+        const themeConfig = (typeof sectorThemes !== 'undefined' && sectorThemes[activeSectorId]) ? sectorThemes[activeSectorId] : { color: 'indigo', feedback: "Great work." };
         const themeColor = themeConfig.color;
         const feedbackText = themeConfig.feedback;
 
@@ -2776,7 +2775,7 @@ function getSectorHubData() {
         skills: dataManager.getSkills(activeSectorId) || baseData.skills
     };
 
-    const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo' };
+    const themeConfig = (typeof sectorThemes !== 'undefined' && sectorThemes[activeSectorId]) ? sectorThemes[activeSectorId] : { color: 'indigo', feedback: 'Keep exploring your sector.' };
     const themeColor = themeConfig.color;
 
     let demandColorClass = "text-slate-900";
@@ -3402,7 +3401,7 @@ window.openVentureModal = function(title) {
     modalTitle.innerHTML = `${venture.title} ${venture.rank <= 3 ? '<span title="High Demand" class="ml-2">&#x1F525;</span>' : ''}`;
 
     // Determine Theme based on Sector
-    const themeConfig = (typeof sectorThemes !== 'undefined') ? sectorThemes[activeSectorId] : { color: 'indigo' };
+    const themeConfig = (typeof sectorThemes !== 'undefined' && sectorThemes[activeSectorId]) ? sectorThemes[activeSectorId] : { color: 'indigo' };
     const theme = themeConfig.color;
     
     // Context Data (Local definition to ensure availability)
@@ -5184,7 +5183,7 @@ window.renderMainLanding = function() {
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center mb-10">
                     <div class="text-[17px] font-semibold text-slate-400 uppercase tracking-widest mb-3">How It Works</div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-[#007DBA]">Explore, Personalise, Take Action</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-[#007DBA]">Explore, Personalise, Use Career Tools</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
@@ -5198,7 +5197,7 @@ window.renderMainLanding = function() {
                                 <h3 class="text-xs font-bold text-blue-600 uppercase tracking-wide">01 &middot; Explore Trends</h3>
                             </div>
                             <p class="text-base font-semibold text-slate-900 leading-snug mb-2">Sector Hiring Trends &amp; Opportunities</p>
-                            <p class="text-sm text-slate-500 mb-4 flex-1 leading-relaxed">See live labour market data — investment flows, hiring demand, and the most in-demand occupations and entrepreneurship opportunities across Agritech, Renewable Energy, and Digital Economy.</p>
+                            <p class="text-sm text-slate-500 mb-4 flex-1 leading-relaxed">View current labour market data - investment flows, hiring demand, occupations, skills and entrepreneurship profiles - across Agritech, Renewable Energy and Digital Economy sectors.</p>
                             <div class="flex items-center gap-2 text-sm font-bold text-blue-600 group-hover:gap-3 transition-all">
                                 Discover Trends <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                             </div>
@@ -5215,7 +5214,7 @@ window.renderMainLanding = function() {
                                 <h3 class="text-xs font-bold text-green-600 uppercase tracking-wide">02 &middot; Personalise Pathway</h3>
                             </div>
                             <p class="text-base font-semibold text-slate-900 leading-snug mb-2">Learning, Skills &amp; Career Pathways</p>
-                            <p class="text-sm text-slate-500 mb-4 flex-1 leading-relaxed">Take a job readiness check, identify your skills strengths and gaps, and receive a personalised training plan — or search 200+ courses by sector, skill, delivery mode, and cost.</p>
+                            <p class="text-sm text-slate-500 mb-4 flex-1 leading-relaxed">Take a job readiness check, identify your skills strengths and gaps, and receive a personalised training plan.</p>
                             <div class="flex items-center gap-2 text-sm font-bold text-green-600 group-hover:gap-3 transition-all">
                                 Build Skills <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                             </div>
@@ -5247,9 +5246,9 @@ window.renderMainLanding = function() {
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="text-center mb-10">
                     <div class="text-[17px] font-semibold text-slate-400 uppercase tracking-widest mb-3">Platform Features</div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-[#007DBA]">Two complementary skills assessments</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-[#007DBA]">Personalised skills assessment</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="max-w-2xl mx-auto">
 
                     <!-- Tool 1: dark blue header -->
                     <div class="flex flex-col rounded-xl overflow-hidden border border-slate-200">
@@ -5274,32 +5273,6 @@ window.renderMainLanding = function() {
                         </div>
                         <button onclick="openUnifiedHub(); renderSkillsHubDashboard(); openSkillsView('pp-practice')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm py-3 px-5 flex items-center justify-center gap-2 transition-colors">
                             Build My Pathway <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                    </div>
-
-                    <!-- Tool 2: dark indigo header -->
-                    <div class="flex flex-col rounded-xl overflow-hidden border border-slate-200">
-                        <div class="bg-indigo-900 p-4">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center shrink-0 mt-0.5">
-                                    <i data-lucide="clipboard-list" class="w-4 h-4 text-white"></i>
-                                </div>
-                                <div>
-                                    <div class="text-[10px] font-semibold uppercase tracking-widest text-indigo-200 mb-0.5">For Teams &amp; Career Services</div>
-                                    <h3 class="text-base font-bold text-white mb-1">Cohort &amp; Team Skills Audit</h3>
-                                    <p class="text-xs text-indigo-100/80 leading-relaxed">A structured audit workflow for higher-education career services, employers, and L&amp;D teams — mapping skills strengths and gaps across a group of learners or staff.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-slate-50 flex-1 p-4">
-                            <ul class="space-y-2 mb-0">
-                                <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 shrink-0 mt-0.5"></i> Benchmark a student cohort or team against in-demand role skills</li>
-                                <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 shrink-0 mt-0.5"></i> Map collective skills strengths and gaps using live labour-market data</li>
-                                <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 shrink-0 mt-0.5"></i> Find group training &amp; track CPD progress</li>
-                            </ul>
-                        </div>
-                        <button onclick="openUnifiedHub(); renderSkillsHubDashboard(); openSkillsView('pp-employer')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm py-3 px-5 flex items-center justify-center gap-2 transition-colors">
-                            Audit My Team or Cohort <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </button>
                     </div>
                 </div>
@@ -5544,609 +5517,10 @@ window.injectAboutDrawer = function() {
             <p class="text-xs text-slate-600 leading-relaxed">
                 A mobile-first navigation tool connecting labour market intelligence with practical career guidance for young people across East Africa's three fastest-growing sectors: Agritech, Renewable Energy, and the Digital Economy.
             </p>
-            <a href="https://unevoc.unesco.org/home/Global+Skills+Tracker" target="_blank" class="flex items-center justify-between p-3 bg-indigo-50 border border-indigo-100 rounded-lg hover:bg-indigo-100 transition-colors group">
-                <div class="flex items-center gap-2.5">
-                    <div class="p-1.5 bg-indigo-100 text-indigo-600 rounded group-hover:bg-indigo-200 transition-colors shrink-0"><i data-lucide="bar-chart-2" class="w-3.5 h-3.5"></i></div>
-                    <div>
-                        <div class="text-xs font-bold text-indigo-800">Visit the Global Skills Tracker</div>
-                        <div class="text-[10px] text-indigo-500">UNESCO &middot; unevoc.unesco.org</div>
-                    </div>
-                </div>
-                <i data-lucide="external-link" class="w-3.5 h-3.5 text-indigo-300 group-hover:text-indigo-500 shrink-0"></i>
-            </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScMkRMgF8TE-nr_xvRuCZ5nF1H-J3uQiM4_-TBUbPycxFQv9Q/viewform?usp=header" target="_blank" class="flex items-center gap-3 p-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors group">
-                <div class="p-2 bg-indigo-50 text-indigo-600 rounded shrink-0"><i data-lucide="message-square" class="w-4 h-4"></i></div>
-                <div>
-                    <div class="font-bold text-sm text-slate-800 group-hover:text-indigo-700">Share Feedback</div>
-                    <div class="text-xs text-slate-500">Help us improve the Compass.</div>
-                </div>
-            </a>
         </div>
     `;
     document.body.appendChild(drawer);
 }
-
-window.injectObservatoryDrawer = function() {
-    if (document.getElementById('observatory-drawer')) return;
-    const drawer = document.createElement('div');
-    drawer.id = 'observatory-drawer';
-    drawer.className = 'fixed inset-y-0 right-0 w-full md:w-[820px] bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-[95] flex flex-col';
-    drawer.innerHTML = `
-        <div class="p-4 border-b border-slate-200 flex justify-between items-center bg-white shrink-0">
-            <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-                <i data-lucide="activity" class="w-5 h-5 text-indigo-600"></i> Sector Intelligence Observatory
-            </h2>
-            <button onclick="toggleObservatoryDrawer()" class="p-2 hover:bg-slate-100 rounded-full transition-colors">
-                <i data-lucide="x" class="w-5 h-5 text-slate-500"></i>
-            </button>
-        </div>
-        <div class="p-4 space-y-4 flex-1 overflow-y-auto min-h-0 overscroll-y-contain bg-slate-50/50">
-            <div id="observatory-content"></div>
-        </div>
-    `;
-    document.body.appendChild(drawer);
-}
-
-window.observatorySectors = window.observatorySectors || new Set(['agri', 'energy', 'digital']);
-let _observatoryTab = 'market';
-
-window.toggleObservatoryTab = function(tab) {
-    _observatoryTab = tab;
-    renderObservatoryView();
-};
-
-window.renderObservatoryView = function() {
-    const container = document.getElementById('observatory-content');
-    if (!container) return;
-
-    const allSectors = ['agri', 'energy', 'digital'];
-    const sectorNames  = { agri: 'Agritech', energy: 'Renewable Energy', digital: 'Digital Economy' };
-    const sectorColors = { agri: 'green',    energy: 'orange',           digital: 'indigo' };
-    const sectorIcons  = { agri: 'leaf',      energy: 'zap',              digital: 'cpu' };
-    const country = activeCountry;
-    const activeSectors = allSectors.filter(s => observatorySectors.has(s));
-
-    const eacCountries = [
-        { val: 'all', label: 'All EAC Countries' },
-        { val: 'Kenya', label: 'Kenya' },
-        { val: 'Tanzania', label: 'Tanzania' },
-        { val: 'Uganda', label: 'Uganda' },
-        { val: 'Rwanda', label: 'Rwanda' },
-        { val: 'Burundi', label: 'Burundi' },
-        { val: 'Ethiopia', label: 'Ethiopia' },
-        { val: 'South Sudan', label: 'South Sudan' },
-        { val: 'DRC', label: 'DRC' },
-        { val: 'Somalia', label: 'Somalia' },
-    ];
-
-    const demandColor = d => {
-        if (['Critical','High','Growing'].includes(d)) return 'text-blue-700 bg-blue-50 border-blue-200';
-        if (d === 'Emerging') return 'text-indigo-700 bg-indigo-50 border-indigo-200';
-        if (d === 'Stable')   return 'text-amber-700 bg-amber-50 border-amber-200';
-        return 'text-slate-600 bg-slate-50 border-slate-200';
-    };
-
-    const sd = {};
-    allSectors.forEach(s => {
-        const base = baseSectorDetailData[s];
-        const ov = (typeof countryOverrides !== 'undefined' && countryOverrides[country] && countryOverrides[country][s]) || {};
-        sd[s] = {
-            jobTrend:     ov.jobTrend     || base.growth.jobTrend,
-            investment:   ov.investment   || base.growth.investment,
-            demand:       ov.skillsDemand || base.growth.skillsDemand,
-            demandCtx:    ov.demandContext || base.growth.demandContext,
-            hotspots:     ov.hotspots     || base.outlook.hotspots,
-            hiring:       ov.hiring       || base.outlook.hiring,
-            source:       ov.source       || base.outlook.source,
-            topOccs:      base.occupations.filter(o => o.isHot).slice(0, 3).map(o => o.name),
-            topSkills:    base.skills.filter(sk => sk.isHot).slice(0, 4).map(sk => sk.name),
-        };
-    });
-
-    const sectorCardHtml = s => {
-        const c = sectorColors[s];
-        const d = sd[s];
-        return `
-        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col">
-            <div class="h-1.5 bg-${c}-500"></div>
-            <div class="p-4 flex-1 space-y-3">
-                <div class="flex items-center gap-2">
-                    <div class="p-1.5 bg-${c}-50 text-${c}-600 rounded-lg shrink-0"><i data-lucide="${sectorIcons[s]}" class="w-4 h-4"></i></div>
-                    <span class="text-sm font-bold text-slate-800">${sectorNames[s]}</span>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-100">
-                        <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wide mb-0.5">Growth</div>
-                        <div class="text-base font-bold text-${c}-600">${d.jobTrend}</div>
-                    </div>
-                    <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-100">
-                        <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wide mb-0.5">Demand</div>
-                        <span class="inline-block text-[10px] font-bold px-1.5 py-0.5 rounded border ${demandColor(d.demand)}">${d.demand}</span>
-                    </div>
-                </div>
-                <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-100">
-                    <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wide mb-0.5">Investment Signal</div>
-                    <div class="text-xs font-semibold text-slate-700">${d.investment}</div>
-                </div>
-                <div>
-                    <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wide mb-1.5">Hot Occupations</div>
-                    <div class="space-y-1">
-                        ${d.topOccs.map(o => `<div class="text-[11px] text-slate-600 flex items-center gap-1.5"><div class="w-1 h-1 rounded-full bg-${c}-400 shrink-0"></div>${o}</div>`).join('')}
-                    </div>
-                </div>
-                <div>
-                    <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wide mb-1.5">In-Demand Skills</div>
-                    <div class="flex flex-wrap gap-1">
-                        ${d.topSkills.map(sk => `<span class="text-[10px] bg-${c}-50 text-${c}-700 border border-${c}-100 px-1.5 py-0.5 rounded-full">${sk}</span>`).join('')}
-                    </div>
-                </div>
-                <div class="pt-2 border-t border-slate-100">
-                    <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wide mb-0.5">Where Hiring</div>
-                    <div class="text-[11px] text-slate-500">${d.hotspots}</div>
-                </div>
-            </div>
-        </div>`;
-    };
-
-    const countryOptions = eacCountries.map(({ val, label }) =>
-        `<option value="${val}" ${val === country ? 'selected' : ''}>${label}</option>`
-    ).join('');
-
-    const sectorToggleHtml = allSectors.map(s => {
-        const c = sectorColors[s];
-        const isActive = observatorySectors.has(s);
-        return isActive
-            ? `<button onclick="toggleObservatorySector('${s}')" class="px-3 py-1 text-[11px] font-bold rounded-lg border bg-${c}-600 text-white border-${c}-600 transition-colors">${sectorNames[s]}</button>`
-            : `<button onclick="toggleObservatorySector('${s}')" class="px-3 py-1 text-[11px] font-bold rounded-lg border bg-white text-${c}-700 border-${c}-200 hover:bg-${c}-50 transition-colors">${sectorNames[s]}</button>`;
-    }).join('');
-
-    const gridCols = activeSectors.length === 1 ? 'grid-cols-1' : activeSectors.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-3';
-
-    // ── Tab navigation ───────────────────────────────────────────────────────────
-    const obsTabs = [
-        { id: 'market',    label: 'Market Signals',    icon: 'bar-chart-3'  },
-        { id: 'supply',    label: 'Supply vs Demand',  icon: 'git-compare'  },
-        { id: 'providers', label: 'Provider Landscape',icon: 'building-2'   },
-        { id: 'regional',  label: 'Regional Access',   icon: 'map-pin'      },
-        { id: 'coverage',  label: 'Skills Coverage',   icon: 'grid-3x3'     },
-    ];
-    const tabNavHtml = obsTabs.map(t => {
-        const active = _observatoryTab === t.id;
-        return `<button onclick="toggleObservatoryTab('${t.id}')" class="shrink-0 flex items-center gap-1.5 px-3 py-2 text-[11px] font-bold rounded-lg border transition-colors whitespace-nowrap ${active ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'}">
-            <i data-lucide="${t.icon}" class="w-3.5 h-3.5"></i> ${t.label}
-        </button>`;
-    }).join('');
-
-    // ── Tab content ──────────────────────────────────────────────────────────────
-    let tabContentHtml = '';
-
-    if (_observatoryTab === 'market') {
-        tabContentHtml = `
-            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                <div class="px-4 py-3 border-b border-slate-100 bg-slate-50 flex items-center gap-2">
-                    <i data-lucide="bar-chart-3" class="w-4 h-4 text-indigo-500"></i>
-                    <span class="text-sm font-bold text-slate-800">Market Intelligence</span>
-                    <span class="text-xs text-slate-400 ml-1 hidden sm:inline">— East Africa Labour Market Signals</span>
-                </div>
-                <div class="p-4 space-y-5">
-                    <div>
-                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide mb-2">Annual Job Growth Rate</p>
-                        <div style="height:90px"><canvas id="obs-chart-growth"></canvas></div>
-                    </div>
-                    <div>
-                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide mb-2">Active Investment Signal (USD)</p>
-                        <div style="height:90px"><canvas id="obs-chart-invest"></canvas></div>
-                    </div>
-                </div>
-            </div>
-            ${activeSectors.length > 0 ? `
-            <div>
-                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wide mb-2">Sector-by-Sector Detail</div>
-                <div class="grid ${gridCols} gap-3">
-                    ${activeSectors.map(sectorCardHtml).join('')}
-                </div>
-            </div>` : `
-            <div class="text-center py-10 text-slate-400 text-sm">
-                <i data-lucide="filter-x" class="w-6 h-6 mx-auto mb-2 opacity-40"></i>
-                Select at least one sector above to compare
-            </div>`}`;
-
-    } else if (_observatoryTab === 'supply') {
-        tabContentHtml = `
-            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                <div class="px-4 py-3 border-b border-slate-100 bg-slate-50 flex items-center gap-2">
-                    <i data-lucide="git-compare" class="w-4 h-4 text-indigo-500"></i>
-                    <span class="text-sm font-bold text-slate-800">Training Supply vs Skills Demand</span>
-                </div>
-                <div class="p-4">
-                    <p class="text-xs text-slate-500 mb-4">All skills shown are identified as in-demand by employers. Bars show how many courses in the database cover each skill — <span class="text-rose-500 font-semibold">red = no coverage</span>, <span class="text-amber-500 font-semibold">amber = 1–3</span>, <span class="text-sky-500 font-semibold">blue = 4–8</span>, <span class="text-green-600 font-semibold">green = 9+</span>.</p>
-                    <div class="grid ${gridCols} gap-5">
-                        ${activeSectors.map(s => `
-                        <div>
-                            <div class="flex items-center gap-1.5 mb-2">
-                                <span class="w-2 h-2 rounded-full bg-${sectorColors[s]}-500 inline-block"></span>
-                                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wide">${sectorNames[s]}</p>
-                            </div>
-                            <div style="height:260px"><canvas id="obs-sd-${s}"></canvas></div>
-                        </div>`).join('')}
-                    </div>
-                </div>
-            </div>`;
-
-    } else if (_observatoryTab === 'providers') {
-        tabContentHtml = `
-            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                <div class="px-4 py-3 border-b border-slate-100 bg-slate-50 flex items-center gap-2">
-                    <i data-lucide="building-2" class="w-4 h-4 text-indigo-500"></i>
-                    <span class="text-sm font-bold text-slate-800">Training Provider Landscape</span>
-                </div>
-                <div class="p-4">
-                    <p class="text-xs text-slate-500 mb-4">Course supply broken down by provider type across sectors. The focus chart shows where global technology companies (Google, Microsoft, IBM, AWS, Cisco, Oracle) concentrate their training effort — a proxy for where commercial tech investment is shaping workforce development.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        <div>
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide mb-2">Courses by Provider Type &amp; Sector</p>
-                            <div style="height:260px"><canvas id="obs-provider-stacked"></canvas></div>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide mb-1">Tech Partner Training Focus</p>
-                            <p class="text-[10px] text-slate-400 mb-2">Google · Microsoft · IBM · AWS · Cisco · Oracle</p>
-                            <div style="height:240px"><canvas id="obs-provider-tech"></canvas></div>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-
-    } else if (_observatoryTab === 'regional') {
-        tabContentHtml = `
-            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                <div class="px-4 py-3 border-b border-slate-100 bg-slate-50 flex items-center gap-2">
-                    <i data-lucide="map-pin" class="w-4 h-4 text-indigo-500"></i>
-                    <span class="text-sm font-bold text-slate-800">Regional Access to Training</span>
-                </div>
-                <div class="p-4">
-                    <p class="text-xs text-slate-500 mb-4">Left: locally-targeted courses per EAC country (excludes global/all-regions programmes). Right: training cost profile per sector — showing the split between free, freemium, subsidised and paid provision.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        <div>
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide mb-2">Local Courses per Country</p>
-                            <div style="height:260px"><canvas id="obs-regional-country"></canvas></div>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wide mb-2">Cost Profile by Sector</p>
-                            <div style="height:260px"><canvas id="obs-regional-cost"></canvas></div>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-
-    } else if (_observatoryTab === 'coverage') {
-        const allCrossSkills = (typeof crossSectorSkillMatrix !== 'undefined')
-            ? Object.entries(crossSectorSkillMatrix)
-                .filter(([, v]) => v.agri && v.energy && v.digital)
-                .map(([k]) => k).sort()
-            : [];
-        const courses = dataManager.courses || [];
-        const coverageLevel = n => {
-            if (n === 0) return { bg: 'bg-rose-50',   text: 'text-rose-400',   border: 'border-rose-100',   label: '—' };
-            if (n <= 3)  return { bg: 'bg-amber-50',  text: 'text-amber-600',  border: 'border-amber-100',  label: String(n) };
-            if (n <= 8)  return { bg: 'bg-sky-50',    text: 'text-sky-600',    border: 'border-sky-100',    label: String(n) };
-            return             { bg: 'bg-green-50',   text: 'text-green-700',  border: 'border-green-100',  label: String(n) };
-        };
-        // For cross-sector skills, count all courses that teach the skill regardless of sector tag —
-        // a Python course tagged "digital" is equally valid for agritech or energy use.
-        const totalBySkill = {};
-        allCrossSkills.forEach(skill => {
-            totalBySkill[skill] = courses.filter(c => (c.skills || []).includes(skill)).length;
-        });
-        const matrix = typeof crossSectorSkillMatrix !== 'undefined' ? crossSectorSkillMatrix : {};
-        const tableRows = allCrossSkills.map(skill => {
-            const n = totalBySkill[skill];
-            const { bg, text, border, label } = coverageLevel(n);
-            const mx = matrix[skill] || {};
-            const appCell = sect => {
-                const app = mx[sect] || '';
-                return `<td class="px-3 py-2 text-[10px] text-slate-500 leading-snug border-l border-slate-100">${app}</td>`;
-            };
-            return `<tr class="border-t border-slate-100">
-                <td class="px-3 py-2.5 text-xs text-slate-700 font-medium whitespace-nowrap">${skill}</td>
-                <td class="px-3 py-2.5 text-center ${bg} border-l ${border}"><span class="text-[12px] font-bold ${text}">${label}</span></td>
-                ${appCell('agri')}${appCell('energy')}${appCell('digital')}
-            </tr>`;
-        }).join('');
-        tabContentHtml = `
-            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                <div class="px-4 py-3 border-b border-slate-100 bg-slate-50 flex items-center gap-2">
-                    <i data-lucide="grid-3x3" class="w-4 h-4 text-indigo-500"></i>
-                    <span class="text-sm font-bold text-slate-800">Skills Coverage Heatmap</span>
-                </div>
-                <div class="p-4">
-                    <p class="text-xs text-slate-500 mb-3">Course count shows total courses teaching each skill across all sectors — cross-sector skills (Python, ML, Cloud etc.) are taught through the same courses regardless of industry context. Sector columns show how the skill applies in each context. Based on ${courses.length} courses.</p>
-                    <div class="flex flex-wrap gap-3 mb-4 text-[10px] font-bold">
-                        <span class="flex items-center gap-1.5 text-rose-400"><span class="w-3 h-3 rounded bg-rose-50 border border-rose-100 inline-block"></span>No courses found</span>
-                        <span class="flex items-center gap-1.5 text-amber-600"><span class="w-3 h-3 rounded bg-amber-50 border border-amber-100 inline-block"></span>1–3 courses</span>
-                        <span class="flex items-center gap-1.5 text-sky-600"><span class="w-3 h-3 rounded bg-sky-50 border border-sky-100 inline-block"></span>4–8 courses</span>
-                        <span class="flex items-center gap-1.5 text-green-700"><span class="w-3 h-3 rounded bg-green-50 border border-green-100 inline-block"></span>9+ courses</span>
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse">
-                            <thead>
-                                <tr class="bg-slate-50 border-b border-slate-200">
-                                    <th class="px-3 py-2 text-left text-[10px] font-bold text-slate-500 uppercase tracking-wide whitespace-nowrap">Skill</th>
-                                    <th class="px-3 py-2 text-center text-[10px] font-bold text-slate-500 uppercase tracking-wide border-l border-slate-200 whitespace-nowrap">Courses</th>
-                                    <th class="px-3 py-2 text-left text-[10px] font-bold text-green-600 uppercase tracking-wide border-l border-slate-200">Agritech Application</th>
-                                    <th class="px-3 py-2 text-left text-[10px] font-bold text-orange-600 uppercase tracking-wide border-l border-slate-200">Energy Application</th>
-                                    <th class="px-3 py-2 text-left text-[10px] font-bold text-indigo-600 uppercase tracking-wide border-l border-slate-200">Digital Application</th>
-                                </tr>
-                            </thead>
-                            <tbody>${tableRows}</tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>`;
-    }
-
-    // ── Assemble ─────────────────────────────────────────────────────────────────
-    container.innerHTML = `
-        <div class="space-y-5 animate-fade-in">
-            <!-- Filter bar -->
-            <div class="bg-white border border-slate-200 rounded-xl p-4 space-y-3 shadow-sm">
-                <div class="flex items-center gap-3 flex-wrap">
-                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
-                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wide shrink-0">Country</span>
-                    <select onchange="setGlobalCountry(this.value); renderObservatoryView()" class="text-xs text-slate-700 font-semibold border border-slate-200 rounded-lg px-2.5 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300">
-                        ${countryOptions}
-                    </select>
-                </div>
-                <div class="flex items-center gap-2 flex-wrap">
-                    <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wide shrink-0">Sectors</span>
-                    <div class="flex flex-wrap gap-1.5">${sectorToggleHtml}</div>
-                </div>
-            </div>
-            <!-- Tab navigation -->
-            <div class="flex gap-1.5 overflow-x-auto pb-1 scrollbar-hide">${tabNavHtml}</div>
-            <!-- Tab content -->
-            ${tabContentHtml}
-            <!-- Data & Methodology -->
-            <div class="border border-slate-100 rounded-xl p-4 bg-slate-50">
-                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wide mb-2 flex items-center gap-1.5">
-                    <i data-lucide="info" class="w-3 h-3"></i> Data &amp; Methodology
-                </p>
-                <p class="text-[11px] text-slate-500 leading-relaxed">
-                    Occupation demand, skills trends and wage estimates are derived from online job vacancy analysis (2024–2026), national labour force surveys (Kenya KNBS, Uganda UBOS, Tanzania NBS, Rwanda NISR), ILO sector employment estimates, and regional sector intelligence reports including GSMA, IRENA and AGRA. Training supply data is drawn from the Skills2Careers Compass course database (${(dataManager.courses || []).length || 199} courses). Data is synthesised for the East African context and should be read as indicative of broad trends.
-                </p>
-            </div>
-        </div>
-    `;
-    refreshIcons();
-    if (_observatoryTab === 'market')         setTimeout(renderObservatoryCharts, 350);
-    else if (_observatoryTab === 'supply')    setTimeout(() => renderObservatorySupplyDemandCharts(activeSectors), 350);
-    else if (_observatoryTab === 'providers') setTimeout(renderObservatoryProviderCharts, 350);
-    else if (_observatoryTab === 'regional')  setTimeout(renderObservatoryRegionalCharts, 350);
-}
-
-window.renderObservatoryCharts = function() {
-    ['obs-chart-growth', 'obs-chart-invest'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) { const ex = Chart.getChart(el); if (ex) ex.destroy(); }
-    });
-
-    const sectors = ['agri', 'energy', 'digital'];
-    const shortLabels = ['Agritech', 'Energy', 'Digital'];
-    const sectorColors = ['#4FB293', '#E4A429', '#4B6AD9'];
-
-    // Chart 1 — Annual Job Growth Rate (horizontal bar)
-    const growthVals = sectors.map(s => parseFloat(baseSectorDetailData[s].growth.jobTrend.replace(/[^0-9.]/g, '')));
-    const ctx1 = document.getElementById('obs-chart-growth');
-    if (ctx1) { const c1 = new Chart(ctx1, {
-        type: 'bar',
-        data: {
-            labels: shortLabels,
-            datasets: [{ data: growthVals, backgroundColor: sectorColors, borderRadius: 6, borderSkipped: false }]
-        },
-        options: {
-            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-            plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => ` +${c.parsed.x}% YoY` } } },
-            scales: {
-                x: { beginAtZero: true, max: 45, grid: { color: '#F1F4F6' }, ticks: { callback: v => `+${v}%`, font: { size: 10 } } },
-                y: { grid: { display: false }, ticks: { font: { size: 10 } } }
-            }
-        }
-    }); c1.resize(); }
-
-    // Chart 2 — Active Investment Signal (horizontal bar, $M)
-    const investVals = sectors.map(s => {
-        const m = baseSectorDetailData[s].growth.investment.match(/\$(\d+)M/);
-        return m ? parseInt(m[1]) : 0;
-    });
-    const ctx3 = document.getElementById('obs-chart-invest');
-    if (ctx3) { const c3 = new Chart(ctx3, {
-        type: 'bar',
-        data: {
-            labels: shortLabels,
-            datasets: [{ data: investVals, backgroundColor: sectorColors, borderRadius: 6, borderSkipped: false }]
-        },
-        options: {
-            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-            plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => ` $${c.parsed.x}M` } } },
-            scales: {
-                x: { beginAtZero: true, grid: { color: '#F1F4F6' }, ticks: { callback: v => `$${v}M`, font: { size: 10 } } },
-                y: { grid: { display: false }, ticks: { font: { size: 10 } } }
-            }
-        }
-    }); c3.resize(); }
-};
-
-window.renderObservatorySupplyDemandCharts = function(activeSectors) {
-    const sectors = (activeSectors && activeSectors.length) ? activeSectors : ['agri', 'energy', 'digital'];
-    const courses = dataManager.courses || [];
-
-    // Colour bars by coverage level
-    const barColor = n => {
-        if (n === 0) return 'rgba(251,113,133,0.75)';  // rose — gap
-        if (n <= 3)  return 'rgba(251,191,36,0.75)';   // amber — limited
-        if (n <= 8)  return 'rgba(56,189,248,0.75)';   // sky — moderate
-        return              'rgba(74,222,128,0.75)';   // green — good
-    };
-
-    sectors.forEach(sector => {
-        const el = document.getElementById(`obs-sd-${sector}`);
-        if (!el) return;
-        const ex = Chart.getChart(el); if (ex) ex.destroy();
-
-        const hotSkills = ((baseSectorDetailData[sector] || {}).skills || []).filter(s => s.isHot).slice(0, 8);
-        const labels = hotSkills.map(s => s.name.length > 20 ? s.name.slice(0, 19) + '…' : s.name);
-        // Count all courses for this skill regardless of sector tag (cross-sector skills are in any tagged course)
-        const counts = hotSkills.map(s => courses.filter(c => (c.skills || []).includes(s.name)).length);
-        const colors = counts.map(barColor);
-
-        new Chart(el, {
-            type: 'bar',
-            data: {
-                labels,
-                datasets: [{
-                    label: 'Courses available',
-                    data: counts,
-                    backgroundColor: colors,
-                    borderRadius: 4,
-                    borderSkipped: false
-                }]
-            },
-            options: {
-                indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: { callbacks: { label: c => ` ${c.parsed.x} course${c.parsed.x === 1 ? '' : 's'} available` } }
-                },
-                scales: {
-                    x: { beginAtZero: true, grid: { color: '#F1F4F6' }, ticks: { font: { size: 9 }, stepSize: 5 } },
-                    y: { grid: { display: false }, ticks: { font: { size: 9 } } }
-                }
-            }
-        });
-    });
-};
-
-window.renderObservatoryProviderCharts = function() {
-    const categorize = p => {
-        const lp = (p || '').toLowerCase();
-        if (['google','microsoft','ibm','amazon','aws','cisco','oracle','meta','deeplearning','edx','linkedin','salesforce'].some(k => lp.includes(k))) return 'Tech Partners';
-        if (['alx','refactory','moringa','andela','eldohub','african leadership','generation','euroafrique','trainingcred','precision field','skills for africa'].some(k => lp.includes(k))) return 'Regional Academies';
-        if (['university','université','institut','college','makerere','nm-aist','strathmore'].some(k => lp.includes(k))) return 'Universities & TVET';
-        return 'NGO & Development';
-    };
-    const providerTypes = ['Tech Partners', 'Regional Academies', 'Universities & TVET', 'NGO & Development'];
-    const ptColors = ['#4B6AD9', '#4FB293', '#E4A429', '#9B59B6'];
-    const courses = dataManager.courses || [];
-    const sectors = ['agri', 'energy', 'digital'];
-    const sectorLabels = ['Agritech', 'Energy', 'Digital'];
-
-    const el1 = document.getElementById('obs-provider-stacked');
-    if (el1) {
-        const ex = Chart.getChart(el1); if (ex) ex.destroy();
-        new Chart(el1, {
-            type: 'bar',
-            data: {
-                labels: sectorLabels,
-                datasets: providerTypes.map((pt, i) => ({
-                    label: pt,
-                    data: sectors.map(s => courses.filter(c => (c.sector === s || c.sector === 'all') && categorize(c.provider) === pt).length),
-                    backgroundColor: ptColors[i], borderRadius: 2
-                }))
-            },
-            options: {
-                responsive: true, maintainAspectRatio: false,
-                plugins: { legend: { position: 'bottom', labels: { font: { size: 9 }, boxWidth: 8, padding: 5 } } },
-                scales: {
-                    x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } },
-                    y: { stacked: true, beginAtZero: true, grid: { color: '#F1F4F6' }, ticks: { font: { size: 9 }, stepSize: 10 } }
-                }
-            }
-        });
-    }
-
-    const el2 = document.getElementById('obs-provider-tech');
-    if (el2) {
-        const ex = Chart.getChart(el2); if (ex) ex.destroy();
-        const techCourses = courses.filter(c => categorize(c.provider) === 'Tech Partners');
-        const techTotal = techCourses.length || 1;
-        new Chart(el2, {
-            type: 'doughnut',
-            data: {
-                labels: ['Agritech', 'Renewable Energy', 'Digital Economy'],
-                datasets: [{ data: sectors.map(s => techCourses.filter(c => c.sector === s || c.sector === 'all').length), backgroundColor: ['#4FB293','#E4A429','#4B6AD9'], borderWidth: 2, borderColor: '#fff' }]
-            },
-            options: {
-                responsive: true, maintainAspectRatio: false,
-                plugins: {
-                    legend: { position: 'bottom', labels: { font: { size: 9 }, boxWidth: 10, padding: 5 } },
-                    tooltip: { callbacks: { label: c => ` ${c.label}: ${c.parsed} courses (${Math.round(c.parsed / techTotal * 100)}%)` } }
-                }
-            }
-        });
-    }
-};
-
-window.renderObservatoryRegionalCharts = function() {
-    const courses = dataManager.courses || [];
-
-    const el1 = document.getElementById('obs-regional-country');
-    if (el1) {
-        const ex = Chart.getChart(el1); if (ex) ex.destroy();
-        const eacList = ['Kenya','Tanzania','Uganda','Rwanda','Ethiopia','Burundi','South Sudan','DR Congo','Somalia'];
-        const counts = eacList
-            .map(c => ({ name: c, count: courses.filter(co => co.country === c || (co.country === 'DRC' && c === 'DR Congo')).length }))
-            .filter(c => c.count > 0).sort((a, b) => b.count - a.count);
-        new Chart(el1, {
-            type: 'bar',
-            data: {
-                labels: counts.map(c => c.name),
-                datasets: [{ data: counts.map(c => c.count), backgroundColor: '#4B6AD9', borderRadius: 4, borderSkipped: false }]
-            },
-            options: {
-                indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-                plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => ` ${c.parsed.x} courses` } } },
-                scales: {
-                    x: { beginAtZero: true, grid: { color: '#F1F4F6' }, ticks: { font: { size: 9 }, stepSize: 2 } },
-                    y: { grid: { display: false }, ticks: { font: { size: 10 } } }
-                }
-            }
-        });
-    }
-
-    const el2 = document.getElementById('obs-regional-cost');
-    if (el2) {
-        const ex = Chart.getChart(el2); if (ex) ex.destroy();
-        const costTypes = ['Free','Freemium','Subsidized','Paid'];
-        const costColors = ['#4FB293','#4B6AD9','#9B59B6','#E4A429'];
-        new Chart(el2, {
-            type: 'bar',
-            data: {
-                labels: ['Agritech','Energy','Digital'],
-                datasets: costTypes.map((ct, i) => ({
-                    label: ct,
-                    data: ['agri','energy','digital'].map(s => courses.filter(c => (c.sector === s || c.sector === 'all') && c.costType === ct).length),
-                    backgroundColor: costColors[i], borderRadius: 2
-                }))
-            },
-            options: {
-                responsive: true, maintainAspectRatio: false,
-                plugins: { legend: { position: 'bottom', labels: { font: { size: 9 }, boxWidth: 8, padding: 5 } } },
-                scales: {
-                    x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } },
-                    y: { stacked: true, beginAtZero: true, grid: { color: '#F1F4F6' }, ticks: { font: { size: 9 } } }
-                }
-            }
-        });
-    }
-};
-
-window.toggleObservatorySector = function(s) {
-    if (observatorySectors.has(s)) {
-        if (observatorySectors.size > 1) observatorySectors.delete(s);
-    } else {
-        observatorySectors.add(s);
-    }
-    renderObservatoryView();
-};
 
 window.showAllCrossSkills = function() {
     document.querySelectorAll('.cross-extra-row').forEach(row => row.style.display = '');
@@ -6196,22 +5570,6 @@ window.hideExtraTopSkills = function() {
     }
 };
 
-window.toggleObservatoryDrawer = function() {
-    const drawer = document.getElementById('observatory-drawer');
-    if (drawer) {
-        closeAllModals('observatory-drawer');
-        const isClosed = drawer.classList.contains('translate-x-full');
-        if (isClosed) {
-            observatorySectors = new Set(['agri', 'energy', 'digital']);
-            drawer.classList.remove('translate-x-full');
-            renderObservatoryView();
-        } else {
-            drawer.classList.add('translate-x-full');
-        }
-    }
-    refreshIcons();
-}
-
 window.injectDataSourcesDrawer = function() {
     if (document.getElementById('data-sources-drawer')) return;
 
@@ -6233,6 +5591,20 @@ window.injectDataSourcesDrawer = function() {
             <p class="text-sm text-slate-500 leading-relaxed">
                 The Compass draws on two primary data sources to generate occupational profiles, skills signals, and labour market intelligence across East Africa's three high-growth sectors.
             </p>
+
+            <!-- Labour Market Intelligence -->
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                <div class="flex items-center gap-3 p-4 border-b border-slate-100">
+                    <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg shrink-0"><i data-lucide="bar-chart-3" class="w-5 h-5"></i></div>
+                    <div>
+                        <div class="text-sm font-bold text-slate-800">Labour Market Intelligence</div>
+                        <div class="text-[11px] text-slate-400">Sector trends, investment signals &amp; occupation demand</div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <p class="text-xs text-slate-600 leading-relaxed">Occupation demand, skills trends and wage estimates are derived from online job vacancy analysis (2024–2026), national labour force surveys (Kenya KNBS, Uganda UBOS, Tanzania NBS, Rwanda NISR), ILO sector employment estimates, and regional sector intelligence reports including GSMA, IRENA and AGRA. Information on training supply and financing opportunities is drawn from publicly available sources on the internet. Data is synthesised for the East African context and should be read as indicative of broad trends.</p>
+                </div>
+            </div>
 
             <!-- OJA -->
             <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
